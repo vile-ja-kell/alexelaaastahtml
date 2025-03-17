@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Commissioner';
+    src: url('../fonts/Commissioner-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('../fonts/Commissioner-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-Light.woff2') format('woff2'),
+         url('fonts/Commissioner-Light.woff') format('woff'),
+         url('fonts/Commissioner-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-Regular.woff2') format('woff2'),
+         url('fonts/Commissioner-Regular.woff') format('woff'),
+         url('fonts/Commissioner-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-Medium.woff2') format('woff2'),
+         url('fonts/Commissioner-Medium.woff') format('woff'),
+         url('fonts/Commissioner-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-SemiBold.woff2') format('woff2'),
+         url('fonts/Commissioner-SemiBold.woff') format('woff'),
+         url('fonts/Commissioner-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-Bold.woff2') format('woff2'),
+         url('fonts/Commissioner-Bold.woff') format('woff'),
+         url('fonts/Commissioner-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-ExtraBold.woff2') format('woff2'),
+         url('fonts/Commissioner-ExtraBold.woff') format('woff'),
+         url('fonts/Commissioner-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-Black.woff2') format('woff2'),
+         url('fonts/Commissioner-Black.woff') format('woff'),
+         url('fonts/Commissioner-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Adieu';
+    src: url('../fonts/Adieu-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Adieu';
+    src: url('../fonts/Adieu-Bold.woff2') format('woff2'),
+         url('../fonts/Adieu-Bold.woff') format('woff'),
+         url('../fonts/Adieu-Bold.otf') format('opentype'),
+         url('../fonts/Adieu-Bold.eot') format('embedded-opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* font-size */
+.font-small {
+    font-size: 0.875rem; /* 14px */
+}
+.font-medium {
+    font-size: 1rem; /* 16px */
+}
+.font-large {
+    font-size: 1.25rem; /* 20px */
+}
+.font-xlarge {
+    font-size: 1.5rem; /* 24px */
+}
+.font-xxlarge {
+    font-size: 2rem; /* 32px */
+}
+
+/* font-weight */
+.font-normal {
+    font-weight: 400;
+}
+.font-bold {
+    font-weight: 700;
+}
+/* align */
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}

@@ -1,0 +1,344 @@
+@import url("partials/reset.css");
+@import url("partials/type.css");
+@import url("partials/colors.css");
+@import url("partials/variables.css");
+@import url("partials/utils.css");
+@import url("partials/animations.css");
+
+/* Define custom media queries early in the file */
+
+body {
+  font-family: "Commissioner", sans-serif;
+  color: var(--text-on-light);
+  background-color: var(--background-light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Adieu", sans-serif;
+}
+
+h1 {
+  /* The clamp() function takes three parameters:
+       1. The minimum value: var(--title-display-sm), which is a CSS variable for the smallest title display size.
+       2. The preferred value: 5vw, which is 5% of the viewport width which the size of the font.
+       3. The maximum value: var(--title-display-lg), which is a CSS variable for the largest title display size.
+       This ensures that the font size scales responsively between the minimum and maximum values based on the viewport width. */
+  font-size: clamp(var(--title-display-sm), 5vw, var(--title-display-lg));
+  line-height: 1;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+header {
+  --header-bottom: 2rem;
+  background-color: var(--background-dark);
+  color: var(--text-on-dark);
+  padding: 1rem;
+  gap: 2rem;
+  display: grid;
+  position: relative;
+  --header-bottom: 2rem;
+  padding-bottom: calc(var(--header-bottom) + 2rem);
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1.5rem;
+    background-image: url(../img/waves.svg);
+    animation: wave-animation 10s ease-in-out infinite alternate;
+
+    @keyframes wave-animation {
+      0% {
+        background-position: 0% bottom;
+      }
+      100% {
+        background-position: 100% bottom;
+      }
+    }
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 200% 100%;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: var(--width-xl);
+  margin: 0 auto;
+}
+.nav__subcontainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.main-nav__logo {
+  /* Styles for the logo container */
+}
+.hero {
+  display: grid;
+  max-width: var(--width-xl);
+  width: 100%;
+  margin: 0 auto;
+}
+.hero__content {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  z-index: 1;
+}
+
+.hero__year {
+  /* Styles for the year container */
+}
+.hero__year-image {
+  /* Styles for the year image */
+}
+
+/* Menu toggle */
+.menu {
+  /* Base styles for menu block */
+}
+.menu-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.menu-toggle__icon {
+  font-size: 2rem;
+  color: var(--text-on-dark);
+  filter: invert(1);
+  padding: 0.5rem;
+}
+
+/* Language selector */
+.language {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.language__select {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: var(--text-on-dark);
+  font-family: "Adieu", sans-serif;
+  font-size: 1.2rem;
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+.language::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../img/icons/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+  filter: invert(1);
+}
+
+/* End of Selection */
+
+/* Buttons */
+.btn {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-family: "Commissioner", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn--primary {
+  background-color: var(--primary-surface);
+  color: var(--text-on-primary);
+  &:hover {
+    background-color: var(--primary-surface-hover);
+  }
+  &:active {
+    background-color: var(--primary-surface-active);
+  }
+}
+
+/* Quicklinks example */
+.quicklinks {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  a {
+    text-decoration: none;
+    color: var(--text-on-light);
+  }
+  h3 {
+    font-family: "Commissioner", sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+  @media (--viewport-xl) {
+    justify-content: space-between;
+  }
+}
+.quicklinks__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  width: 13rem;
+  @media (--viewport-xl) {
+    width: inherit;
+  }
+}
+.quicklinks__item--featured {
+  /* Modifier for featured quicklink items */
+}
+/* Main start */
+main {
+  display: grid;
+  gap: var(--gap-xl);
+}
+section {
+  padding: 1rem;
+  max-width: var(--width-xl);
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  gap: var(--gap-xl);
+  width: 100%;
+  h2 {
+    text-align: center;
+  }
+}
+.section--top {
+  display: grid;
+  gap: 2rem;
+  @media (--viewport-md) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.image-text-content-block {
+  display: grid;
+  gap: var(--gap-lg);
+  h2 {
+    text-align: left;
+  }
+  .block__image {
+    img {
+      border-radius: var(--radius-xs);
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  .block__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+  }
+  @media (--viewport-md) {
+    display: flex;
+    & > * {
+      flex: 1;
+    }
+  }
+}
+.block--image-right {
+  @media (--viewport-md) {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  max-width: var(--width-xl);
+  /* This creates a responsive grid layout where:
+     * - repeat(auto-fill, ...) automatically fills the container with as many columns as possible
+     * - minmax(200px, 1fr) ensures each column is at least 200px wide, but can grow to fill available space
+     * - This allows cards to responsively adjust from 1 column on mobile to multiple columns on larger screens
+     */
+  grid-template-columns: repeat(2, 1fr);
+  @media (--viewport-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (--viewport-xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  gap: var(--gap-lg);
+  &__content {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    gap: var(--gap-xs);
+    img {
+      justify-self: center;
+    }
+  }
+  &__item {
+    background-color: var(--surface-light-03);
+    padding-inline: var(--padding-md);
+    padding-block: var(--padding-lg);
+    border-radius: var(--radius-md);
+  }
+  &__description {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+}
+
+
+/* Alexela list style */
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(../img/icons/monogram.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* Main end */

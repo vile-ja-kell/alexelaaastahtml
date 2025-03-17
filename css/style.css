@@ -1,0 +1,667 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+/* 2. Remove default margin */
+* {
+    margin: 0;
+  }
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+  }
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+  }
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+/*
+    9. Create a root stacking context
+  */
+#root, #__next {
+    isolation: isolate;
+  }
+@font-face {
+    font-family: 'Commissioner';
+    src: url('../fonts/Commissioner-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('../fonts/Commissioner-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-Light.woff2') format('woff2'),
+         url('fonts/Commissioner-Light.woff') format('woff'),
+         url('fonts/Commissioner-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-Regular.woff2') format('woff2'),
+         url('fonts/Commissioner-Regular.woff') format('woff'),
+         url('fonts/Commissioner-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-Medium.woff2') format('woff2'),
+         url('fonts/Commissioner-Medium.woff') format('woff'),
+         url('fonts/Commissioner-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-SemiBold.woff2') format('woff2'),
+         url('fonts/Commissioner-SemiBold.woff') format('woff'),
+         url('fonts/Commissioner-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-Bold.woff2') format('woff2'),
+         url('fonts/Commissioner-Bold.woff') format('woff'),
+         url('fonts/Commissioner-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-ExtraBold.woff2') format('woff2'),
+         url('fonts/Commissioner-ExtraBold.woff') format('woff'),
+         url('fonts/Commissioner-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Commissioner';
+    src: url('fonts/Commissioner-Black.woff2') format('woff2'),
+         url('fonts/Commissioner-Black.woff') format('woff'),
+         url('fonts/Commissioner-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Adieu';
+    src: url('../fonts/Adieu-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Adieu';
+    src: url('../fonts/Adieu-Bold.woff2') format('woff2'),
+         url('../fonts/Adieu-Bold.woff') format('woff'),
+         url('../fonts/Adieu-Bold.otf') format('opentype'),
+         url('../fonts/Adieu-Bold.eot') format('embedded-opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+/* font-size */
+.font-small {
+    font-size: 0.875rem; /* 14px */
+}
+.font-medium {
+    font-size: 1rem; /* 16px */
+}
+.font-large {
+    font-size: 1.25rem; /* 20px */
+}
+.font-xlarge {
+    font-size: 1.5rem; /* 24px */
+}
+.font-xxlarge {
+    font-size: 2rem; /* 32px */
+}
+/* font-weight */
+.font-normal {
+    font-weight: 400;
+}
+.font-bold {
+    font-weight: 700;
+}
+/* align */
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+:root {
+    --graphics-alexela-blue: #00BCF1FF;
+    --graphics-navy: #172057FF;
+    --graphics-flamingo: #F7DADDFF;
+    --graphics-mint: #C0FFD3FF;
+    --graphics-jade: #3D866BFF;
+    --graphics-slate: #4E6267FF;
+    --graphics-cream: #FFF6E1FF;
+    --graphics-orche: #C27050FF;
+    --graphics-steel: #969696FF;
+
+    --primary-800: #172057;
+    --primary-500: #028CE9;
+    --primary-400: #00BCF1;
+    --primary-300: #40D5FF;
+    --primary-100: #E5F9FF;
+
+    --background-dark: var(--graphics-navy);
+    --background-light: hsl(44 100% 99% / 1);
+
+    --surface-light-03: var(--primary-100);
+
+    --text-on-dark:hsl(44, 100.00%, 97.80%);
+    --text-on-light:hsl(233, 70.60%, 6.70%);
+    --text-on-primary: var(--primary-800);
+
+    --primary-surface: var(--primary-300);
+    --primary-surface-hover: var(--primary-400);
+    --primary-surface-active: var(--primary-500);
+}
+:root {
+    --title-display-sm: 2rem;
+    --title-display-md: 4rem;
+    --title-display-lg: 5rem;
+
+    /* breakpoints */
+    --width-xl: 1200px;
+    --width-lg: 768px;
+    --width-md: 640px;
+    --width-sm: 480px;
+    --width-xs: 320px;
+
+
+    /* sizes */
+    --size-xxs: 0.25rem;
+    --size-xs: 0.5rem;
+    --size-sm: 0.75rem;
+    --size-md: 1rem;
+    --size-lg: 1.5rem;
+    --size-xl: 2rem;
+    --size-xxl: 2.5rem;
+    --size-xxxl: 3rem;
+
+    /* gap */
+    --gap-xxs: var(--size-xxs);
+    --gap-xs: var(--size-xs);
+    --gap-sm: var(--size-sm);
+    --gap-md: var(--size-md);
+    --gap-lg: var(--size-lg);
+    --gap-xl: var(--size-xl);
+    --gap-xxl: var(--size-xxl);
+    --gap-xxxl: var(--size-xxxl);
+
+    /* padding */
+    --padding-xxs: var(--size-xxs);
+    --padding-xs: var(--size-xs);
+    --padding-sm: var(--size-sm);
+    --padding-md: var(--size-md);
+    --padding-lg: var(--size-lg);
+    --padding-xl: var(--size-xl);
+
+    /* radius */
+    --radius-xxs: var(--size-xxs);
+    --radius-xs: var(--size-xs);
+    --radius-sm: var(--size-sm);
+    --radius-md: var(--size-md);
+    --radius-lg: var(--size-lg);
+    --radius-xl: var(--size-xl);
+    --radius-xxl: var(--size-xxl);
+    --radius-xxxl: var(--size-xxxl);
+}
+.no-wrap {
+    white-space: nowrap;
+}
+.hero__year-container {
+    animation: fadeInUp 4s ease-in-out forwards;
+    animation-delay: .5s; /* Viivitab animatsiooni algust 0.5 sekundit */
+    opacity: 0;
+    transform: translateY(100%);
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+        filter: blur(5px);
+    }
+    30% {
+        opacity: 0.3;
+        filter: blur(3px);
+    }
+    70% {
+        filter: blur(1px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+/* Random zoom-in animation for quicklinks items */
+.quicklinks__item {
+    opacity: 0;
+    transform: scale(0.8);
+    animation-name: zoomIn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy effect */
+}
+/* Zoom in animation */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Apply different animation delays to create random appearance */
+.quicklinks__item:nth-child(1) {
+    animation-delay: 0.3s;
+}
+.quicklinks__item:nth-child(2) {
+    animation-delay: 0.9s;
+}
+.quicklinks__item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.quicklinks__item:nth-child(4) {
+    animation-delay: 1.5s;
+}
+.quicklinks__item:nth-child(5) {
+    animation-delay: 1.2s;
+}
+/* Lazy loading image styles */
+.lazy-image {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.fade-in {
+    opacity: 1;
+}
+.lazy-image {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.fade-in {
+    opacity: 1;
+}
+/* Lazy loading image styles with animations */
+.lazy-image {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    transition: opacity 2s ease-out, 
+                transform 2s ease-out;
+    will-change: opacity, transform;
+}
+.fade-in {
+    opacity: 1;
+}
+.slide-up {
+    transform: translateY(0) scale(1);
+}
+/* Define custom media queries early in the file */
+body {
+  font-family: "Commissioner", sans-serif;
+  color: var(--text-on-light);
+  background-color: var(--background-light);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Adieu", sans-serif;
+}
+h1 {
+  /* The clamp() function takes three parameters:
+       1. The minimum value: var(--title-display-sm), which is a CSS variable for the smallest title display size.
+       2. The preferred value: 5vw, which is 5% of the viewport width which the size of the font.
+       3. The maximum value: var(--title-display-lg), which is a CSS variable for the largest title display size.
+       This ensures that the font size scales responsively between the minimum and maximum values based on the viewport width. */
+  font-size: clamp(var(--title-display-sm), 5vw, var(--title-display-lg));
+  line-height: 1;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+header {
+  --header-bottom: 2rem;
+  background-color: var(--background-dark);
+  color: var(--text-on-dark);
+  padding: 1rem;
+  gap: 2rem;
+  display: grid;
+  position: relative;
+  --header-bottom: 2rem;
+  padding-bottom: calc(var(--header-bottom) + 2rem);
+}
+header:after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1.5rem;
+    background-image: url(../img/waves.svg);
+    animation: wave-animation 10s ease-in-out infinite alternate;
+  }
+@keyframes wave-animation {
+      0% {
+        background-position: 0% bottom;
+      }
+      100% {
+        background-position: 100% bottom;
+      }
+    }
+header:after {
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 200% 100%;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: var(--width-xl);
+  margin: 0 auto;
+}
+.nav__subcontainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.main-nav__logo {
+  /* Styles for the logo container */
+}
+.hero {
+  display: grid;
+  max-width: var(--width-xl);
+  width: 100%;
+  margin: 0 auto;
+}
+.hero__content {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  z-index: 1;
+}
+.hero__year {
+  /* Styles for the year container */
+}
+.hero__year-image {
+  /* Styles for the year image */
+}
+/* Menu toggle */
+.menu {
+  /* Base styles for menu block */
+}
+.menu-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.menu-toggle__icon {
+  font-size: 2rem;
+  color: var(--text-on-dark);
+  filter: invert(1);
+  padding: 0.5rem;
+}
+/* Language selector */
+.language {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.language__select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: none;
+  color: var(--text-on-dark);
+  font-family: "Adieu", sans-serif;
+  font-size: 1.2rem;
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+.language::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../img/icons/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+  filter: invert(1);
+}
+/* End of Selection */
+/* Buttons */
+.btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-family: "Commissioner", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn--primary {
+  background-color: var(--primary-surface);
+  color: var(--text-on-primary);
+}
+.btn--primary:hover {
+    background-color: var(--primary-surface-hover);
+  }
+.btn--primary:active {
+    background-color: var(--primary-surface-active);
+  }
+/* Quicklinks example */
+.quicklinks {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+}
+.quicklinks a {
+    text-decoration: none;
+    color: var(--text-on-light);
+  }
+.quicklinks h3 {
+    font-family: "Commissioner", sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+@media (min-width: 1200px) {
+.quicklinks {
+    justify-content: space-between
+}
+  }
+.quicklinks__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  width: 13rem;
+}
+@media (min-width: 1200px) {
+.quicklinks__item {
+    width: inherit
+}
+  }
+.quicklinks__item--featured {
+  /* Modifier for featured quicklink items */
+}
+/* Main start */
+main {
+  display: grid;
+  gap: var(--gap-xl);
+}
+section {
+  padding: 1rem;
+  max-width: var(--width-xl);
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  gap: var(--gap-xl);
+  width: 100%;
+}
+section h2 {
+    text-align: center;
+  }
+.section--top {
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 640px) {
+.section--top {
+    display: flex;
+    flex-direction: column
+}
+  }
+.image-text-content-block {
+  display: grid;
+  gap: var(--gap-lg);
+}
+.image-text-content-block h2 {
+    text-align: left;
+  }
+.image-text-content-block .block__image img {
+      border-radius: var(--radius-xs);
+      -o-object-fit: cover;
+         object-fit: cover;
+      width: 100%;
+    }
+.image-text-content-block .block__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+  }
+@media (min-width: 640px) {
+.image-text-content-block {
+    display: flex
+}
+    .image-text-content-block > * {
+      flex: 1;
+    }
+  }
+@media (min-width: 640px) {
+.block--image-right {
+    flex-direction: row-reverse
+}
+  }
+/* Cards */
+.cards {
+  display: grid;
+  max-width: var(--width-xl);
+  /* This creates a responsive grid layout where:
+     * - repeat(auto-fill, ...) automatically fills the container with as many columns as possible
+     * - minmax(200px, 1fr) ensures each column is at least 200px wide, but can grow to fill available space
+     * - This allows cards to responsively adjust from 1 column on mobile to multiple columns on larger screens
+     */
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 640px) {
+.cards {
+    grid-template-columns: repeat(3, 1fr)
+}
+  }
+@media (min-width: 1200px) {
+.cards {
+    grid-template-columns: repeat(4, 1fr)
+}
+  }
+.cards {
+  gap: var(--gap-lg);
+}
+.cards__content {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    gap: var(--gap-xs);
+  }
+.cards__content img {
+      justify-self: center;
+    }
+.cards__item {
+    background-color: var(--surface-light-03);
+    padding-inline: var(--padding-md);
+    padding-block: var(--padding-lg);
+    border-radius: var(--radius-md);
+  }
+.cards__description {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+/* Alexela list style */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.75rem;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url(../img/icons/monogram.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* Main end */
+/*# sourceMappingURL=style.css.map */
