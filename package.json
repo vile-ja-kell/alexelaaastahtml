@@ -1,0 +1,24 @@
+{
+  "name": "aastaaruanne-html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css:dev": "MINIFY_CSS=false postcss src/style.css -o css/style.css --map --watch",
+    "css:build": "MINIFY_CSS=true postcss src/style.css -o css/style.css --map",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-custom-media": "^11.0.5",
+    "postcss-import": "^16.1.0",
+    "postcss-nested": "^7.0.2",
+    "postcss-sorting": "^9.1.0"
+  }
+}

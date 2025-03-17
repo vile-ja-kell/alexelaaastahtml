@@ -1,0 +1,232 @@
+@import url('reset.css');
+@import url('type.css');
+@import url('colors.css');
+@import url('variables.css');
+@import url('utils.css');
+@import url('animations.css');
+body {
+    font-family: 'Commissioner', sans-serif;
+    color: var(--text-on-light);
+    background-color: var(--background-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Adieu', sans-serif;
+}
+
+h1 {
+    /* The clamp() function takes three parameters:
+       1. The minimum value: var(--title-display-sm), which is a CSS variable for the smallest title display size.
+       2. The preferred value: 5vw, which is 5% of the viewport width which the size of the font.
+       3. The maximum value: var(--title-display-lg), which is a CSS variable for the largest title display size.
+       This ensures that the font size scales responsively between the minimum and maximum values based on the viewport width. */
+    font-size: clamp(var(--title-display-sm), 5vw, var(--title-display-lg));
+    line-height: 1;
+}
+
+header {
+    --header-bottom:2rem;
+    background-color: var(--background-dark);
+    color: var(--text-on-dark);
+    padding: 1rem;
+    gap: 2rem;
+    display: grid;
+    position: relative;
+    --header-bottom:2rem;
+    padding-bottom: calc(var(--header-bottom) + 2rem);
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 1.5rem;
+        background-image: url(../img/waves.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 200% 100%;
+    }
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--width-lg);
+    margin: 0 auto;
+}
+.nav__subcontainer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.main-nav__logo {
+    /* Styles for the logo container */
+}
+.hero {
+    display: grid;
+    max-width: var(--width-lg);
+    width: 100%;
+    margin: 0 auto;
+}
+.hero__content {
+    display: grid;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    z-index: 1;
+}
+
+.hero__year {
+    /* Styles for the year container */
+}
+.hero__year-image {
+    /* Styles for the year image */
+}
+
+/* Menu toggle */
+.menu {
+    /* Base styles for menu block */
+}
+.menu-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+.menu-toggle__icon {
+    font-size: 2rem;
+    color: var(--text-on-dark);
+    filter: invert(1);
+    padding: 0.5rem;
+}
+
+/* Language selector */
+.language {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.language__select {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: var(--text-on-dark);
+    font-family: 'Adieu', sans-serif;
+    font-size: 1.2rem;
+    padding-right: 1.5rem;
+    cursor: pointer;
+}
+.language::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    background-image: url(../img/icons/chevron-down.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    pointer-events: none;
+    filter: invert(1);
+}
+
+/* End of Selection */  
+
+/* Buttons */
+.btn {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn--primary {
+    background-color: var(--primary-surface);
+    color: var(--text-on-primary);
+    &:hover {
+        background-color: var(--primary-surface-hover);
+    }
+    &:active {
+        background-color: var(--primary-surface-active);
+    }
+}
+
+/* Quicklinks example */
+.quicklinks {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    a {
+        text-decoration: none;
+        color: var(--text-on-light);
+    }
+    h3 {
+        font-family: 'Commissioner', sans-serif;
+        font-weight: 500;
+        font-size: 1.25rem;
+    }
+}
+.quicklinks__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+.quicklinks__item--featured {
+    /* Modifier for featured quicklink items */
+}
+/* Main start */
+section {
+    padding: 1rem;
+    max-width: var(--width-lg);
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    gap: var(--gap-md);
+    h2 {
+        text-align: center;
+    }
+}
+.section--top {
+    display: grid;
+    gap: 2rem;
+}
+
+.image-text-content-block {
+    @nest &__image {
+        img {
+            border-radius: var(--radius-xs);
+        }
+    }
+    
+}
+
+
+/* .image-text-content-block__image {
+    img {
+        border-radius: var(--radius-xs);
+    }
+}
+.image-text-content-block__text {
+    display: grid;
+    gap: var(--gap-md);
+} */
+
+
+
+/* Main end */
