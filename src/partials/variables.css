@@ -3,6 +3,12 @@
     --title-display-md: 4rem;
     --title-display-lg: 5rem;
 
+    --font-sm: 0.875rem; /* 14px */
+    --font-md: 1rem; /* 16px */
+    --font-lg: 1.25rem; /* 20px */
+    --font-xl: 1.5rem; /* 24px */
+    --font-xxl: 2rem; /* 32px */
+
     /* breakpoints */
     --width-xl: 1200px;
     --width-lg: 768px;
