@@ -1,6 +1,7 @@
 /**
  * Lazy loading with fade-in and slide-up animation for images in image-text-content-block
  */
+/* 
 document.addEventListener('DOMContentLoaded', () => {
     // Check if Intersection Observer is supported
     if ('IntersectionObserver' in window) {
@@ -131,4 +132,46 @@ document.addEventListener('DOMContentLoaded', () => {
             img.classList.add('slide-up');
         }
     }
+});
+*/
+
+/**
+ * Tabs functionality
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    // Find tab elements
+    const tabsContainer = document.querySelector('.tabs');
+    
+    // Exit if no tabs container exists
+    if (!tabsContainer) return;
+    
+    const tabButtons = tabsContainer.querySelectorAll('.tabs__btn');
+    const tabContents = tabsContainer.querySelectorAll('.tabs__content');
+    
+    // Function to activate a specific tab
+    const activateTab = (index) => {
+        // Remove active class from all tabs
+        for (const btn of tabButtons) {
+            btn.classList.remove('tabs__btn--active');
+        }
+        
+        for (const content of tabContents) {
+            content.classList.remove('tabs__content--active');
+        }
+        
+        // Add active class to selected tab
+        tabButtons[index].classList.add('tabs__btn--active');
+        tabContents[index].classList.add('tabs__content--active');
+    };
+    
+    // Add click event listeners to tab buttons
+    let index = 0;
+    for (const button of tabButtons) {
+        const currentIndex = index;
+        button.addEventListener('click', () => activateTab(currentIndex));
+        index++;
+    }
+    
+    // Initialize first tab as active
+    activateTab(0);
 });
