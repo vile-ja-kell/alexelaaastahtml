@@ -62,18 +62,7 @@ header {
     background-size: 200% 100%;
   }
 }
-.waves-animation:after {
-  animation: wave-animation 10s ease-in-out infinite alternate;
 
-    @keyframes wave-animation {
-      0% {
-        background-position: 0% bottom;
-      }
-      100% {
-        background-position: 100% bottom;
-      }
-    }
-}
 .nav {
   display: flex;
   justify-content: space-between;
@@ -171,7 +160,7 @@ header {
 /* End of Selection */
 
 /* Buttons */
-.btn {
+.btn, .tabs__btn {
   width: fit-content;
   display: inline-flex;
   align-items: center;
@@ -195,6 +184,57 @@ header {
   &:active {
     background-color: var(--primary-surface-active);
   }
+}
+
+.tabs__btn {
+  border-radius: var(--radius-sm);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom: -2px;
+  position: relative;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+/* Tab button active state */
+.tabs__btn--active {
+  background-color: var(--primary-surface);
+  color: var(--text-on-primary);
+  border-bottom: 2px solid var(--primary-800);
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+/* Tab button hover state */
+.tabs__btn:hover {
+  background-color: var(--primary-100);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab button active hover state */
+.tabs__btn--active:hover {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Tab content */
+.tabs__content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tabs__content--active {
+  display: block;
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* Quicklinks example */
@@ -258,8 +298,33 @@ section {
   }
 }
 .section--dark {
+  --section-wave-height: 5rem;
   background-color: var(--background-dark);
   color: var(--text-on-dark);
+  position: relative;
+  margin-block: var(--section-wave-height);
+  
+  
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background-repeat: no-repeat;
+    background-size: 200% 100%;
+    z-index: 1;
+  }
+  
+  &:before {
+    top: calc(-1 * var(--section-wave-height));
+    background-image: url(../img/wave-top-01.svg);
+  }
+  
+  &:after {
+    bottom: calc(-1 * var(--section-wave-height));
+    background-image: url(../img/wave-bottom-01.svg);
+  }
 }
 
 .waves-02:after {
@@ -287,7 +352,7 @@ section {
   }
 }
 
-.text-content-block, .image-text-content-block {
+.content-block, .text-content-block, .image-text-content-block {
   max-width: var(--width-xl);
   display: grid;
   gap: var(--gap-lg);
@@ -362,7 +427,7 @@ figcaption {
   }
   &__description {
     font-size: 1.125rem;
-    font-weight: 600;
+    font-weight: 600; 
   }
 }
 
