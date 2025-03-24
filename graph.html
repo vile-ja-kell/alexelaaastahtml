@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+        }
+        
+        .chart-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .chart-grid {
+            display: grid;
+            grid-template-columns: 100px 1fr 100px;
+            gap: 10px;
+        }
+        
+        .left-axis {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: right;
+            padding-right: 10px;
+            height: 370px;
+        }
+        
+        .right-axis {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+            padding-left: 10px;
+            height: 370px;
+        }
+        
+        .chart-area {
+            position: relative;
+            height: 370px;
+            /* This area will be replaced by your graph image later */
+            background-color: #222;
+        }
+        
+        .x-axis {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        
+        .x-axis div {
+            text-align: center;
+        }
+        
+        .legend {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .blue {
+            background-color: #00AEEF;
+        }
+        
+        .dark {
+            background-color: #222;
+            border: 1px solid #333;
+        }
+        
+        .green {
+            background-color: #3C9;
+        }
+        
+        @media (max-width: 600px) {
+            .chart-grid {
+                grid-template-columns: 70px 1fr 70px;
+            }
+            
+            .left-axis, .right-axis {
+                font-size: 12px;
+            }
+            
+            .x-axis {
+                margin-left: 70px;
+                margin-right: 70px;
+                font-size: 12px;
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <div class="chart-grid">
+            <div class="left-axis">
+                <div>450 000</div>
+                <div>400 000</div>
+                <div>350 000</div>
+                <div>300 000</div>
+                <div>250 000</div>
+                <div>200 000</div>
+                <div>150 000</div>
+                <div>100 000</div>
+                <div>50 000</div>
+                <div>0</div>
+            </div>
+            
+            <div class="chart-area">
+                <img src="graph.svg" alt="">
+            </div>
+            
+            <div class="right-axis">
+                <div>30</div>
+                <div>25</div>
+                <div>20</div>
+                <div>15</div>
+                <div>10</div>
+                <div>5</div>
+                <div>0</div>
+            </div>
+        </div>
+        
+        <div class="x-axis">
+            <div>2020</div>
+            <div>2021</div>
+            <div>2022</div>
+            <div>2023</div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color blue"></div>
+                <div>Toetusprojekte (tk) parem telg</div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color dark"></div>
+                <div></div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color green"></div>
+                <div>Toetusprojektide rahaline väärtus (EUR) vasak telg</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
