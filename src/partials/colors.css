@@ -15,6 +15,10 @@
     --primary-300: #40D5FF;
     --primary-100: #E5F9FF;
 
+    --success-500: #00bf7a;
+    --success-300: #3CEEAE;
+    --success-200: #99FFC9;
+
     --background-dark: var(--graphics-navy);
     --background-light: hsl(44 100% 99% / 1);
 
