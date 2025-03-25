@@ -14,17 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize smooth scrolling
     initSmoothScrolling();
 
+    // Initialize nav wave effect
+    initNavWave();
+
     const menuToggle = document.querySelector('.menu-toggle');
     const menuContainer = document.querySelector('.menu__container');
     const menuLinks = document.querySelectorAll('.menu__link');
 
     menuToggle.addEventListener('click', () => {
         menuContainer.classList.toggle('is-open');
+        menuToggle.classList.toggle('is-open');
     });
 
     for (const link of menuLinks) {
         link.addEventListener('click', () => {
             menuContainer.classList.remove('is-open');
+            menuToggle.classList.remove('is-open');
         });
     }
 
@@ -260,4 +265,30 @@ function initSmoothScrolling() {
             }
         });
     }
+}
+
+/**
+ * Initialize nav wave effect on scroll
+ */
+function initNavWave() {
+    const nav = document.querySelector('.nav');
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const scrollPosition = window.scrollY;
+                const viewportHeight = window.innerHeight;
+                const triggerHeight = viewportHeight * 0.75; // 75vh
+
+                if (scrollPosition >= triggerHeight) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
 }

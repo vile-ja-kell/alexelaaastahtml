@@ -519,6 +519,20 @@ header {
   top: 0;
   padding: 1rem;
 }
+.nav::before {
+  content: '';
+  position: fixed;
+  top: -5.25rem;
+  left: 0;
+  width: 100%;
+  height: 5.25rem;
+  background-color: #fcfaf0;
+  transition: top 0.4s ease-in-out;
+  z-index: -1;
+}
+.nav.scrolled::before {
+  top: 0;
+}
 .nav__subcontainer {
   display: flex;
   gap: 1rem;
@@ -590,9 +604,6 @@ header {
   /* Styles for the year image */
 }
 /* Menu toggle */
-.menu {
-  /* Base styles for menu block */
-}
 .menu-toggle {
   background: transparent;
   border: none;
@@ -601,12 +612,47 @@ header {
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
 }
 .menu-toggle__icon {
-  font-size: 2rem;
-  color: var(--text-on-dark);
-  filter: invert(1);
-  padding: 0.5rem;
+  position: relative;
+  width: 24px;
+  height: 20px;
+}
+/* Create the lines */
+.menu-toggle__icon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: var(--graphics-alexela-blue);
+  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  transform-origin: center;
+}
+/* Position the lines */
+.menu-toggle__icon span:nth-child(1) {
+  top: 0;
+}
+.menu-toggle__icon span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu-toggle__icon span:nth-child(3) {
+  bottom: 0;
+}
+/* Animate to X when menu is open */
+.menu-toggle.is-open .menu-toggle__icon span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.menu-toggle.is-open .menu-toggle__icon span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.is-open .menu-toggle__icon span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
 }
 /* Language selector */
 .language {
@@ -620,7 +666,7 @@ header {
           appearance: none;
   background: transparent;
   border: none;
-  color: var(--text-on-dark);
+  color: var(--graphics-alexela-blue);
   font-family: "Adieu", sans-serif;
   font-size: 1.2rem;
   padding-right: 1.5rem;
@@ -639,7 +685,7 @@ header {
   background-position: center;
   background-size: contain;
   pointer-events: none;
-  filter: invert(1);
+  filter: invert(26%) sepia(89%) saturate(1453%) hue-rotate(212deg) brightness(91%) contrast(98%);
 }
 /* End of Selection */
 /* Buttons */
