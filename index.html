@@ -8,9 +8,16 @@
   </head>
   <body>
     <header>
-      <video class="header__video" autoplay muted loop playsinline>
-        <source src="video/uduhommik.webm" type="video/webm">
-        <source src="video/uduhommik.mp4" type="video/mp4">
+      <video
+        class="header__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="video/uduhommik.jpg"
+      >
+        <source src="video/uduhommik.webm" type="video/webm" />
+        <source src="video/uduhommik.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <nav class="nav">
@@ -29,6 +36,148 @@
               ><img src="img/icons/menu-burger.svg" alt="Hamburger menu icon"
             /></span>
           </button>
+        </div>
+        <div class="menu__container">
+          <div class="menu">
+            <div class="menu__section">
+              <button class="menu__button" aria-expanded="true">
+                <span class="menu__icon">
+                  <img src="img/icons/1.svg" alt="1" />
+                </span>
+                Ettevõttest
+                <span class="menu__chevron">
+                  <img src="img/icons/chevron-up.svg" alt="Expand" />
+                </span>
+              </button>
+              <ul class="menu__list is-open">
+                <li class="menu__item">
+                  <a href="#" class="menu__link"
+                    >Suurima portfelliga energiaettevõte</a
+                  >
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link"
+                    >Elutähtsa teenuse osutaja tanklad</a
+                  >
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Juhatuse esimehe pöördumine</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Meie kogukond</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link"
+                    >Sponsorluse mõju Eesti ühiskonda</a
+                  >
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Istutame puid</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Kodus, teel ja sihtkohas</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Olulisimad ESG numbrid</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Energia kui teenus</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu__section">
+              <button class="menu__button" aria-expanded="false">
+                <span class="menu__icon">
+                  <img src="img/icons/2.svg" alt="2" />
+                </span>
+                Jätkusuutlikkus
+                <span class="menu__chevron">
+                  <img src="img/icons/chevron-down.svg" alt="Expand" />
+                </span>
+              </button>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Keskkonnasõbralik energia</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Roheline tulevik</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Taastuvenergia lahendused</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu__section">
+              <button class="menu__button" aria-expanded="false">
+                <span class="menu__icon">
+                  <img src="img/icons/3.svg" alt="3" />
+                </span>
+                Majandustulemused
+                <span class="menu__chevron">
+                  <img src="img/icons/chevron-down.svg" alt="Expand" />
+                </span>
+              </button>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#" class="menu__link">2023 tulemused</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Finantsaruanded</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Investorsuhted</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu__section">
+              <button class="menu__button" aria-expanded="false">
+                <span class="menu__icon">
+                  <img src="img/icons/4.svg" alt="4" />
+                </span>
+                Raamatupidamise aastaaruanne
+                <span class="menu__chevron">
+                  <img src="img/icons/chevron-down.svg" alt="Expand" />
+                </span>
+              </button>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Bilansiaruanne</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Kasumiaruanne</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Rahavoogude aruanne</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu__section">
+              <button class="menu__button" aria-expanded="false">
+                <span class="menu__icon">
+                  <img src="img/icons/5.svg" alt="5" />
+                </span>
+                Vaata PDF aruannet
+                <span class="menu__chevron">
+                  <img src="img/icons/chevron-down.svg" alt="Expand" />
+                </span>
+              </button>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Eestikeelne PDF</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">English PDF</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Русский PDF</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </nav>
       <div class="hero">
@@ -56,7 +205,11 @@
             href="#ettevottest"
             aria-label="Info ettevõttest"
           >
-            <img src="img/icons/1.svg" alt="Number 1 ikoon" class="quicklinks__icon"/> 
+            <img
+              src="img/icons/1.svg"
+              alt="Number 1 ikoon"
+              class="quicklinks__icon"
+            />
             <h3>Ettevõttest</h3>
           </a>
           <a
@@ -64,7 +217,11 @@
             href="#ettevottest"
             aria-label="Info ettevõttest"
           >
-            <img src="img/icons/2.svg" alt="Number 2 ikoon" class="quicklinks__icon"/>
+            <img
+              src="img/icons/2.svg"
+              alt="Number 2 ikoon"
+              class="quicklinks__icon"
+            />
             <h3>Jätkusuutlikkus</h3>
           </a>
           <a
@@ -72,7 +229,11 @@
             href="#ettevottest"
             aria-label="Info ettevõttest"
           >
-            <img src="img/icons/3.svg" alt="Number 3 ikoon" class="quicklinks__icon"/>
+            <img
+              src="img/icons/3.svg"
+              alt="Number 3 ikoon"
+              class="quicklinks__icon"
+            />
             <h3>Majandustulemused</h3>
           </a>
           <a
@@ -80,7 +241,11 @@
             href="#ettevottest"
             aria-label="Info ettevõttest"
           >
-            <img src="img/icons/4.svg" alt="Number 4 ikoon" class="quicklinks__icon"/>
+            <img
+              src="img/icons/4.svg"
+              alt="Number 4 ikoon"
+              class="quicklinks__icon"
+            />
             <h3>Aastaaruanne</h3>
           </a>
           <a
@@ -88,7 +253,11 @@
             href="#ettevottest"
             aria-label="Info ettevõttest"
           >
-            <img src="img/icons/5.svg" alt="Number 5 ikoon" class="quicklinks__icon"/>
+            <img
+              src="img/icons/5.svg"
+              alt="Number 5 ikoon"
+              class="quicklinks__icon"
+            />
             <h3>Vaata PDF-i</h3>
           </a>
         </nav>
@@ -123,56 +292,80 @@
         <article class="cards">
           <div class="cards__item">
             <div class="cards__content">
-              <img src="img/icons/heart.svg" alt="Heart icon" class="big-icon"/>
+              <img
+                src="img/icons/heart.svg"
+                alt="Heart icon"
+                class="big-icon"
+              />
               <h3 class="cards__title">1993</h3>
               <p class="cards__description">Katusetirme asutamine</p>
             </div>
           </div>
           <div class="cards__item">
             <div class="cards__content">
-              <img src="img/icons/handshake.svg" alt="Handshake icon" class="big-icon"/>
+              <img
+                src="img/icons/handshake.svg"
+                alt="Handshake icon"
+                class="big-icon"
+              />
               <h3 class="cards__title">175 tuhat</h3>
               <p class="cards__description">Era- ja äriklienti</p>
             </div>
           </div>
           <div class="cards__item">
             <div class="cards__content">
-              <img src="img/icons/community.svg" alt="Community icon" class="big-icon"/>
+              <img
+                src="img/icons/community.svg"
+                alt="Community icon"
+                class="big-icon"
+              />
               <h3 class="cards__title">550</h3>
               <p class="cards__description">Töötajat</p>
             </div>
           </div>
           <div class="cards__item">
             <div class="cards__content">
-              <img src="img/icons/receipt.svg" alt="Receipt icon" class="big-icon"/>
+              <img
+                src="img/icons/receipt.svg"
+                alt="Receipt icon"
+                class="big-icon"
+              />
               <h3 class="cards__title">161 mln eur</h3>
               <p class="cards__description">Taastatatud müügitulu 2023. a</p>
             </div>
           </div>
           <div class="cards__item">
             <div class="cards__content">
-              <img src="img/icons/bolt.svg" alt="Bolt icon" class="big-icon"/>
+              <img src="img/icons/bolt.svg" alt="Bolt icon" class="big-icon" />
               <h3 class="cards__title">18%</h3>
               <p class="cards__description">Elektrituru turuosa</p>
             </div>
           </div>
           <div class="cards__item">
             <div class="cards__content">
-              <img src="img/icons/natural-gas.svg" alt="Natural gas icon" class="big-icon"/>
+              <img
+                src="img/icons/natural-gas.svg"
+                alt="Natural gas icon"
+                class="big-icon"
+              />
               <h3 class="cards__title">19%</h3>
               <p class="cards__description">Maagasi turuosa</p>
             </div>
           </div>
           <div class="cards__item">
             <div class="cards__content">
-              <img src="img/icons/fuel.svg" alt="Fuel icon" class="big-icon"/>
+              <img src="img/icons/fuel.svg" alt="Fuel icon" class="big-icon" />
               <h3 class="cards__title">21%</h3>
               <p class="cards__description">Kütuse turuosa</p>
             </div>
           </div>
           <div class="cards__item">
             <div class="cards__content">
-              <img src="img/icons/greenspark.svg" alt="Green icon" class="big-icon"/>
+              <img
+                src="img/icons/greenspark.svg"
+                alt="Green icon"
+                class="big-icon"
+              />
               <h3 class="cards__title">500 GWh</h3>
               <p class="cards__description">
                 tarbijatele müüdud energiat 2023. a
@@ -181,28 +374,40 @@
           </div>
           <div class="cards__item">
             <div class="cards__content">
-              <img src="img/icons/eur.svg" alt="Euro icon" class="big-icon"/>
+              <img src="img/icons/eur.svg" alt="Euro icon" class="big-icon" />
               <h3 class="cards__title">619 mln eur</h3>
               <p class="cards__description">Käive 2023. a</p>
             </div>
           </div>
           <div class="cards__item">
             <div class="cards__content">
-              <img src="img/icons/consumption.svg" alt="Consumption icon" class="big-icon"/>
+              <img
+                src="img/icons/consumption.svg"
+                alt="Consumption icon"
+                class="big-icon"
+              />
               <h3 class="cards__title">26,5 mln eur</h3>
               <p class="cards__description">EBITDA 2023. a</p>
             </div>
           </div>
           <div class="cards__item">
             <div class="cards__content">
-              <img src="img/icons/future.svg" alt="Future icon" class="big-icon"/>
+              <img
+                src="img/icons/future.svg"
+                alt="Future icon"
+                class="big-icon"
+              />
               <h3 class="cards__title">100 MW</h3>
               <p class="cards__description">Projektide arendamisel</p>
             </div>
           </div>
           <div class="cards__item">
             <div class="cards__content">
-              <img src="img/icons/digitempel.svg" alt="Digitempel icon" class="big-icon"/>
+              <img
+                src="img/icons/digitempel.svg"
+                alt="Digitempel icon"
+                class="big-icon"
+              />
               <h3 class="cards__title">500 t eur</h3>
               <p class="cards__description">
                 Panustatud kultuuri, sporti ja heategevusse
@@ -611,8 +816,6 @@
         <article class="content-block">
           <h2 class="block__title">Alexela rahvusvaheliselt</h2>
           <div class="block__graph">
-
-
             <div class="graph__map">
               <figure>
                 <img
@@ -629,8 +832,6 @@
         <article class="content-block">
           <h2 class="block__title">Kodus ja teel</h2>
           <div class="block__graph">
-
-
             <div class="graph__map">
               <figure>
                 <img
@@ -638,7 +839,7 @@
                   alt="Alexela scheme"
                   class="map__image map__image--desktop"
                 />
-                <img 
+                <img
                   src="img/alexela-scheme-mob.svg"
                   alt="Alexela scheme"
                   class="map__image map__image--mobile"
@@ -652,12 +853,11 @@
         <article class="content-block">
           <h2 class="block__title">Tulevikutehnoloogiad</h2>
           <div class="block__graph">
-
             <div class="graph__map">
               <figure>
                 <video width="640" height="360" controls>
                   <!-- <source src="video/alexela_future.mp4" type="video/mp4"> -->
-                  <source src="video/alexela_future.webm" type="video/webm">
+                  <source src="video/alexela_future.webm" type="video/webm" />
                   Teie veebilehitseja ei toeta video elementi.
                 </video>
               </figure>
@@ -749,8 +949,6 @@
                 </div>
               </div>
             </div>
-
-
           </div>
         </article>
       </section>
@@ -758,8 +956,6 @@
         <article class="content-block">
           <h2 class="block__title">Energia kui teenus</h2>
           <div class="block__graph">
-
-
             <div class="graph__map two-graphs">
               <figure>
                 <img src="img/energiahybriid.svg" alt="Energia hübriid" />
@@ -797,7 +993,9 @@
           </div>
           <div class="footer__right">
             <div class="footer__social">
-              <a href="https://www.alexela.ee" class="social__link">www.alexela.ee</a>
+              <a href="https://www.alexela.ee" class="social__link"
+                >www.alexela.ee</a
+              >
               <a href="#" class="social__icon">
                 <img src="img/icons/facebook.svg" alt="Facebook" />
               </a>

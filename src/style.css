@@ -4,6 +4,7 @@
 @import url("partials/variables.css");
 @import url("partials/utils.css");
 @import url("partials/animations.css");
+@import url("partials/menu.css");
 
 /* Define custom media queries early in the file */
 
@@ -44,29 +45,24 @@ h3 {
 }
 
 header {
-  height:var(--hero-height);
-  background-color: var(--neutral-background);
-  color: var(--text-on-dark);
-  padding: 1rem;
-  gap: 2rem;
-  display: grid;
-  position: fixed;
-  width: 100%;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
 }
 
 /* Header videos */
 
 .header__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: fixed;
+
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
-  z-index: 0;
   border-radius: 0;
+  -o-object-position: top;
   object-position: top;
+  height: 75vh;
 }
 
 .nav {
@@ -76,24 +72,65 @@ header {
   width: 100%;
   max-width: var(--width-xl);
   margin: 0 auto;
+  height: -moz-fit-content;
   height: fit-content;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  padding: 1rem;
 }
 .nav__subcontainer {
   display: flex;
   gap: 1rem;
   align-items: center;
+  position: relative;
+  z-index: 1000;
 }
 .nav__logo {
   width: 10rem;
-  z-index: 1;
+  z-index: 1000;
 }
+
+.menu__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-dark);
+  z-index: 999;
+  transition: transform 0.4s ease-in-out;
+  transform: translateY(-100%);
+  display: block;
+}
+
+.menu__container.is-open {
+  transform: translateY(0);
+}
+
+.menu {
+  padding: 4rem 1rem 1rem;
+  background-color: var(--background-dark);
+  color: var(--text-on-dark);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.menu__container.is-open .menu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero {
   display: grid;
   max-width: var(--width-xl);
   width: 100%;
-  margin: 0 auto;
-  z-index: 1;
-  height: fit-content;
+  height: -moz-fit-content;
+  position: fixed;
+  color: var(--text-on-dark);
 }
 .hero__content {
   display: grid;
@@ -290,12 +327,12 @@ header {
 
 main {
   --main-top: 6rem;
-  top: var(--hero-height);
   background-color: var(--neutral-background);
   position: relative;
   padding-bottom: calc(var(--main-top) + 2rem);
   background-image: url(../img/bg-horses.jpg);
   background-repeat: no-repeat;
+  z-index: 0;
   &:before {
     content: "";
     position: absolute;
@@ -382,17 +419,17 @@ section {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 300%;
+    width: 200%;
     height: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 150% 100%;
     z-index: -1;
     @media (--viewport-md) {
-      width: 200%;
+      width: 100%;
     }
     @media (--viewport-xl) {
-      width: 150%;
+      width: 100%;
       background-size: 110% 100%;
     }
   }
@@ -554,7 +591,6 @@ figcaption {
   }
 }
 
-
 .map__legend {
   font-size: clamp(var(--font-sm), 2vw, var(--font-xl));
 }
@@ -634,7 +670,7 @@ video {
   }
 }
 
-.section--cream  {
+.section--cream {
   --wave-height: 4rem;
   background-color: var(--graphics-cream);
   margin-top: var(--wave-height);
@@ -787,4 +823,3 @@ footer {
     flex-wrap: wrap;
   }
 }
-

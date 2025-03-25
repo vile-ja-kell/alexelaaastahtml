@@ -13,6 +13,54 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize smooth scrolling
     initSmoothScrolling();
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuContainer = document.querySelector('.menu__container');
+    const menuLinks = document.querySelectorAll('.menu__link');
+
+    menuToggle.addEventListener('click', () => {
+        menuContainer.classList.toggle('is-open');
+    });
+
+    for (const link of menuLinks) {
+        link.addEventListener('click', () => {
+            menuContainer.classList.remove('is-open');
+        });
+    }
+
+    const menuButtons = document.querySelectorAll('.menu__button');
+
+    for (const button of menuButtons) {
+        button.addEventListener('click', () => {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !isExpanded);
+            
+            // Update chevron icon
+            const chevronImg = button.querySelector('.menu__chevron img');
+            chevronImg.src = !isExpanded ? 'img/icons/chevron-up.svg' : 'img/icons/chevron-down.svg';
+            
+            // Toggle the menu list visibility with smooth transition
+            const menuSection = button.closest('.menu__section');
+            const menuList = menuSection.querySelector('.menu__list');
+            
+            if (menuList) {
+                menuList.classList.toggle('is-open');
+            }
+
+            // Close other open menus
+            const otherOpenMenus = document.querySelectorAll('.menu__list.is-open');
+            for (const openMenu of otherOpenMenus) {
+                if (openMenu !== menuList) {
+                    openMenu.classList.remove('is-open');
+                    const parentSection = openMenu.closest('.menu__section');
+                    const parentButton = parentSection.querySelector('.menu__button');
+                    parentButton.setAttribute('aria-expanded', 'false');
+                    const parentChevron = parentButton.querySelector('.menu__chevron img');
+                    parentChevron.src = 'img/icons/chevron-down.svg';
+                }
+            }
+        });
+    }
 });
 
 /**
@@ -196,6 +244,8 @@ function initSmoothScrolling() {
             e.preventDefault();
             
             const targetId = link.getAttribute('href');
+            if (targetId === '#') return; // Skip if href is just '#'
+            
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {

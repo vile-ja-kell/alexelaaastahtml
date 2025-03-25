@@ -353,6 +353,108 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(0) scale(1);
 }
 */
+.menu {
+    padding: 4rem 1rem 1rem;
+    background-color: var(--background-dark);
+    color: var(--text-on-dark);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    opacity: 0;  /* Start transparent */
+    transform: translateY(-20px);  /* Slight offset for content */
+    transition: opacity 0.3s ease-in-out, transform 0.4s ease-in-out;
+}
+.menu__container.is-open .menu {
+    opacity: 1;
+    transform: translateY(0);
+}
+.menu__section {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: var(--width-xl);
+    margin: 0 auto;
+}
+.menu__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: "Adieu", sans-serif;
+    font-size: var(--font-lg);
+    color: var(--text-on-dark);
+    text-align: left;
+}
+.menu__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+}
+.menu__icon img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    filter: invert(1);
+}
+.menu__chevron {
+    margin-left: auto;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 0.3s ease;
+}
+.menu__chevron img {
+    filter: invert(1); /* Keep chevron icons white */
+}
+.menu__button[aria-expanded="true"] .menu__chevron {
+    transform: rotate(180deg);
+}
+.menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-left: 3.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    opacity: 0;
+}
+.menu__list.is-open {
+    max-height: 500px; /* Large enough to fit content */
+    padding-bottom: 1rem;
+    opacity: 1;
+}
+.menu__item {
+    margin-bottom: 0.75rem;
+    transform: translateY(-5px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.menu__list.is-open .menu__item {
+    transform: translateY(0);
+    opacity: 1;
+}
+.menu__list.is-open .menu__item:nth-child(1) { transition-delay: 0.1s; }
+.menu__list.is-open .menu__item:nth-child(2) { transition-delay: 0.2s; }
+.menu__list.is-open .menu__item:nth-child(3) { transition-delay: 0.3s; }
+.menu__item:last-child {
+    margin-bottom: 0;
+}
+.menu__link {
+    color: var(--text-on-dark);
+    text-decoration: none;
+    font-size: var(--font-md);
+    transition: opacity 0.3s ease;
+}
+.menu__link:hover {
+    opacity: 0.8;
+}
 /* Define custom media queries early in the file */
 body {
   font-family: "Commissioner", sans-serif;
@@ -386,29 +488,22 @@ h3 {
   font-weight: 600;
 }
 header {
-  height:var(--hero-height);
-  background-color: var(--neutral-background);
-  color: var(--text-on-dark);
-  padding: 1rem;
-  gap: 2rem;
-  display: grid;
-  position: fixed;
-  width: 100%;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
 }
 /* Header videos */
 .header__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: fixed;
+
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
-  z-index: 0;
+  object-fit: cover;
   border-radius: 0;
   -o-object-position: top;
-     object-position: top;
+  object-position: top;
+  height: 75vh;
 }
 .nav {
   display: flex;
@@ -419,24 +514,58 @@ header {
   margin: 0 auto;
   height: -moz-fit-content;
   height: fit-content;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  padding: 1rem;
 }
 .nav__subcontainer {
   display: flex;
   gap: 1rem;
   align-items: center;
+  position: relative;
+  z-index: 1000;
 }
 .nav__logo {
   width: 10rem;
-  z-index: 1;
+  z-index: 1000;
+}
+.menu__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-dark);
+  z-index: 999;
+  transition: transform 0.4s ease-in-out;
+  transform: translateY(-100%);
+  display: block;
+}
+.menu__container.is-open {
+  transform: translateY(0);
+}
+.menu {
+  padding: 4rem 1rem 1rem;
+  background-color: var(--background-dark);
+  color: var(--text-on-dark);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-in-out, transform 0.4s ease-in-out;
+}
+.menu__container.is-open .menu {
+  opacity: 1;
+  transform: translateY(0);
 }
 .hero {
   display: grid;
   max-width: var(--width-xl);
   width: 100%;
-  margin: 0 auto;
-  z-index: 1;
   height: -moz-fit-content;
-  height: fit-content;
+  position: fixed;
+  color: var(--text-on-dark);
 }
 .hero__content {
   display: grid;
@@ -629,12 +758,12 @@ header {
 /* Main start */
 main {
   --main-top: 6rem;
-  top: var(--hero-height);
   background-color: var(--neutral-background);
   position: relative;
   padding-bottom: calc(var(--main-top) + 2rem);
   background-image: url(../img/bg-horses.jpg);
   background-repeat: no-repeat;
+  z-index: 0;
 }
 main:before {
     content: "";
@@ -716,7 +845,7 @@ section h2 {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 300%;
+    width: 200%;
     height: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -725,12 +854,12 @@ section h2 {
   }
 @media (min-width: 640px) {
 .waves-02:after {
-      width: 200%
+      width: 100%
   }
     }
 @media (min-width: 1200px) {
 .waves-02:after {
-      width: 150%;
+      width: 100%;
       background-size: 110% 100%
   }
     }
@@ -961,7 +1090,7 @@ video {
       justify-content: flex-end
   }
     }
-.section--cream  {
+.section--cream {
   --wave-height: 4rem;
   background-color: var(--graphics-cream);
   margin-top: var(--wave-height);
@@ -1094,6 +1223,5 @@ footer {
     flex-wrap: wrap;
   }
 }
-
 
 /*# sourceMappingURL=style.css.map */
