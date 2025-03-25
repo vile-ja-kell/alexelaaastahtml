@@ -134,13 +134,7 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-# Ignore large files
-*.mp4
-*.mov
-*.avi
-*.wmv
-*.flv
-*.mkv
+
 
 # Ignore other large file types
 *.iso

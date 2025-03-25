@@ -21,7 +21,7 @@
 
     --background-dark: var(--graphics-navy);
     --background-light: hsl(44 100% 99% / 1);
-
+    --neutral-background: #fcfaf0;
     --surface-light-03: var(--primary-100);
 
     --text-on-dark:hsl(44, 100.00%, 97.80%);
