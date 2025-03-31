@@ -36,6 +36,12 @@
     font-size: var(--font-lg);
     color: var(--text-on-dark);
     text-align: left;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.menu__button:hover {
+    opacity: 0.8;
 }
 
 .menu__icon {
@@ -50,7 +56,7 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: invert(1);
+    filter: grayscale(1) invert(1);
 }
 
 .menu__chevron {

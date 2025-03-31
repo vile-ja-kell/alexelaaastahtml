@@ -5,7 +5,9 @@
 @import url("partials/utils.css");
 @import url("partials/animations.css");
 @import url("partials/menu.css");
-
+@import url("partials/quicklinks.css");
+@import url("partials/tabs.css");
+@import url("partials/graphs.css");
 /* Define custom media queries early in the file */
 
 body {
@@ -263,8 +265,7 @@ header {
 /* End of Selection */
 
 /* Buttons */
-.btn,
-.tabs__btn {
+.btn {
   width: fit-content;
   display: inline-flex;
   align-items: center;
@@ -290,94 +291,8 @@ header {
   }
 }
 
-.tabs__btn {
-  border-radius: var(--radius-sm);
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  margin-bottom: -2px;
-  position: relative;
-  transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
-}
 
-/* Tab button active state */
-.tabs__btn--active {
-  background-color: var(--primary-surface);
-  color: var(--text-on-primary);
-  border-bottom: 2px solid var(--primary-800);
-  font-weight: 700;
-  position: relative;
-  z-index: 2;
-}
 
-/* Tab button hover state */
-.tabs__btn:hover {
-  background-color: var(--primary-100);
-  transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Tab button active hover state */
-.tabs__btn--active:hover {
-  transform: translateY(0);
-  box-shadow: none;
-}
-
-/* Tab content */
-.tabs__content {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.tabs__content--active {
-  display: block;
-  opacity: 1;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Quicklinks example */
-.quicklinks {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-  gap: 2rem;
-  justify-content: start;
-  a {
-    text-decoration: none;
-    color: var(--text-on-light);
-  }
-  h3 {
-    font-weight: 500;
-    font-size: 2rem;
-  }
-  @media (--viewport-xl) {
-    justify-content: space-between;
-  }
-  &__item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    @media (--viewport-xl) {
-      width: inherit;
-    }
-    h3 {
-      font-size: clamp(1rem, 5vw, 2rem);
-    }
-  }
-  &__icon {
-    width: clamp(4rem, 5vw, 6.5rem);
-    height: auto;
-  }
-}
 
 /* Main start */
 
@@ -411,6 +326,9 @@ main {
 main {
   display: grid;
   gap: var(--gap-xl);
+  @media (--viewport-xl) {
+    gap: var(--gap-xxxl);
+  }
 }
 section {
   padding: 1rem;
@@ -428,6 +346,7 @@ section {
   max-width: var(--width-xl);
   display: grid;
   gap: 2rem;
+  justify-content: start;
   @media (--viewport-md) {
     display: flex;
     flex-direction: column;
@@ -520,9 +439,12 @@ section {
   @media (--viewport-md) {
     display: flex;
     & > * {
-      flex: 1;
+      flex: 2;
     }
   }
+}
+.block__image--third {
+  flex: 1;
 }
 .block--image-right {
   @media (--viewport-md) {
@@ -586,7 +508,7 @@ figcaption {
   padding-left: 2.5rem;
   display: flex;
   align-items: center;
-  height: 3rem;
+  min-height: 3rem;
   line-height: 1.2;
   margin-bottom: 0.75rem;
 }
