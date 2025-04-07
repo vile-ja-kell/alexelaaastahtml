@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Jätkusuutlikkus</title>
+  </head>
+  <body>
+    <header>
+      <video
+        class="header__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="video/kogukond.jpg"
+      >
+        <source src="video/kogukond.webm" type="video/webm" />
+        <source src="video/kogukond.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="img/alexela_logo.svg" alt="Alexela logo" />
+          </a>
+        </div>
+        <div class="nav__subcontainer">
+          <div class="language">
+            <select name="language" id="language" class="language__select">
+              <option value="et">ET</option>
+              <option value="en">EN</option>
+            </select>
+          </div>
+          <button class="menu-toggle" aria-label="Toggle menu">
+            <div class="menu-toggle__icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </div>
+        <div class="menu__container">
+          <div class="menu">
+            <div class="menu__section">
+              <a href="ettevottest.html" class="menu__button">
+                <span class="menu__icon">
+                  <img src="img/icons/1.svg" alt="1" />
+                </span>
+                Ettevõttest
+              </a>
+            </div>
+
+            <div class="menu__section">
+              <a href="jatkusuutlikkus.html" class="menu__button">
+                <span class="menu__icon">
+                  <img src="img/icons/2.svg" alt="2" />
+                </span>
+                Jätkusuutlikkus
+              </a>
+            </div>
+
+            <div class="menu__section">
+              <a href="majandustulemused.html" class="menu__button">
+                <span class="menu__icon">
+                  <img src="img/icons/3.svg" alt="3" />
+                </span>
+                Majandustulemused
+              </a>
+            </div>
+
+            <div class="menu__section">
+              <a href="aastaaruanne.html" class="menu__button">
+                <span class="menu__icon">
+                  <img src="img/icons/4.svg" alt="4" />
+                </span>
+                Raamatupidamise aastaaruanne
+              </a>
+            </div>
+
+            <div class="menu__section">
+              <a href="pdf.html" class="menu__button">
+                <span class="menu__icon">
+                  <img src="img/icons/5.svg" alt="5" />
+                </span>
+                Vaata PDF aruannet
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="hero">
+        <div class="hero__year-container">
+          <img
+            src="img/header_02.svg"
+            alt="Aasta"
+            class="hero__year-animation"
+          />
+        </div>
+        <div class="hero__content">
+          <h1>Jätkusuutlikkus</h1>
+        </div>
+        <a href="#majandus" class="btn btn--primary">
+          Majandus&shy;tulemused
+          <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+        </a>
+      </div>
+    </header>
+    <main class="waves-animation">
+      <section class="section--top" id="quicklinks">
+        <h2 class="text-left">Leia kiirelt</h2>
+        <nav class="quicklinks" aria-label="Quick navigation">
+          <a
+            class="quicklinks__item"
+            href="ettevottest.html"
+            aria-label="Info ettevõttest"
+          >
+            <img
+              src="img/icons/1.svg"
+              alt="Number 1 ikoon"
+              class="quicklinks__icon"
+            />
+            <h3>Ettevõttest</h3>
+          </a>
+          <a
+            class="quicklinks__item"
+            href="jatkusuutlikkus.html"
+            aria-label="Info ettevõttest"
+          >
+            <img
+              src="img/icons/2.svg"
+              alt="Number 2 ikoon"
+              class="quicklinks__icon"
+            />
+            <h3>Jätkusuutlikkus</h3>
+          </a>
+          <a
+            class="quicklinks__item"
+            href="majandustulemused.html"
+            aria-label="Info ettevõttest"
+          >
+            <img
+              src="img/icons/3.svg"
+              alt="Number 3 ikoon"
+              class="quicklinks__icon"
+            />
+            <h3>Majandus&shy;tulemused</h3>
+          </a>
+          <a
+            class="quicklinks__item"
+            href="aastaaruanne.html"
+            aria-label="Info ettevõttest"
+          >
+            <img
+              src="img/icons/4.svg"
+              alt="Number 4 ikoon"
+              class="quicklinks__icon"
+            />
+            <h3>Aastaaruanne</h3>
+          </a>
+          <a
+            class="quicklinks__item"
+            href="aastaaruanne.pdf"
+            aria-label="Info ettevõttest"
+          >
+            <img
+              src="img/icons/5.svg"
+              alt="Number 5 ikoon"
+              class="quicklinks__icon"
+            />
+            <h3>Vaata PDF-i</h3>
+          </a>
+        </nav>
+      </section>
+
+      <section class="section--content section--color section--navy waves-animation">
+
+        <article class="content-block mb-xxl">
+          <h2 class="block__title">
+            Konsolideeritud bilanss
+          </h2>
+          <div class="table">
+            <table>
+              <thead>
+                <tr class="table__header bg-flamingo">
+                  <th class="table__header-text text-left">Suhtarv</th>
+                  <th class="table__header-text text-right">2023</th>
+                  <th class="table__header-text text-right">2022</th>
+                  <th class="table__header-text text-right">2021</th>
+                  <th class="table__header-text text-right">2020</th>
+                </tr>
+                <tr class="visually-hidden">
+                  <th scope="col">Teema</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Müügitulud (tuh €)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    617 909
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    620 384
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    367 799
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    249 839
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Müügitulude kasv(%)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    -0,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    68,7%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    47,2%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,9%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Puhaskasum (tuh€)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    8 697
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    14 612
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    8 320
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    3 382
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Puhasrentaablus(%)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,3%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,4%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Lühiajaliste kohustuste kattekordaja
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,01
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,01
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,69
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,91
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">ROA (%)</td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,8%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    4,2%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    3,6%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,1%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">ROE (%)</td>
+                  <td class="table__cell table__cell--number text-right">
+                    6,1%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    11,1%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    10,7%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    4,7%
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      
+        <article class="content-block mb-xxl">
+          <h2 class="block__title">
+            Konsolideeritud kasumiaruanne
+          </h2>
+          <div class="table">
+            <table>
+              <thead>
+                <tr class="table__header bg-flamingo">
+                  <th class="table__header-text text-left">Suhtarv</th>
+                  <th class="table__header-text text-right">2023</th>
+                  <th class="table__header-text text-right">2022</th>
+                  <th class="table__header-text text-right">2021</th>
+                  <th class="table__header-text text-right">2020</th>
+                </tr>
+                <tr class="visually-hidden">
+                  <th scope="col">Teema</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Müügitulud (tuh €)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    617 909
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    620 384
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    367 799
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    249 839
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Müügitulude kasv(%)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    -0,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    68,7%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    47,2%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,9%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Puhaskasum (tuh€)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    8 697
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    14 612
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    8 320
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    3 382
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Puhasrentaablus(%)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,3%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,4%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Lühiajaliste kohustuste kattekordaja
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,01
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,01
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,69
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,91
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">ROA (%)</td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,8%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    4,2%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    3,6%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,1%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">ROE (%)</td>
+                  <td class="table__cell table__cell--number text-right">
+                    6,1%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    11,1%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    10,7%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    4,7%
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        
+        <article class="content-block mb-xxl">
+          <h2 class="block__title">
+            Konsolideeritud koondkasumiaruanne
+          </h2>
+          <div class="table">
+            <table>
+              <thead>
+                <tr class="table__header bg-flamingo">
+                  <th class="table__header-text text-left">Suhtarv</th>
+                  <th class="table__header-text text-right">2023</th>
+                  <th class="table__header-text text-right">2022</th>
+                  <th class="table__header-text text-right">2021</th>
+                  <th class="table__header-text text-right">2020</th>
+                </tr>
+                <tr class="visually-hidden">
+                  <th scope="col">Teema</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Müügitulud (tuh €)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    617 909
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    620 384
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    367 799
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    249 839
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Müügitulude kasv(%)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    -0,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    68,7%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    47,2%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,9%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Puhaskasum (tuh€)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    8 697
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    14 612
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    8 320
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    3 382
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Puhasrentaablus(%)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,3%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,4%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Lühiajaliste kohustuste kattekordaja
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,01
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,01
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,69
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,91
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">ROA (%)</td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,8%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    4,2%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    3,6%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,1%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">ROE (%)</td>
+                  <td class="table__cell table__cell--number text-right">
+                    6,1%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    11,1%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    10,7%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    4,7%
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      
+
+        <article class="content-block mb-xxl">
+          <h2 class="block__title">
+            Konsolideeritud rahavoogude aruanne
+          </h2>
+          <div class="table">
+            <table>
+              <thead>
+                <tr class="table__header bg-flamingo">
+                  <th class="table__header-text text-left">Suhtarv</th>
+                  <th class="table__header-text text-right">2023</th>
+                  <th class="table__header-text text-right">2022</th>
+                  <th class="table__header-text text-right">2021</th>
+                  <th class="table__header-text text-right">2020</th>
+                </tr>
+                <tr class="visually-hidden">
+                  <th scope="col">Teema</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Müügitulud (tuh €)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    617 909
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    620 384
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    367 799
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    249 839
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Müügitulude kasv(%)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    -0,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    68,7%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    47,2%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,9%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Puhaskasum (tuh€)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    8 697
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    14 612
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    8 320
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    3 382
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Puhasrentaablus(%)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,3%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,4%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Lühiajaliste kohustuste kattekordaja
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,01
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,01
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,69
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,91
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">ROA (%)</td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,8%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    4,2%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    3,6%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,1%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">ROE (%)</td>
+                  <td class="table__cell table__cell--number text-right">
+                    6,1%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    11,1%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    10,7%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    4,7%
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      
+        <article class="content-block mb-xxl">
+          <h2 class="block__title">
+            Kosolideeritud omakapitali muutuste aruanne
+          </h2>
+          <div class="table">
+            <table>
+              <thead>
+                <tr class="table__header bg-flamingo">
+                  <th class="table__header-text text-left">Suhtarv</th>
+                  <th class="table__header-text text-right">2023</th>
+                  <th class="table__header-text text-right">2022</th>
+                  <th class="table__header-text text-right">2021</th>
+                  <th class="table__header-text text-right">2020</th>
+                </tr>
+                <tr class="visually-hidden">
+                  <th scope="col">Teema</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                  <th scope="col">Aasta</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Müügitulud (tuh €)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    617 909
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    620 384
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    367 799
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    249 839
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Müügitulude kasv(%)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    -0,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    68,7%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    47,2%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,9%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Puhaskasum (tuh€)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    8 697
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    14 612
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    8 320
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    3 382
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Puhasrentaablus(%)
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,4%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,3%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,4%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">
+                    Lühiajaliste kohustuste kattekordaja
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,01
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    1,01
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,69
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    0,91
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">ROA (%)</td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,8%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    4,2%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    3,6%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    2,1%
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell table__cell--content">ROE (%)</td>
+                  <td class="table__cell table__cell--number text-right">
+                    6,1%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    11,1%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    10,7%
+                  </td>
+                  <td class="table__cell table__cell--number text-right">
+                    4,7%
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+
+
+
+
+    </main>
+
+    <footer>
+      <div class="footer__container">
+        <div class="footer__content">
+          <div class="footer__left">
+            <div class="footer__logo">
+              <img src="img/alexela_logo.svg" alt="Alexela" />
+            </div>
+            <div class="footer__contact">
+              <strong>Alexela AS</strong>
+              <span>Roseni 11, 10111 Tallinn</span>
+              <a href="mailto:alexela@alexela.ee" class="footer__contact__item">
+                <img src="img/icons/email.svg" alt="Email" />
+                <span>alexela@alexela.ee</span>
+              </a>
+              <a href="tel:+372629000" class="footer__contact__item">
+                <img src="img/icons/Phone.svg" alt="Phone" />
+                <span>+ 372 629 000</span>
+              </a>
+            </div>
+          </div>
+          <div class="footer__right">
+            <div class="footer__social">
+              <a href="https://www.alexela.ee" class="social__link"
+                ><span class="social__icon-mask icon-monogram"></span> www.alexela.ee</a
+              >
+              <a href="#" class="social__icon">
+                <span class="social__icon-mask icon-facebook"></span>
+                <span>Facebook</span>
+              </a>
+              <a href="#" class="social__icon">
+                <span class="social__icon-mask icon-instagram"></span>
+                <span>Instagram</span>
+              </a>
+              <a href="#" class="social__icon">
+                <span class="social__icon-mask icon-youtube"></span>
+                <span>Youtube</span>
+              </a>
+            </div>
+            <div class="footer__certification">
+              <img src="img/iso-9001.svg" alt="ISO 9001 Certified" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+.section--color {
+  --section-wave-height: 5rem;
+  position: relative;
+  margin-block: var(--section-wave-height);
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: var(--section-wave-height);
+    mask-size: 200% 100% !important;
+  }
+
+  &:before {
+    top: calc(-1 * var(--section-wave-height));
+    mask: url("../img/wave-neutral-top.svg") no-repeat;
+  }
+
+  &:after {
+    bottom: calc(-1 * var(--section-wave-height));
+    mask: url("../img/wave-neutral-bottom.svg") no-repeat;
+  }
+}
+
+
+.section--flamingo {
+  background-color: var(--graphics-flamingo);
+  &:before,
+  &:after {
+    background-color: var(--graphics-flamingo);
+  }
+}
+.section--mint {
+  background-color: var(--graphics-mint);
+  &:before,
+  &:after {
+    background-color: var(--graphics-mint);
+  }
+}
+.section--cream {
+  background-color: var(--graphics-cream);
+  &:before,
+  &:after {
+    background-color: var(--graphics-cream);
+  }
+}
+
+.section--navy {
+  background-color: var(--graphics-navy);
+  color: var(--text-on-dark);
+  &:before,
+  &:after {
+    background-color: var(--graphics-navy);
+  }
+}
+

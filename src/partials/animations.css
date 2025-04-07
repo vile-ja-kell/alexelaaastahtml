@@ -1,4 +1,3 @@
-
 .hero__year-container {
     animation: fadeInUp 4s ease-in-out forwards;
     animation-delay: .5s; /* Viivitab animatsiooni algust 0.5 sekundit */
@@ -67,15 +66,24 @@
 
 .waves-animation:after, .waves-animation:before {
     animation: wave-animation 10s ease-in-out infinite alternate;
-  }
-  @keyframes wave-animation {
-        0% {
-          background-position: 0% bottom;
-        }
-        100% {
-          background-position: 100% bottom;
-        }
-      }
+}
+
+/* Animation for masked waves */
+[class*="section--"]:before,
+[class*="section--"]:after {
+    animation: wave-animation 10s ease-in-out infinite alternate;
+}
+
+@keyframes wave-animation {
+    0% {
+        background-position: 0% bottom;
+        mask-position: 0% bottom;
+    }
+    100% {
+        background-position: 100% bottom;
+        mask-position: 100% bottom;
+    }
+}
 
 /* Lazy loading image styles */
 /*.lazy-image {

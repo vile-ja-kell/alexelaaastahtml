@@ -1,0 +1,86 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-lg) 0;
+  font-size: var(--font-sm);
+  @media (--viewport-lg) {
+    font-size: var(--font-md);
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table__header {
+}
+
+.table__header-text {
+  font-family: "Commissioner", sans-serif;
+  font-weight: 800;
+  margin: 0;
+  text-align: left;
+  padding: var(--padding-sm);
+  text-align: center;
+}
+
+/* Hide table headers visually but keep them for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.table__row {
+  border-bottom: 1px solid var(--primary-400);
+}
+
+.table__cell {
+  padding: var(--padding-xs);
+  line-height: 1.5;
+  border-inline: 1px solid var(--primary-400);
+  &:first-child {
+    border-left: none;
+  }
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.table__cell--number {
+  font-family: "Commissioner", sans-serif;
+  text-align: center;
+}
+
+.table__cell--content {
+}
+
+.table-w-legend {
+  font-size: var(--font-sm);
+  display: flex;
+  flex-direction: column;
+  @media (--viewport-lg) {
+    flex-direction: row;
+    font-size: var(--font-md);
+  }
+  .table {
+    flex: 2;
+  }
+}
+
+.table-legend {
+  background-color: var(--graphics-cream);
+  padding: var(--gap-md);
+  flex: 1;
+  ul {
+    margin-block: var(--size-sm);
+    padding-inline-start: var(--padding-lg);
+  }
+}

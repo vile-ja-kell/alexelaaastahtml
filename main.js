@@ -2,9 +2,6 @@
  * Main JavaScript functionality
  */
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize lazy loading
-    initLazyLoading();
-    
     // Initialize tabs
     initTabs();
     
@@ -16,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize nav wave effect
     initNavWave();
+
 
     const menuToggle = document.querySelector('.menu-toggle');
     const menuContainer = document.querySelector('.menu__container');
@@ -32,112 +30,59 @@ document.addEventListener('DOMContentLoaded', () => {
             menuToggle.classList.remove('is-open');
         });
     }
+
+    // Modal functionality
+    const modal = document.querySelector('.modal');
+    const modalContent = document.querySelector('.modal__content');
+    const modalOpenBtn = document.querySelector('.btn-modal');
+    const modalCloseBtn = document.querySelector('.modal__close');
+
+    // Function to open modal
+    const openModal = () => {
+        modal.style.display = 'block';
+        // Trigger reflow to ensure the transition works
+        modal.offsetHeight;
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    };
+
+    // Function to close modal
+    const closeModal = () => {
+        modal.classList.remove('is-open');
+        // Wait for the animation to finish before hiding the modal
+        setTimeout(() => {
+            if (!modal.classList.contains('is-open')) {
+                modal.style.display = 'none';
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        }, 300); // Match this with the CSS transition duration
+    };
+
+    // Event listeners
+    modalOpenBtn.addEventListener('click', openModal);
+    modalCloseBtn.addEventListener('click', closeModal);
+
+    // Close modal when clicking outside modal content
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close modal on escape key press
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+            closeModal();
+        }
+    });
 });
 
-/**
- * Lazy loading with fade-in and slide-up animation for images
- */
-function initLazyLoading() {
-    if (!('IntersectionObserver' in window)) {
-        console.log('IntersectionObserver not supported, loading images immediately');
-        const fallbackImages = document.querySelectorAll('.image-text-content-block img.block__img');
-        for (const img of fallbackImages) {
-            img.src = img.getAttribute('data-src') || img.src;
-            img.classList.add('fade-in', 'slide-up');
-        }
-        return;
-    }
 
-    const lazyImages = document.querySelectorAll('.image-text-content-block img.block__img');
-    console.log('Found lazy images:', lazyImages.length);
-
-    const options = {
-        root: null,
-        rootMargin: '150px',
-        threshold: 0.1
-    };
-
-    const calculateImageHeight = (img) => {
-        const width = img.clientWidth || img.parentElement.clientWidth;
-        if (width) {
-            const height = width * (2.9/4);
-            img.style.height = `${height}px`;
-        }
-    };
-
-    const preloadAndAnimate = (img, delay = 100) => {
-        if (!img.dataset.src) return;
-        
-        const originalSrc = img.dataset.src;
-        
-        setTimeout(() => {
-            img.src = originalSrc;
-            
-            setTimeout(() => {
-                img.classList.add('fade-in', 'slide-up');
-            }, 50);
-            
-            img.onerror = () => {
-                console.error('Failed to load image:', originalSrc);
-                img.classList.add('fade-in', 'slide-up');
-            };
-            
-            img.removeAttribute('data-src');
-        }, delay);
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        for (const entry of entries) {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                console.log('Image in view:', img.alt);
-                preloadAndAnimate(img);
-                observer.unobserve(img);
-            }
-        }
-    }, options);
-
-    for (const img of lazyImages) {
-        img.dataset.src = img.getAttribute('src');
-        img.classList.add('lazy-image');
-        calculateImageHeight(img);
-        img.style.backgroundColor = 'transparent';
-        img.setAttribute('src', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==');
-        
-        const rect = img.getBoundingClientRect();
-        const isInViewport = (
-            rect.top >= -150 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight + 150) &&
-            rect.right <= window.innerWidth
-        );
-        
-        if (isInViewport) {
-            console.log('Image already in viewport, loading with animation:', img.alt);
-            preloadAndAnimate(img, 3000);
-        } else {
-            observer.observe(img);
-            console.log('Prepared image for lazy loading:', img.dataset.src);
-        }
-    }
-
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            for (const img of lazyImages) {
-                if (img.classList.contains('lazy-image') && !img.classList.contains('fade-in')) {
-                    calculateImageHeight(img);
-                }
-            }
-        }, 100);
-    });
-}
 
 /**
  * Tabs functionality
  */
-function initTabs() {
+const initTabs = () => {
     const tabsContainer = document.querySelector('.tabs');
     if (!tabsContainer) return;
     
@@ -165,12 +110,12 @@ function initTabs() {
     }
     
     activateTab(0);
-}
+};
 
 /**
  * Parallax effect and sticky behavior
  */
-function initParallax() {
+const initParallax = () => {
     const main = document.querySelector('main');
     if (!main) return;
 
@@ -202,12 +147,12 @@ function initParallax() {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
-}
+};
 
 /**
  * Smooth scrolling functionality
  */
-function initSmoothScrolling() {
+const initSmoothScrolling = () => {
     // Smooth scroll for anchor links
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     for (const link of anchorLinks) {
@@ -231,12 +176,12 @@ function initSmoothScrolling() {
             }
         });
     }
-}
+};
 
 /**
  * Initialize nav wave effect on scroll
  */
-function initNavWave() {
+const initNavWave = () => {
     const nav = document.querySelector('.nav');
     let ticking = false;
 
@@ -257,4 +202,4 @@ function initNavWave() {
             ticking = true;
         }
     }, { passive: true });
-}
+};
