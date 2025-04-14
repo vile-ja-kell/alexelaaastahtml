@@ -1,1245 +1,705 @@
 <!DOCTYPE html>
 <html lang="et">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Majandustulemused</title>
-  </head>
-  <body>
-    <header>
-      <video
-        class="header__video"
-        autoplay
-        muted
-        loop
-        playsinline
-        poster="video/kogukond.jpg"
-      >
-        <source src="video/kogukond.webm" type="video/webm" />
-        <source src="video/kogukond.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <nav class="nav">
-        <div class="nav__logo">
-          <a href="index.html">
-            <img src="img/alexela_logo.svg" alt="Alexela logo" />
-          </a>
-        </div>
-        <div class="nav__subcontainer">
-          <div class="language">
-            <select name="language" id="language" class="language__select">
-              <option value="et">ET</option>
-              <option value="en">EN</option>
-            </select>
-          </div>
-          <button class="menu-toggle" aria-label="Toggle menu">
-            <div class="menu-toggle__icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </button>
-        </div>
-        <div class="menu__container">
-          <div class="menu">
-            <div class="menu__section">
-              <a href="ettevottest.html" class="menu__button">
-                <span class="menu__icon">
-                  <img src="img/icons/1.svg" alt="1" />
-                </span>
-                Ettevõttest
-              </a>
-            </div>
 
-            <div class="menu__section">
-              <a href="jatkusuutlikkus.html" class="menu__button">
-                <span class="menu__icon">
-                  <img src="img/icons/2.svg" alt="2" />
-                </span>
-                Jätkusuutlikkus
-              </a>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Majandustulemused</title>
+</head>
 
-            <div class="menu__section">
-              <a href="majandustulemused.html" class="menu__button">
-                <span class="menu__icon">
-                  <img src="img/icons/3.svg" alt="3" />
-                </span>
-                Majandustulemused
-              </a>
-            </div>
-
-            <div class="menu__section">
-              <a href="aastaaruanne.html" class="menu__button">
-                <span class="menu__icon">
-                  <img src="img/icons/4.svg" alt="4" />
-                </span>
-                Raamatupidamise aastaaruanne
-              </a>
-            </div>
-
-            <div class="menu__section">
-              <a href="pdf.html" class="menu__button">
-                <span class="menu__icon">
-                  <img src="img/icons/5.svg" alt="5" />
-                </span>
-                Vaata PDF aruannet
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div class="hero">
-        <div class="hero__year-container">
-          <img
-            src="img/header_03.svg"
-            alt="Aasta"
-            class="hero__year-animation"
-          />
-        </div>
-        <div class="hero__content">
-          <h1>Majandus&shy;tulemused</h1>
-        </div>
-        <a href="#majandus" class="btn btn--primary">
-          Majandus&shy;tulemused
-          <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+<body>
+  <header>
+    <video class="header__video" autoplay muted loop playsinline poster="video/majandustulemused.jpg">
+      <source src="video/majandustulemused-1.webm" type="video/webm" />
+      <source src="video/majandustulemused-1.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <nav class="nav">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="img/alexela_logo.svg" alt="Alexela logo" />
         </a>
       </div>
-    </header>
-    <main class="waves-animation">
-      <section class="section--top" id="quicklinks">
-        <h2 class="text-left">Leia kiirelt</h2>
-        <nav class="quicklinks" aria-label="Quick navigation">
-          <a
-            class="quicklinks__item"
-            href="ettevottest.html"
-            aria-label="Info ettevõttest"
-          >
-            <img
-              src="img/icons/1.svg"
-              alt="Number 1 ikoon"
-              class="quicklinks__icon"
-            />
-            <h3>Ettevõttest</h3>
-          </a>
-          <a
-            class="quicklinks__item"
-            href="jatkusuutlikkus.html"
-            aria-label="Info ettevõttest"
-          >
-            <img
-              src="img/icons/2.svg"
-              alt="Number 2 ikoon"
-              class="quicklinks__icon"
-            />
-            <h3>Jätkusuutlikkus</h3>
-          </a>
-          <a
-            class="quicklinks__item"
-            href="majandustulemused.html"
-            aria-label="Info ettevõttest"
-          >
-            <img
-              src="img/icons/3.svg"
-              alt="Number 3 ikoon"
-              class="quicklinks__icon"
-            />
-            <h3>Majandus&shy;tulemused</h3>
-          </a>
-          <a
-            class="quicklinks__item"
-            href="aastaaruanne.html"
-            aria-label="Info ettevõttest"
-          >
-            <img
-              src="img/icons/4.svg"
-              alt="Number 4 ikoon"
-              class="quicklinks__icon"
-            />
-            <h3>Aastaaruanne</h3>
-          </a>
-          <a
-            class="quicklinks__item"
-            href="aastaaruanne.pdf"
-            aria-label="Info ettevõttest"
-          >
-            <img
-              src="img/icons/5.svg"
-              alt="Number 5 ikoon"
-              class="quicklinks__icon"
-            />
-            <h3>Vaata PDF-i</h3>
-          </a>
-        </nav>
-      </section>
-      <section class="section--content">
-        <article class="image-text-content-block block--image-right">
-          <figure class="block__image">
-            <img src="img/kytuseveok.jpg" alt="Kütuse veok" class="block__img" />
-          </figure>
-          <div class="block__text">
-            <h2 class="block__title">Vedelkütused ja Alexela Motors</h2>
-            <p class="block__description">
-              Aasta 2023 tähendas AS Alexelale järjekordset edukat aastat. Kõik kriisid, millest mõned jätkuvad ka praegu, tegid meid tugevamaks ja aitasid seada uusi sihte. Kogu piirkonna energeetikasektor on täis väljakutseid ja see on ainult tervitatav. Oluline on mõista, et viimased paar aastat on väliskeskkond mõjutanud ettevõtte äritegevust rohkem, kui ise suudad mingit muudatust või muutust kontrollida. See nõuab tegelikult suurt paindlikkust ja reageerimiskiirust ning hoiab kogu ettevõttes sobivat pinget. Eelmisel aastal oli märkimisväärne saavutus äritehingute aktiviseerimine Rohe Solutions OY-s ja SIA Alexelas. Võime selgelt väita, et oleme Soomes ja Lätis Alexelaga kohal.
-            </p>
-            <a href="#majandus" class="btn btn--primary">
-              Loe edasi
-              <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+      <div class="nav__subcontainer">
+        <div class="language">
+          <select name="language" id="language" class="language__select">
+            <option value="et">ET</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <div class="menu-toggle__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+      <div class="menu__container">
+        <div class="menu">
+          <div class="menu__section">
+            <a href="ettevottest.html" class="menu__button">
+              <span class="menu__icon">
+                <img src="img/icons/1.svg" alt="1" />
+              </span>
+              Ettevõttest
             </a>
           </div>
-        </article>
-      </section>
 
-      <section class="section--content">
-        <article class="image-text-content-block block--image-right">
-          <figure class="block__image">
-            <img src="img/kaubandus.jpg" alt="Alexela pood" class="block__img" />
-          </figure>
-          <div class="block__text">
-            <h2 class="block__title">Kaubandus ja jaeäri</h2>
-            <p class="block__description">
-              Kaubanduse osatähtsus lisaväärtusena kasvab aastast aastasse. Meie eesmärk on pakkuda kliendile mugavat teenust ja suurepärast teenindust, järgides seejuures jätkusuutlikkuse eesmärke.
-            </p>
-            <a href="#majandus" class="btn btn--primary">
-              Loe edasi
-              <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          <div class="menu__section">
+            <a href="jatkusuutlikkus.html" class="menu__button">
+              <span class="menu__icon">
+                <img src="img/icons/2.svg" alt="2" />
+              </span>
+              Jätkusuutlikkus
             </a>
           </div>
-        </article>
-      </section>
 
-
-      <section class="section--content section--color section--flamingo waves-animation">
-        <article class="image-text-content-block block--image-right">
-          <figure class="block__image">
-            <img src="img/lng-terminal.jpg" alt="LNG terminal" class="block__img" />
-          </figure>
-          <div class="block__text">
-            <h2 class="block__title">Gaasilised kütused</h2>
-            <div class="block__description">
-              <p>
-                Mootorikütusena kasutatavat veeldatud naftagaasi (LPG) ja surumaagaasi (CNG) on viimastel aastatel enim mõjutanud jätkuv sõda Ukrainas.
-              </p>
-              <p>
-                Kui 2022. aastal nägi Euroopa rekordilisi maagaasi hindu, siis 2023. aastal hinnad normaliseerusid ning mõjutasid ka transpordikütusena kasutatava CNG hinda ja koguseid. Hea meel oli näha, et 2023. aastal müüdud kogused ületasid sõjaeelse aasta mahte enam kui 7%. CNG-na kasutatav biometaan on endiselt kõige keskkonnasäästlikum transpordikütus. Järgnevatel aastatel tõusev diislikütuse aktsiis ja 2027. aastal rakenduv CO₂ maks transpordikütustele tõstab biometaani konkurentsivõimet veelgi.</p>
-            </div>
-            <a href="#majandus" class="btn btn--primary">
-              Loe edasi
-              <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          <div class="menu__section">
+            <a href="majandustulemused.html" class="menu__button">
+              <span class="menu__icon">
+                <img src="img/icons/3.svg" alt="3" />
+              </span>
+              Majandustulemused
             </a>
           </div>
-        </article>
-      </section>
 
-      <section class="section--content">
-        <article class="image-text-content-block block--image-right">
-          <figure class="block__image">
-            <img src="img/e-tankla.jpg" alt="Alexela laadimisjaam" class="block__img" />
-          </figure>
-          <div class="block__text">
-            <h2 class="block__title">Elekter ja e-mobiilsus</h2>
-            <p class="block__description">
-              2023. aasta algas Eesti elektriturul olukorras, kus 75% eraklientidest kasutasid riigi loodud universaalteenust. Samal ajal liikus jaanuarikuu börsihind allapoole universaalteenuse hinda. Eraisikutest klientidel olid endiselt meeles 2022. aasta kõrged hinnad ning neil puudus usaldus nii börsipakettide kui ka fikseeritud hindadega pakettide suhtes
-            </p>
-            <a href="#majandus" class="btn btn--primary">
-              Loe edasi
-              <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          <div class="menu__section">
+            <a href="aastaaruanne.html" class="menu__button">
+              <span class="menu__icon">
+                <img src="img/icons/4.svg" alt="4" />
+              </span>
+              Raamatupidamise aastaaruanne
             </a>
           </div>
-        </article>
-      </section>
 
-
-      <section class="section--content section--color section--cream waves-animation">
-        <article class="image-text-content-block block--image-right">
-          <figure class="block__image">
-            <img src="img/solar.jpg" alt="Päikesepatarei" class="block__img" />
-          </figure>
-          <div class="block__text">
-            <h2 class="block__title">Alexela Solar</h2>
-            <div class="block__description">
-              <p>
-                Alexela Solar OÜ on AS Alexela tütarettevõtte (100%). Alexela Solar OÜ ärisuund on taastuvenergia projektide nõustamine, planeerimine ja rajamine AS Alexela äriklientidele.</p>
-            </div>
-            <a href="#majandus" class="btn btn--primary">
-              Loe edasi
-              <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          <div class="menu__section">
+            <a href="pdf.html" class="menu__button">
+              <span class="menu__icon">
+                <img src="img/icons/5.svg" alt="5" />
+              </span>
+              Vaata PDF aruannet
             </a>
-          </div>
-        </article>
-      </section>
-
-      <section class="section--content">
-        <article class="content-block">
-          <h2 class="block__title">
-            Biometaani tootmine
-          </h2>
-
-          <div class="table">
-            <table>
-              <thead>
-                <tr class="table__header bg-flamingo">
-                  <th class="table__header-text text-left">Suhtarv</th>
-                  <th class="table__header-text text-right">2023</th>
-                  <th class="table__header-text text-right">2022</th>
-                  <th class="table__header-text text-right">2021</th>
-                  <th class="table__header-text text-right">2020</th>
-                </tr>
-                <tr class="visually-hidden">
-                  <th scope="col">Teema</th>
-                  <th scope="col">2023</th>
-                  <th scope="col">2022</th>
-                  <th scope="col">2021</th>
-                  <th scope="col">2020</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Müügitulud (tuh €)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    617 909
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    620 384
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    367 799
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    249 839
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Müügitulude kasv(%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    -0,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    68,7%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    47,2%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,9%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Puhaskasum (tuh€)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    8 697
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    14 612
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    8 320
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    3 382
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Puhasrentaablus(%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,3%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,4%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Lühiajaliste kohustuste kattekordaja
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,01
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,01
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,69
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,91
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    ROA (%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,8%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    4,2%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    3,6%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,1%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    ROE (%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    6,1%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    11,1%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    10,7%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    4,7%
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p>
-            2023. aastal viisime läbi Alexela oluliste teemade (Materiality Topics) hindamise. Analüüsisime, millist mõju avaldab Alexela igale teemale ja vastupidi, millist mõju avaldavad need teemad ettevõttele. Samuti võtsime arvesse sisemiste ja väliste huvipoolte jaoks olulisi teemasid, mis mõjutavad nende otsuste langetamist. Selle tulemusena tuvastasime olulised teemad, millele ettevõte peaks kõige rohkem tähelepanu ja ressursse suunama ning millel on suurim mõju.
-          </p>
-          <a href="#" class="btn btn--primary"
-            >Loe edasi<img
-              src="img/icons/chevron-right.svg"
-              alt="Arrow right icon"
-          /></a>
-        </article>
-      </section>
-
-      <section class="section--content section--color section--mint waves-animation">
-        <article class="image-text-content-block block--image-right">
-          <figure class="block__image">
-            <img src="img/maantee.jpg" alt="Sügisene maantee" class="block__img" />
-          </figure>
-          <div class="block__text">
-            <h2 class="block__title">Rohe solutions ja Hamina LNG</h2>
-            <div class="block__description">
-              <p>
-                Energiasalve vesisalvesti on ainuke Euroopa Liidu ühishuviprojektide hulka kuuluv energia salvestiprojekt PõhjaBalti piirkonnas.</p>
-            </div>
-            <a href="#majandus" class="btn btn--primary">
-              Loe edasi
-              <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
-            </a>
-          </div>
-        </article>
-      </section>
-
-      <section class="section--content">
-        <article class="image-text-content-block block--image-right">
-          <figure class="block__image">
-            <img src="img/lillevali.jpg" alt="Lilleväli" class="block__img" />
-          </figure>
-          <div class="block__text">
-            <h2 class="block__title">Digitaliseerimine</h2>
-            <p class="block__description">
-              Alexela Solar OÜ on AS Alexela tütarettevõtte (100%). Alexela Solar OÜ ärisuund on taastuvenergia projektide nõustamine, planeerimine ja rajamine AS Alexela äriklientidele.
-            </p>
-            <a href="#majandus" class="btn btn--primary">
-              Loe edasi
-              <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
-            </a>
-          </div>
-        </article>
-      </section>
-
-      <section class="section--content section--color section--cream waves-animation">
-        <article class="content-block">
-          <h2 class="block__title">
-            Investeeringud
-          </h2>
-
-          <p>
-            AS Alexela investeeris 2023. aastal üle 16,5 miljoni euro erinevatesse projektidesse, millest suurimad olid Täkupoisi energiajaam Pärnu lähedal Saugas, uued poed Haabersti, Viljandi ja Jüri tanklates ning Tõrva poe rekonstrueerimine. Jätkusid investeeringud e-mobiilsuse valdkonda, kus on kiire hooga laienenud Eestit kattev elektrilaadijate võrgustik, ja uude ajajärku jõuti ka balloonigaasi nutikappidega, mis muudab kliendile toote lihtsasti kättesaadavamaks ja toote olemasolu kiiresti kontrollitavaks. 
-          </p>
-          <a href="#" class="btn btn--primary"
-            >Loe edasi<img
-              src="img/icons/chevron-right.svg"
-              alt="Arrow right icon"
-          /></a>
-        </article>
-      </section>
-
-      <section class="section--content">
-        <article class="content-block">
-          <h2 class="block__title">
-            Konsolideeritud bilanss
-          </h2>
-
-          <div class="table">
-            <table>
-              <thead>
-                <tr class="table__header bg-flamingo">
-                  <th class="table__header-text text-left">Suhtarv</th>
-                  <th class="table__header-text text-right">2023</th>
-                  <th class="table__header-text text-right">2022</th>
-                  <th class="table__header-text text-right">2021</th>
-                  <th class="table__header-text text-right">2020</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Müügitulud (tuh €)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    617 909
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    620 384
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    367 799
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    249 839
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Müügitulude kasv(%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    -0,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    68,7%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    47,2%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,9%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Puhaskasum (tuh€)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    8 697
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    14 612
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    8 320
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    3 382
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Puhasrentaablus(%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,3%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,4%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Lühiajaliste kohustuste kattekordaja
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,01
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,01
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,69
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,91
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    ROA (%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,8%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    4,2%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    3,6%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,1%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    ROE (%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    6,1%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    11,1%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    10,7%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    4,7%
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
-      </section>
-
-      <section class="section--content">
-        <article class="content-block">
-          <h2 class="block__title">
-            Konsolideeritud kasumiaruanne
-          </h2>
-          <div class="table">
-            <table>
-              <thead>
-                <tr class="table__header bg-flamingo">
-                  <th class="table__header-text text-left">Suhtarv</th>
-                  <th class="table__header-text text-right">2023</th>
-                  <th class="table__header-text text-right">2022</th>
-                  <th class="table__header-text text-right">2021</th>
-                  <th class="table__header-text text-right">2020</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Müügitulud (tuh €)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    617 909
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    620 384
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    367 799
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    249 839
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Müügitulude kasv(%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    -0,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    68,7%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    47,2%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,9%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Puhaskasum (tuh€)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    8 697
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    14 612
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    8 320
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    3 382
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Puhasrentaablus(%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,3%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,4%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Lühiajaliste kohustuste kattekordaja
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,01
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,01
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,69
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,91
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    ROA (%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,8%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    4,2%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    3,6%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,1%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    ROE (%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    6,1%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    11,1%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    10,7%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    4,7%
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
-      </section>
-
-      <section class="section--content">
-        <article class="content-block">
-          <h2 class="block__title">
-            Konsolideeritud koondkasumiaruanne
-          </h2>
-          <div class="table">
-            <table>
-              <thead>
-                <tr class="table__header bg-flamingo">
-                  <th class="table__header-text text-left">Suhtarv</th>
-                  <th class="table__header-text text-right">2023</th>
-                  <th class="table__header-text text-right">2022</th>
-                  <th class="table__header-text text-right">2021</th>
-                  <th class="table__header-text text-right">2020</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Müügitulud (tuh €)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    617 909
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    620 384
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    367 799
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    249 839
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Müügitulude kasv(%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    -0,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    68,7%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    47,2%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,9%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Puhaskasum (tuh€)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    8 697
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    14 612
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    8 320
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    3 382
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Puhasrentaablus(%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,3%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,4%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Lühiajaliste kohustuste kattekordaja
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,01
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,01
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,69
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,91
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    ROA (%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,8%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    4,2%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    3,6%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,1%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    ROE (%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    6,1%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    11,1%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    10,7%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    4,7%
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
-      </section>
-
-      <section class="section--content">
-        <article class="content-block">
-          <h2 class="block__title">
-            Konsolideeritud rahavoogude aruanne
-          </h2>
-          <div class="table">
-            <table>
-              <thead>
-                <tr class="table__header bg-flamingo">
-                  <th class="table__header-text text-left">Suhtarv</th>
-                  <th class="table__header-text text-right">2023</th>
-                  <th class="table__header-text text-right">2022</th>
-                  <th class="table__header-text text-right">2021</th>
-                  <th class="table__header-text text-right">2020</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Müügitulud (tuh €)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    617 909
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    620 384
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    367 799
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    249 839
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Müügitulude kasv(%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    -0,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    68,7%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    47,2%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,9%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Puhaskasum (tuh€)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    8 697
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    14 612
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    8 320
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    3 382
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Puhasrentaablus(%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,3%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,4%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Lühiajaliste kohustuste kattekordaja
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,01
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,01
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,69
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,91
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    ROA (%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,8%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    4,2%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    3,6%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,1%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    ROE (%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    6,1%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    11,1%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    10,7%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    4,7%
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
-      </section>
-
-      <section class="section--content">
-        <article class="content-block">
-          <h2 class="block__title">
-            Konsolideeritud omakapitali muutuste aruanne
-          </h2>
-          <div class="table">
-            <table>
-              <thead>
-                <tr class="table__header bg-flamingo">
-                  <th class="table__header-text text-left">Suhtarv</th>
-                  <th class="table__header-text text-right">2023</th>
-                  <th class="table__header-text text-right">2022</th>
-                  <th class="table__header-text text-right">2021</th>
-                  <th class="table__header-text text-right">2020</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Müügitulud (tuh €)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    617 909
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    620 384
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    367 799
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    249 839
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Müügitulude kasv(%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    -0,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    68,7%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    47,2%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,9%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Puhaskasum (tuh€)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    8 697
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    14 612
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    8 320
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    3 382
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Puhasrentaablus(%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,4%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,3%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,4%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Lühiajaliste kohustuste kattekordaja
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,01
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1,01
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,69
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0,91
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    ROA (%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,8%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    4,2%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    3,6%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    2,1%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    ROE (%)
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    6,1%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    11,1%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    10,7%
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    4,7%
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
-      </section>
-
-    </main>
-
-    <footer>
-      <div class="footer__container">
-        <div class="footer__content">
-          <div class="footer__left">
-            <div class="footer__logo">
-              <img src="img/alexela_logo.svg" alt="Alexela" />
-            </div>
-            <div class="footer__contact">
-              <strong>Alexela AS</strong>
-              <span>Roseni 11, 10111 Tallinn</span>
-              <a href="mailto:alexela@alexela.ee" class="footer__contact__item">
-                <img src="img/icons/email.svg" alt="Email" />
-                <span>alexela@alexela.ee</span>
-              </a>
-              <a href="tel:+372629000" class="footer__contact__item">
-                <img src="img/icons/Phone.svg" alt="Phone" />
-                <span>+ 372 629 000</span>
-              </a>
-            </div>
-          </div>
-          <div class="footer__right">
-            <div class="footer__social">
-              <a href="https://www.alexela.ee" class="social__link"
-                ><span class="social__icon-mask icon-monogram"></span> www.alexela.ee</a
-              >
-              <a href="#" class="social__icon">
-                <span class="social__icon-mask icon-facebook"></span>
-                <span>Facebook</span>
-              </a>
-              <a href="#" class="social__icon">
-                <span class="social__icon-mask icon-instagram"></span>
-                <span>Instagram</span>
-              </a>
-              <a href="#" class="social__icon">
-                <span class="social__icon-mask icon-youtube"></span>
-                <span>Youtube</span>
-              </a>
-            </div>
-            <div class="footer__certification">
-              <img src="img/iso-9001.svg" alt="ISO 9001 Certified" />
-            </div>
           </div>
         </div>
       </div>
-    </footer>
-    <script src="main.js"></script>
-  </body>
+    </nav>
+    <div class="hero">
+      <div class="hero__year-container">
+        <img src="img/header_03.svg" alt="Aasta" class="hero__year-animation" />
+      </div>
+      <div class="hero__content">
+        <h1>Majandus&shy;tulemused</h1>
+      </div>
+      <a href="#majandus" class="btn btn--primary">
+        Majandus&shy;tulemused
+        <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+      </a>
+    </div>
+  </header>
+  <main class="waves-animation">
+    <section class="section--top" id="quicklinks">
+      <h2 class="text-left">Leia kiirelt</h2>
+      <nav class="quicklinks" aria-label="Quick navigation">
+        <a class="quicklinks__item" href="ettevottest.html" aria-label="Info ettevõttest">
+          <img src="img/icons/1.svg" alt="Number 1 ikoon" class="quicklinks__icon" />
+          <h3>Ettevõttest</h3>
+        </a>
+        <a class="quicklinks__item" href="jatkusuutlikkus.html" aria-label="Info ettevõttest">
+          <img src="img/icons/2.svg" alt="Number 2 ikoon" class="quicklinks__icon" />
+          <h3>Jätkusuutlikkus</h3>
+        </a>
+        <a class="quicklinks__item" href="majandustulemused.html" aria-label="Info ettevõttest">
+          <img src="img/icons/3.svg" alt="Number 3 ikoon" class="quicklinks__icon" />
+          <h3>Majandus&shy;tulemused</h3>
+        </a>
+        <a class="quicklinks__item" href="aastaaruanne.html" aria-label="Info ettevõttest">
+          <img src="img/icons/4.svg" alt="Number 4 ikoon" class="quicklinks__icon" />
+          <h3>Aastaaruanne</h3>
+        </a>
+        <a class="quicklinks__item" href="aastaaruanne.pdf" aria-label="Info ettevõttest">
+          <img src="img/icons/5.svg" alt="Number 5 ikoon" class="quicklinks__icon" />
+          <h3>Vaata PDF-i</h3>
+        </a>
+      </nav>
+    </section>
+
+    <section class="section--content">
+      <article class="image-text-content-block block--image-right">
+        <figure class="block__image">
+          <img src="img/kytuseveok.jpg" alt="Kütuse veok" class="block__img" />
+        </figure>
+        <div class="block__text">
+          <h2 class="block__title">Vedelkütused</h2>
+          <strong>Vedelkütuste turg aastal 2024: väljakutsed ja kohanemine</strong>
+          <p class="block__description">
+            Aasta 2024 tõi vedelkütuste turul jätkuvalt suuri väljakutseid, kinnitades vajaduse olla valmis
+            ootamatusteks ja kiiresti reageerima turgu mõjutavatele sündmustele.</p>
+          <p>
+            Vedelkütuste turg jäi suuresti välistest teguritest sõltuvaks. Kõige suurema mõjuga olid Venemaa
+            agressioonisõda Ukraina vastu ja poliitilised otsused lähiriikide, suurriikide ning OPEC+ liikmesriikide
+            poolt. Üldiselt on Euroopa turg nüüdseks kohanenud uute tarneahelatega.
+
+          </p>
+          <a href="#majandus" class="btn btn--primary">
+            Loe edasi
+            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          </a>
+        </div>
+      </article>
+    </section>
+
+
+    <section class="section--content section--color section--flamingo waves-animation">
+      <article class="image-text-content-block block--image-right">
+        <figure class="block__image">
+          <img src="img/lng-terminal.jpg" alt="LNG terminal" class="block__img" />
+        </figure>
+        <div class="block__text">
+          <h2 class="block__title">Gaasilised kütused</h2>
+          <strong>Gaasituru arengud</strong>
+          <div class="block__description">
+            <p>
+              Aasta 2022 rekordilised gaasihinnad mõjutasid jätkuvalt ka 2024. aastat, eriti äriklientide
+              konservatiivsete valikute näol, kui kaaluti sõidukiparkide üleviimist keskkonnasõbralikumatele kütustele.
+              Autotootjate otsus lõpetada 2024. aastal CNG-l töötavate sõidukite tootmine avaldab järgmistel aastatel
+              mõju CNG tarbimisele erakliendi segmendis.
+            </p>
+            <p>
+              LNG turumahud jätkasid kasvu 2024. aastal, kuna see kütus pakub madala seadmete investeeringute maksumust
+              ja on kilomeetrikulu poolest kõige odavam. Võrreldes 2023. aastaga kasvas LNG turumahu maht seitse
+              protsenti.</p>
+          </div>
+          <a href="#majandus" class="btn btn--primary">
+            Loe edasi
+            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section--content">
+      <article class="image-text-content-block block--image-right">
+        <figure class="block__image">
+          <img src="img/e-tankla.jpg" alt="Alexela laadimisjaam" class="block__img" />
+        </figure>
+        <div class="block__text">
+          <h2 class="block__title">Elekter</h2>
+          <strong>Alexela elektrimüügi turuosa jätkuv kasv</strong>
+          <p class="block__description">
+            Eesti elektriturg algas 2024. aastal pingeliselt, kuna jaanuarikuu külmad ilmad tõid kaasa ülikõrged
+            elektrihinnad. Lisaks katkes 26. jaanuari varahommikul ootamatult Estlink 2, suurim elektriühendus Soomega.
+            See sündmus mõjutas Eesti elektritarbijaid veel kaheksa kuu jooksul ja tõi kaasa kõrgemad elektrihinnad.
+          </p>
+          <a href="#majandus" class="btn btn--primary">
+            Loe edasi
+            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section--content">
+      <article class="image-text-content-block block--image-right">
+        <figure class="block__image">
+          <img src="img/e-tankla.jpg" alt="Alexela laadimisjaam" class="block__img" />
+        </figure>
+        <div class="block__text">
+          <h2 class="block__title">E-Mobiilsus</h2>
+          <strong>E-mobiilsuse lahenduste ja teenuste laienemine</strong>
+          <p class="block__description">
+            E-mobiilsuse valdkonnas toimusid 2024. aastal märkimisväärsed arengud nii avaliku laadimistaristu kui ka
+            klientidele pakutavate toodete ja teenuste osas. Aastatepikkune kogemus ja tegutsemine võimaldas meil veelgi
+            täpsemalt kujundada arengut ja pakkuda klientidele suurimat väärtust, pakkudes laadimisteenuseid kodus,
+            teekonnal ja sihtkohas.
+          </p>
+          <a href="#majandus" class="btn btn--primary">
+            Loe edasi
+            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section--content">
+      <article class="image-text-content-block block--image-right">
+        <figure class="block__image">
+          <img src="img/kaubandus.jpg" alt="Alexela pood" class="block__img" />
+        </figure>
+        <div class="block__text">
+          <h2 class="block__title">Kaubandus ja jaeäri</h2>
+          <strong>Tanklate kaubanduse areng ja Minu Alexela programm </strong>
+          <p class="block__description">
+            Kaubanduse osatähtsus lisaväärtusena kasvab aastast aastasse. Meie eesmärk on pakkuda kliendile mugavat
+            teenust ja suurepärast teenindust, järgides seejuures jätkusuutlikkuse eesmärke.
+          </p>
+          <a href="#majandus" class="btn btn--primary">
+            Loe edasi
+            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section--content">
+      <article class="image-text-content-block block--image-right">
+        <figure class="block__image">
+          <img src="img/tankla.jpg" alt="Alexela Täkupoiss" class="block__img" />
+        </figure>
+        <div class="block__text">
+          <h2 class="block__title">Alexela Täkupoiss</h2>
+          <strong>Jätkus Alexela Täkupoisi energiajaama kontseptsiooni areng </strong>
+          <p class="block__description">
+            Aastal 2024 jätkasime Alexela Täkupoisi uudse energiajaama kontseptsiooni arendamist, mis sisaldab
+            kohvik-poodi, 100kohalist tippkoka kvaliteediga maanteerestorani, erinevaid tankimisvõimalusi ning
+            lisateenuseid nagu gaasikapid, haagiserent, purgimispunkt ja veevõtukoht matkaautodele. Lisaks pakume
+            pesemisvõimalusi kaugsõiduautojuhtidele, kohalike väikeettevõtjate toodetega suveniiririiuleid turistidele
+            ning eripakkumisi giididele, bussijuhtidele ja ürituskorraldajatele.
+          </p>
+          <a href="#majandus" class="btn btn--primary">
+            Loe edasi
+            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section--content">
+      <article class="image-text-content-block block--image-right">
+        <figure class="block__image">
+          <img src="img/lillevali.jpg" alt="Lilleväli" class="block__img" />
+        </figure>
+        <div class="block__text">
+          <h2 class="block__title">Digitaliseerimine</h2>
+          <strong>Tehnoloogia ja digitaliseerimine </strong>
+          <p class="block__description">
+            Aastal 2024 suunas AS Alexela üle kahe miljoni euro tehnoloogia ja digitaliseerimise arendamisse, et pakkuda
+            innovaatilisi lahendusi, mis lihtsustavad klientide igapäevaelu ja muudavad ettevõtte sisemised protsessid
+            tõhusamaks. Meie eesmärk on, et tehnoloogia oleks strateegiline eelis, mis aitab pakkuda paremat teenust,
+            suurendada efektiivsust ja kiirelt reageerida turu muutuvatele nõudmistele.
+          </p>
+          <a href="#majandus" class="btn btn--primary">
+            Loe edasi
+            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section--content">
+      <article class="content-block">
+        <h2 class="block__title">
+          Tark elekter
+        </h2>
+        <strong>
+          Tark Elekter – innovaatiline teenus väiketootjatele ja salvestajatele
+        </strong>
+        <p>
+          Aasta 2024 märtsis tutvustasime turul uut platvormi Tark Elekter, mis on mõeldud elektri väiketootjatele ja
+          salvestajatele. Teenus aitab juhtida elektri tootmist ja salvestamist, pakkudes maksimaalset kasu ja aidates
+          vähendada elektriarveid.
+        </p>
+        <a href="#" class="btn btn--primary">Loe edasi<img src="img/icons/chevron-right.svg"
+            alt="Arrow right icon" /></a>
+      </article>
+    </section>
+
+    <section class="section--content">
+      <article class="content-block">
+        <h2 class="block__title">
+          Alexela Motors 
+        </h2>
+        <strong>Alexela põhiäri toetamine </strong>
+        <p>
+          AS Alexela Motors, AS-i Alexela tütarettevõte, pakub vedelkütuste, sealhulgas LPG, LNG ja balloonigaasi, logistika- ja transporditeenuseid. Lepingupartneriteks on Rohe Solutions Oy, kellele pakutakse LNG transporditeenust Soomes, ja OÜ Oisu Biogaas, millele osutatakse CNG logistika- ja vedude teenuseid Eestis. 
+        </p>
+        <a href="#" class="btn btn--primary">Loe edasi<img src="img/icons/chevron-right.svg"
+            alt="Arrow right icon" /></a>
+      </article>
+    </section>
+
+
+    <section class="section--content section--color section--cream waves-animation">
+      <article class="image-text-content-block block--image-right">
+        <figure class="block__image">
+          <img src="img/solar.jpg" alt="Päikesepatarei" class="block__img" />
+        </figure>
+        <div class="block__text">
+          <h2 class="block__title">Alexela Repower</h2>
+          <strong>OÜ Alexela rePower – jätkusuutlikud energia- ja innovatsioonilahendused </strong>
+          <div class="block__description">
+            <p>
+              OÜ Alexela rePower, endine OÜ Alexela Solar, on AS-i Alexela tütarettevõte, mis koondab kõik tulevikutehnoloogiate arendusprojektid ühe katuse alla. 2024. aastal restruktureeritud ettevõtte eesmärgiks on lihtsustada arenduste juhtimist ning toetada nende täiendavat kasvu. </p>
+          </div>
+          <a href="#majandus" class="btn btn--primary">
+            Loe edasi
+            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section--content section--color section--mint waves-animation">
+      <article class="image-text-content-block block--image-right">
+        <figure class="block__image">
+          <img src="img/maantee.jpg" alt="Sügisene maantee" class="block__img" />
+        </figure>
+        <div class="block__text">
+          <h2 class="block__title">Rohe Solutions OY</h2>
+          <strong>Rohe Solutions Oy – LNG ja bio-LNG lahendused Soome turul </strong>
+          <div class="block__description">
+            <p>
+              Rohe Solutions Oy on AS-i Alexela tütarettevõte, mis tegutseb Soome turul maagaasi ja LNG müüjana. Aastast 2024 on ettevõtte peamine fookus LNG lahenduste pakkumisel tööstusklientidele ja LNG-laevade punkerdamisel. Aasta 2024 jooksul müüdi Soomes 165 GWh maagaasi ja 120 GWh LNG-d. </p>
+          </div>
+          <a href="#majandus" class="btn btn--primary">
+            Loe edasi
+            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section--content">
+      <article class="content-block">
+        <h2 class="block__title">
+          SIA Aexela 
+        </h2>
+        <strong>SIA Alexela – elektri ja maagaasi müük Lätis </strong>
+        <p>
+          SIA Alexela on AS-i Alexela tütarettevõte, mis tegutseb Läti turul elektri ja maagaasi müügiga äri- ning eraklientidele. Aastal 2024 ulatus maagaasiportfelli maht 139 GWh ja elektriportfelli maht 162 GWh. 
+        </p>
+        <a href="#" class="btn btn--primary">Loe edasi<img src="img/icons/chevron-right.svg"
+            alt="Arrow right icon" /></a>
+      </article>
+    </section>
+
+    <section class="section--content">
+      <article class="image-text-content-block block--image-right">
+        <figure class="block__image">
+          <img src="img/lng-terminal.jpg" alt="Hamina LNG terminal" class="block__img" />
+        </figure>
+        <div class="block__text">
+          <h2 class="block__title">Hamina LNG terminal</h2>
+          <strong>Hamina LNG Terminal – Soome ja Eesti klientide teenindamine </strong>
+          <p class="block__description">
+            Hamina LNG terminali käivitamine 2022. aasta sügistalvel võimaldas Alexela abiga pakkuda Soome ja Eesti klientidele soodsaima logistilise kuluga väljastpoolt Venemaad tarnitud LNG-d. Tegemist on esimese LNG-terminaliga Soomes, millel on ühendus Soome gaasiülekandevõrguga, ning terminali mahutis saab hoiustada kuni 30 000 m³ LNG-d. 
+          </p>
+          <a href="#majandus" class="btn btn--primary">
+            Loe edasi
+            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section--content">
+      <article class="content-block">
+        <h2 class="block__title">
+          Eesti Biogaas
+        </h2>
+        <strong>Eesti Biogaas – biometaani tootmise kasv </strong>
+        <div class="table">
+          <table>
+            <thead>
+              <tr class="table__header bg-flamingo">
+                <th class="table__header-text text-left"></th>
+                <th class="table__header-text text-right">2023</th>
+                <th class="table__header-text text-right">2024</th>
+                <th class="table__header-text text-right">Muutus</th>
+              </tr>
+              <tr class="visually-hidden">
+                <th scope="col">Ettevõtte nimi</th>
+                <th scope="col">aasta</th>
+                <th scope="col">aasta</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table__row">
+                <td class="table__cell table__cell--content">
+                  Tartu Biogaas
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  36 119 GWh
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  41 660 GWh
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  15,3%
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell table__cell--content">
+                  Vinni Biogaas
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  37 701 GWh
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  43 359 GWh
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  15,0%
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell table__cell--content">
+                  Oisu Biogaas
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  33 305 GWh
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  41 112 GWh
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  8 320
+                </td>
+              </tr>
+              <tr class="table__row font-bold">
+                <td class="table__cell table__cell--content">
+                  EBG grupp kokku
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  107 125 GWh
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  126 131 GWh
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  17,7%
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Alexela 50protsendilise osalusega sidusettevõtte Eesti Biogaas tootmismaht kasvas 2024. aastal 17,7 protsenti, ulatudes 126,125 GWh-ni, mis moodustas umbes poole kogu Eestis toodetud biometaanist. 
+        </p>
+        <a href="#" class="btn btn--primary">Loe edasi<img src="img/icons/chevron-right.svg"
+            alt="Arrow right icon" /></a>
+      </article>
+    </section>
+
+    <section class="section--content">
+      <article class="content-block">
+        <h2 class="block__title">
+          ZERO Terrain
+        </h2>
+        <strong>Zero Terrain – Paldiskisse arendatav vesisalvesti projekt </strong>
+        <p>
+          Zero Terrain, endine Energiasalv, arendab Paldiskisse 500 MW võimsusega vesisalvestit, mis on ainus Põhja-Balti piirkonnas Euroopa Liidu ühishuviprojektide hulka kuuluv energiasalvestiprojekt. 
+        </p>
+        <a href="#" class="btn btn--primary">Loe edasi<img src="img/icons/chevron-right.svg"
+            alt="Arrow right icon" /></a>
+      </article>
+    </section>
+
+    <section class="section--content section--color section--cream waves-animation">
+      <article class="content-block">
+        <h2 class="block__title">
+          Investeeringud
+        </h2>
+        <strong>Aasta 2024 oli investeeringute aasta </strong>
+        <p>
+          Aastal 2024 investeeris AS-i Alexela kontsern üle 10,5 miljoni euro erinevatesse projektidesse ja IT-lahendustesse. Suurimad projektid olid Peterburi tee vesinikutankla, mis valmib 2025. aasta kevadeks, Mustakivi tankla soetamine ning brändiuuendus koos IT investeeringutega sisemise efektiivsuse suurendamiseks. Samuti toetasime uusi teenuseid, sealhulgas Tark Elekter, platvormi, mis võimaldab mugavat tootmise, tarbimise ja salvestamise juhtimist. 
+        </p>
+        <a href="#" class="btn btn--primary">Loe edasi<img src="img/icons/chevron-right.svg"
+            alt="Arrow right icon" /></a>
+      </article>
+    </section>
+
+    <section class="section--content">
+      <article class="content-block">
+        <h2 class="block__title">
+          Olulised finantssuhtarvud
+        </h2>
+
+        <div class="table">
+          <table>
+            <thead>
+              <tr class="table__header bg-flamingo">
+                <th class="table__header-text text-left">Suhtarv</th>
+                <th class="table__header-text text-right">2023</th>
+                <th class="table__header-text text-right">2022</th>
+                <th class="table__header-text text-right">2021</th>
+                <th class="table__header-text text-right">2020</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table__row">
+                <td class="table__cell table__cell--content">
+                  Müügitulud (tuh €)
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  617 909
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  620 384
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  367 799
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  249 839
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell table__cell--content">
+                  Müügitulude kasv(%)
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  -0,4%
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  68,7%
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  47,2%
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  0,9%
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell table__cell--content">
+                  Puhaskasum (tuh€)
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  8 697
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  14 612
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  8 320
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  3 382
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell table__cell--content">
+                  Puhasrentaablus(%)
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  1,4%
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  2,4%
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  2,3%
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  1,4%
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell table__cell--content">
+                  Lühiajaliste kohustuste kattekordaja
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  1,01
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  1,01
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  0,69
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  0,91
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell table__cell--content">
+                  ROA (%)
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  2,8%
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  4,2%
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  3,6%
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  2,1%
+                </td>
+              </tr>
+              <tr class="table__row">
+                <td class="table__cell table__cell--content">
+                  ROE (%)
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  6,1%
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  11,1%
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  10,7%
+                </td>
+                <td class="table__cell table__cell--number text-right">
+                  4,7%
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer__container">
+      <div class="footer__content">
+        <div class="footer__left">
+          <div class="footer__logo">
+            <img src="img/alexela_logo.svg" alt="Alexela" />
+          </div>
+          <div class="footer__contact">
+            <strong>Alexela AS</strong>
+            <span>Roseni 11, 10111 Tallinn</span>
+            <a href="mailto:alexela@alexela.ee" class="footer__contact__item">
+              <img src="img/icons/email.svg" alt="Email" />
+              <span>alexela@alexela.ee</span>
+            </a>
+            <a href="tel:+372629000" class="footer__contact__item">
+              <img src="img/icons/Phone.svg" alt="Phone" />
+              <span>+ 372 629 000</span>
+            </a>
+          </div>
+        </div>
+        <div class="footer__right">
+          <div class="footer__social">
+            <a href="https://www.alexela.ee" class="social__link"><span class="social__icon-mask icon-monogram"></span>
+              www.alexela.ee</a>
+            <a href="#" class="social__icon">
+              <span class="social__icon-mask icon-facebook"></span>
+              <span>Facebook</span>
+            </a>
+            <a href="#" class="social__icon">
+              <span class="social__icon-mask icon-instagram"></span>
+              <span>Instagram</span>
+            </a>
+            <a href="#" class="social__icon">
+              <span class="social__icon-mask icon-youtube"></span>
+              <span>Youtube</span>
+            </a>
+          </div>
+          <div class="footer__certification">
+            <img src="img/iso-9001.svg" alt="ISO 9001 Certified" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
 </html>

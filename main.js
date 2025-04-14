@@ -59,8 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Event listeners
-    modalOpenBtn.addEventListener('click', openModal);
-    modalCloseBtn.addEventListener('click', closeModal);
+    if (window.location.pathname.includes('ettevottest.html')) {
+        modalOpenBtn.addEventListener('click', openModal);
+        modalCloseBtn.addEventListener('click', closeModal);
+    }
 
     // Close modal when clicking outside modal content
     modal.addEventListener('click', (e) => {
@@ -203,3 +205,4 @@ const initNavWave = () => {
         }
     }, { passive: true });
 };
+

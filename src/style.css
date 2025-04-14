@@ -156,6 +156,7 @@ header {
   position: fixed;
   color: var(--text-on-dark);
   padding-inline: var(--size-md);
+  text-shadow: 0 0 27px #00000066;
 }
 .hero__content {
   display: grid;
@@ -240,6 +241,7 @@ header {
 .language {
   position: relative;
   display: flex;
+  display: none;
   align-items: center;
 }
 .language__select {
