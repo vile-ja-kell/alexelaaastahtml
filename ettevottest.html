@@ -13,7 +13,7 @@
     <video class="header__video" autoplay muted loop playsinline poster="video/kogukond.jpg">
       <source src="video/kogukond.webm" type="video/webm" />
       <source src="video/kogukond.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
+      Sinu brauser ei toeta video elementi.
     </video>
     <nav class="nav">
       <div class="nav__logo">
@@ -39,145 +39,116 @@
       <div class="menu__container">
         <div class="menu">
           <div class="menu__section">
-            <a href="ettevottest.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/1.svg" alt="1" />
-              </span>
+            <a href="ettevottest.html" class="menu__button menu__button--active">
+              <span class="menu__icon menu__icon--a-monogram"></span>
               Ettevõttest
             </a>
           </div>
 
           <div class="menu__section">
             <a href="jatkusuutlikkus.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/2.svg" alt="2" />
-              </span>
+              <span class="menu__icon menu__icon--greenspark"></span>
               Jätkusuutlikkus
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="majandustulemused.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/3.svg" alt="3" />
-              </span>
-              Majandustulemused
+            <a href="arisuunad.html" class="menu__button">
+              <span class="menu__icon menu__icon--eur"></span>
+              Ärisuunad
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="aastaaruanne.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/4.svg" alt="4" />
-              </span>
-              Raamatupidamise aastaaruanne
+            <a href="finantstulemused.html" class="menu__button">
+              <span class="menu__icon menu__icon--news"></span>
+              Finantstulemused
             </a>
           </div>
 
           <div class="menu__section">
             <a href="pdf.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/5.svg" alt="5" />
-              </span>
-              Vaata PDF aruannet
+              <span class="menu__icon menu__icon--contract"></span>
+              Laadi alla PDF
             </a>
           </div>
         </div>
       </div>
     </nav>
     <div class="hero">
-      <div class="hero__year-container">
-        <img src="img/header_01.svg" alt="Aasta" class="hero__year-animation" />
-      </div>
       <div class="hero__content">
         <h1>Ettevõttest</h1>
       </div>
-      <a href="#majandus" class="btn btn--primary">
-        Majandus&shy;tulemused
-        <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
       </a>
     </div>
   </header>
   <main class="waves-animation">
     <section class="section--top" id="quicklinks">
       <h2 class="text-left">Leia kiirelt</h2>
-      <nav class="quicklinks" aria-label="Quick navigation">
-        <a class="quicklinks__item" href="ettevottest.html" aria-label="Info ettevõttest">
-          <img src="img/icons/1.svg" alt="Number 1 ikoon" class="quicklinks__icon" />
+      <nav class="quicklinks quicklinks--pages" aria-label="Quick navigation">
+        <a
+          class="quicklinks__item"
+          href="ettevottest.html"
+          aria-label="Info ettevõttest"
+        >
+          <img
+            src="img/icons/a-monogram.svg"
+            alt="Alexela logo"
+            class="quicklinks__icon"
+          />
           <h3>Ettevõttest</h3>
         </a>
-        <a class="quicklinks__item" href="jatkusuutlikkus.html" aria-label="Info ettevõttest">
-          <img src="img/icons/2.svg" alt="Number 2 ikoon" class="quicklinks__icon" />
+        <a
+          class="quicklinks__item"
+          href="jatkusuutlikkus.html"
+          aria-label="Info ettevõttest"
+        >
+          <img
+            src="img/icons/greenspark.svg"
+            alt="Lehe ikoon"
+            class="quicklinks__icon"
+          />
           <h3>Jätkusuutlikkus</h3>
         </a>
-        <a class="quicklinks__item" href="majandustulemused.html" aria-label="Info ettevõttest">
-          <img src="img/icons/3.svg" alt="Number 3 ikoon" class="quicklinks__icon" />
-          <h3>Majandus&shy;tulemused</h3>
+        <a
+          class="quicklinks__item"
+          href="arisuunad.html"
+          aria-label="Info ettevõttest"
+        >
+          <img
+            src="img/icons/eur.svg"
+            alt="Euro ikoon"
+            class="quicklinks__icon"
+          />
+          <h3>Ärisuunad</h3>
         </a>
-        <a class="quicklinks__item" href="aastaaruanne.html" aria-label="Info ettevõttest">
-          <img src="img/icons/4.svg" alt="Number 4 ikoon" class="quicklinks__icon" />
-          <h3>Aastaaruanne</h3>
+        <a
+          class="quicklinks__item"
+          href="finantstulemused.html"
+          aria-label="Info ettevõttest"
+        >
+          <img
+            src="img/icons/news.svg"
+            alt="Uudiste ikoon"
+            class="quicklinks__icon"
+          />
+          <h3>Finantstulemused</h3>
         </a>
-        <a class="quicklinks__item" href="aastaaruanne.pdf" aria-label="Info ettevõttest">
-          <img src="img/icons/5.svg" alt="Number 5 ikoon" class="quicklinks__icon" />
-          <h3>Vaata PDF-i</h3>
+        <a
+          class="quicklinks__item"
+          href="pdf.html"
+          aria-label="Info ettevõttest"
+        >
+          <img
+            src="img/icons/contract.svg"
+            alt="Lepingu ikoon"
+            class="quicklinks__icon"
+          />
+          <h3>Laadi alla PDF</h3>
         </a>
       </nav>
     </section>
-    <section class="section--content">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="img/marti-haal.jpg" alt="Marti Hääl" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h2 class="block__title">Juhatuse esimehe pöördumine</h2>
-          <p class="block__description">
-            2024 oli Alexela jaoks muutuste ja kasvu aasta. Oleme jõudnud arengufaasi, kus liigume varasemalt
-            ärimudelitelt uute lahenduste suunas. See üleminek nõuab suuri investeeringuid ja pidevat õppimist, kuid on
-            hädavajalik, et olla tulevikus juhtiv energialahenduste pakkuja regioonis. Tänase suuna õigsust näitavad nii
-            meie turuosa kasv kui ka klientide positiivne hinnang Alexela kuvandile.
 
-          </p>
-          <button class="btn btn--primary btn-modal">
-            Loe edasi
-            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
-          </button>
-        </div>
-      </article>
-    </section>
-
-    <section class="section--content section--color section--flamingo waves-animation">
-      <article class="content-block">
-        <div class="block__text">
-          <h2 class="block__title">Alexelast lühidalt</h2>
-          <div class="block__description">
-            <p>
-              Alexela on Eesti juhtiv energiaettevõte, millel on laiaulatuslik teenuste portfell, mis pakub nutikaid ja
-              keskkonnasõbralikke energialahendusi igapäevaelus – kodus, teel ja sihtkohas. Keskendume
-              investeeringutele, mis muudavad Eesti energiamaastiku sõltumatumaks teistest ning samal ajal ka
-              keskkonnasõbralikumaks. Oleme otsustanud panustada kohaliku toormega põhinevatesse kestlikesse
-              energialahendustesse, nagu bio-LNG, Energiasalv ja Alexela rePower, et tugevdada meie energiajulgeolekut
-              ja vähendada sõltuvust välistest allikatest.
-            </p>
-
-          </div>
-          <a href="#majandus" class="btn btn--primary">
-            Loe edasi
-            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
-          </a>
-        </div>
-
-        <h2 class="block__title">Kodus ja teel</h2>
-        <div class="block__graph">
-          <div class="graph__map">
-            <figure>
-              <img src="img/alexela-scheme-desk.svg" alt="Alexela scheme" class="map__image map__image--desktop" />
-              <img src="img/alexela-scheme-mob.svg" alt="Alexela scheme" class="map__image map__image--mobile" />
-            </figure>
-          </div>
-        </div>
-      </article>
-    </section>
 
     <section class="section--content waves-animation">
       <article class="content-block">
@@ -692,86 +663,7 @@
 
   </main>
 
-  <div class="modal">
-    <div class="modal__content">
-      <button class="btn btn--outline modal__close">
-        <img src="img/icons/close.svg" alt="Sulge" />
-      </button>
-      <h2>Juhatuse esimehe pöördumine</h2>
-      <div class="modal__content-inner">
-        <figure>
-          <img src="img/marti-haal.jpg" alt="Marti Hääl" />
-          <figcaption>Marti Hääl, Alexela juhatuse esimees</figcaption>
-        </figure>
-        <p>2024 oli Alexela jaoks muutuste ja kasvu aasta. Oleme jõudnud arengufaasi, kus liigume varasemalt
-          ärimudelitelt uute lahenduste suunas. See üleminek nõuab suuri investeeringuid ja pidevat õppimist, kuid on
-          hädavajalik, et olla tulevikus juhtiv energialahenduste pakkuja regioonis. Tänase suuna õigsust näitavad nii
-          meie turuosa kasv kui ka klientide positiivne hinnang Alexela kuvandile.</p>
-        <p>Siinse piirkonna energeetikasektorit laiemalt mõjutasid eelmisel aastal majanduslangus, geopoliitilised
-          muutused ja regulatiivne ebakindlus. Siiski suutsime kohaneda, leida võimalusi ja jätkata investeerimist
-          energiajulgeolekusse. Meie fookuses olid kohalike ressursside maksimaalne kasutamine, uute tarneahelate
-          loomine ja varustuskindluse tugevdamine. </p>
-        <h3>Meil on tasakaalustatud energiaportfell ja arendame tulevikulahendusi </h3>
-        <p>Eesti vajab tasakaalustatud energiaportfelli, kus taastuvenergia kõrval on ka juhitavad tootmisvõimsused,
-          pikaajaline salvestus ja tugevad ühendused naaberriikidega. Alexela panustab sellesse, arendades Eesti esimest
-          bio-LNG tarneahelat, rajades Paldiskisse Energiasalve ja investeerides taristuprojektidesse, mis vähendavad
-          sõltuvust Venemaast. </p>
-        <p>
-          2024. aastal jätkasime liikumist tootepõhiselt teenusepõhisele ärimudelile, pakkudes klientidele terviklikke
-          ja nutikaid energialahendusi kodus, teel ja sihtkohas. Kasvatasime tanklavõrku, laiendasime energiateenuseid
-          ja elektrisõidukite laadimisvõrgustikku, tehes Targa Elektri lahenduse tasuta kättesaadavaks Lisaks
-          panustasime taastuvenergiasse, arendades päikese- ja akuparke ning vesinikutanklate lahendusi.
-        </p>
-        <p>Eesti vajab tasakaalustatud energiaportfelli, kus taastuvenergia kõrval on ka juhitavad tootmisvõimsused,
-          pikaajaline salvestus ja tugevad ühendused naaberriikidega. Alexela panustab sellesse, arendades Eesti esimest
-          bio-LNG tarneahelat, rajades Paldiskisse Energiasalve ja investeerides taristuprojektidesse, mis vähendavad
-          sõltuvust Venemaast. </p>
-        <p>2024. aastal jätkasime liikumist tootepõhiselt teenusepõhisele ärimudelile, pakkudes klientidele terviklikke
-          ja nutikaid energialahendusi kodus, teel ja sihtkohas. Kasvatasime tanklavõrku, laiendasime energiateenuseid
-          ja elektrisõidukite laadimisvõrgustikku, tehes Targa Elektri lahenduse tasuta kättesaadavaks Lisaks
-          panustasime taastuvenergiasse, arendades päikese- ja akuparke ning vesinikutanklate lahendusi. </p>
-        <h3>Oleme kasvav regiooni energiapartner</h3>
-        <p>Aastal 2024 laiendasime tegevust Lätis ja Soomes. Meie tütarettevõtted Rohe Solutions Oy Soomes ja SIA
-          Alexela Lätis ehitasid üles uusi läänepõhiseid tarneahelaid ja pakkusid jätkusuutlikke energialahendusi.
-          Hamina LNG terminal Soomes on saanud oluliseks regionaalseks sõlmpunktiks, tagades sõltumatu gaasivarustuse
-          Baltikumile. </p>
-        <p>Samuti viisime lõpule regiooni esimese lääne päritolu LPG tarneahela – Alexela emaettevõte AVH Grupp omandas
-          Riia terminali SIA Latvija Propāna Gāze, kindlustades nii alternatiivse tarnekanali kogu regioonile. </p>
-        <h3>Säilitasime tugeva finantspositsiooni</h3>
-        <p>Vaatamata keerulisele majanduskeskkonnale säilitasime tugeva finantspositsiooni ja investeerisime üle 10
-          miljoni euro innovaatilistesse energialahendustesse. Alexela elektrimüügi turuosa kasvas 19,7 protsendini,
-          tehes meist suuruselt teise Eesti elektrimüüja.</p>
-        <p>Energiasektori hindade volatiilsus ja kõrge Euribor mõjutasid turgu, kuid suutsime säilitada efektiivse
-          kulustruktuuri ja tugevdada ettevõtte kapitalibaasi.</p>
-        <h3>Panustame majandusse, haridusse ja kultuuri</h3>
-        <p>Meie väärtused – Eesti inimeste heaolu kasv, varustuskindluse tagamine, mõistlik energiahind, hariduse,
-          kultuuri ja spordi toetamine ning vastutustundlikkus – ei ole pelgalt sõnad, vaid põhimõtted, mida järgime iga
-          päev.</p>
-        <p>
-          Panustasime Eesti majandusse 182 miljoni euro makstud maksudega ja toetasime haridust, kultuuri ning sporti
-          üle 500 tuhande euroga. Meid tunnustati Eesti kultuurisõbra ja muusika toetaja tiitliga, ning Kantar Emori
-          uuring kinnitas, et Alexela on Eesti spontaanselt tuntuim energiaettevõte ja kuulub ihaldusväärseimate
-          tööandjate hulka.</p>
-        <p>
-          Lisaks seisime Eesti tarbijate huvide eest, aidates ära hoida sagedusreservitasu kehtestamise, mis oleks
-          tähendanud elektrihinna tõusu.
-        </p>
-        <h3>Vaadates tulevikku</h3>
-        <p>Energiasektoris toimub fundamentaalne muutus. Senised lahendused enam ei toimi, kuid uued pole veel
-          täielikult valmis. Selleks, et üleminek oleks sujuv ja jätkusuutlik, vajame kindlaid partnerlusi ja
-          pikaajalist visiooni.</p>
-        <p>
-          Iga ettevõtte ja inimese otsus mõjutab tulevikku – energia ei ole ainult hind, vaid ka väärtused, mis loovad
-          tugevama ja sõltumatuma ühiskonna.</p>
-        <p>Koos loome parema energiatuleviku!</p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p>Marti Hääl</br>Juhatuse esimees</p>
-
-      </div>
-    </div>
-  </div>
+  
 
   <footer>
     <div class="footer__container">

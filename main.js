@@ -31,52 +31,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Modal functionality
+    // Check if the page contains a modal
     const modal = document.querySelector('.modal');
-    const modalContent = document.querySelector('.modal__content');
-    const modalOpenBtn = document.querySelector('.btn-modal');
-    const modalCloseBtn = document.querySelector('.modal__close');
+    if (modal) {
+        const modalOpenBtn = document.querySelector('.btn-modal');
+        const modalCloseBtn = document.querySelector('.modal__close');
 
-    // Function to open modal
-    const openModal = () => {
-        modal.style.display = 'block';
-        // Trigger reflow to ensure the transition works
-        modal.offsetHeight;
-        modal.classList.add('is-open');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-    };
+        // Function to open modal
+        const openModal = () => {
+            modal.style.display = 'block';
+            modal.offsetHeight; // Trigger reflow
+            modal.classList.add('is-open');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        };
 
-    // Function to close modal
-    const closeModal = () => {
-        modal.classList.remove('is-open');
-        // Wait for the animation to finish before hiding the modal
-        setTimeout(() => {
-            if (!modal.classList.contains('is-open')) {
-                modal.style.display = 'none';
-                document.body.style.overflow = ''; // Restore scrolling
-            }
-        }, 300); // Match this with the CSS transition duration
-    };
+        // Function to close modal
+        const closeModal = () => {
+            modal.classList.remove('is-open');
+            setTimeout(() => {
+                if (!modal.classList.contains('is-open')) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+            }, 300); // Match with CSS transition duration
+        };
 
-    // Event listeners
-    if (window.location.pathname.includes('ettevottest.html')) {
+        // Add event listeners
         modalOpenBtn.addEventListener('click', openModal);
         modalCloseBtn.addEventListener('click', closeModal);
+
+        // Close modal when clicking outside modal content
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal on escape key press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+                closeModal();
+            }
+        });
     }
-
-    // Close modal when clicking outside modal content
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-
-    // Close modal on escape key press
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('is-open')) {
-            closeModal();
-        }
-    });
 });
 
 

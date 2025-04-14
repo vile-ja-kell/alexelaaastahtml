@@ -165,19 +165,6 @@ header {
   z-index: 1;
 }
 
-.hero__year-container {
-  margin-bottom: -2rem;
-  @media (--viewport-md) {
-    margin-bottom: -3rem;
-  }
-  @media (--viewport-lg) {
-    margin-bottom: -4rem;
-  }
-}
-.hero__year-image {
-  /* Styles for the year image */
-}
-
 /* Menu toggle */
 .menu-toggle {
   background: transparent;
@@ -603,7 +590,7 @@ figcaption {
   &__item {
     display: flex;
     align-items: center;
-    gap: var(--gap-xxs);
+    gap: var(--gap-sm);
   }
   &__label {
     font-size: clamp(var(--font-sm), 2vw, var(--font-xl));

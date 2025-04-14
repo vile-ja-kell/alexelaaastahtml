@@ -13,7 +13,7 @@
     <video class="header__video" autoplay muted loop playsinline poster="video/majandustulemused.jpg">
       <source src="video/majandustulemused-1.webm" type="video/webm" />
       <source src="video/majandustulemused-1.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
+      Sinu brauser ei toeta video elementi.
     </video>
     <nav class="nav">
       <div class="nav__logo">
@@ -40,87 +40,112 @@
         <div class="menu">
           <div class="menu__section">
             <a href="ettevottest.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/1.svg" alt="1" />
-              </span>
+              <span class="menu__icon menu__icon--a-monogram"></span>
               Ettevõttest
             </a>
           </div>
 
           <div class="menu__section">
             <a href="jatkusuutlikkus.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/2.svg" alt="2" />
-              </span>
+              <span class="menu__icon menu__icon--greenspark"></span>
               Jätkusuutlikkus
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="majandustulemused.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/3.svg" alt="3" />
-              </span>
-              Majandustulemused
+            <a href="arisuunad.html" class="menu__button menu__button--active">
+              <span class="menu__icon menu__icon--eur"></span>
+              Ärisuunad
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="aastaaruanne.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/4.svg" alt="4" />
-              </span>
-              Raamatupidamise aastaaruanne
+            <a href="finantstulemused.html" class="menu__button">
+              <span class="menu__icon menu__icon--news"></span>
+              Finantstulemused
             </a>
           </div>
 
           <div class="menu__section">
             <a href="pdf.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/5.svg" alt="5" />
-              </span>
-              Vaata PDF aruannet
+              <span class="menu__icon menu__icon--contract"></span>
+              Laadi alla PDF
             </a>
           </div>
         </div>
       </div>
     </nav>
     <div class="hero">
-      <div class="hero__year-container">
-        <img src="img/header_03.svg" alt="Aasta" class="hero__year-animation" />
-      </div>
+
       <div class="hero__content">
         <h1>Majandus&shy;tulemused</h1>
       </div>
-      <a href="#majandus" class="btn btn--primary">
-        Majandus&shy;tulemused
-        <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
-      </a>
+
     </div>
   </header>
   <main class="waves-animation">
     <section class="section--top" id="quicklinks">
       <h2 class="text-left">Leia kiirelt</h2>
-      <nav class="quicklinks" aria-label="Quick navigation">
-        <a class="quicklinks__item" href="ettevottest.html" aria-label="Info ettevõttest">
-          <img src="img/icons/1.svg" alt="Number 1 ikoon" class="quicklinks__icon" />
+      <nav class="quicklinks quicklinks--pages" aria-label="Quick navigation">
+        <a
+          class="quicklinks__item"
+          href="ettevottest.html"
+          aria-label="Info ettevõttest"
+        >
+          <img
+            src="img/icons/a-monogram.svg"
+            alt="Alexela logo"
+            class="quicklinks__icon"
+          />
           <h3>Ettevõttest</h3>
         </a>
-        <a class="quicklinks__item" href="jatkusuutlikkus.html" aria-label="Info ettevõttest">
-          <img src="img/icons/2.svg" alt="Number 2 ikoon" class="quicklinks__icon" />
+        <a
+          class="quicklinks__item"
+          href="jatkusuutlikkus.html"
+          aria-label="Info ettevõttest"
+        >
+          <img
+            src="img/icons/greenspark.svg"
+            alt="Lehe ikoon"
+            class="quicklinks__icon"
+          />
           <h3>Jätkusuutlikkus</h3>
         </a>
-        <a class="quicklinks__item" href="majandustulemused.html" aria-label="Info ettevõttest">
-          <img src="img/icons/3.svg" alt="Number 3 ikoon" class="quicklinks__icon" />
-          <h3>Majandus&shy;tulemused</h3>
+        <a
+          class="quicklinks__item"
+          href="arisuunad.html"
+          aria-label="Info ettevõttest"
+        >
+          <img
+            src="img/icons/eur.svg"
+            alt="Euro ikoon"
+            class="quicklinks__icon"
+          />
+          <h3>Ärisuunad</h3>
         </a>
-        <a class="quicklinks__item" href="aastaaruanne.html" aria-label="Info ettevõttest">
-          <img src="img/icons/4.svg" alt="Number 4 ikoon" class="quicklinks__icon" />
-          <h3>Aastaaruanne</h3>
+        <a
+          class="quicklinks__item"
+          href="finantstulemused.html"
+          aria-label="Info ettevõttest"
+        >
+          <img
+            src="img/icons/news.svg"
+            alt="Uudiste ikoon"
+            class="quicklinks__icon"
+          />
+          <h3>Finantstulemused</h3>
         </a>
-        <a class="quicklinks__item" href="aastaaruanne.pdf" aria-label="Info ettevõttest">
-          <img src="img/icons/5.svg" alt="Number 5 ikoon" class="quicklinks__icon" />
-          <h3>Vaata PDF-i</h3>
+        <a
+          class="quicklinks__item"
+          href="pdf.html"
+          aria-label="Info ettevõttest"
+        >
+          <img
+            src="img/icons/contract.svg"
+            alt="Lepingu ikoon"
+            class="quicklinks__icon"
+          />
+          <h3>Laadi alla PDF</h3>
         </a>
       </nav>
     </section>
