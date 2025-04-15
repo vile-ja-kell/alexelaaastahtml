@@ -69,7 +69,6 @@ header {
   border-radius: 0;
   -o-object-position: top;
   object-position: top;
-  height: 75vh;
 }
 
 .nav {
@@ -568,8 +567,8 @@ figcaption {
   font-size: clamp(var(--font-sm), 2vw, var(--font-xl));
 }
 .legend__color {
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   display: inline-block;
   &--dark {
