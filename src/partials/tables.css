@@ -3,6 +3,7 @@
   border-collapse: collapse;
   margin: var(--spacing-lg) 0;
   font-size: var(--font-sm);
+  overflow-x: auto;
   @media (--viewport-lg) {
     font-size: var(--font-md);
   }
@@ -40,7 +41,21 @@ table {
 
 .table__row {
   border-bottom: 1px solid var(--primary-400);
+  &--level-2 {
+    .table__cell {
+      padding-left: var(--padding-lg);
+    }
+  }
+  &--level-3 {
+    .table__cell {
+      padding-left: var(--padding-xxl);
+    }
+  }
 }
+.bottom-border {
+  border-bottom: 1px solid var(--primary-400);
+}
+
 
 .table__cell {
   padding: var(--padding-xs);
@@ -84,3 +99,5 @@ table {
     padding-inline-start: var(--padding-lg);
   }
 }
+
+
