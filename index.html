@@ -39,6 +39,13 @@
       <div class="menu__container">
         <div class="menu">
           <div class="menu__section">
+            <a href="/" class="menu__button menu__button--active">
+              <span class="menu__icon menu__icon--home"></span>
+              Avaleht
+            </a>
+          </div>
+
+          <div class="menu__section">
             <a href="ettevottest.html" class="menu__button">
               <span class="menu__icon menu__icon--a-monogram"></span>
               Ettevõttest
@@ -226,7 +233,7 @@
         </div>
       </article>
     </section>
-    <section class="section--content waves-02 waves-animation">
+    <section class="section--content section--color section--flamingo waves-animation">
       <article class="image-text-content-block block--image-right mb-xxl">
         <figure class="block__image">
 
@@ -551,11 +558,57 @@
       <article class="content-block">
         <h2 class="block__title">Alexela rahvusvaheliselt</h2>
         <div class="block__graph">
-          <div class="graph__map">
-            <figure>
-              <img src="img/alexela_global.svg" alt="Alexela global map" class="map__image" />
+          
+          <div class="graph__map" role="group" aria-label="Alexela globaalne kaardi visualiseering">
+            <figure class="map__figure">
+              
+              <!-- Responsive kaart -->
+              <picture>
+                <source srcset="img/alexela_global.svg" media="(min-width: 768px)" />
+                <source srcset="img/alexela_global_tablet.svg" media="(min-width: 480px)" />
+                <img
+                  src="img/alexela_global_mob.svg"
+                  alt="Alexela globaalne kaart koos tähistega mobiilivaates"
+                  class="map__image"
+                />
+              </picture>
+          
+              <!-- Legend toggle nupp – ainult mobiil/tablet -->
+              <button
+                class="map__legend-toggle"
+                aria-controls="map-legend"
+                aria-expanded="false"
+              ><div class="menu-toggle__icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+                Ikoonide selgitused
+              </button>
+          
+              <!-- Interaktiivne legend -->
+              <div id="map-legend" class="map__legend-panel">
+                <button class="map__legend-close" aria-label="Sulge legend">
+                  <div class="menu-toggle__icon">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </button>
+                <img
+                  src="img/alexela_global_legend.svg"
+                  alt="Tähiste legend: roheline ring – terminal, sinine kolmnurk – laohoone jne"
+                  class="map__legend-image"
+                />
+              </div>
+          
+              <figcaption class="visually-hidden">
+                Kaardil on näha Alexela rahvusvahelised tegevuskohad ja tähised vastavalt legendile.
+              </figcaption>
+          
             </figure>
           </div>
+
+
         </div>
       </article>
     </section>
@@ -743,13 +796,63 @@
   <footer>
     <div class="footer__container">
       <div class="footer__content">
+        <div class="footer__menu">
+
+    <nav class="footer__nav">
+          <div class="menu__section">
+            <a href="/" class="menu__button menu__button--active">
+              <span class="menu__icon menu__icon--home"></span>
+              Avaleht
+            </a>
+          </div>
+
+          <div class="menu__section">
+            <a href="ettevottest.html" class="menu__button">
+              <span class="menu__icon menu__icon--a-monogram"></span>
+              Ettevõttest
+            </a>
+          </div>
+
+          <div class="menu__section">
+            <a href="jatkusuutlikkus.html" class="menu__button">
+              <span class="menu__icon menu__icon--greenspark"></span>
+              Jätkusuutlikkus
+            </a>
+          </div>
+
+          <div class="menu__section">
+            <a href="arisuunad.html" class="menu__button">
+              <span class="menu__icon menu__icon--eur"></span>
+              Ärisuunad
+            </a>
+          </div>
+
+          <div class="menu__section">
+            <a href="finantstulemused.html" class="menu__button">
+              <span class="menu__icon menu__icon--news"></span>
+              Finantstulemused
+            </a>
+          </div>
+
+          <div class="menu__section">
+            <a href="pdf.html" class="menu__button">
+              <span class="menu__icon menu__icon--contract"></span>
+              Laadi alla PDF
+            </a>
+          </div>
+
+
+    </nav>
+        </div>
         <div class="footer__left">
           <div class="footer__logo">
             <img src="img/alexela_logo.svg" alt="Alexela" />
           </div>
           <div class="footer__contact">
+            <div>
             <strong>Alexela AS</strong>
             <span>Roseni 11, 10111 Tallinn</span>
+          </div>
             <a href="mailto:alexela@alexela.ee" class="footer__contact__item">
               <img src="img/icons/email.svg" alt="Email" />
               <span>alexela@alexela.ee</span>

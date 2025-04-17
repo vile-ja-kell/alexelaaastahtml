@@ -52,57 +52,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 @font-face {
     font-family: 'Commissioner';
-    src: url('../fonts/Commissioner-Light.woff2') format('woff2'),
-         url('../fonts/Commissioner-Light.woff') format('woff'),
-         url('../fonts/Commissioner-Light.ttf') format('truetype');
+    src: url('../fonts/Commissioner-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {
     font-family: 'Commissioner';
-    src: url('../fonts/Commissioner-Regular.woff2') format('woff2'),
-         url('../fonts/Commissioner-Regular.woff') format('woff'),
-         url('../fonts/Commissioner-Regular.ttf') format('truetype');
+    src: url('../fonts/Commissioner-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
     font-family: 'Commissioner';
-    src: url('../fonts/Commissioner-Medium.woff2') format('woff2'),
-         url('../fonts/Commissioner-Medium.woff') format('woff'),
-         url('../fonts/Commissioner-Medium.ttf') format('truetype');
+    src: url('../fonts/Commissioner-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 @font-face {
     font-family: 'Commissioner';
-    src: url('../fonts/Commissioner-SemiBold.woff2') format('woff2'),
-         url('../fonts/Commissioner-SemiBold.woff') format('woff'),
-         url('../fonts/Commissioner-SemiBold.ttf') format('truetype');
+    src: url('../fonts/Commissioner-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
 }
 @font-face {
     font-family: 'Commissioner';
-    src: url('../fonts/Commissioner-Bold.woff2') format('woff2'),
-         url('../fonts/Commissioner-Bold.woff') format('woff'),
-         url('../fonts/Commissioner-Bold.ttf') format('truetype');
+    src: url('../fonts/Commissioner-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: 'Commissioner';
-    src: url('../fonts/Commissioner-ExtraBold.woff2') format('woff2'),
-         url('../fonts/Commissioner-ExtraBold.woff') format('woff'),
-         url('../fonts/Commissioner-ExtraBold.ttf') format('truetype');
+    src: url('../fonts/Commissioner-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
 @font-face {
     font-family: 'Commissioner';
-    src: url('../fonts/Commissioner-Black.woff2') format('woff2'),
-         url('../fonts/Commissioner-Black.woff') format('woff'),
-         url('../fonts/Commissioner-Black.ttf') format('truetype');
+    src: url('../fonts/Commissioner-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
@@ -505,7 +491,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
     transform: translateY(0);
 }
-.menu__section {
+.nav .menu__section {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     max-width: var(--width-xl);
     margin: 0 auto;
@@ -567,6 +553,10 @@ h1, h2, h3, h4, h5, h6 {
         -webkit-mask-image: url('../img/icons/contract.svg');
                 mask-image: url('../img/icons/contract.svg');
     }
+.menu__icon--home {
+        -webkit-mask-image: url('../img/icons/home.svg');
+                mask-image: url('../img/icons/home.svg');
+    }
 .menu__chevron {
     margin-left: auto;
     width: 1.5rem;
@@ -619,6 +609,91 @@ h1, h2, h3, h4, h5, h6 {
 .menu__link:hover {
     opacity: 0.8;
 }
+.graph__map {
+    position: relative;
+  }
+.map__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+/* Legend toggle button (only visible on small devices) */
+.map__legend-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    top: 1rem;
+    z-index: 10;
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    color: var(--text-on-dark);
+  }
+.map__legend-toggle .menu-toggle__icon span {
+        background-color: var(--text-on-dark);
+    }
+/* Legend panel (hidden by default) */
+.map__legend-panel {
+    position: absolute;
+    top: 0;
+    left: calc(-100% - 1rem);
+    height: 100%;
+    width: 100%;
+    background-color: #172057e3;
+    border-radius: 1rem;
+    z-index: 20;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+.map__legend-panel img {
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+    }
+/* When legend is active */
+.map__legend-panel.active {
+    left: 0;
+  }
+/* Close button */
+.map__legend-close {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-on-dark);
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+  }
+.map__legend-close .menu-toggle__icon span {
+        background-color: var(--text-on-dark);
+    }
+.map__legend-close .menu-toggle__icon span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+.map__legend-close .menu-toggle__icon span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+/* Desktop: always show legend */
+@media (min-width: 768px) {
+    .map__legend-toggle {
+      display: none;
+    }
+  
+    .map__legend-panel {
+      display: none;
+    }
+  }
 /* Quicklinks*/
 .quicklinks {
     display: grid;
@@ -655,7 +730,6 @@ h1, h2, h3, h4, h5, h6 {
     }
       }
 .quicklinks--home {
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     gap: 2rem;
   }
 .quicklinks--home .quicklinks__icon {
@@ -675,6 +749,11 @@ h1, h2, h3, h4, h5, h6 {
 .quicklinks--home .quicklinks__item h3 {
         font-size: clamp(1rem, 5vw, 2rem);
       }
+@media (min-width: 640px) {
+.quicklinks--home {
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr))
+  }
+    }
 /* Tabs Component */
 .tabs {
     width: 100%;
@@ -1777,15 +1856,27 @@ footer a {
     color: var(--text-on-dark);
     text-decoration: none;
   }
+.footer__left, .footer__right {
+    padding-top: var(--size-md);
+  }
 .footer__container {
     max-width: var(--width-xl);
     margin: 0 auto;
   }
+.footer__container .menu__button {
+      padding-inline: 0 !important;
+    }
 .footer__content {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 2rem;
   }
+@media (min-width: 640px) {
+.footer__content {
+      flex-direction: row
+  }
+    }
 .footer__logo {
     width: 8rem;
     margin-top: var(--size-xxs);
@@ -1800,7 +1891,6 @@ footer a {
   }
 @media (min-width: 768px) {
 .footer__contact {
-      flex-direction: row;
       gap: var(--gap-sm)
   }
     }
@@ -1828,7 +1918,6 @@ footer a {
 .footer__social .social__link {
   display: flex;
   align-items: center;
-  justify-content: right;
   gap: var(--gap-xxs);
   font-size: var(--font-sm);
   color: var(--graphics-alexela-blue);
@@ -1840,7 +1929,6 @@ footer a {
 .footer__social .social__icon {
   display: flex;
   align-items: center;
-  justify-content: right;
   gap: var(--gap-xxs);
   font-size: var(--font-sm);
   color: var(--graphics-alexela-blue) !important;

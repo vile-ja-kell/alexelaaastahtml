@@ -796,14 +796,24 @@ footer {
 }
 
 .footer {
+  &__left, &__right {
+    padding-top: var(--size-md);
+  }
   &__container {
     max-width: var(--width-xl);
     margin: 0 auto;
+    .menu__button {
+      padding-inline: 0 !important;
+    }
   }
   &__content {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 2rem;
+    @media (--viewport-md) {
+      flex-direction: row;
+    }
   }
   &__logo {
     width: 8rem;
@@ -817,7 +827,6 @@ footer {
     flex-direction: column;
     gap: var(--gap-xs);
     @media (--viewport-lg) {
-      flex-direction: row;
       gap: var(--gap-sm);
     }
     &__item {
@@ -850,7 +859,6 @@ footer {
 .footer__social .social__link {
   display: flex;
   align-items: center;
-  justify-content: right;
   gap: var(--gap-xxs);
   font-size: var(--font-sm);
   color: var(--graphics-alexela-blue);
@@ -864,7 +872,6 @@ footer {
 .footer__social .social__icon {
   display: flex;
   align-items: center;
-  justify-content: right;
   gap: var(--gap-xxs);
   font-size: var(--font-sm);
   color: var(--graphics-alexela-blue) !important;

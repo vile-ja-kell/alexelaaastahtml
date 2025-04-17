@@ -203,3 +203,17 @@ const initNavWave = () => {
     }, { passive: true });
 };
 
+// Map legend toggle
+const toggleBtn = document.querySelector('.map__legend-toggle');
+const legendPanel = document.querySelector('#map-legend');
+const closeBtn = document.querySelector('.map__legend-close');
+
+if (toggleBtn && legendPanel && closeBtn) {
+  toggleBtn.addEventListener('click', () => {
+    legendPanel.classList.toggle('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    legendPanel.classList.remove('active');
+  });
+}

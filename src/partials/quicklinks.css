@@ -33,7 +33,6 @@
   }
 
   .quicklinks--home {
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     gap: 2rem;
     .quicklinks__icon {
       width: clamp(2rem, 3vw, 4rem);
@@ -49,5 +48,8 @@
       h3 {
         font-size: clamp(1rem, 5vw, 2rem);
       }
+    }
+    @media (--viewport-md) {
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     }
   }
