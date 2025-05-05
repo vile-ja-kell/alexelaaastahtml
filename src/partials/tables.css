@@ -81,6 +81,7 @@ table {
   font-size: var(--font-sm);
   display: flex;
   flex-direction: column;
+  overflow-x: auto;
   @media (--viewport-lg) {
     flex-direction: row;
     font-size: var(--font-md);

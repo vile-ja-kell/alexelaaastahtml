@@ -58,6 +58,26 @@
     
     &-item {
         text-align: center;
+        &:nth-child(2) {
+            display: none;
+        }
+        &:nth-child(3) {
+            display: none;
+        }
+        &:nth-child(4) {
+            display: none;
+        }
+        @media (--viewport-sm) {
+            &:nth-child(2) {
+                display: block;
+            }
+            &:nth-child(3) {
+                display: block;
+            }
+            &:nth-child(4) {
+                display: block;
+            }
+        }
     }
 }
 

@@ -297,7 +297,7 @@ main {
   background-color: var(--neutral-background);
   position: relative;
   padding-bottom: calc(var(--main-top) + 2rem);
-  background-image: url(../img/bg-horses.jpg);
+  background-size: 130%;
   background-repeat: no-repeat;
   z-index: 0;
   &:before {
@@ -313,6 +313,17 @@ main {
     background-size: 150% 100%;
   }
 }
+
+.bg-main-1 {
+  background-image: url(../img/bg-horses.jpg);
+}
+.bg-main-2 {
+  background-image: url(../img/bg-main-2.jpg);
+}
+.bg-main-3 {
+  background-image: url(../img/bg-main-3.jpg);
+}
+
 
 .big-icon {
   width: 3rem;
@@ -461,7 +472,10 @@ figcaption {
      * - minmax(200px, 1fr) ensures each column is at least 200px wide, but can grow to fill available space
      * - This allows cards to responsively adjust from 1 column on mobile to multiple columns on larger screens
      */
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  @media (--viewport-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
   @media (--viewport-md) {
     grid-template-columns: repeat(3, 1fr);
   }
