@@ -134,7 +134,7 @@ const initParallax = () => {
                 }
 
                 const scrolled = scrollTop - heroHeight;
-                const parallaxOffset = scrolled * 0.5;
+                const parallaxOffset = scrolled * 0.9;
                 main.style.backgroundPosition = `center ${parallaxOffset}px`;
 
                 lastScrollTop = scrollTop;
@@ -217,3 +217,34 @@ if (toggleBtn && legendPanel && closeBtn) {
     legendPanel.classList.remove('active');
   });
 }
+
+let scrollPosition = 0;
+let targetScrollPosition = 0;
+let isScrolling = false;
+
+const smoothScroll = () => {
+    if (!isScrolling) return;
+
+    scrollPosition += (targetScrollPosition - scrollPosition) * 0.1;
+
+    window.scrollTo(0, scrollPosition);
+
+    if (Math.abs(targetScrollPosition - scrollPosition) > 0.5) {
+        requestAnimationFrame(smoothScroll);
+    } else {
+        isScrolling = false;
+    }
+};
+
+let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+window.addEventListener('wheel', (e) => {
+    if (e.target.closest('.modal')) return; // Exclude modal from smooth scrolling
+    maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    targetScrollPosition = Math.min(Math.max(targetScrollPosition + e.deltaY, 0), maxScroll);
+    if (!isScrolling) {
+        isScrolling = true;
+        smoothScroll();
+    }
+    e.preventDefault();
+}, { passive: false });
