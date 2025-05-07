@@ -119,3 +119,9 @@
   .w-100 {
     width: 100%;
   }
+
+
+
+.radius-md {
+    border-radius: var(--size-md);
+}

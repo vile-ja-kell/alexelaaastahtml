@@ -51,7 +51,7 @@
     }
 
     &--on-dark {
-        background-color: var(--neutral-background);
+        background-color: var(--background-light);
         color: var(--text-on-primary);
         &:hover {
             background-color: var(--primary-surface);

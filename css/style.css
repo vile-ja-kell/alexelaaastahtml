@@ -176,6 +176,7 @@ h1, h2, h3, h4, h5, h6 {
 
   --background-dark: var(--graphics-navy);
   --background-light: hsl(44 100% 99% / 1);
+  --background-light-transparent: hsl(44 100% 99% / 0.5);
   --neutral-background: #fcfaf0;
   --surface-light-03: var(--primary-100);
 
@@ -221,6 +222,9 @@ h1, h2, h3, h4, h5, h6 {
 .bg-steel {
   background-color: var(--graphics-steel);
   color: var(--graphics-navy);
+}
+.bg-transparent {
+  background-color: var(--background-light-transparent);
 }
 :root {
     --title-display-xs: 1.5rem;
@@ -387,6 +391,9 @@ h1, h2, h3, h4, h5, h6 {
 .w-100 {
     width: 100%;
   }
+.radius-md {
+    border-radius: var(--size-md);
+}
 /* Random zoom-in animation for quicklinks items */
 .quicklinks__item {
     opacity: 0;
@@ -805,7 +812,7 @@ h1, h2, h3, h4, h5, h6 {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     }
 .tabs__btn--on-dark {
-        background-color: var(--neutral-background);
+        background-color: var(--background-light);
         color: var(--text-on-primary);
     }
 .tabs__btn--on-dark:hover {
@@ -852,6 +859,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Chart Layout */
 .chart {
     font-size: var(--font-sm);
+    padding: var(--size-md);
 }
 @media (min-width: 640px) {
 .chart {
@@ -863,6 +871,11 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 6rem 1fr 5rem;
     gap: var(--gap-sm);
 }
+.chart__grid--two-col {
+        display: grid;
+        gap: var(--gap-sm);
+        grid-template-columns: 4rem 1fr;
+    }
 /* Chart Area */
 .chart {
     --chart-height: 12rem;
@@ -902,33 +915,60 @@ h1, h2, h3, h4, h5, h6 {
 .chart__x-axis {
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
+    padding-top: 0.625rem;
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
 }
+.chart__x-axis--two-col {
+        margin-left: 5.4rem;
+        margin-right: 0.8rem;
+    }
+@media (min-width: 640px) {
+.chart__x-axis--two-col {
+            margin-left: 5.75rem;
+            margin-right: 1.25rem
+    }
+        }
+.chart__x-axis-item--desktop {
+        display: none;
+    }
+@media (min-width: 640px) {
+.chart__x-axis-item--desktop {
+            display: flex
+    }
+        }
+.chart__x-axis-item--mobile {
+        display: flex;
+    }
+@media (min-width: 640px) {
+.chart__x-axis-item--mobile {
+            display: none
+    }
+        }
 .chart__x-axis-item {
         text-align: center;
+        /* &:nth-child(2) {
+            display: none;
+        }
+        &:nth-child(3) {
+            display: none;
+        }
+        &:nth-child(4) {
+            display: none;
+        }
+        @media (--viewport-sm) {
+            
+            &:nth-child(2) {
+                display: block;
+            }
+            &:nth-child(3) {
+                display: block;
+            }
+            &:nth-child(4) {
+                display: block;
+            }
+        } */
     }
-.chart__x-axis-item:nth-child(2) {
-            display: none;
-        }
-.chart__x-axis-item:nth-child(3) {
-            display: none;
-        }
-.chart__x-axis-item:nth-child(4) {
-            display: none;
-        }
-@media (min-width: 480px) {
-            .chart__x-axis-item:nth-child(2) {
-                display: block;
-            }
-            .chart__x-axis-item:nth-child(3) {
-                display: block;
-            }
-            .chart__x-axis-item:nth-child(4) {
-                display: block;
-            }
-        }
 /* Legend */
 .chart {
     max-width: 48rem;
@@ -1207,7 +1247,7 @@ header {
   left: 0;
   width: 100%;
   height: 5.25rem;
-  background-color: #fcfaf0;
+  background-color: var(--background-light);
   transition: top 0.4s ease-in-out;
   z-index: -1;
 }
@@ -1391,7 +1431,7 @@ header {
 /* Main start */
 main {
   --main-top: 6rem;
-  background-color: var(--neutral-background);
+  background-color: var(--background-light);
   position: relative;
   padding-bottom: calc(var(--main-top) + 2rem);
   background-size: 130%;
@@ -1857,7 +1897,7 @@ figure.original-size-graph img {
   padding: var(--size-lg);
   height: calc(100vh - var(--size-lg) * 2);
   box-sizing: border-box;
-  background-color: var(--neutral-background);
+  background-color: var(--background-light);
   transform: translateY(-20px);
   opacity: 0;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;

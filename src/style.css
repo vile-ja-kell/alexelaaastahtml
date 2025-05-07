@@ -93,7 +93,7 @@ header {
   left: 0;
   width: 100%;
   height: 5.25rem;
-  background-color: #fcfaf0;
+  background-color: var(--background-light);
   transition: top 0.4s ease-in-out;
   z-index: -1;
 }
@@ -294,7 +294,7 @@ header {
 
 main {
   --main-top: 6rem;
-  background-color: var(--neutral-background);
+  background-color: var(--background-light);
   position: relative;
   padding-bottom: calc(var(--main-top) + 2rem);
   background-size: 130%;
@@ -772,7 +772,7 @@ figure.original-size-graph {
   padding: var(--size-lg);
   height: calc(100vh - var(--size-lg) * 2);
   box-sizing: border-box;
-  background-color: var(--neutral-background);
+  background-color: var(--background-light);
   transform: translateY(-20px);
   opacity: 0;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
