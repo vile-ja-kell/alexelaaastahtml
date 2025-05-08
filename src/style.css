@@ -770,6 +770,7 @@ figure.original-size-graph {
   margin: var(--size-lg) auto;
   border-radius: var(--radius-md);
   padding: var(--size-lg);
+  padding-right: 0;
   height: calc(100vh - var(--size-lg) * 2);
   box-sizing: border-box;
   background-color: var(--background-light);
@@ -787,7 +788,7 @@ figure.original-size-graph {
   }
   figure {
     border-radius: var(--radius-md);
-    width: 34rem;
+    max-width: 34rem;
     height: auto;
     margin: 0 auto;
     margin-block: var(--size-lg);
@@ -797,6 +798,7 @@ figure.original-size-graph {
   }
   &-inner {
     overflow-y: auto;
+    padding-right: var(--size-lg);
   }
 }
 
