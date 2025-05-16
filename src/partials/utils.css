@@ -61,6 +61,9 @@
 .mb-xxs {
     margin-bottom: var(--size-xxs) !important;
 }
+.mt-md {
+  margin-top: var(--size-md) !important;
+}
 
 .w-10 {
     width: 10%;
