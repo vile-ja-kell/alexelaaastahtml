@@ -53,6 +53,9 @@
     margin: 0 auto;
 }
 
+.mb-0 {
+  margin-bottom: 0 !important;
+}
 
 .mb-xxl {
     margin-bottom: var(--size-xxl) !important;

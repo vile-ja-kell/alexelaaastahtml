@@ -188,6 +188,9 @@ h1, h2, h3, h4, h5, h6 {
   --primary-surface-hover: var(--primary-400);
   --primary-surface-active: var(--primary-500);
 }
+.text-white {
+  color: var(--text-on-dark);
+}
 .bg-navy {
   background-color: var(--graphics-navy);
   color: var(--text-on-dark);
@@ -327,6 +330,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .mx-auto {
     margin: 0 auto;
+}
+.mb-0 {
+  margin-bottom: 0 !important;
 }
 .mb-xxl {
     margin-bottom: var(--size-xxl) !important;
@@ -1590,6 +1596,9 @@ section h2 {
     .image-text-content-block > * {
       flex: 2;
     }
+    .image-text-content-block .block__image {
+      margin-top: 1.75rem;
+  }
   }
 .block__image--third {
   flex: 1;
@@ -1815,7 +1824,7 @@ video {
     z-index: -2;
   }
 .section--cream .content-block {
-    margin-top: -4rem;
+    
   }
 /* Main end */
 /* Icon text block */
@@ -1945,8 +1954,28 @@ footer a {
     color: var(--text-on-dark);
     text-decoration: none;
   }
+.footer__slogan {
+    font-size: var(--font-xxl);
+    font-weight: 700;
+    width: 100%;
+    text-align: left;
+    font-family: "Adieu", sans-serif;
+    color: var(--text-on-dark);
+    margin-top: var(--size-xl);
+  }
+@media (min-width: 640px) {
+.footer__slogan {
+      text-align: right
+  }
+    }
+.footer__menu {
+    flex: 3;
+  }
 .footer__left, .footer__right {
     padding-top: var(--size-md);
+  }
+.footer__left {
+    flex:2;
   }
 .footer__container {
     max-width: var(--width-xl);
@@ -1955,6 +1984,11 @@ footer a {
 .footer__container .menu__button {
       padding-inline: 0 !important;
     }
+.footer__datablock {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 4;
+  }
 .footer__content {
     display: flex;
     flex-direction: column;

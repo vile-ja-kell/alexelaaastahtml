@@ -455,6 +455,9 @@ section {
     & > * {
       flex: 2;
     }
+    .block__image {
+      margin-top: 1.75rem;
+  }
   }
 }
 .block__image--third {
@@ -683,7 +686,7 @@ video {
     z-index: -2;
   }
   .content-block {
-    margin-top: -4rem;
+    
   }
 }
 
@@ -821,8 +824,26 @@ footer {
 }
 
 .footer {
+  &__slogan {
+    font-size: var(--font-xxl);
+    font-weight: 700;
+    width: 100%;
+    text-align: left;
+    font-family: "Adieu", sans-serif;
+    color: var(--text-on-dark);
+    margin-top: var(--size-xl);
+    @media (--viewport-md) {
+      text-align: right;
+    }
+  }
+  &__menu {
+    flex: 3;
+  }
   &__left, &__right {
     padding-top: var(--size-md);
+  }
+  &__left {
+    flex:2;
   }
   &__container {
     max-width: var(--width-xl);
@@ -830,6 +851,11 @@ footer {
     .menu__button {
       padding-inline: 0 !important;
     }
+  }
+  &__datablock {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 4;
   }
   &__content {
     display: flex;

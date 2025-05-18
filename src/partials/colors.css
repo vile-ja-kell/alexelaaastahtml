@@ -35,6 +35,10 @@
   --primary-surface-active: var(--primary-500);
 }
 
+.text-white {
+  color: var(--text-on-dark);
+}
+
 .bg-navy {
   background-color: var(--graphics-navy);
   color: var(--text-on-dark);
