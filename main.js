@@ -14,6 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize nav wave effect
     initNavWave();
 
+    // Initialize accordion
+    const accordionButtons = document.querySelectorAll('.accordion__button');
+    
+    accordionButtons.forEach(button => {
+        const content = button.nextElementSibling;
+        if (content && content.classList.contains('accordion__content')) {
+            button.addEventListener('click', () => {
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', !isExpanded);
+                content.classList.toggle('is-open');
+            });
+        }
+    });
 
     const menuToggle = document.querySelector('.menu-toggle');
     const menuContainer = document.querySelector('.menu__container');

@@ -960,3 +960,81 @@ footer {
   -webkit-mask-size: contain;
   mask-size: contain;
 }
+
+
+/* Accordion */
+.accordion {
+  max-width: var(--width-xl);
+  margin: 0 auto;
+}
+.accordion__button {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-family: "Commissioner", sans-serif;
+  font-size: var(--font-lg);
+  font-weight: 600;
+  background-color: var(--primary-surface);
+  color: var(--text-on-primary);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.accordion__button span {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.accordion__button[aria-expanded="true"] span {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.accordion__button[aria-expanded="false"] span {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.accordion__button::after {
+  content: "Sulge";
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.accordion__button[aria-expanded="true"]::after {
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
+.accordion__button[aria-expanded="false"]::after {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.accordion__icon {
+  transition: transform 0.3s ease;
+}
+.accordion__button[aria-expanded="true"] .accordion__icon {
+  transform: rotate(90deg);
+}
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  margin-top: 1rem;
+}
+.accordion__content.is-open {
+  max-height: 300rem;
+  transition: max-height 0.5s ease-in;
+}
