@@ -30,7 +30,7 @@
 }
 
 .gap-md {
-    gap: var(--size-md);
+    gap: var(--size-md) !important;
 }
 
 .gap-lg {
@@ -66,6 +66,9 @@
 }
 .mt-md {
   margin-top: var(--size-md) !important;
+}
+.mt-lg {
+  margin-top: var(--size-lg) !important;
 }
 
 .w-10 {

@@ -289,7 +289,15 @@ header {
   color: var(--primary-surface);
   background-color: transparent;
 }
-
+.link {
+  display: flex;
+  gap: .5rem;
+  color: #172057;
+  text-decoration: none;
+  opacity: 1;
+  border-bottom: 2px solid #172057;
+  width: fit-content;
+}
 /* Main start */
 
 main {
@@ -439,7 +447,7 @@ section {
 .block__text {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: 0;
 }
 
 .image-text-content-block {
