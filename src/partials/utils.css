@@ -71,6 +71,13 @@
   margin-top: var(--size-lg) !important;
 }
 
+.px-md {
+  padding-inline: var(--size-md) !important;
+  @media (--viewport-xl) {
+    padding-inline: 0 !important;
+  }
+}
+
 .w-10 {
     width: 10%;
   }
