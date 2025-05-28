@@ -2175,5 +2175,94 @@ footer a {
   max-height: 300rem;
   transition: max-height 0.5s ease-in;
 }
-
+/* card bullets & explanation modals */
+.figure__relative {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.bullet {
+  border-radius:100px;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Adieu", sans-serif;
+  font-size: var(--font-xl);
+  font-weight: 700;
+}
+.bullet__mint {
+    background-color: var(--graphics-mint);
+    color: var(--graphics-jade);
+  }
+.bullet__absolute {
+    position: absolute;
+  }
+.explanation {
+  position: absolute;
+  top: 30%;
+  background-color: #061a5cde;
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 35ch;
+  margin: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+.explanation.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+.figure__scrollable {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  width: calc(100vw - 3rem);
+  position: relative;
+}
+.figure__scrollable img, .bullets {
+  max-width: 79.625rem;
+  height: auto;
+}
+.explanation__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--size-md);
+}
+.explanation__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-on-dark);
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+.explanation__close .menu-toggle__icon {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.explanation__close .menu-toggle__icon span {
+  position: absolute;
+  width: 1.5rem;
+  height: 2px;
+  background-color: var(--text-on-dark);
+  left: 50%;
+  transform-origin: center;
+}
+.explanation__close .menu-toggle__icon span:nth-child(1) {
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.explanation__close .menu-toggle__icon span:nth-child(2) {
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
 /*# sourceMappingURL=style.css.map */
