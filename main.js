@@ -14,6 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize nav wave effect
     initNavWave();
 
+    // Initialize accordion
+    const accordionButtons = document.querySelectorAll('.accordion__button');
+    
+    accordionButtons.forEach(button => {
+        const content = button.nextElementSibling;
+        if (content && content.classList.contains('accordion__content')) {
+            button.addEventListener('click', () => {
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                button.setAttribute('aria-expanded', !isExpanded);
+                content.classList.toggle('is-open');
+            });
+        }
+    });
 
     const menuToggle = document.querySelector('.menu-toggle');
     const menuContainer = document.querySelector('.menu__container');
@@ -31,50 +44,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Modal functionality
+    // Check if the page contains a modal
     const modal = document.querySelector('.modal');
-    const modalContent = document.querySelector('.modal__content');
-    const modalOpenBtn = document.querySelector('.btn-modal');
-    const modalCloseBtn = document.querySelector('.modal__close');
+    if (modal) {
+        const modalOpenBtn = document.querySelector('.btn-modal');
+        const modalCloseBtn = document.querySelector('.modal__close');
 
-    // Function to open modal
-    const openModal = () => {
-        modal.style.display = 'block';
-        // Trigger reflow to ensure the transition works
-        modal.offsetHeight;
-        modal.classList.add('is-open');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-    };
+        // Function to open modal
+        const openModal = () => {
+            modal.style.display = 'block';
+            modal.offsetHeight; // Trigger reflow
+            modal.classList.add('is-open');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        };
 
-    // Function to close modal
-    const closeModal = () => {
-        modal.classList.remove('is-open');
-        // Wait for the animation to finish before hiding the modal
-        setTimeout(() => {
-            if (!modal.classList.contains('is-open')) {
-                modal.style.display = 'none';
-                document.body.style.overflow = ''; // Restore scrolling
+        // Function to close modal
+        const closeModal = () => {
+            modal.classList.remove('is-open');
+            setTimeout(() => {
+                if (!modal.classList.contains('is-open')) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+            }, 300); // Match with CSS transition duration
+        };
+
+        // Add event listeners
+        modalOpenBtn.addEventListener('click', openModal);
+        modalCloseBtn.addEventListener('click', closeModal);
+
+        // Close modal when clicking outside modal content
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
             }
-        }, 300); // Match this with the CSS transition duration
-    };
+        });
 
-    // Event listeners
-    modalOpenBtn.addEventListener('click', openModal);
-    modalCloseBtn.addEventListener('click', closeModal);
-
-    // Close modal when clicking outside modal content
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
-
-    // Close modal on escape key press
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('is-open')) {
-            closeModal();
-        }
-    });
+        // Close modal on escape key press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+                closeModal();
+            }
+        });
+    }
 });
 
 
@@ -135,7 +147,7 @@ const initParallax = () => {
                 }
 
                 const scrolled = scrollTop - heroHeight;
-                const parallaxOffset = scrolled * 0.5;
+                const parallaxOffset = scrolled * 0.9;
                 main.style.backgroundPosition = `center ${parallaxOffset}px`;
 
                 lastScrollTop = scrollTop;
@@ -203,3 +215,49 @@ const initNavWave = () => {
         }
     }, { passive: true });
 };
+
+// Map legend toggle
+const toggleBtn = document.querySelector('.map__legend-toggle');
+const legendPanel = document.querySelector('#map-legend');
+const closeBtn = document.querySelector('.map__legend-close');
+
+if (toggleBtn && legendPanel && closeBtn) {
+  toggleBtn.addEventListener('click', () => {
+    legendPanel.classList.toggle('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    legendPanel.classList.remove('active');
+  });
+}
+
+let scrollPosition = 0;
+let targetScrollPosition = 0;
+let isScrolling = false;
+
+const smoothScroll = () => {
+    if (!isScrolling) return;
+
+    scrollPosition += (targetScrollPosition - scrollPosition) * 0.1;
+
+    window.scrollTo(0, scrollPosition);
+
+    if (Math.abs(targetScrollPosition - scrollPosition) > 0.5) {
+        requestAnimationFrame(smoothScroll);
+    } else {
+        isScrolling = false;
+    }
+};
+
+let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+window.addEventListener('wheel', (e) => {
+    if (e.target.closest('.modal')) return; // Exclude modal from smooth scrolling
+    maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    targetScrollPosition = Math.min(Math.max(targetScrollPosition + e.deltaY, 0), maxScroll);
+    if (!isScrolling) {
+        isScrolling = true;
+        smoothScroll();
+    }
+    e.preventDefault();
+}, { passive: false });

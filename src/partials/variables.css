@@ -51,7 +51,7 @@
     --padding-md: var(--size-md);
     --padding-lg: var(--size-lg);
     --padding-xl: var(--size-xl);
-
+    --padding-xxl: var(--size-xxl);
     /* radius */
     --radius-xxs: var(--size-xxs);
     --radius-xs: var(--size-xs);

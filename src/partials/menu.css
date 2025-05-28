@@ -17,7 +17,7 @@
     transform: translateY(0);
 }
 
-.menu__section {
+.nav .menu__section {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     max-width: var(--width-xl);
     margin: 0 auto;
@@ -38,6 +38,12 @@
     text-align: left;
     text-decoration: none;
     transition: opacity 0.3s ease;
+    &--active {
+        color: var(--graphics-alexela-blue);
+        .menu__icon {
+            background-color: var(--graphics-alexela-blue);
+        }
+    }
 }
 
 .menu__button:hover {
@@ -48,15 +54,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: 2rem;
-}
-
-.menu__icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    filter: grayscale(1) invert(1);
+    background-color: var(--text-on-dark);
+    width: 1.5rem;
+    height: 1.5rem;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    &--a-monogram {
+        mask-image: url('../img/icons/a-monogram.svg');
+    }
+    &--greenspark {
+        mask-image: url('../img/icons/greenspark.svg');
+    }
+    &--eur {
+        mask-image: url('../img/icons/eur.svg');
+    }
+    &--news {
+        mask-image: url('../img/icons/news.svg');
+    }
+    &--contract {
+        mask-image: url('../img/icons/contract.svg');
+    }
+    &--home {
+        mask-image: url('../img/icons/home.svg');
+    }
 }
 
 .menu__chevron {
@@ -121,3 +141,96 @@
 .menu__link:hover {
     opacity: 0.8;
 } 
+
+
+.graph__map {
+    position: relative;
+  }
+  
+  .map__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+  
+  /* Legend toggle button (only visible on small devices) */
+  .map__legend-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    top: 1rem;
+    z-index: 10;
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    color: var(--text-on-dark);
+    .menu-toggle__icon span {
+        background-color: var(--text-on-dark);
+    }
+  }
+  
+  /* Legend panel (hidden by default) */
+  .map__legend-panel {
+    position: absolute;
+    top: 0;
+    left: calc(-100% - 1rem);
+    height: 100%;
+    width: 100%;
+    background-color: #172057e3;
+    border-radius: 1rem;
+    z-index: 20;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    img {
+        max-width: fit-content;
+    }
+  }
+  
+  /* When legend is active */
+  .map__legend-panel.active {
+    left: 0;
+  }
+  
+  /* Close button */
+  .map__legend-close {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-on-dark);
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    .menu-toggle__icon span {
+        background-color: var(--text-on-dark);
+        &:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        &:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+    }
+  }
+  
+  /* Desktop: always show legend */
+  @media (min-width: 768px) {
+    .map__legend-toggle {
+      display: none;
+    }
+  
+    .map__legend-panel {
+      display: none;
+    }
+  }
+

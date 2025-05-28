@@ -22,6 +22,7 @@
 
   --background-dark: var(--graphics-navy);
   --background-light: hsl(44 100% 99% / 1);
+  --background-light-transparent: hsl(44 100% 99% / 0.5);
   --neutral-background: #fcfaf0;
   --surface-light-03: var(--primary-100);
 
@@ -32,6 +33,10 @@
   --primary-surface: var(--primary-300);
   --primary-surface-hover: var(--primary-400);
   --primary-surface-active: var(--primary-500);
+}
+
+.text-white {
+  color: var(--text-on-dark);
 }
 
 .bg-navy {
@@ -77,6 +82,10 @@
   background-color: var(--graphics-steel);
   color: var(--graphics-navy);
 }
+.bg-transparent {
+  background-color: var(--background-light-transparent);
+}
+
 
 
 

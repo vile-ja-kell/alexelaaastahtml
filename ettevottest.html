@@ -4,16 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="css/style.css" />
   <title>Ettevõttest</title>
 </head>
 
 <body>
   <header>
-    <video class="header__video" autoplay muted loop playsinline poster="video/kogukond.jpg">
-      <source src="video/kogukond.webm" type="video/webm" />
-      <source src="video/kogukond.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
+    <video class="header__video" autoplay muted loop playsinline poster="video/ettevottest.jpg">
+      <source src="video/ettevottest.webm" type="video/webm" />
+      <source src="video/ettevottest.mp4" type="video/mp4" />
+      Sinu brauser ei toeta video elementi.
     </video>
     <nav class="nav">
       <div class="nav__logo">
@@ -39,149 +43,87 @@
       <div class="menu__container">
         <div class="menu">
           <div class="menu__section">
-            <a href="ettevottest.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/1.svg" alt="1" />
-              </span>
+            <a href="/" class="menu__button">
+              <span class="menu__icon menu__icon--home"></span>
+              Avaleht
+            </a>
+          </div>
+
+          <div class="menu__section">
+            <a href="ettevottest.html" class="menu__button menu__button--active">
+              <span class="menu__icon menu__icon--a-monogram"></span>
               Ettevõttest
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="jatkusuutlikkus.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/2.svg" alt="2" />
-              </span>
-              Jätkusuutlikkus
+            <a href="arisuunad.html" class="menu__button">
+              <span class="menu__icon menu__icon--eur"></span>
+              Ärisuunad
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="majandustulemused.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/3.svg" alt="3" />
-              </span>
-              Majandustulemused
+            <a href="kestlikkus.html" class="menu__button">
+              <span class="menu__icon menu__icon--greenspark"></span>
+              Kestlikkus (ESG)
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="aastaaruanne.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/4.svg" alt="4" />
-              </span>
-              Raamatupidamise aastaaruanne
+            <a href="finantstulemused.html" class="menu__button">
+              <span class="menu__icon menu__icon--news"></span>
+              Finantstulemused
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="pdf.html" class="menu__button">
-              <span class="menu__icon">
-                <img src="img/icons/5.svg" alt="5" />
-              </span>
-              Vaata PDF aruannet
+            <a href="alexela_aruanne_2024.pdf" target="_blank" class="menu__button">
+              <span class="menu__icon menu__icon--contract"></span>
+              Laadi alla PDF
             </a>
           </div>
         </div>
       </div>
     </nav>
     <div class="hero">
-      <div class="hero__year-container">
-        <img src="img/header_01.svg" alt="Aasta" class="hero__year-animation" />
-      </div>
       <div class="hero__content">
         <h1>Ettevõttest</h1>
       </div>
-      <a href="#majandus" class="btn btn--primary">
-        Majandus&shy;tulemused
-        <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
-      </a>
     </div>
   </header>
-  <main class="waves-animation">
+  <main class="waves-animation bg-main-2">
     <section class="section--top" id="quicklinks">
       <h2 class="text-left">Leia kiirelt</h2>
-      <nav class="quicklinks" aria-label="Quick navigation">
+      <nav class="quicklinks quicklinks--pages" aria-label="Quick navigation">
         <a class="quicklinks__item" href="ettevottest.html" aria-label="Info ettevõttest">
-          <img src="img/icons/1.svg" alt="Number 1 ikoon" class="quicklinks__icon" />
+          <img src="img/icons/a-monogram.svg" alt="Alexela logo" class="quicklinks__icon" />
           <h3>Ettevõttest</h3>
         </a>
-        <a class="quicklinks__item" href="jatkusuutlikkus.html" aria-label="Info ettevõttest">
-          <img src="img/icons/2.svg" alt="Number 2 ikoon" class="quicklinks__icon" />
-          <h3>Jätkusuutlikkus</h3>
+        <a class="quicklinks__item" href="arisuunad.html" aria-label="Info ettevõttest">
+          <img src="img/icons/eur.svg" alt="Euro ikoon" class="quicklinks__icon" />
+          <h3>Ärisuunad</h3>
         </a>
-        <a class="quicklinks__item" href="majandustulemused.html" aria-label="Info ettevõttest">
-          <img src="img/icons/3.svg" alt="Number 3 ikoon" class="quicklinks__icon" />
-          <h3>Majandus&shy;tulemused</h3>
+        <a class="quicklinks__item" href="kestlikkus.html" aria-label="Info ettevõttest">
+          <img src="img/icons/greenspark.svg" alt="Lehe ikoon" class="quicklinks__icon" />
+          <h3>Kestlikkus (ESG)</h3>
         </a>
-        <a class="quicklinks__item" href="aastaaruanne.html" aria-label="Info ettevõttest">
-          <img src="img/icons/4.svg" alt="Number 4 ikoon" class="quicklinks__icon" />
-          <h3>Aastaaruanne</h3>
+        <a class="quicklinks__item" href="finantstulemused.html" aria-label="Info ettevõttest">
+          <img src="img/icons/news.svg" alt="Uudiste ikoon" class="quicklinks__icon" />
+          <h3>Finantstulemused</h3>
         </a>
-        <a class="quicklinks__item" href="aastaaruanne.pdf" aria-label="Info ettevõttest">
-          <img src="img/icons/5.svg" alt="Number 5 ikoon" class="quicklinks__icon" />
-          <h3>Vaata PDF-i</h3>
+        <a class="quicklinks__item" href="alexela_aruanne_2024.pdf" target="_blank" aria-label="Info ettevõttest">
+          <img src="img/icons/contract.svg" alt="Lepingu ikoon" class="quicklinks__icon" />
+          <h3>Laadi alla PDF</h3>
         </a>
       </nav>
     </section>
-    <section class="section--content">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="img/marti-haal.jpg" alt="Marti Hääl" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h2 class="block__title">Juhatuse esimehe pöördumine</h2>
-          <p class="block__description">
-            2024 oli Alexela jaoks muutuste ja kasvu aasta. Oleme jõudnud arengufaasi, kus liigume varasemalt
-            ärimudelitelt uute lahenduste suunas. See üleminek nõuab suuri investeeringuid ja pidevat õppimist, kuid on
-            hädavajalik, et olla tulevikus juhtiv energialahenduste pakkuja regioonis. Tänase suuna õigsust näitavad nii
-            meie turuosa kasv kui ka klientide positiivne hinnang Alexela kuvandile.
 
-          </p>
-          <button class="btn btn--primary btn-modal">
-            Loe edasi
-            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
-          </button>
-        </div>
-      </article>
-    </section>
 
-    <section class="section--content section--color section--flamingo waves-animation">
-      <article class="content-block">
-        <div class="block__text">
-          <h2 class="block__title">Alexelast lühidalt</h2>
-          <div class="block__description">
-            <p>
-              Alexela on Eesti juhtiv energiaettevõte, millel on laiaulatuslik teenuste portfell, mis pakub nutikaid ja
-              keskkonnasõbralikke energialahendusi igapäevaelus – kodus, teel ja sihtkohas. Keskendume
-              investeeringutele, mis muudavad Eesti energiamaastiku sõltumatumaks teistest ning samal ajal ka
-              keskkonnasõbralikumaks. Oleme otsustanud panustada kohaliku toormega põhinevatesse kestlikesse
-              energialahendustesse, nagu bio-LNG, Energiasalv ja Alexela rePower, et tugevdada meie energiajulgeolekut
-              ja vähendada sõltuvust välistest allikatest.
-            </p>
-
-          </div>
-          <a href="#majandus" class="btn btn--primary">
-            Loe edasi
-            <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
-          </a>
-        </div>
-
-        <h2 class="block__title">Kodus ja teel</h2>
-        <div class="block__graph">
-          <div class="graph__map">
-            <figure>
-              <img src="img/alexela-scheme-desk.svg" alt="Alexela scheme" class="map__image map__image--desktop" />
-              <img src="img/alexela-scheme-mob.svg" alt="Alexela scheme" class="map__image map__image--mobile" />
-            </figure>
-          </div>
-        </div>
-      </article>
-    </section>
 
     <section class="section--content waves-animation">
       <article class="content-block">
-        <h2>2024. aasta põhisündmused</h2>
+        <h2>Meie teekond 2024</h2>
         <p class="">Aasta lõikes, kuude kaupa</p>
 
         <div class="tabs">
@@ -211,7 +153,14 @@
                 <div class="tabs__projects">
                   <ul class="alexela__list">
                     <li>
-                      Uuendasime Alexela brändiidentiteeti.
+                      Avasime Jüri tanklas Alexela ja ühtlasi Eesti teise 400 kW laadija, kus saavad laadida ka
+                      raskeveokid.
+                    </li>
+                    <li>
+                      Alustasime Alexela Energiapäeva konverentside sarjaga.
+                    </li>
+                    <li>
+                      Uuendasime Alexela brändi.
                     </li>
                   </ul>
                 </div>
@@ -228,9 +177,12 @@
                 <div class="tabs__projects">
                   <ul class="alexela__list">
                     <li>
+                      Tõime turule uued Alexela balloonigaasi nutikapid.
+                    </li>
+                    <li>
                       Avasime Tallinna võimsaima laadimisjaama Mustamäe keskuse juures. Kokku kümme laadimiskohta, 2x400
-                      kW CCS, 150 kW CCS, 50 kW CCC ja 5x22 kW type 2 laadijat, et edendada elektrisõidukite
-                      kasutuselevõttu ning piirkonna energiasõltumatuse tagamist.
+                      kW CCS, 150 kW CCS, 50 kW CCC ja 5x22 kW <i>type</i> 2 laadijat, et edendada elektrisõidukite
+                      kasutuselevõttu.
                     </li>
                   </ul>
                 </div>
@@ -266,16 +218,20 @@
                 <div class="tabs__projects">
                   <ul class="alexela__list">
                     <li>
-                      Rae vallas Peetris avasime Alexela toel 11. toiduringluskapi Aruheina lasteaia juures, mis töötab
-                      päikesepaneelide toel. </li>
+                      Rae vallas Peetris Aruheina lasteaia juures avasime üheteistkümnenda toiduringluskapi, mis
+                      töötab muuhulgas päikesepaneelide toel.
+                    </li>
                     <li>
                       Tõime Eestis turule taastuvkütuse E85, mis on valmistatud biolagunevatest jäätmetest, tugevdades
-                      meie pühendumust keskkonnasõbralikele lahendustele. </li>
+                      meie pühendumust keskkonnasõbralikele lahendustele.
+                    </li>
                     <li>
                       Võitsime turundus- ja reklaamiauhindade galal Kuldmuna 2024 kaks auhinda: Hõbemuna uue logo eest
-                      ja Pronksmuna korporatiivse rebrändimise kategoorias. </li>
+                      ja Pronksmuna korporatiivse rebrändimise kategoorias.
+                    </li>
                     <li>
-                      Kirjastasime koostöölepingu nutikaid elektriautode laadijaid tootva eestimaise ettevõttega VOOL.
+                      Alustasime strateegilist koostööd eestimaise ettevõttega VOOL, mis toodab nutikaid elektriautode
+                      laadijaid, mille integreerisime oma paindliku energiajuhtimise süsteemi.
                     </li>
                   </ul>
                 </div>
@@ -292,13 +248,21 @@
                 <div class="tabs__projects">
                   <ul class="alexela__list">
                     <li>
-                      Toimus Alexela struktuurimuudatus, mis toetab ettevõtte kiiret kasvu ja võimaldab strateegiliselt suunatud arengut.</li>
+                      Toimus Alexela struktuurimuudatus, mis toetab ettevõtte kiiret kasvu ja võimaldab strateegiliselt
+                      suunatud arengut.
+                    </li>
                     <li>
-                      Alustasime uut taskuhäälingut "Energiakool", mille eesmärk on selgitada Eesti inimestele olulisi energeetikateemasid ekspertide abil arusaadaval ja lihtsal viisil.</li>
+                      Alustasime uut taskuhäälingut „Energiakool“, mille eesmärk on selgitada Eesti inimestele olulisi
+                      energeetikateemasid ekspertide abil arusaadaval ja lihtsal viisil.
+                    </li>
                     <li>
-                      Toimus kolmas Alexela kogukonnapäev puude istutamiseks, mille käigus Raplamaal istutati ühe päevaga 5000 puud. Maikuuks saavutasime kogukonnaprogrammi eesmärgi, milleks oli istutada üks puu iga Eestimaa elaniku kohta.</li>
+                      Toimus kolmas Alexela kogukonnapäev puude istutamiseks, mille käigus istutati Raplamaal ühe
+                      päevaga 5000 puud. Maikuuks saavutasime kogukonnaprogrammi eesmärgi, milleks oli istutada üks puu
+                      iga Eestimaa elaniku kohta.
+                    </li>
                     <li>
-                      Toimus esimene Täkupoisi ööturg, kus kohalikud kauplejad said müüa oma värsket toidukraami, edendades kohaliku kogukonna toetust ja kohaliku toidu tarbimist.
+                      Toimus esimene Täkupoisi ööturg, kus kohalikud kauplejad said müüa oma värsket toidukraami,
+                      edendades kohaliku kogukonna toetust ja kohaliku toidu tarbimist.
                     </li>
                   </ul>
                 </div>
@@ -315,8 +279,12 @@
                 <div class="tabs__projects">
                   <ul class="alexela__list">
                     <li>
-                      Nägi ilmavalgust Alexela esimene digitaalse loosirattaga üle-eestiline suvekampaania.</li>
-                    
+                      Ilmavalgust nägi Alexela esimene digitaalse loosirattaga üle-eestiline suvekampaania.
+                    </li>
+                    <li>
+                      Täkupoiss pälvis peresõbraliku toidukoha märgise Eesti Lasterikaste Perede Liidult.
+                    </li>
+
                   </ul>
                 </div>
               </div>
@@ -332,11 +300,10 @@
                 <div class="tabs__projects">
                   <ul class="alexela__list">
                     <li>
-                      Täkupoiss pälvis peresõbraliku toidukoha märgise Eesti lasterikaste perede liidult. </li>
+                      Lõpuni jõudis ühinemine energiaettevõttega 220 Energia.
+                    </li>
                     <li>
-                      Lõpuni jõudis ühinemine energiaettevõttega 220 Energia. </li>
-                    <li>
-                      Läksime üle uuele personalihalduse platvormile Wemply. 
+                      Läksime üle uuele personalihalduse platvormile Wemply.
                     </li>
                   </ul>
                 </div>
@@ -353,7 +320,7 @@
                 <div class="tabs__projects">
                   <ul class="alexela__list">
                     <li>
-                      Toimusid traditsioonilised Alexela Väepäevad Alexela töötajatele.  
+                      Toimusid traditsioonilised Alexela Väepäevad Alexela töötajatele.
                     </li>
                   </ul>
                 </div>
@@ -370,11 +337,17 @@
                 <div class="tabs__projects">
                   <ul class="alexela__list">
                     <li>
-                      Tõime Eesti turule esimese siinsel toormel põhineva LBG ehk veeldatud biometaani. Alexela poolt Eestis toodetud biometaani veeldas Põhjamaade ettevõte St1. </li>
+                      Tõime Eesti turule esimese siinsel toormel põhineva veeldatud biometaani. Alexela poolt Eestis
+                      toodetud biometaan veeldati meie Hamina LNG terminalis.
+                    </li>
                     <li>
-                      Käivitasime kaks olulist vahendit Alexela väärtuste ülalhoidmiseks. Alexela käitumiskoodeks ja rikkumistest teavitamise kanal, mille kaudu anda teada parandamist vajavatest kohtadest ning märkimisväärsematest eksimustest. </li>
+                      Käivitasime kaks olulist vahendit Alexela väärtuste ülalhoidmiseks. Alexela käitumiskoodeks ja
+                      rikkumistest teavitamise kanal, mille kaudu saab anda teada
+                      parandamist vajavatest kohtadest ning märkimisväärsematest eksimustest.
+                    </li>
                     <li>
-                      OÜ Alexela Solar sai uue nime ja põhimõtted OÜ Alexela rePower näol, mis koondab endas kõiki tulevikutehnoloogiate arendamise projekte ühe katuse all. 
+                      OÜ Alexela Solar sai uue nime ja põhimõtted OÜ Alexela rePower näol, mis koondab endas kõiki
+                      tulevikutehnoloogiate arendamise projekte ühe katuse all.
                     </li>
                   </ul>
                 </div>
@@ -391,13 +364,20 @@
                 <div class="tabs__projects">
                   <ul class="alexela__list">
                     <li>
-                      Allkirjastasime koostöölepingu Tallinna tehnikaülikooli korvpalli esindusmeeskonnaga, mis kannab sest ajast nime TalTech/Alexela. </li>
-                    <li>
-                      Alexela korraldas klienditänuürituse ja osales partnerina Tallinn International Horse Show’l 2024. </li>
-                    <li>
-                      Täkupoisis toimus traditsiooniline teenindajate tänuüritus, et tänada ja tõsta esile meie eesrindlikke kohvik-poodide töötajaid. 
+                      Allkirjastasime koostöölepingu Tallinna Tehnikaülikooli korvpalli esindusmeeskonnaga, mis kannab
+                      nüüd nime TalTech/Alexela.
                     </li>
-                    <li>Alustasime Alexela unikaalse energiaportfelli võimalusi näitava kampaaniaga, millega liitudes saavad Alexela elektrikliendid kolmeks kuus kütusesoodustuse -15 sent/liiter. </li>
+                    <li>
+                      Alexela korraldas klienditänuürituse ja osales partnerina Tallinn International Horse Show’l 2024.
+                    </li>
+                    <li>
+                      Täkupoisis toimus traditsiooniline teenindajate tänuüritus, et tänada ja tõsta esile meie
+                      eesrindlikke kohvik-poodide töötajaid.
+                    </li>
+                    <li>
+                      Alustasime Alexela unikaalse energiaportfelli võimalusi näitava kampaaniaga, millega liitudes
+                      saavad Alexela elektrikliendid kolmeks kuuks kütusesoodustuse -15 sent/liiter.
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -413,10 +393,11 @@
                 <div class="tabs__projects">
                   <ul class="alexela__list">
                     <li>
-                      Toimus PÖFF ehk Pimedate Ööde filmifestival, mille suurtoetaja on ka Alexela. </li>
+                      Toimus PÖFF ehk Pimedate Ööde filmifestival, mille suurtoetaja on ka Alexela.
+                    </li>
                     <li>
-                      Alexela sai TULI ehk Eesti turundajate liidu liikmeks. </li>
-                    
+                      Alexela sai TULI ehk Eesti turundajate liidu liikmeks.
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -432,9 +413,14 @@
                 <div class="tabs__projects">
                   <ul class="alexela__list">
                     <li>
-                      Jõudsime balloonigaasi nutikappide paigaldamisega aasta lõpuks 185 kapini üle Eesti. Nutikapid on erilised, sest Alexela äpiga kliendid saavad neist balloonigaasi osta 24/7 ja kapid ei vaja eraldi elektritoidet ehk neid saab paigaldada kohtadesse, kus puuduvad varasemad kommunikatsioonid. </li>
+                      Jõudsime balloonigaasi nutikappide paigaldamisega aasta lõpuks 185 kapini üle Eesti. Nutikapid on
+                      erilised, sest Alexela äpiga kliendid saavad neist balloonigaasi osta 24/7 ja kapid ei vaja eraldi
+                      elektritoidet ehk neid saab paigaldada kohtadesse, kus puuduvad varasemad kommunikatsioonid.
+                    </li>
                     <li>
-                      Koostöös emaettevõttega AVH Grupp käivitus uus LPG tarneahel, millega varustatakse kogu regiooni lääne päritolu LPG-ga. </li>
+                      Koostöös emaettevõttega AVH Grupp käivitus uus LPG tarneahel, millega varustatakse kogu regiooni
+                      lääne päritolu LPG-ga.
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -450,8 +436,8 @@
 
     <section class="section--dark waves-animation">
       <article class="content-block">
-        <h2 class="block__title">Kuidas muudame maailma paremaks</h2>
-        <h3>Sotsiaalne - toetusprojektid</h3>
+        <h2 class="block__title">Muudame maailma paremaks</h2>
+        <h3>Toetame Eesti haridust, kultuuri, sporti ja kogukondi</h3>
         <figure class="chart" role="figure" aria-label="Toetusprojektide statistika graafik">
           <div class="chart__grid">
             <div class="chart__axis chart__axis--left" role="list" aria-label="Vasak telg - rahaline väärtus">
@@ -485,9 +471,9 @@
           <div class="chart__x-axis" role="list" aria-label="Aasta telg">
             <div class="chart__x-axis-item" role="listitem">2020</div>
             <div class="chart__x-axis-item" role="listitem">2021</div>
-              <div class="chart__x-axis-item" role="listitem">2022</div>
-              <div class="chart__x-axis-item" role="listitem">2023</div>
-              <div class="chart__x-axis-item" role="listitem">2024</div>
+            <div class="chart__x-axis-item" role="listitem">2022</div>
+            <div class="chart__x-axis-item" role="listitem">2023</div>
+            <div class="chart__x-axis-item" role="listitem">2024</div>
           </div>
 
           <figcaption class="chart__legend">
@@ -502,7 +488,7 @@
           </figcaption>
         </figure>
 
-        <h3>Kogukonnaprogramm</h3>
+        <h3>Kogukonna&shy;programm</h3>
 
         <figure class="chart" role="figure" aria-label="Kogukonnaprogramm">
           <div class="chart__grid">
@@ -558,11 +544,11 @@
               <div class="chart__legend-color chart__legend-color--grey" aria-hidden="true"></div>
               <div>Kogukonnaprogrammi liikmeid, parem telg</div>
             </div>
-            <div class="chart__legend-item">* Istutatud eluea joksul</div>
+            <div class="chart__legend-item">* Istutatud puude eluea joksul</div>
           </figcaption>
         </figure>
 
-        <h3>Keskkonda säästvate tankimislahenduste arendamine</h3>
+        <h3>Keskkonda säästvate tankimis&shy;lahenduste arendamine</h3>
         <figure class="chart" role="figure" aria-label="Toetusprojektide statistika graafik">
           <div class="chart__grid">
             <div class="chart__axis chart__axis--left" role="list" aria-label="Vasak telg - rahaline väärtus">
@@ -599,6 +585,7 @@
             <div class="chart__x-axis-item" role="listitem">2021</div>
             <div class="chart__x-axis-item" role="listitem">2022</div>
             <div class="chart__x-axis-item" role="listitem">2023</div>
+            <div class="chart__x-axis-item" role="listitem">2024</div>
           </div>
 
           <figcaption class="chart__legend">
@@ -619,26 +606,64 @@
 
     <section class="section--horizontal">
       <article class="content-block">
-        <h2>Strateegia ja suund</h2>
-        <p>
-          Alexela strateegia keskmes on energiajulgeoleku tugevdamine, jätkusuutlike lahenduste arendamine ja klientidele terviklike, paindlike ning taskukohaste energiateenuste pakkumine. Kiiresti muutuvas majanduskeskkonnas ja geopoliitilistes tingimustes on meie fookus pikaajaliste investeeringute jätkamisel, uutel turuvõimalustel ja teenuste digitaliseerimisel.
-        </p>
-        <a href="#" class="btn btn--primary">Loe edasi</a>
+        <h2 class="mb-xxl">Hoiame, varustame ja vastutame</h2>
         <div class="block__graph">
-          <div class="graph__map two-graphs">
+          <div class="graph__map">
             <figure>
-              <img src="img/energiahybriid.svg" alt="Energia hübriid" />
-            </figure>
-            <figure>
-              <img src="img/jatkusuutlik.svg" alt="Jätkusuutlikkus" />
+              <img src="img/energiakuiteenus.svg" alt="Energia hübriid" />
             </figure>
           </div>
         </div>
       </article>
     </section>
 
+
+
+    <section class="section--content section--color section--cream waves-animation">
+      <article class="content-block block__text">
+        <h2>
+          Investeeringud
+        </h2>
+        <p><strong>Aasta 2024 oli investeeringute aasta </strong></p>
+        <p>
+          Aastal 2024 investeeris AS-i Alexela kontsern üle 10,5 miljoni euro erinevatesse projektidesse ja
+          IT-lahendustesse. Suurimad projektid olid Peterburi tee vesinikutankla, mis valmib 2025. aasta kevadeks,
+          Mustakivi tankla soetamine ning brändiuuendus koos IT investeeringutega sisemise efektiivsuse suurendamiseks.
+          Samuti toetasime uusi teenuseid, sealhulgas Tark Elekter, platvormi, mis võimaldab mugavat tootmise, tarbimise
+          ja salvestamise juhtimist.
+        </p>
+        <p>
+          E-mobiilsuse valdkonnas jätkus investeerimine, mille käigus lisandus rekordiline
+          arv laadimisotsikuid ning teenuse disain
+          sai täiendust. Lõppes esimene nutikate
+          balloonigaasi kappide paigaldamise faas,
+          muutes kogu Alexela müügivõrgustiku
+          nutikaks. Ettemakse tehnoloogia valmimine toimus 2024. aasta sügistalvel.
+        </p>
+        <p>
+          Alexela Motors investeeris üle miljoni
+          euro masinapargi uuendamisse ja laiendamisse. Fookus oli LPG varustuskindluse suurendamisel ning logistika
+          täiendamisel, et olla valmis kehtima hakkavateks
+          sanktsioonideks. Nutikate balloonigaasi
+          kappide teenindamiseks soetati spetsiaalsed eriveokid ja uus tõstuk. Alexela
+          Motors jätkab roheliste gaasiliste kütuste kasutamist, et vähendada oma keskkonnajalajälge.
+        </p>
+        <p>
+          Alexela rePower alustas investeeringuga
+          Kiviõli akuparki, mille kogumaksumus on
+          1,4 miljonit eurot ja mis valmib 2025. aasta kevadeks. Aasta 2024 investeeringute
+          maht ulatus üle 0,75 miljoni euro.
+        </p>
+        <p>
+          AS Alexela suurendas Alexela Motorsi
+          omakapitali vabatahtlikku reservi sissemaksega 0,6 miljoni euro võrra.
+        </p>
+      </article>
+
+    </section>
+
     <section class="section--horizontal section--color section--flamingo waves-animation">
-      <article class="content-block">
+      <article class="content-block block__text">
         <h2>Alexela väärtused</h2>
         <p>
           Kõik räägivad energiast. Tuulest, päikesest, gaasist, isegi
@@ -647,11 +672,14 @@
           aeg võtta kontroll enda kätte, teha otsused ja hakata tegutsema. Nii
           energia julgeoleku, hinna kui keskkonnamõju vaates. Tagada nii
           iseendale kui riigile tervikuna energiakindlus ja konkurentsieelis,
-          kindlustada oma olemasolu ja tulevik. AS Alexela (edaspidi Alexela)
-          on kasvanud kodumaisest tanklaketist piirkonna üheks suurimaks
-          energiafirmaks ja rohenovaatoriks.
+          kindlustada oma olemasolu ja tulevik. AS Alexela (edaspidi Alexela) on kasvanud kodumaisest tanklaketist
+          piirkonna üheks suurimaks energiaettevõtteks.
         </p>
-        <a href="#" class="btn btn--primary">Loe edasi</a>
+        <a href="https://www.alexela.ee/et/alexela-grupi-vaartused" target="_blank" class="link">
+          Loe edasi
+          <img src="img/icons/external-link.svg" alt="link outside icon" /></a>
+
+          
       </article>
     </section>
 
@@ -659,32 +687,30 @@
       <article class="content-block">
         <div class="flex icon-text-block">
           <figure>
-            <img src="img/hold-earth.svg" alt="Maakera käte vahel" />
+            <img src="img/rocket.svg" alt="Maakera käte vahel" />
           </figure>
           <div>
-            <p>Olen jõud...</p>
-            <p>...ja minu töö on väärtuslik</p>
+            <p>Olen jõud ja minu töö on väärtuslik.</p>
           </div>
         </div>
 
         <div class="flex icon-text-block">
           <figure>
-            <img src="img/hold-earth.svg" alt="Maakera käte vahel" />
+            <img src="img/hands.svg" alt="Maakera käte vahel" />
           </figure>
           <div>
-            <p>Meis on väge...</p>
-            <p>…ja me toetame üksteist</p>
+            <p>Meis on väge ja me toetame üksteist.</p>
           </div>
         </div>
 
 
         <div class="flex icon-text-block">
           <figure>
-            <img src="img/hold-earth.svg" alt="Maakera käte vahel" />
+            <img src="img/earth.svg" alt="Maakera käte vahel" />
           </figure>
           <div>
-            <p>Muudame maailma...</p>
-            <p>…tarkuse ja pühendumusega, mis toetab Eesti kultuuri, looduse säilimist ning majanduse arengut</p>
+            <p>Muudame maailma tarkuse ja pühendumusega, mis toetab Eesti kultuuri, looduse säilimist ning majanduse
+              arengut.</p>
           </div>
         </div>
       </article>
@@ -692,128 +718,110 @@
 
   </main>
 
-  <div class="modal">
-    <div class="modal__content">
-      <button class="btn btn--outline modal__close">
-        <img src="img/icons/close.svg" alt="Sulge" />
-      </button>
-      <h2>Juhatuse esimehe pöördumine</h2>
-      <div class="modal__content-inner">
-        <figure>
-          <img src="img/marti-haal.jpg" alt="Marti Hääl" />
-          <figcaption>Marti Hääl, Alexela juhatuse esimees</figcaption>
-        </figure>
-        <p>2024 oli Alexela jaoks muutuste ja kasvu aasta. Oleme jõudnud arengufaasi, kus liigume varasemalt
-          ärimudelitelt uute lahenduste suunas. See üleminek nõuab suuri investeeringuid ja pidevat õppimist, kuid on
-          hädavajalik, et olla tulevikus juhtiv energialahenduste pakkuja regioonis. Tänase suuna õigsust näitavad nii
-          meie turuosa kasv kui ka klientide positiivne hinnang Alexela kuvandile.</p>
-        <p>Siinse piirkonna energeetikasektorit laiemalt mõjutasid eelmisel aastal majanduslangus, geopoliitilised
-          muutused ja regulatiivne ebakindlus. Siiski suutsime kohaneda, leida võimalusi ja jätkata investeerimist
-          energiajulgeolekusse. Meie fookuses olid kohalike ressursside maksimaalne kasutamine, uute tarneahelate
-          loomine ja varustuskindluse tugevdamine. </p>
-        <h3>Meil on tasakaalustatud energiaportfell ja arendame tulevikulahendusi </h3>
-        <p>Eesti vajab tasakaalustatud energiaportfelli, kus taastuvenergia kõrval on ka juhitavad tootmisvõimsused,
-          pikaajaline salvestus ja tugevad ühendused naaberriikidega. Alexela panustab sellesse, arendades Eesti esimest
-          bio-LNG tarneahelat, rajades Paldiskisse Energiasalve ja investeerides taristuprojektidesse, mis vähendavad
-          sõltuvust Venemaast. </p>
-        <p>
-          2024. aastal jätkasime liikumist tootepõhiselt teenusepõhisele ärimudelile, pakkudes klientidele terviklikke
-          ja nutikaid energialahendusi kodus, teel ja sihtkohas. Kasvatasime tanklavõrku, laiendasime energiateenuseid
-          ja elektrisõidukite laadimisvõrgustikku, tehes Targa Elektri lahenduse tasuta kättesaadavaks Lisaks
-          panustasime taastuvenergiasse, arendades päikese- ja akuparke ning vesinikutanklate lahendusi.
-        </p>
-        <p>Eesti vajab tasakaalustatud energiaportfelli, kus taastuvenergia kõrval on ka juhitavad tootmisvõimsused,
-          pikaajaline salvestus ja tugevad ühendused naaberriikidega. Alexela panustab sellesse, arendades Eesti esimest
-          bio-LNG tarneahelat, rajades Paldiskisse Energiasalve ja investeerides taristuprojektidesse, mis vähendavad
-          sõltuvust Venemaast. </p>
-        <p>2024. aastal jätkasime liikumist tootepõhiselt teenusepõhisele ärimudelile, pakkudes klientidele terviklikke
-          ja nutikaid energialahendusi kodus, teel ja sihtkohas. Kasvatasime tanklavõrku, laiendasime energiateenuseid
-          ja elektrisõidukite laadimisvõrgustikku, tehes Targa Elektri lahenduse tasuta kättesaadavaks Lisaks
-          panustasime taastuvenergiasse, arendades päikese- ja akuparke ning vesinikutanklate lahendusi. </p>
-        <h3>Oleme kasvav regiooni energiapartner</h3>
-        <p>Aastal 2024 laiendasime tegevust Lätis ja Soomes. Meie tütarettevõtted Rohe Solutions Oy Soomes ja SIA
-          Alexela Lätis ehitasid üles uusi läänepõhiseid tarneahelaid ja pakkusid jätkusuutlikke energialahendusi.
-          Hamina LNG terminal Soomes on saanud oluliseks regionaalseks sõlmpunktiks, tagades sõltumatu gaasivarustuse
-          Baltikumile. </p>
-        <p>Samuti viisime lõpule regiooni esimese lääne päritolu LPG tarneahela – Alexela emaettevõte AVH Grupp omandas
-          Riia terminali SIA Latvija Propāna Gāze, kindlustades nii alternatiivse tarnekanali kogu regioonile. </p>
-        <h3>Säilitasime tugeva finantspositsiooni</h3>
-        <p>Vaatamata keerulisele majanduskeskkonnale säilitasime tugeva finantspositsiooni ja investeerisime üle 10
-          miljoni euro innovaatilistesse energialahendustesse. Alexela elektrimüügi turuosa kasvas 19,7 protsendini,
-          tehes meist suuruselt teise Eesti elektrimüüja.</p>
-        <p>Energiasektori hindade volatiilsus ja kõrge Euribor mõjutasid turgu, kuid suutsime säilitada efektiivse
-          kulustruktuuri ja tugevdada ettevõtte kapitalibaasi.</p>
-        <h3>Panustame majandusse, haridusse ja kultuuri</h3>
-        <p>Meie väärtused – Eesti inimeste heaolu kasv, varustuskindluse tagamine, mõistlik energiahind, hariduse,
-          kultuuri ja spordi toetamine ning vastutustundlikkus – ei ole pelgalt sõnad, vaid põhimõtted, mida järgime iga
-          päev.</p>
-        <p>
-          Panustasime Eesti majandusse 182 miljoni euro makstud maksudega ja toetasime haridust, kultuuri ning sporti
-          üle 500 tuhande euroga. Meid tunnustati Eesti kultuurisõbra ja muusika toetaja tiitliga, ning Kantar Emori
-          uuring kinnitas, et Alexela on Eesti spontaanselt tuntuim energiaettevõte ja kuulub ihaldusväärseimate
-          tööandjate hulka.</p>
-        <p>
-          Lisaks seisime Eesti tarbijate huvide eest, aidates ära hoida sagedusreservitasu kehtestamise, mis oleks
-          tähendanud elektrihinna tõusu.
-        </p>
-        <h3>Vaadates tulevikku</h3>
-        <p>Energiasektoris toimub fundamentaalne muutus. Senised lahendused enam ei toimi, kuid uued pole veel
-          täielikult valmis. Selleks, et üleminek oleks sujuv ja jätkusuutlik, vajame kindlaid partnerlusi ja
-          pikaajalist visiooni.</p>
-        <p>
-          Iga ettevõtte ja inimese otsus mõjutab tulevikku – energia ei ole ainult hind, vaid ka väärtused, mis loovad
-          tugevama ja sõltumatuma ühiskonna.</p>
-        <p>Koos loome parema energiatuleviku!</p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p>Marti Hääl</br>Juhatuse esimees</p>
-
-      </div>
-    </div>
-  </div>
-
   <footer>
     <div class="footer__container">
       <div class="footer__content">
-        <div class="footer__left">
-          <div class="footer__logo">
-            <img src="img/alexela_logo.svg" alt="Alexela" />
-          </div>
-          <div class="footer__contact">
-            <strong>Alexela AS</strong>
-            <span>Roseni 11, 10111 Tallinn</span>
-            <a href="mailto:alexela@alexela.ee" class="footer__contact__item">
-              <img src="img/icons/email.svg" alt="Email" />
-              <span>alexela@alexela.ee</span>
-            </a>
-            <a href="tel:+372629000" class="footer__contact__item">
-              <img src="img/icons/Phone.svg" alt="Phone" />
-              <span>+ 372 629 000</span>
-            </a>
-          </div>
+        <div class="footer__menu">
+
+          <nav class="footer__nav">
+            <div class="menu__section">
+              <a href="/" class="menu__button">
+                <span class="menu__icon menu__icon--home"></span>
+                Avaleht
+              </a>
+            </div>
+
+            <div class="menu__section">
+              <a href="ettevottest.html" class="menu__button menu__button--active">
+                <span class="menu__icon menu__icon--a-monogram"></span>
+                Ettevõttest
+              </a>
+            </div>
+
+            <div class="menu__section">
+              <a href="arisuunad.html" class="menu__button">
+                <span class="menu__icon menu__icon--eur"></span>
+                Ärisuunad
+              </a>
+            </div>
+
+            <div class="menu__section">
+              <a href="kestlikkus.html" class="menu__button">
+                <span class="menu__icon menu__icon--greenspark"></span>
+                Kestlikkus (ESG)
+              </a>
+            </div>
+
+            <div class="menu__section">
+              <a href="finantstulemused.html" class="menu__button">
+                <span class="menu__icon menu__icon--news"></span>
+                Finantstulemused
+              </a>
+            </div>
+
+            <div class="menu__section">
+              <a href="alexela_aruanne_2024.pdf" target="_blank" class="menu__button">
+                <span class="menu__icon menu__icon--contract"></span>
+                Laadi alla PDF
+              </a>
+            </div>
+
+
+          </nav>
         </div>
-        <div class="footer__right">
-          <div class="footer__social">
-            <a href="https://www.alexela.ee" class="social__link"><span class="social__icon-mask icon-monogram"></span>
-              www.alexela.ee</a>
-            <a href="#" class="social__icon">
-              <span class="social__icon-mask icon-facebook"></span>
-              <span>Facebook</span>
-            </a>
-            <a href="#" class="social__icon">
-              <span class="social__icon-mask icon-instagram"></span>
-              <span>Instagram</span>
-            </a>
-            <a href="#" class="social__icon">
-              <span class="social__icon-mask icon-youtube"></span>
-              <span>Youtube</span>
-            </a>
+
+        <div class="footer__datablock">
+
+          <div class="footer__left">
+            <div class="footer__logo">
+              <img src="img/alexela_logo.svg" alt="Alexela" />
+            </div>
+            <div class="footer__contact">
+              <div>
+                <strong>Alexela AS</strong>
+                <span>Roseni 11, 10111 Tallinn</span>
+              </div>
+              <a href="mailto:alexela@alexela.ee" class="footer__contact__item">
+                <img src="img/icons/email.svg" alt="Email" />
+                <span>alexela@alexela.ee</span>
+              </a>
+              <a href="tel:+372629000" class="footer__contact__item">
+                <img src="img/icons/Phone.svg" alt="Phone" />
+                <span>+ 372 629 000</span>
+              </a>
+            </div>
           </div>
-          <div class="footer__certification">
-            <img src="img/iso-9001.svg" alt="ISO 9001 Certified" />
+
+          <div class="footer__right">
+            <div class="footer__social">
+              <a href="https://www.alexela.ee" class="social__link"><span
+                  class="social__icon-mask icon-monogram"></span>
+                www.alexela.ee</a>
+              <a href="#" class="social__icon">
+                <span class="social__icon-mask icon-facebook"></span>
+                <span>Facebook</span>
+              </a>
+              <a href="#" class="social__icon">
+                <span class="social__icon-mask icon-instagram"></span>
+                <span>Instagram</span>
+              </a>
+              <a href="#" class="social__icon">
+                <span class="social__icon-mask icon-youtube"></span>
+                <span>Youtube</span>
+              </a>
+            </div>
+            <div class="footer__certification">
+              <img src="img/iso-9001.svg" alt="ISO 9001 Certified" />
+            </div>
           </div>
+
+          <div class="footer__slogan">
+            Energia kogu eluks
+          </div>
+
         </div>
+
+
       </div>
     </div>
   </footer>
