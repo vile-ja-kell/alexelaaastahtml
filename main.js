@@ -17,16 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize accordion
     const accordionButtons = document.querySelectorAll('.accordion__button');
     
-    accordionButtons.forEach(button => {
+    for (const button of accordionButtons) {
         const content = button.nextElementSibling;
-        if (content && content.classList.contains('accordion__content')) {
+        if (content?.classList.contains('accordion__content')) {
             button.addEventListener('click', () => {
                 const isExpanded = button.getAttribute('aria-expanded') === 'true';
                 button.setAttribute('aria-expanded', !isExpanded);
                 content.classList.toggle('is-open');
             });
         }
-    });
+    }
 
     const menuToggle = document.querySelector('.menu-toggle');
     const menuContainer = document.querySelector('.menu__container');
@@ -44,52 +44,120 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Check if the page contains a modal
-    const modal = document.querySelector('.modal');
-    if (modal) {
-        const modalOpenBtn = document.querySelector('.btn-modal');
-        const modalCloseBtn = document.querySelector('.modal__close');
+    // Initialize explanation functionality for bullets
+    initExplanations();
+});
 
-        // Function to open modal
-        const openModal = () => {
-            modal.style.display = 'block';
-            modal.offsetHeight; // Trigger reflow
-            modal.classList.add('is-open');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
-        };
+/**
+ * Explanation functionality for bullet elements
+ */
+const initExplanations = () => {
+    const bullets = document.querySelectorAll('.bullet');
+    const explanations = document.querySelectorAll('.explanation');
+    const closeButtons = document.querySelectorAll('.explanation__close');
 
-        // Function to close modal
-        const closeModal = () => {
-            modal.classList.remove('is-open');
-            setTimeout(() => {
-                if (!modal.classList.contains('is-open')) {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = ''; // Restore scrolling
-                }
-            }, 300); // Match with CSS transition duration
-        };
+    // Function to close all explanations
+    const closeAllExplanations = () => {
+        for (const explanation of explanations) {
+            explanation.classList.remove('is-open');
+        }
+    };
 
-        // Add event listeners
-        modalOpenBtn.addEventListener('click', openModal);
-        modalCloseBtn.addEventListener('click', closeModal);
+    // Function to open specific explanation
+    const openExplanation = (explanation) => {
+        closeAllExplanations(); // Close any open explanations first
+        explanation.classList.add('is-open');
+    };
 
-        // Close modal when clicking outside modal content
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
+    // Function to find corresponding explanation for a bullet
+    const findCorrespondingExplanation = (clickedBullet) => {
+        // First try to match using data-bullet-id attribute
+        const bulletId = clickedBullet.getAttribute('data-bullet-id');
+        if (bulletId) {
+            const matchingExplanation = document.querySelector(`.explanation[data-bullet-id="${bulletId}"]`);
+            if (matchingExplanation) {
+                return matchingExplanation;
             }
-        });
+        }
+        
+        // Fallback to text-based matching
+        const bulletText = clickedBullet.textContent.trim();
+        
+        // First try to find explanation in the same parent container
+        const parentFigure = clickedBullet.closest('figure');
+        if (parentFigure) {
+            const explanationInSameContainer = parentFigure.querySelector('.explanation');
+            if (explanationInSameContainer) {
+                // Check if the explanation has a matching bullet inside
+                const explanationBullet = explanationInSameContainer.querySelector('.bullet');
+                if (explanationBullet) {
+                    const explanationText = explanationBullet.textContent.trim();
+                    // Check if explanation bullet starts with the clicked bullet text
+                    if (explanationText.startsWith(bulletText) || bulletText.startsWith(explanationText)) {
+                        return explanationInSameContainer;
+                    }
+                }
+            }
+        }
+        
+        // Fallback: find any explanation with matching bullet text (partial match)
+        for (const explanation of explanations) {
+            const explanationBullet = explanation.querySelector('.bullet');
+            if (explanationBullet) {
+                const explanationText = explanationBullet.textContent.trim();
+                // Check if either text starts with the other (partial matching)
+                if (explanationText.startsWith(bulletText) || bulletText.startsWith(explanationText)) {
+                    return explanation;
+                }
+            }
+        }
+        
+        return null;
+    };
 
-        // Close modal on escape key press
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.classList.contains('is-open')) {
-                closeModal();
+    // Add click listeners to bullets (only absolute positioned ones that are clickable)
+    for (const bullet of bullets) {
+        // Only add click listener to bullets that are not inside explanations
+        if (!bullet.closest('.explanation')) {
+            bullet.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent event bubbling
+                
+                const explanation = findCorrespondingExplanation(bullet);
+                if (explanation) {
+                    openExplanation(explanation);
+                }
+            });
+            
+            // Add cursor pointer style to indicate clickability
+            bullet.style.cursor = 'pointer';
+        }
+    }
+
+    // Add click listeners to close buttons
+    for (const closeButton of closeButtons) {
+        closeButton.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent event bubbling
+            const explanation = closeButton.closest('.explanation');
+            if (explanation) {
+                explanation.classList.remove('is-open');
             }
         });
     }
-});
 
+    // Close explanation when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.bullet') && !e.target.closest('.explanation')) {
+            closeAllExplanations();
+        }
+    });
 
+    // Close explanation on escape key press
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeAllExplanations();
+        }
+    });
+};
 
 /**
  * Tabs functionality
