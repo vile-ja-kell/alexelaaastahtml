@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="../css/style.css" />
-  <title>Jätku&shy;suutlikkus</title>
+  <title>Sustainability</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <video class="header__video" autoplay muted loop playsinline poster="../video/jatkusuutlikkus.jpg">
       <source src="../video/jatkusuutlikkus.webm" type="video/webm" />
       <source src="../video/jatkusuutlikkus.mp4" type="video/mp4" />
-      Sinu brauser ei toeta video elementi.
+      Your browser does not support the video element.
     </video>
     <nav class="nav">
       <div class="nav__logo">
@@ -27,7 +27,7 @@
       </div>
       <div class="nav__subcontainer">
         <div class="language">
-          <select name="language" id="language" class="language__select">
+          <select name="language" id="language" class="language__select" onchange="switchLanguage(this.value)">
             <option value="et">ET</option>
             <option value="en">EN</option>
           </select>
@@ -43,44 +43,44 @@
       <div class="menu__container">
         <div class="menu">
           <div class="menu__section">
-            <a href="/" class="menu__button">
+            <a href="index.html" class="menu__button">
               <span class="menu__icon menu__icon--home"></span>
-              Avaleht
+              Homepage
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="ettevottest.html" class="menu__button">
+            <a href="about.html" class="menu__button">
               <span class="menu__icon menu__icon--a-monogram"></span>
-              Ettevõttest
+              About the Company
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="arisuunad.html" class="menu__button">
+            <a href="business-lines.html" class="menu__button">
               <span class="menu__icon menu__icon--eur"></span>
-              Ärisuunad
+              Business Lines
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="kestlikkus.html" class="menu__button menu__button--active">
+            <a href="sustainability.html" class="menu__button menu__button--active">
               <span class="menu__icon menu__icon--greenspark"></span>
-              Kestlikkus (ESG)
+              Sustainability and Governance
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="finantstulemused.html" class="menu__button">
+            <a href="economic-results.html" class="menu__button">
               <span class="menu__icon menu__icon--news"></span>
-              Finantstulemused
+              Economic Results
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="alexela_aruanne_2024.pdf" target="_blank" class="menu__button">
+            <a href="alexela_aruanne_2024_ENG.pdf" target="_blank" class="menu__button">
               <span class="menu__icon menu__icon--contract"></span>
-              Laadi alla PDF
+              Download PDF
             </a>
           </div>
         </div>
@@ -89,34 +89,34 @@
     <div class="hero">
 
       <div class="hero__content">
-        <h1>Kestlikkus (ESG)</h1>
+        <h1>Sustainability <br>and Governance</h1>
       </div>
-      </a>
+      
     </div>
   </header>
   <main class="waves-animation bg-main-3">
     <section class="section--top" id="quicklinks">
-      <h2 class="text-left">Leia kiirelt</h2>
+      <h2 class="text-left">Quick find</h2>
       <nav class="quicklinks quicklinks--pages" aria-label="Quick navigation">
-        <a class="quicklinks__item" href="ettevottest.html" aria-label="Info ettevõttest">
+        <a class="quicklinks__item" href="about.html" aria-label="About the company">
           <img src="../img/icons/a-monogram.svg" alt="Alexela logo" class="quicklinks__icon" />
-          <h3>Ettevõttest</h3>
+          <h3>About the Company</h3>
         </a>
-        <a class="quicklinks__item" href="arisuunad.html" aria-label="Info ettevõttest">
-          <img src="../img/icons/eur.svg" alt="Euro ikoon" class="quicklinks__icon" />
-          <h3>Ärisuunad</h3>
+        <a class="quicklinks__item" href="business-lines.html" aria-label="About the company">
+          <img src="../img/icons/eur.svg" alt="Euro icon" class="quicklinks__icon" />
+          <h3>Business Lines</h3>
         </a>
-        <a class="quicklinks__item" href="kestlikkus.html" aria-label="Info ettevõttest">
-          <img src="../img/icons/greenspark.svg" alt="Lehe ikoon" class="quicklinks__icon" />
-          <h3>Kestlikkus (ESG)</h3>
+        <a class="quicklinks__item" href="sustainability.html" aria-label="About the company">
+          <img src="../img/icons/greenspark.svg" alt="Leaf icon" class="quicklinks__icon" />
+          <h3>Sustainability and Governance</h3>
         </a>
-        <a class="quicklinks__item" href="finantstulemused.html" aria-label="Info ettevõttest">
-          <img src="../img/icons/news.svg" alt="Uudiste ikoon" class="quicklinks__icon" />
-          <h3>Finantstulemused</h3>
+        <a class="quicklinks__item" href="economic-results.html" aria-label="About the company">
+          <img src="../img/icons/news.svg" alt="News icon" class="quicklinks__icon" />
+          <h3>Economic Results</h3>
         </a>
-        <a class="quicklinks__item" href="alexela_aruanne_2024.pdf" target="_blank" aria-label="Info ettevõttest">
-          <img src="../img/icons/contract.svg" alt="Lepingu ikoon" class="quicklinks__icon" />
-          <h3>Laadi alla PDF</h3>
+        <a class="quicklinks__item" href="alexela_aruanne_2024_ENG.pdf" target="_blank" aria-label="About the company">
+          <img src="../img/icons/contract.svg" alt="Contract icon" class="quicklinks__icon" />
+          <h3>Download PDF</h3>
         </a>
       </nav>
     </section>
@@ -126,53 +126,51 @@
 
     <section class="section--horizontal">
       <article class="content-block block__text">
-        <h2>Juhtimine</h2>
-        <strong>Alexela juhtimiskultuur on väärtuspõhine</strong>
-        <p>Alexela lähtub oma äritegevuses väärtustest, käitumiskoodeksist, fookusteemadest, strateegilistest
-          eesmärkidest ning riiklikest seadustest ja õigusnormidest. </p>
-        <strong>Alexela juhtimisalased põhimõtted: </strong>
+        <h2>Governance</h2>
+        <strong>Alexela's management culture is value-based</strong>
+        <p>Alexela's business activities are guided by
+          values, a Code of Conduct, focus, topics,
+          strategic objectives, and national laws
+          and regulations.</p>
+        <strong>Alexela's governance principles:</strong>
         <ul class="alexela__list">
-          <li>Alexela ei salli ühelgi kujul
-            korruptsiooni ega altkäemaksu. Me
-            ei küsi, ei paku ega võta kunagi vastu
-            altkäemaksu.
+          <li>Alexela does not tolerate any form of
+            corruption or bribery. We will never
+            ask for, offer, or accept bribes.
           </li>
           <li>
-            Altkäemaksu all peame silmas
-            millegi väärtusliku pakkumist või
-            vastuvõtmist mõne tegevuse eest,
-            mis võib hõlmata väljapressimist ja
-            kasusaamist.
+            By bribery, we mean offering or
+            accepting something of value in
+            exchange for an action that may
+            involve extortion and profiteering.
           </li>
           <li>
-            Korruptsiooni all peame silmas
-            ebaausat või ebaseaduslikku
-            käitumist, nagu omastamine, võimu
-            kuritarvitamine, pettus, nepotism,
-            kokkumäng.
+            By corruption we mean dishonest
+            or illegal behaviour such as
+            embezzlement, abuse of power, fraud,
+            nepotism, collusion.
           </li>
           <li>
-            Me ei tegele maksudest
-            kõrvalehoidumise, rahapesu ega
-            nende soodustamisega.
+            We do not engage in or facilitate tax
+            evasion, money laundering.
           </li>
           <li>
-            Alexelas tehtavad otsused peavad
-            olema tehtud ettevõtte parimates
-            huvides ja vältima huvide konflikti.
+            Decisions at Alexela must be made in
+            the best interests of the company and
+            avoid conflicts of interest.
           </li>
           <li>
-            Alexela järgib konkurentsiseadust ja
-            monopolivastaseid eeskirju ega astu
-            aruteludesse või lepingutesse, mis
-            sisaldavad hinnakokkuleppeid, turu
-            jagamist, pakkumiste võltsimist või
-            teisi ebaausaid kaubandusvõtteid.
+            Alexela complies with competition
+            law and antitrust rules and does not
+            enter into discussions or agreements
+            that involve price fixing, market
+            sharing, bid rigging, or other unfair
+            trading practices.
           </li>
           <li>
-            Alexela tagab klientide, töötajate ja
-            äripartnerite andmete turvalisuse ning
-            eraelu puutumatuse.
+            Alexela ensures the security and
+            privacy of the data of its customers,
+            employees, and business partners.
           </li>
         </ul>
 
@@ -180,154 +178,135 @@
 
         <article class="accordion">
           <button class="accordion__button" aria-expanded="false">
-            <span>Loe edasi</span>
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
             <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
           </button>
           <div class="accordion__content">
             <p>
-              Avaldame vähemalt kord aastas avaliku raporti vahendusel ülevaate oma ESG
-              eesmärkidest, edenemistest ja põhimõtetest.
+              At least once a year, we publish a public
+              report on our ESG objectives, progress,
+              and key findings.
             </p>
             <p>
-              Alexela ESG valdkonna strateegia eest
-              vastutavad ettevõtte juhatus ning jätkusuutlikkuse juht. Seega on juhtkonnal
-              oluline roll jätkusuutlikkuse integreerimisel äriprotsessidesse, kuid tähtis osa on
-              ka kõigil töötajatel, kuna nemad vastutavad oma vastutusalas kvaliteedi, ohutuse
-              ja keskkonnahoiu eest.
+              Alexela's ESG strategy is the responsibility of the company's Board of Directors
+              and the Head of Sustainability. Thus, the
+              management plays an important role in
+              integrating sustainability into the business processes, but all employees also
+              play an important role, as they are responsible for quality, safety, and the environment in their area of responsibility.
             </p>
             <p>
-              Töötajate koolitamist alustatakse kohe
-              alguses uute töötajate päeva raames,
-              tutvustades muu hulgas ettevõtte väärtuseid, käitumiskoodeksit ning strateegilisi fookusteemasid, et
-              kollektiivis oleks
-              kõigil hea ja turvaline töötada. Personali
-              koolitamine jätkub kogu ettevõttes töötamise aja lisaks valdkonnaspetsiifilistele
-              koolitustele järjepidevate üldiselt vajalike
-              koolitustega nagu küberturvalisuse, andmekaitsealaste, vaimse tervise jms koolitused.
+              Employee training starts at the very beginning with a New Employees Day, which
+              introduces, among other things, the company's values, Code of Conduct and strategic focus topics, so that everyone can
+              work well and safely. Staff training will
+              continue throughout their employment,
+              in addition to sector-specific training,
+              with ongoing general training such as
+              cyber security, data protection, mental
+              health, etc. training.
             </p>
             <p>
-              Avatud organisatsioonikultuuri ja sisekommunikatsiooni edendamiseks jagatakse jooksvalt infot siseveebi
-              vahendusel ning regulaarselt toimuvad kõigile
-              töötajatele mõeldud infotunnid, mis on
-              jälgitavad ka Microsoft Teamsi vahendusel. Siseveebis on kõigil töötajatel võimalik lihtsasti anda
-              tagasisidet käimasolevatele protsessidele, kiita kolleege ja
-              vajadusel ka kritiseerida, kui midagi on
-              vaja paremini teha.
+              In order to promote an open organisational culture and internal communication, information is shared on an ongoing
+              basis via the intranet, and regular information sessions for all employees are
+              held and monitored via Microsoft Teams.
+              On the intranet, all employees can easily give feedback on ongoing processes,
+              praise colleagues and, if necessary, criticise if something needs to be done better.
             </p>
-            <strong>Juhtimispõhimõtete rakendamine</strong>
-            <p></p>
-            <p>Alexela järgib eetilisi, ausaid ja läbipaistvaid juhtimispõhimõtteid kõigis oma
-              tegevustes, mis on kirjas meie käitumiskoodeksis. Käitumiskoodeks on kompass
-              meie igapäevatöös ning otsustes, tagades, et neid põhimõtteid järgivad kõik
-              töötajad ja koostööpartnerid.
-            </p>
-            <p>
-              Meie käitumiskoodeks kajastab meie
-              väärtusi, mis aitavad edendada lugupidavat, jätkusuutlikku ja vastutustundlikku
-              ettevõtte kultuuri. Seda järgides tagame
-              eetilise käitumise looduse ning inimeste
-              suhtes. Samuti pühendume seaduskuulekusele, täites kõik vajalikud määrused, et
-              tagada turvaline ja tervislik töökeskkond,
-              kus inimõigused on alati au sees. Näiteks
-              tagame oma töötajatele ning koostööpartneritele tervisliku ja ohutu töökeskkonna, järgides töötervishoiu
-              ja -ohutuse
-              seadusi.
-            </p>
-            <p>
-              Alexela ei salli korruptsiooni ega ebaausat konkurentsi. Me ei aktsepteeri altkäemaksu ega ebaausaid
-              äripraktikaid,
-              nagu ametiseisundi kuritarvitamine või
-              perekondlikest või ärilistest sidemetest
-              tulenev huvide konflikt. Kõik suuremad
-              tehingud kinnitatakse juhatuses, et vältida võimalikke probleeme. Näiteks jälgime, et meil ei oleks
-              olukordi, kus siseinfo
-              levitamist kasutataks isiklike huvide saavutamiseks.</p>
-            <strong>AS Alexela 2024. aastal</strong>
-            <ul class="alexela__list">
-              <li>
-                Ei esinenud ühtegi korruptsioonijuhtumit ega esitatud kohtukaebust ettevõtte
-                vastu. Korruptsiooniga seotud põhjustel ei vallandatud ühtegi töötajat ega
-                peatatud ega lõpetatud ühtegi lepingut meie partneritega.
-              </li>
-              <li>
-                Meie tegevus vastas kõigile kehtivatele regulatsioonidele, sealhulgas sotsiaalsete,
-                majanduslike ja keskkonnaalaste nõuete täitmine.
-              </li>
-              <li>
-                Ettevõttele ei rakendatud rahatrahve ega muid sanktsioone.
-              </li>
-              <li>
-                Keskkonnakohustuste täitmise osas ei esinenud ühtegi rikkumist ega
-                mittevastavust.
-              </li>
-              <li>
-                Samuti ei ole Alexela toetanud poliitilisi tegevusi rahaliselt ega mitterahaliselt.
-              </li>
-            </ul>
+            <strong>Applying governance principles</strong>
+        <p>
+          Alexela adheres to ethical, fair, and transparent governance principles in all its activities, as set out in our Code of Conduct.
+          The Code of Conduct is a compass in our
+          daily work and decisions, ensuring that
+          these principles are followed by all employees and partners.
+        </p>
+        <p>
+          Our Code of Conduct reflects our values, which help to promote a respectful,
+          sustainable, and responsible corporate
+          culture. By adhering to it, we ensure ethical behaviour towards nature and people. We are also committed to complying
+          with the law, by complying with all necessary regulations in order to
+          ensure a safe and healthy working environment where human rights are always
+          held in high regard. For example, we ensure a healthy and safe working environment for our employees and partners by
+          complying with occupational health and
+          safety laws.
+        </p>
+        <p>
+          Alexela does not tolerate corruption or
+          unfair competition. We do not accept
+          bribery or unfair business practices, such
+          as abuse of official position or conflicts
+          of interest arising from family or business
+          ties. All major transactions are approved
+          by the Management Board to avoid potential problems. For example, we make
+          sure that we do not have situations where
+          the dissemination of inside information is
+          used to advance personal interests.
+        </p>
           </div>
         </article>
 
+        
 
-        <h2 class="block__title">Juhatus</h2>
+        <h2 class="block__title">Management Board</h2>
 
         <p class="font-bold text-center">
-          AS-i Alexela tegevust juhtis 2024. aastal kolmeliikmeline juhatus järgmises koosseisus:
+          In 2024, Alexela AS was managed by a three-member Management Board with the
+          following composition:
         </p>
         <div class="persons">
           <div class="person">
             <div>
               <img src="../img/juhatus-marti-haal.png" alt="Marti Hääl" />
               <p class="font-bold">Marti Hääl</p>
-              <p>Juhatuse liige</p>
+              <p>Chairman of the Board</p>
             </div>
           </div>
           <div class="person">
             <div>
               <img src="../img/juhatus-aivo-adamson.png" alt="Aivo Adamson" />
               <p class="font-bold">Aivo Adamson</p>
-              <p>Juhatuse liige</p>
+              <p>Member of the Board</p>
             </div>
           </div>
           <div class="person">
             <div>
               <img src="../img/juhatus-karmo-piikmann.png" alt="Karmo Piikmann" />
               <p class="font-bold">Karmo Piikmann</p>
-              <p>Juhatuse liige</p>
+              <p>Member of the Board</p>
             </div>
           </div>
         </div>
-        <h2 class="block__title">Nõukogu</h2>
+        <h2 class="block__title">Advisory Board</h2>
 
         <p class="font-bold text-center">
-          AS-i Alexela nõukogu koosnes 2024. aastal neljast liikmest järgmises kooseisus:
+          The Advisory Board of AS Alexela in 2024 consisted of four members as follows:
         </p>
         <div class="persons">
           <div class="person">
             <div>
               <img src="../img/juhatus-hans-pajoma.png" alt="Hans Pajoma" />
               <p class="font-bold">Hans Pajoma</p>
-              <p>Nõukogu liige</p>
+              <p>Chairman of the Council</p>
             </div>
           </div>
           <div class="person">
             <div>
               <img src="../img/juhatus-mikhail-kazarin.png" alt="Mikhail Kazarin" />
               <p class="font-bold">Mikhail Kazarin</p>
-              <p>Nõukogu liige</p>
+              <p>Member of the Board</p>
             </div>
           </div>
           <div class="person">
             <div>
               <img src="../img/juhatus-andreas-laane.png" alt="Andreas Laane" />
               <p class="font-bold">Andreas Laane</p>
-              <p>Nõukogu liige</p>
+              <p>Member of the Board</p>
             </div>
           </div>
           <div class="person">
             <div>
               <img src="../img/juhatus-priit-penjam.png" alt="Priit Penjam" />
               <p class="font-bold">Priit Penjam</p>
-              <p>Nõukogu liige</p>
+              <p>Member of the Board</p>
             </div>
           </div>
         </div>
@@ -337,41 +316,40 @@
     <section class="section--content">
       <article class="image-text-content-block block--image-right">
         <figure class="block__image">
-          <img src="../img/esg-illustration.svg" alt="ESG illustratsioon" class="block__img" />
+          <img src="../img/esg-illustration-eng.svg" alt="ESG illustratsioon" class="block__img" />
         </figure>
         <div class="block__text">
-          <h2 class="block__title">Jätku&shy;suut&shy;likkus ja ESG Alexelas</h2>
-          <strong>Jätkusuutlikkuse hindamine</strong>
+          <h2 class="block__title">Sustainability</h2>
+          <strong>Sustainability assessment</strong>
           <p class="block__description">
-            Alexela on kõige laiema tootevalikuga energiaettevõte Eestis. Me tahame aktiivselt olla abiks igale
-            majapidamisele ja ettevõttele. Taastuvenergia osakaal Alexela energiaportfellis kasvab eesmärgiga
-            tasakaalustada fossiilsete kütuste mõju majapidamistes (kodus), transpordis (teel) ja ettevõtluses
-            (sihtkohas).
+            Alexela is the most diversified energy
+            company in Estonia. We want to actively
+            help every household and every business.
+            The share of renewable energy in Alexela's
+            energy portfolio is growing with the aim
+            of offsetting the impact of fossil fuels in
+            households (at home), transport (en-route) and business (at destination)
+          </p>
+          <p>
+            The development of the company is based on a consistent focus on environmental, social, and governance topics (ESG).
+            Addressing climate change is important,
+            but social and governance aspects are
+            equally important to ensure sustainable
+            development.
+          </p>
 
+          <p>
+            Alexela's ESG strategy is the responsibility of the company's Board of Directors
+            and the Head of Sustainability. Each area
+            manager is responsible for linking ESG issues in his/her area of responsibility to the
+            achievement of the area's objectives.
           </p>
           <p>
-            Ettevõtte areng põhineb keskkonna-, sotsiaal- ja juhtimisvaldkondade järjepideval fookuses hoidmisel (ESG –
-            <i>environmental, social, and governance</i>). Kliimamuutustega tegelemine on oluline, kuid sotsiaal- ja
-            juhtimisaspektid on samuti olulised jätkusuutliku arengu tagamiseks.
-          </p>
-
-          <p>
-            Alexela ESG valdkonna strateegia eest
-            vastutavad ettevõtte juhatus ning jätkusuutlikkuse juht. Iga valdkonnajuht vastutab enda vastutusalas ESG
-            teemade
-            sidumise eest valdkonna eesmärkide täitmisega.
-          </p>
-          <p>
-            Oluliste ESG teemade kaardistamiseks ja
-            paremaks juhtimiseks oleme läbi viinud
-            kahese olulisuse hindamise, arvestades nii
-            kestlikkusega seonduvate teemade mõju
-            olulisust kui ka majanduslikku olulisust.
-            Hindamise protsessi kaasasime ettevõtte
-            peamised huvigrupid. Järgnevas tabelis on
-            välja toodud suuremad ettevõttesisesed
-            ja -välised huvirühmad, mille ootused ning
-            kaasamine on olulised.
+            In order to map and better manage key
+            ESG issues, we have carried out a double materiality assessment, taking into
+            account both, the materiality of the impacts of sustainabilityrelated issues and
+            their economic materiality. We involved
+            the company's key stakeholders in the assessment process. The table below highlights the major internal and external stakeholders whose expectations and involvement are important.
           </p>
         </div>
       </article>
@@ -380,54 +358,84 @@
 
     <section class="section--content">
       <article class="content-block block__text">
-        <h2 class="block__title">Kahese olulisuse protsess </h2>
+        <h2 class="block__title">Double materiality process</h2>
         <p>
-          Kahese olulisuse hindamise tulemused peegelduvad meie vajaduses järgida jätkusuutlikkuse strateegiat, mille
-          eesmärk on suurendada taastuvenergia osakaalu, tasakaalustades fossiilsete kütuste mõju ärides, majapidamistes
-          ja transpordis. See strateegia aitab meil arendada ettevõtte kultuuri ja innovatsiooni.
+          The results of the double materiality assessment
+reflect our need to pursue a sustainability
+strategy that aims to increase
+the share of renewable energy by balancing
+the impact of fossil fuels in business,
+households, and transport. This strategy
+will help us to develop our corporate culture
+and innovation.
         </p>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Kahese olulisuse hindamine kajastub ka
-            meie käitumiskoodeksis, mille järgimist
-            ootame lisaks Alexela töötajatele meie
-            koostööpartneritelt. Käitumiskoodeksis
-            kajastuvad Alexela väärtused, mis suunavad meid eetiliste äritegemise põhimõtete järgimisele ja
-            lugupidamisele keskkonna
-            ning inimeste vastu. Kõik töötajad peavad
-            läbima käitumiskoodeksi koolituse, et tagada vastutustundlik ja eetiline sisekultuur.
+            The double materiality assessment is also
+reflected in our Code of Conduct, which
+we expect our partners to follow, in addition
+to Alexela employees. The Code of
+Conduct reflects Alexela's values, which
+guide us towards ethical business conduct
+and respect for the environment and people.
+All employees are required to undergo
+Code of Conduct training in order to create
+a responsible and ethical internal culture.
           </p>
-          <strong>Tegevused</strong>
+          <strong>Activities</strong>
           <p></p>
           <p>
-            Oleme juba pikka aega panustanud keskkonna ja rohepöörde valdkondadesse.</p>
-          <p>Meie tegevused sisaldavad:</p>
+            We have a long-standing commitment to
+the community and to the green transition.</p>
+          <p>Our activities include:</p>
           <ul class="alexela__list">
-            <li>Vähem saastavad tankimislahendused, näiteks biometaanitanklate ja e-mobiilsuse arendamine.</li>
-            <li>Biometaani tootmine kohaliku ringmajanduse põhimõttel.</li>
-            <li>Päikese- ja tuuleenergiaparkide arendamine.</li>
-            <li>Taastuvenergia salvestusvõimekuse arendamine, näiteks Zero Terraini vesisalvesti Paldiskis.</li>
-            <li>Roheline elektripakett Rohesärts.</li>
-            <li>Klientide kaasamine kogukonnaprogrammide kaudu, näiteks puude istutamine.</li>
-            <li>Loodusliku mitmekesisuse edendamine, näiteks putukate drive-in'i projekt, mis laenes kogu
-              tanklavõrgustikule.</li>
-            <li>Korduvkasutuse premeerimine kaubanduses, näiteks korduvkasutatava topsiga soodsam kuum jook ja
-              taaskasutatud plastist pudelites pakendatud Alexela vesi.</li>
+            <li>Developing less polluting refuelling
+              solutions, such as biomethane
+              refuelling and e-mobility.
+            </li>
+            <li>Biomethane production based on
+              the local circular economy.
+            </li>
+            <li>Developing solar and wind parks.
+            </li>
+            <li>Developing renewable energy
+              storage capacity, such as the
+              Zero Terrain pumped-storage
+              hydropower in Paldiski.
+            </li>
+            <li>Green electricity package Green
+              Spark.
+            </li>
+            <li>Involving clients through community
+              programmessuch astree planting.
+            </li>
+            <li>Promoting biodiversity, such as the
+              Insect Drive-In project, which was
+              rolled out across the entire network
+              of service station.
+            </li>
+            <li>Rewarding reusability in retail, such
+              as cheaper hot drinks with reusable
+              cups and Alexela water packaged in
+              recycled plastic bottles.
+            </li>
           </ul>
           <p></p>
-          <strong>Kokkuvõte</strong>
+          <strong>Summary</strong>
           <p></p>
           <p>
-            Meie tegevused on suunatud keskkonnasõbralikumate lahenduste väljatöötamisele ja jätkusuutlikkuse
-            tagamisele, panustades nii loodusesse kui ka kohalikesse
-            kogukondadesse.
+            Our activities are aimed at developing
+more environmentally friendly solutions
+and ensuring sustainability by investing in
+nature and local communities.
           </p>
         </div>
       </article>
@@ -435,10 +443,10 @@
 
     <section class="section--content">
       <article class="content-block block__text">
-        <h2 class="block__title">Alexela väärtusahel</h2>
-        <p>Mõjude, riskide ja võimalustega tutvumiseks kliki numbritele.</p>
+        <h2 class="block__title">Alexela Value Chain</h2>
+        <p>Click on the numbers to learn about impacts, risks, and opportunities.</p>
         <div class="figure__scrollable">
-          <img src="../img/valuechain.svg" alt="Alexela väärtusahel" />
+          <img src="../img/valuechain_eng.svg" alt="Alexela value chain" />
             <div class="bullet bullet__absolute bullet__mint" 
               style="
                 top: 23.5rem;
@@ -627,332 +635,332 @@
           <div class="explanation" data-bullet-id="1">
 
               <div class="explanation__header">
-                <div class="bullet bullet__relative bullet__mint bullet__modal">1 Positiivne mõju</div>
-                <button class="explanation__close" aria-label="Sulge legend">
+                <div class="bullet bullet__relative bullet__mint bullet__modal">1 Positive impact</div>
+                <button class="explanation__close" aria-label="Close legend">
                   <div class="menu-toggle__icon">
                     <span></span>
                     <span></span>
                   </div>
                 </button>
               </div>
-              <div class="explanation__text">Hajatootmise ja energia salvestamise lahenduste arendamine ja pakkumine</div>
+              <div class="explanation__text">Development and provision of distributed generation and energy storage solutions</div>
 
           </div>
           <div class="explanation" data-bullet-id="2">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__mint bullet__modal">2 Positiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__mint bullet__modal">2 Positive impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Taastuvenergia tootmine ja jaotamine</div>
+            <div class="explanation__text">Production and distribution of renewable energy</div>
           </div>
           <div class="explanation" data-bullet-id="3">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__mint bullet__modal">3 Positiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__mint bullet__modal">3 Positive impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Klientide teenindamine ja energialahenduste pakkumine</div>
+            <div class="explanation__text">Customer service and provision of energy solutions</div>
           </div>
           <div class="explanation" data-bullet-id="4">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__mint bullet__modal">4 Positiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__mint bullet__modal">4 Positive impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Uuenduslike energialahenduste väljatöötamine ja testimine</div>
+            <div class="explanation__text">Development and testing of innovative energy solutions</div>
           </div>
           <div class="explanation" data-bullet-id="5">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__mint bullet__modal">5 Positiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__mint bullet__modal">5 Positive impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Keskkonnasõbralike lahenduste integreerimine ärimudelisse</div>
+            <div class="explanation__text">Integration of environmentally friendly solutions into the business model</div>
           </div>
           <div class="explanation" data-bullet-id="6">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__mint bullet__modal">6 Positiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__mint bullet__modal">6 Positive impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Strateegiliste partnerite kaasamine ja koostöö arendamine</div>
+            <div class="explanation__text">Involving strategic partners and developing cooperation</div>
           </div>
           <div class="explanation" data-bullet-id="7">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__mint bullet__modal">7 Positiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__mint bullet__modal">7 Positive impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Kõrgete kvaliteedistandardite tagamine kõigis protsessides</div>
+            <div class="explanation__text">Ensuring high quality standards in all processes</div>
           </div>
           <div class="explanation" data-bullet-id="8">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__mint bullet__modal">8 Positiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__mint bullet__modal">8 Positive impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Digitaaltehnoloogiate rakendamine efektiivsuse suurendamiseks</div>
+            <div class="explanation__text">Implementation of digital technologies to increase efficiency</div>
           </div>
           <div class="explanation" data-bullet-id="9">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__mint bullet__modal">9 Positiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__mint bullet__modal">9 Positive impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Töötajate ja klientide ohutuse tagamine kõigis tegevustes</div>
+            <div class="explanation__text">Ensuring the safety of employees and customers in all activities</div>
           </div>
           <div class="explanation" data-bullet-id="10">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__mint bullet__modal">10 Positiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__mint bullet__modal">10 Positive impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Pidev areng ja täiustamine kõigis valdkondades</div>
+            <div class="explanation__text">Continuous development and improvement in all areas</div>
           </div>
           <div class="explanation" data-bullet-id="11">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__mint bullet__modal">11 Positiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__mint bullet__modal">11 Positive impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Kohaliku kogukonna toetamine ja sotsiaalne vastutus</div>
+            <div class="explanation__text">Supporting the local community and social responsibility</div>
           </div>
           <div class="explanation" data-bullet-id="12">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__mint bullet__modal">12 Positiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__mint bullet__modal">12 Positive impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Tulevikuvaate kujundamine ja pikaajaliste eesmärkide seadmine</div>
+            <div class="explanation__text">Shaping a future vision and setting long-term goals</div>
           </div>
           <div class="explanation" data-bullet-id="13">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__orange bullet__modal">1 Negatiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__orange bullet__modal">1 Negative impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">KHG emissioonid enda tegevusest ja väärtusahelast
+            <div class="explanation__text">GHG emissions from own activities and value chain
             </div>
           </div>
           <div class="explanation" data-bullet-id="14">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__orange bullet__modal">2 Negatiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__orange bullet__modal">2 Negative impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Energia tarbimine enda tegevuses ja väärtusahelas
+            <div class="explanation__text">Energy consumption in own activities and value chain
             </div>
           </div>
           <div class="explanation" data-bullet-id="15">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__orange bullet__modal">3 Negatiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__orange bullet__modal">3 Negative impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Bensiiniaurud, mikrosaaste
+            <div class="explanation__text">Gasoline vapors, micro-pollution
             </div>
           </div>
           <div class="explanation" data-bullet-id="16">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__orange bullet__modal">4 Negatiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__orange bullet__modal">4 Negative impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Plastpakendite kasutamine
+            <div class="explanation__text">Use of plastic packaging
             </div>
           </div>
           <div class="explanation" data-bullet-id="17">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__orange bullet__modal">5 Negatiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__orange bullet__modal">5 Negative impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Suures mahus ressursside vahendamine väärtusahela partnerite vahel
+            <div class="explanation__text">Large-scale transfer of resources between value chain partners
             </div>
           </div>
           <div class="explanation" data-bullet-id="18">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__orange bullet__modal">6 Negatiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__orange bullet__modal">6 Negative impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Jäätmete teke enda tegevuses ja väärtusahelas
+            <div class="explanation__text">Generation of waste in own activities and value chain
             </div>
           </div>
           <div class="explanation" data-bullet-id="19">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__orange bullet__modal">7 Negatiivne mõju</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__orange bullet__modal">7 Negative impact</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Suures mahus isikuandmete haldamine
+            <div class="explanation__text">Large-scale management of personal data
             </div>
           </div>
           <div class="explanation" data-bullet-id="20">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__yellow bullet__modal">1 Riskid</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__yellow bullet__modal">1 Risks</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Seadusandlus KHG emissioonide kaubanduses ja aktsiiside muutused
+            <div class="explanation__text">Legislation in GHG emissions trading and changes in excise duties
             </div>
           </div>
           <div class="explanation" data-bullet-id="21">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__yellow bullet__modal">2 Riskid</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__yellow bullet__modal">2 Risks</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Halvemad rahastustingimused kehva kestlikkuse tulemuslikkuse korral
+            <div class="explanation__text">Worse financing conditions in case of poor sustainability performance
             </div>
           </div>
 
           <div class="explanation" data-bullet-id="22">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__yellow bullet__modal">3 Riskid</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__yellow bullet__modal">3 Risks</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Innovaatiliste tehnoloogiate investeerimisrisk
+            <div class="explanation__text">Investment risk in innovative technologies
             </div>
           </div>
 
           <div class="explanation" data-bullet-id="23">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__yellow bullet__modal">4 Riskid</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__yellow bullet__modal">4 Risks</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Konkurentsivõime vähenemine teadusarenduse ja innovatsiooni arengust mahajäämisel
+            <div class="explanation__text">Decrease in competitiveness due to lagging behind in research and innovation development
             </div>
           </div>
           <div class="explanation" data-bullet-id="24">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__purple bullet__modal">1 Võimalused</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__purple bullet__modal">1 Opportunities</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Taastuvenergia ja alternatiivsete kütuste nõudluse kasv
+            <div class="explanation__text">Growth in demand for renewable energy and alternative fuels
             </div>
           </div>
           <div class="explanation" data-bullet-id="25">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__purple bullet__modal">2 Võimalused</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__purple bullet__modal">2 Opportunities</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Energiasalvestustehnoloogiate nõudluse kasv
+            <div class="explanation__text">Growth in demand for energy storage technologies
             </div>
           </div>
 
           <div class="explanation" data-bullet-id="26">
             <div class="explanation__header">
-              <div class="bullet bullet__relative bullet__purple bullet__modal">3 Võimalused</div>
-              <button class="explanation__close" aria-label="Sulge legend">
+              <div class="bullet bullet__relative bullet__purple bullet__modal">3 Opportunities</div>
+              <button class="explanation__close" aria-label="Close legend">
                 <div class="menu-toggle__icon">
                   <span></span>
                   <span></span>
                 </div>
               </button>
             </div>
-            <div class="explanation__text">Arenguvõimalused energiatehnoloogiate innovatsioonil
+            <div class="explanation__text">Development opportunities in energy technology innovation
             </div>
           </div>
         </div>
@@ -961,23 +969,17 @@
 
       <section class="section--horizontal section--color section--mint">
         <article class="content-block">
-          <h2>Meie fookus&shy;teemad</h2>
-          <strong>Integreeritud juhtpõhimõtte elluviimisel tuginetakse järgmistele
-            põhimõtetele:</strong>
+          <h2>Our Focus Topics</h2>
+          <strong>The implementation of the integrated management principle is based on the following principles:</strong>
           <figure>
-            <img class="mx-auto" src="../img/fookusteemant.svg" alt="Fookusteemant" />
+            <img class="mx-auto" src="../img/fookusteemant_eng.svg" alt="Focus diamond" />
           </figure>
           <p>
-            Alexela jätkusuutlikkuse strateegia on kooskõlas nii siseriiklike
-            kui ka Euroopa normide ja reeglitega. Arvestame sidusrühmadega, kes
-            võivad olla mõjutatud meie tegevustest. Tänast jätkusuutlikku
-            tegevust toetavad erinevad juhtimissüsteemid, mille on
-            sertifitseerinud kolmandad isikud ning mis on üks olulisemaid
-            tööriistu igapäevatöös.
+            Alexela's sustainability strategy is in line with both national and European standards and regulations. We take into account stakeholders who may be affected by our activities. Our current sustainability efforts are supported by various management systems certified by third parties, which are among the most important tools in our daily work.
           </p>
-          <a href="https://www.alexela.ee/et/eraklient/meist/jatkusuutlikkus/jatkusuutlikkus" target="_blank"
+          <a href="https://www.alexela.ee/en/private-client/about-us/sustainability/sustainability" target="_blank"
             class="link">
-            Loe edasi
+            Read more
             <img src="../img/icons/external-link.svg" alt="link outside icon" /></a>
         </article>
       </section>
@@ -985,17 +987,13 @@
       <section class="section--content">
         <article class="image-text-content-block block--image-right">
           <figure class="block__image">
-            <img src="../img/huvigrupid.svg" alt="Energia kui teenus" />
+            <img src="../img/huvigrupid_eng.svg" alt="Energia kui teenus" />
           </figure>
           <div class="block__text">
-            <h2 class="text-left block__title">Jätku&shy;suutlikkuse strateegia</h2>
-            <h3 class="block__title">Huvigrupid</h3>
+            <h2 class="text-left block__title">Sustainability Strategy</h2>
+            <h3 class="block__title">Stakeholders</h3>
             <p>
-              Alexela jaoks on oluline usaldusväärne koostöö oma peamiste
-              huvigruppidega, kelle hulka kuuluvad töötajad ja omanikud,
-              kliendid ja tarnijad/koostööpartnerid, kogukond ja kohalikud
-              omavalitsused, aga ka regulaatorid ja järelevalveasutused. Nende
-              huvigruppidega on Alexelal kõige tugevam vastastikmõju.
+              For Alexela, reliable cooperation with its key stakeholders is important. These include employees and owners, customers and suppliers/partners, the community and local governments, as well as regulators and supervisory authorities. Alexela has the strongest mutual interaction with these stakeholders.
             </p>
           </div>
         </article>
@@ -1004,21 +1002,12 @@
       <section class="section--content">
         <article class="image-text-content-block block--image-right">
           <figure class="block__image">
-            <img src="../img/energia-kui-teenus.svg" alt="Huvigrupid" />
+            <img src="../img/energia-kui-teenus_eng.svg" alt="Huvigrupid" />
           </figure>
           <div class="block__text">
-            <h2 class="text-left block__title">Jätku&shy;suutlikkus Alexelas</h2>
+            <h2 class="text-left block__title">Sustainability at Alexela</h2>
             <p>
-              Alexela fookusteemadeks on keskkonda säästvate tankimislahenduste
-              arendamine, ringmajanduse arendamine, energiajulgeolekusse
-              panustamine, kogukondade võimestamine ning kultuuri, spordi ja
-              heategevuse toetamine. Fookusteemad on
-              sätestatud lähtuvalt ettevõtte suurima mõjuga valdkondadest ning
-              olulisimate huvigruppide sisendist. Fookusteemade raames jälgime
-              oma tegevust suurima hoolega ja nende kaudu mõjutame ka enim
-              kaheksat ÜRO kestliku arengu eesmärki (SDG-d). Seni oleme
-              huvigruppide sisendit kogunud iga-aastaste uuringute ja
-              otsesuhtluse kaudu.
+              Alexela's focus topics are the development of environmentally friendly refueling solutions, the advancement of the circular economy, contributing to energy security, empowering communities, and supporting culture, sports, and charity. The focus topics are defined based on the company's highest impact areas and the input of the most important stakeholders. Within these focus topics, we monitor our activities with the greatest care, and through them, we have the most influence on eight of the UN Sustainable Development Goals (SDGs). So far, we have gathered stakeholder input through annual surveys and direct communication.
             </p>
           </div>
         </article>
@@ -1026,28 +1015,13 @@
 
       <section class="section--content">
         <article class="content-block block__text">
-          <h2 class="block__title">Keskkond</h2>
-          <strong>Keskkonnaeesmärkide saavutamine innovatsiooniga</strong>
+          <h2 class="block__title">Environment</h2>
+          <strong>Achieving environmental objectives through innovation</strong>
           <p>
-            Alexela muudab oma äri- ja arendustegevust pidevalt, et vähendada keskkonnamõju ja rakendada ringmajanduse
-            põhimõtteid. Meie eesmärgid on kooskõlas Pariisi kliimakokkuleppe ning roheülemineku tegevuskavaga.
-            Keskendume
-            oma süsinikujälje vähendamisele ja eelistame tarnijaid, kelle keskkonnapõhimõtted ühtivad meie omadega. Kõik
-            Alexela töötajad peavad austama neid põhimõtteid.</p>
-          <p>Alexela eesmärk on saavutada CO2
-            neutraalsus aastaks 2030 (mõjualad 1 ja 2).
-            Me mõõdame süsinikujälge alates 2020.
-            aastast ja oleme korrigeerinud varasemate aastate tulemusi. Aastal 2022 verifitseerisime oma baasaasta
-            tulemused, mis
-            aitas täpsustada ka hilisemaid mõõtmisi.
-            GHG Protocol Standardi kohaselt on organisatsioonidele mõjualade 1 ja 2 arvutused kohustuslikud ning mõjuala
-            3
-            vabatahtlik. Seega saavad ettevõtted alustada
-            kõige lähemate mõjude kaardistamisega.
-            Mõjuala 3 puhul kasutatakse astmelist
-            lähenemisviisi, kaasates vastavalt andmete olemasolule ja võimalustele erinevaid
-            olulisi mõjukategooriaid. Selles vallas töö
-            ning tegevus jätkub.
+            Alexela is constantly changing its business and development practices to reduce its impact on the environment and apply circular economy principles. Our goals are in line with the Paris Climate Agreement and the Green Deal. We focus on reducing our CO2 footprint and give preference to suppliers whose environmental policies are compatible with our own. All Alexela employees must respect these principles.
+          </p>
+          <p>
+            Alexela's target is to achieve CO2 neutrality by 2030 (Impact Areas 1 and 2). We measure our CO2 footprint from 2020 and have corrected the results from last years. In 2022, we verified our baseline year, which helped to refine later measurements. Under the GHG Protocol Standard, calculations for Impact Areas 1 and 2 are mandatory for organisations, while Impact Area 3 is optional. Companies can therefore start by mapping the most immediate impacts. For Impact Area 3, a tiered approach is used, including different relevant impact categories according to data availability and capabilities. Work and activities are ongoing in this area.
           </p>
         </article>
       </section>
@@ -1055,22 +1029,22 @@
       <section class="section--content">
         <article class="content-block block__text">
           <h2 class="block__title">
-            AS Alexela ja Alexela Motors AS kasvuhoone&shy;gaaside süsinikujälg
+            Greenhouse gas footprint of AS Alexela and AS Alexela Motors
           </h2>
-          <p>Mõjuala 1: otsesed emissioonid ettevõtte omanduses olevatest või kontrollitud allikatest. <br />
-            Mõjuala 2: kaudsed emissioonid sisse ostetud energiast.
+          <p>Impact Area 1: direct emissions from sources owned or controlled by the company. <br />
+            Impact Area 2: indirect emissions from purchased energy.
           </p>
 
           <div class="table bg-transparent">
             <table>
               <thead>
                 <tr class="table__header bg-flamingo">
-                  <th>Mõjuala</th>
-                  <th class="table__cell" rowspan="2">KHG emissioonide allikas</th>
-                  <th class="table__cell bottom-border" colspan="5">KHG emissioonid (t CO2 ekvivalent)</th>
+                  <th>Impact Area</th>
+                  <th class="table__cell" rowspan="2">Source of GHG emissions</th>
+                  <th class="table__cell bottom-border" colspan="5">GHG emissions (t CO2 eq.)</th>
                 </tr>
                 <tr class="table__header bg-flamingo">
-                  <th>Mõjuala</th>
+                  <th>Impact Area</th>
                   <th class="table__cell table__cell--number text-right">2020</th>
                   <th class="table__cell table__cell--number text-right">2021</th>
                   <th class="table__cell table__cell--number text-right">2022</th>
@@ -1079,9 +1053,9 @@
                 </tr>
               </thead>
               <tbody>
-                <!-- Mõjuala 1 -->
+                <!-- Impact Area 1 -->
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content"><strong>Mõjuala 1</strong></td>
+                  <td class="table__cell table__cell--content"><strong>Impact Area 1</strong></td>
                   <td class="table__cell"></td>
                   <td class="table__cell table__cell--number text-right"><strong>986</strong></td>
                   <td class="table__cell table__cell--number text-right"><strong>1 186</strong></td>
@@ -1091,7 +1065,7 @@
                 </tr>
                 <tr class="table__row">
                   <td rowspan="3" class="table__cell table__cell--content"></td>
-                  <td class="table__cell table__cell--content">Kütuste vedu</td>
+                  <td class="table__cell table__cell--content">Transport of fuels</td>
                   <td class="table__cell table__cell--number text-right">845</td>
                   <td class="table__cell table__cell--number text-right">1 001</td>
                   <td class="table__cell table__cell--number text-right">1 285</td>
@@ -1099,7 +1073,7 @@
                   <td class="table__cell table__cell--number text-right">1 220</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Ärireisid ettevõtte sõidukiga</td>
+                  <td class="table__cell table__cell--content">Business trips in a company vehicle</td>
                   <td class="table__cell table__cell--number text-right">44</td>
                   <td class="table__cell table__cell--number text-right">63</td>
                   <td class="table__cell table__cell--number text-right">148</td>
@@ -1107,7 +1081,7 @@
                   <td class="table__cell table__cell--number text-right">202</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Soojusenergia (gaas)</td>
+                  <td class="table__cell table__cell--content">Thermal energy (gas)</td>
                   <td class="table__cell table__cell--number text-right">97</td>
                   <td class="table__cell table__cell--number text-right">122</td>
                   <td class="table__cell table__cell--number text-right">72</td>
@@ -1115,9 +1089,9 @@
                   <td class="table__cell table__cell--number text-right">5</td>
                 </tr>
 
-                <!-- Mõjuala 2 -->
+                <!-- Impact Area 2 -->
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content"><strong>Mõjuala 2</strong></td>
+                  <td class="table__cell table__cell--content"><strong>Impact Area 2</strong></td>
                   <td class="table__cell"></td>
                   <td class="table__cell table__cell--number text-right"><strong>4 037</strong></td>
                   <td class="table__cell table__cell--number text-right"><strong>680</strong></td>
@@ -1127,7 +1101,7 @@
                 </tr>
                 <tr class="table__row">
                   <td></td>
-                  <td class="table__cell table__cell--content">Elektrienergia</td>
+                  <td class="table__cell table__cell--content">Electricity</td>
                   <td class="table__cell table__cell--number text-right">4 037</td>
                   <td class="table__cell table__cell--number text-right">680</td>
                   <td class="table__cell table__cell--number text-right">0</td>
@@ -1135,8 +1109,8 @@
                   <td class="table__cell table__cell--number text-right">0</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content"><strong>Kokku</strong></td>
-                  <td class="table__cell table__cell--content"><strong>Mõjuala 1–2</strong></td>
+                  <td class="table__cell table__cell--content"><strong>Total</strong></td>
+                  <td class="table__cell table__cell--content"><strong>Impact Areas 1-2</strong></td>
                   <td class="table__cell table__cell--number text-right"><strong>5 023</strong></td>
                   <td class="table__cell table__cell--number text-right"><strong>1 866</strong></td>
                   <td class="table__cell table__cell--number text-right"><strong>1 505</strong></td>
@@ -1144,9 +1118,9 @@
                   <td class="table__cell table__cell--number text-right"><strong>1 428</strong></td>
                 </tr>
 
-                <!-- Mõjuala 3 -->
+                <!-- Impact Area 3 -->
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content"><strong>Mõjuala 3</strong></td>
+                  <td class="table__cell table__cell--content"><strong>Impact Area 3</strong></td>
                   <td class="table__cell"></td>
                   <td class="table__cell table__cell--number text-right"><strong>522</strong></td>
                   <td class="table__cell table__cell--number text-right"><strong>1 251</strong></td>
@@ -1156,7 +1130,7 @@
                 </tr>
                 <tr class="table__row">
                   <td class="table__cell table__cell--content" rowspan="8"></td>
-                  <td class="table__cell table__cell--content">Ärireisid töötaja sõiduk</td>
+                  <td class="table__cell table__cell--content">Business trips in an employee vehicle</td>
                   <td class="table__cell table__cell--number text-right">36</td>
                   <td class="table__cell table__cell--number text-right">53</td>
                   <td class="table__cell table__cell--number text-right">112</td>
@@ -1164,7 +1138,7 @@
                   <td class="table__cell table__cell--number text-right">95</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Biolagundatavad jäätmed</td>
+                  <td class="table__cell table__cell--content">Biodegradable waste</td>
                   <td class="table__cell table__cell--number text-right">0</td>
                   <td class="table__cell table__cell--number text-right">0</td>
                   <td class="table__cell table__cell--number text-right">0</td>
@@ -1172,7 +1146,7 @@
                   <td class="table__cell table__cell--number text-right">1</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Jäätmed</td>
+                  <td class="table__cell table__cell--content">Waste</td>
                   <td class="table__cell table__cell--number text-right">135</td>
                   <td class="table__cell table__cell--number text-right">840</td>
                   <td class="table__cell table__cell--number text-right">220</td>
@@ -1180,7 +1154,7 @@
                   <td class="table__cell table__cell--number text-right">184</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Must metall</td>
+                  <td class="table__cell table__cell--content">Black metal</td>
                   <td class="table__cell table__cell--number text-right">0</td>
                   <td class="table__cell table__cell--number text-right">0</td>
                   <td class="table__cell table__cell--number text-right">0</td>
@@ -1188,7 +1162,7 @@
                   <td class="table__cell table__cell--number text-right">0</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Paber/kartong</td>
+                  <td class="table__cell table__cell--content">Paper/cardboard</td>
                   <td class="table__cell table__cell--number text-right">0</td>
                   <td class="table__cell table__cell--number text-right">0</td>
                   <td class="table__cell table__cell--number text-right">0</td>
@@ -1196,7 +1170,7 @@
                   <td class="table__cell table__cell--number text-right">0</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Taaskasutusmaterjal (pakendid)</td>
+                  <td class="table__cell table__cell--content">Recycled material (packaging)</td>
                   <td class="table__cell table__cell--number text-right">0</td>
                   <td class="table__cell table__cell--number text-right">0</td>
                   <td class="table__cell table__cell--number text-right">1</td>
@@ -1204,7 +1178,7 @@
                   <td class="table__cell table__cell--number text-right">2</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Tarbitud vesi</td>
+                  <td class="table__cell table__cell--content">Water consumed</td>
                   <td class="table__cell table__cell--number text-right"></td>
                   <td class="table__cell table__cell--number text-right">6</td>
                   <td class="table__cell table__cell--number text-right">7</td>
@@ -1212,7 +1186,7 @@
                   <td class="table__cell table__cell--number text-right">9</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Tööle-koju sõit</td>
+                  <td class="table__cell table__cell--content">Commuting</td>
                   <td class="table__cell table__cell--number text-right">352</td>
                   <td class="table__cell table__cell--number text-right">352</td>
                   <td class="table__cell table__cell--number text-right">504</td>
@@ -1220,10 +1194,10 @@
                   <td class="table__cell table__cell--number text-right">535</td>
                 </tr>
 
-                <!-- Kokku -->
+                <!-- Total -->
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content"><strong>Kokku</strong></td>
-                  <td class="table__cell table__cell--content"><strong>Mõjuala 3</strong></td>
+                  <td class="table__cell table__cell--content"><strong>Total</strong></td>
+                  <td class="table__cell table__cell--content"><strong>Impact Area 3</strong></td>
                   <td class="table__cell table__cell--number text-right"><strong>522</strong></td>
                   <td class="table__cell table__cell--number text-right"><strong>1 251</strong></td>
                   <td class="table__cell table__cell--number text-right"><strong>846</strong></td>
@@ -1231,8 +1205,8 @@
                   <td class="table__cell table__cell--number text-right"><strong>825</strong></td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content"><strong>Kokku </strong></td>
-                  <td class="table__cell table__cell--content"><strong>Mõjuala 1–3</strong></td>
+                  <td class="table__cell table__cell--content"><strong>Total</strong></td>
+                  <td class="table__cell table__cell--content"><strong>Impact Areas 1-3</strong></td>
                   <td class="table__cell table__cell--number text-right"><strong>5 546</strong></td>
                   <td class="table__cell table__cell--number text-right"><strong>3 116</strong></td>
                   <td class="table__cell table__cell--number text-right"><strong>2 351</strong></td>
@@ -1244,36 +1218,20 @@
           </div>
           <p></p>
           <p>
-            AS-i Alexela ja AS-i Alexela Motors süsinikujälg (mõjualad 1–2) oli 2024. aastal 1428 tonni CO2 ekvivalenti
-            (2023. aastal 2044,3 tonni), mis tähendab 30protsendilist emissioonide langust, võrreldes 2023. aastaga ja
-            72
-            protsendilist emissioonide langust baasaastaga võrreldes. Aasta 2024 emissioonide langus tuli autopargi
-            autode
-            välja vahetamisest vähemsaastavate vastu – sõiduautosid CNG-l ning elektril ja veokeid CNG-l ning LNG-l
-            töötavate masinate vastu.
+            The CO2 footprint of AS Alexela and AS Alexela Motors (Impact Areas 1-2) was in 2024 1428 tonnes of CO2 equivalent (2 044.3 tonnes in 2023), representing a 30% reduction in emissions compared to 2023 and a 72% reduction in emissions compared to the base year. The reduction in emissions in 2024 was due to the replacement of vehicles in the fleet by less-polluting. Passenger cars were replaced by CNG and electric powered vehicles, lorries were replaced by CNG and LNG powered vehicles.
           </p>
-          <p>Ettevõtte väärtusahelas üles- ja allavoolu tekkivate emissioonide maht 2024.
-            aastal oluliselt ei muutunud, jäädes 825
-            tonni CO2
-            ekvivalendi juurde (2023. aastal 822 tonni). Aastal 2024 jätkasime Alexelas jäätmete liigiti kogumise
-            parendamist, mis hoolimata ettevõtte laienemisest aitas hoida kontrolli all jäätmetest
-            tulenevate emissiooni mahtu. </p>
-          <p>Aastal 2024 AS-i Alexela ja AS-i Alexela
-            Motors süsinikujälg langes, mille saavutasime ettevõtte autopargi vähemsaastavaks muutmise ning jäätmete
-            liigiti
-            kogumise järjepideva parendamisega.
-            Pikaajaline trend näitab, et Alexela süsinikuintensiivsus müüdud energiaühiku
-            kohta on languses, nagu illustreerib allolev graafik. </p>
+          <p>The volume of emissions from upstream and downstream activities in the company's value chain did not change significantly in 2024, remaining at 825 tonnes of CO2 equivalent (822 tonnes in 2023). In 2024, we continued to improve waste sorting at Alexela, which, despite the company's expansion, helped to keep emissions from waste under control. </p>
+          <p>In 2024, the carbon footprint of AS Alexela and AS Alexela Motors decreased, which we achieved by making the company's vehicle fleet less polluting and by continuously improving waste sorting. The long-term trend shows that Alexela's carbon intensity per unit of energy sold is decreasing, as illustrated by the graph below. </p>
         </article>
       </section>
 
       <section class="section--horizontal">
         <article class="content-block">
-          <h2 class="block__title">Co<sub>2</sub> jälg ja süsiniku&shy;intensiivsus</h2>
+          <h2 class="block__title">CO<sub>2</sub> footprint and CO<sub>2</sub> intensity</h2>
 
-          <figure class="chart bg-transparent" role="figure" aria-label="Toetusprojektide statistika graafik">
+          <figure class="chart bg-transparent" role="figure" aria-label="Support projects statistics chart">
             <div class="chart__grid">
-              <div class="chart__axis chart__axis--left" role="list" aria-label="Vasak telg - rahaline väärtus">
+              <div class="chart__axis chart__axis--left" role="list" aria-label="Left axis - monetary value">
                 <div role="listitem">6000</div>
                 <div role="listitem">5000</div>
                 <div role="listitem">4000</div>
@@ -1283,11 +1241,11 @@
                 <div role="listitem">0</div>
               </div>
 
-              <div class="chart__area" role="img" aria-label="Toetusprojektide statistika graafik">
-                <img src="./img/graph-co2.svg" alt="Toetusprojektide statistika graafik" class="chart__image" />
+              <div class="chart__area" role="img" aria-label="Support projects statistics chart">
+                <img src="../img/graph-co2.svg" alt="Toetusprojektide statistika graafik" class="chart__image" />
               </div>
 
-              <div class="chart__axis chart__axis--right" role="list" aria-label="Parem telg - toetusprojektide arv">
+              <div class="chart__axis chart__axis--right" role="list" aria-label="Right axis - number of support projects">
                 <div role="listitem">1.8</div>
                 <div role="listitem">1.6</div>
                 <div role="listitem">1.4</div>
@@ -1301,7 +1259,7 @@
               </div>
             </div>
 
-            <div class="chart__x-axis" role="list" aria-label="Aasta telg">
+            <div class="chart__x-axis" role="list" aria-label="Year axis">
               <div class="chart__x-axis-item" role="listitem">2020</div>
               <div class="chart__x-axis-item" role="listitem">2021</div>
               <div class="chart__x-axis-item" role="listitem">2022</div>
@@ -1313,14 +1271,13 @@
               <div class="chart__legend-item">
                 <div class="chart__legend-color chart__legend-color--grey" aria-hidden="true"></div>
                 <div>
-                  CO<sub>2</sub> jälg (t CO<sub>2</sub>-ekv) mõjuala 1-3
+                  CO<sub>2</sub> footprint (t CO<sub>2</sub> eq.) Impact Areas 1–3
                 </div>
               </div>
               <div class="chart__legend-item">
                 <div class="chart__legend-color chart__legend-color--blue" aria-hidden="true"></div>
                 <div>
-                  Müüdud energiaühiku kohta (t CO<sub>2</sub>-eks/GWh) paremal
-                  teljel
+                  Per unit of energy sold (t CO<sub>2</sub> eq. per GWh) right axis
                 </div>
               </div>
             </figcaption>
@@ -1330,12 +1287,12 @@
 
       <section class="section--horizontal">
         <article class="content-block block__text">
-          <h2 class="block__title">AS Alexela ja AS Alexela Motors CO<sub>2</sub> jälg ning selle vähendamise plaan,
-            mõjualad 1-2</h2>
+          <h2 class="block__title">AS Alexela and AS Alexela Motors CO<sub>2</sub> footprint and mitigation plan,
+            Impact Areas 1-2</h2>
 
-          <figure class="chart bg-transparent" role="figure" aria-label="Toetusprojektide statistika graafik">
+          <figure class="chart bg-transparent" role="figure" aria-label="Support projects statistics chart">
             <div class="chart__grid--two-col">
-              <div class="chart__axis chart__axis--left" role="list" aria-label="Vasak telg - rahaline väärtus">
+              <div class="chart__axis chart__axis--left" role="list" aria-label="Left axis - monetary value">
                 <div role="listitem">6000</div>
                 <div role="listitem">5000</div>
                 <div role="listitem">4000</div>
@@ -1345,13 +1302,13 @@
                 <div role="listitem">0</div>
               </div>
 
-              <div class="chart__area" role="img" aria-label="Toetusprojektide statistika graafik">
-                <img src="./img/graph_jaelg.svg" alt="Toetusprojektide statistika graafik" class="chart__image" />
+              <div class="chart__area" role="img" aria-label="Support projects statistics chart">
+                <img src="../img/graph_jaelg.svg" alt="Toetusprojektide statistika graafik" class="chart__image" />
               </div>
 
             </div>
 
-            <div class="chart__x-axis chart__x-axis--two-col" role="list" aria-label="Aasta telg">
+            <div class="chart__x-axis chart__x-axis--two-col" role="list" aria-label="Year axis">
               <div class="chart__x-axis-item chart__x-axis-item--mobile" role="listitem">20</div>
               <div class="chart__x-axis-item chart__x-axis-item--mobile" role="listitem">21</div>
               <div class="chart__x-axis-item chart__x-axis-item--mobile" role="listitem">22</div>
@@ -1380,47 +1337,41 @@
               <div class="chart__legend-item">
                 <div class="chart__legend-color" aria-hidden="true"></div>
                 <div>
-                  Graafik: Alexela on seadnud endale eesmärgi olla aastaks 2030 CO2-neutraalne
-                  mõjualade 1 ja 2 raames. Peamised süsinikujälge vähendavad tegevused seni on olnud
-                  100 protsenti taastuvale elektrienergiale üleminek ja oma autopargi järkjärguline
-                  üleminek vähemsaastavatele lahendustele.
+                  Graph: Alexela has set itself a target to be CO2 neutral by 2030 in Impact Areas 1
+and 2. The main CO2 footprint-reducing activitiesso far have been the transition to
+100 percent renewable electricity and the gradual transition of its vehicle fleet to less
+polluting solutions.
                 </div>
               </div>
             </figcaption>
           </figure>
 
           <p></p>
-          <strong>Üleminekukava kliimamuutuste leevendamiseks </strong>
+          <strong>Transition plan for climate change mitigation</strong>
           <p>
-            Alexela peamine keskkonnamõju tuleneb
-            meie energiaportfellist. Kliimamuutuste
-            leevendamiseks on keskkonnapõhimõtted osa meie strateegiast. Me jälgime ja
-            mõõdame oma keskkonnalaste eesmärkide täitumist ning avaldame tulemused
-            majandusaasta aruandes.
+            Alexela's main environmental impact comes from our energy portfolio. Environmental policies are part of our strategy to mitigate climate change. We monitor and measure the achievement of our environmental targets and publish the results in our annual report.
           </p>
           <p>
-            Meie tegevus keskendub heitmete vähendamisele, olles seadnud eesmärgi saavutada CO2
-            -neutraalsus 2030. aastaks
-            (mõjualad 1–2).
+            Our action is focused on reducing emissions, with a target to achieve CO2-neutrality 2030 (Impact Areas 1-2).
           </p>
           <p>
-            Selleks me:
+            To do this we:
           </p>
           <ul class="alexela__list">
-            <li>Toodame ja ostame rohelist energiat,
-              pakkudes seda oma klientidele,
-              et vähendada fossiilsete kütuste
-              kasutamist.</li>
-            <li>Rajame taastuvenergia tootmisüksusi,
-              näiteks päikeseparke ning tulevikus ka
-              tuuleparke koos salvestusega.</li>
-            <li>Arendame autode laadimispunkte,
-              et muuta transpordisektor vähem
-              saastavaks.</li>
-            <li>Toome turule biometaani ja vesinikku,
-              pakkudes neid oma tanklates ning
-              autokütusena.
-            </li>
+            <li>We produce and buy green energy,
+              providing it to our customers, to
+              reduce the use of fossil fuels.</li>
+            <li>We are building renewable energy
+              production units, such as solar parks
+              and, in the future, wind parks, and
+              energy storage.</li>
+            <li>We will develop car charging points
+              to make the transport sector less
+              polluting.</li>
+            <li>We are bringing biomethane and
+              hydrogen to the market, offering them
+              in our own service stations and as
+              automotive fuel.</li>
           </ul>
         </article>
 
@@ -1428,84 +1379,53 @@
 
       <section class="section--content">
         <article class="content-block block__text">
-          <h2 class="block__title">Regulatiivse keskkonna mõjud</h2>
-          <strong>Regulatiivse keskkonna ülevaade</strong>
+          <h2 class="block__title">Impact of the Regulatory Environment</h2>
+          <strong>Overview of the regulatory environment</strong>
           <p>
-            Alexela on pidevalt investeerinud, teades,
-            et vaid demokraatia aluspõhimõtteid
-            järgides ja ausa konkurentsi tingimustes
-            saame inimeste elu paremaks muuta.
-            Aasta 2024 on näidanud, et regulatiivsed
-            riskid on suurenenud. Regulatiivses keskkonnas
-            valitseb määramatus, mille mõju
-            pikaajalistele investeeringutele jääb ettevõtetele
-            tunnetatavaks veel aastaid.
-            Ettenägelikult tehtud investeeringud aitavad
-            meil reguleerimisest tulenevatele
-            väljakutsetele vastu seista ja toetada
-            Eesti ühiskonda. Kuigi regulatiivsete muudatuste
-            täideviimine on ajutiselt tuluootusi
-            leevendanud, jätkame panustamist
-            Eesti arengusse.
+            Alexela has continuously invested, knowing
+that only by following the basic principles
+of democracy and fair competition
+can we make people's lives better.
+The year 2024 has shown that regulatory
+risks have increased. The regulatory environment
+is characterised by uncertainty,
+the impact of which on long-term investments
+will be felt for years to come.
+Investing wisely will help us to meet the
+regulatory challenges and to support the
+Estonian society. While the implementation
+of regulatory changes has temporarily
+eased revenue expectations, we will
+continue to contribute to Estonia's development.
 
           </p>
         </article>
 
         <article class="accordion">
           <button class="accordion__button" aria-expanded="false">
-            <span>Loe edasi</span>
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
             <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
           </button>
           <div class="accordion__content">
             <p>
-              Peamine määramatuse allikas on
-              Venemaa agressioonisõda Ukrainas, mille tagajärjel on Euroopa Liit teinud suure
-              muudatuse oma energiapoliitikas. Seda,
-              et EL on aeglaselt teadvustanud uusi geopoliitilisi reaalsusi, on suurendanud segadust, eriti 2019. aasta
-              rohelise kokkuleppe elluviimisel. Teatud muudatused ei ole
-              Eestis veel jõustunud.
+              The main source of uncertainty is Russia's war of aggression in Ukraine, as a result of which the European Union has made a major change to its energy policy. The fact that the EU has been slow to grasp the new geopolitical realities has added to the complexity, especially to the implementation of the 2019 Green Deal. Certain changes have not yet entered into force in Estonia.
             </p>
             <p>
-              Aastal 2024 jõustusid 15 sanktsioonipaketti, mis piirasid Venemaa ja selle liitlaste
-              energiakandjate Euroopa Liidu turule pääsemist. Alexela toetab kõiki sanktsioone,
-              mis tõkestavad Venemaa energiakandjate
-              turule pääsu, ning on kohandanud oma tegevuse demokraatlikele alternatiividele.
-              Samuti anname endale vastutuse tagada
-              energiajulgeolek, mis ei sõltu agressorriikidest. Eestis on aga praktikaid, mis võimaldavad vältida
-              sanktsioone ja tekitavad
-              ebaausat konkurentsi. Selline tegevus on
-              meile kahjulik.
+              In 2024, 15 sets of sanctions came into force, restricting access to the EU market for energy supplies from Russia and its allies. Alexela supports all sanctions that block market access for Russian energy products and has adapted its operations to democratic alternatives. We also accept our responsibility to ensure energy security independent of aggressor countries. However, there are practices in Estonia that avoid sanctions and create unfair competition. Such practices are harmful to us.
             </p>
             <p>
-              Oleme tuvastanud, et teatud turuosalised kasutasid Vene päritolu LNG-d
-              sanktsioone vältides ja seeläbi tekkis
-              ebaaus konkurents. Samuti on avastatud
-              olukord, kus metaaniga seotud aktsiisivabastust on taotletud topelt, mis toob
-              kaasa ebaseaduslikke hüvesid. Selliseid
-              probleeme tuleb lahendada, et turul oleks
-              õiglane konkurents.
+              We have identified that certain market players used Russian origin LNG to avoid sanctions, creating unfair competition. We have also detected a situation where methane excise duty exemptions have been claimed twice, leading to illegal benefits. Such problems need to be addressed to ensure fair competition in the market.
             </p>
 
-            <strong>Sagedusreservitasude edasi lükkamine</strong>
+            <strong>Deferral of frequency reserve fees</strong>
             <p>
-              Aastal 2024 suutis Alexela koos partnerite ja riigiasutustega edasi lükata sagedusreservitasu jõustumist
-              2025. aastasse.
-              Usume, et selline tasu kohustus oleks õigustatud alles pärast Balti riikide võrgutasude harmoniseerimist.
-              Regulatiivsed
-              riskid on jätkuvalt aktuaalsed ja vajavad
-              koostööd nii riigiasutuste kui ka erasektori vahel. Meie eesmärk on arendada
-              koostööd, et tagada pikaajaline stabiilsus
-              ning toetada Eesti inimeste ja energiatarbijate heaolu.
+              In 2024, Alexela, together with partners and public authorities, managed to defer the implementation of the frequency reserve fee into 2025. We believe that such a fee obligation should only be implemented after harmonisation of the network charges in the Baltic States. Regulatory risks are still relevant and require cooperation between public authorities and the private sector. Our aim is to further cooperation to ensure long-term stability and to support the wellbeing of the Estonian people and energy consumers.
             </p>
 
-            <strong>Regulatiivsete riskide juhtimine</strong>
+            <strong>Regulatory risk management</strong>
             <p>
-              Edasi liikumine regulatiivsete riskide juhtimisel toimub koostööga, mille raames
-              tegeleme ka järgmiste oluliste küsimustega: kliimakindla majanduse seadus, biometaani turule toomine,
-              CO₂-aktsiisi küsimused ja Estlink 2 lõhkumine. Jätkame
-              tööd nende teemade lahendamiseks, sest
-              arusaamine ning juhtimine on võimalik vaid avaliku ja erasektori usalduslikus
-              koostöös.
+              Moving forward on regulatory risk management will be a collaborative process, where we will also address the following key issues: the Climate Resilient Economy Act, bringing biomethane to the market, CO₂ excise issues and the damaging of Estlink 2. We will continue to work on these issues, as mutual understanding and leadership are only possible through trusted collaboration between the public and private sectors.
             </p>
           </div>
         </article>
@@ -1514,189 +1434,211 @@
 
       <section class="section--horizontal">
         <article class="content-block block__text">
-          <h2 class="block__title">Meie inimesed</h2>
-          <strong>Meie inimesed – meie tugevus</strong>
+          <h2 class="block__title">Our People</h2>
+          <strong>Our people – our strength</strong>
           <p>
-            Alexelas töötab üle 500 professionaali, kes igapäevaselt panustavad maailma paremaks muutmisse. Meie
-            töötajad
-            puutuvad eestimaalastega kokku nii tanklates kohvikutes, pakkudes puhkepause ja toiduvalikut, kui ka
-            elektroonilistes kanalites, kus pakume ööpäevaringset klienditeenindust. Olgu nõuandeks parima elektripaketi
-            leidmine või kiire abi erinevates küsimustes – oleme alati olemas.
+            Alexela employs more than 500 professionals who contribute to making the world a better place every day. Our employees interact with Estonians, both in service station café-shops, offering breaks and a choice of food, and in electronic channels, where we provide round-the-clock customer service. Whether it is advice on finding the best electricity package or quick help with a variety of problems, we're always there.
           </p>
-          <p>Hindame oma inimesi igal ametipositsioonil. Meie väärtus on nii pikaajalistes
-            töötajates, kes jagavad väärtuslikke kogemusi ning aitavad ettevõtte järjepidevust,
-            kui ka värsketes tulijates, kes toovad uusi
-            ideid ja teadmisi. Töötajate värbamine
-            ning juhtimine põhinevad 2019. aastal välja töötatud väärtustel, mis toetavad väärtuspõhist juhtimist. </p>
-          <strong>Väärtuspõhine juhtimine ja
-            kultuur </strong>
-          <p>Iga meie töötaja jagab ning kannab edasi
-            meie põhiväärtusi: „Olen jõud – ja minu töö
-            on väärtuslik“, „Meis on väge – ja toetame
-            üksteist“, „Muudame maailma – hoolides,
-            et elu Eestis läheks paremaks“. Need väärtused ei ole vaid sõnad – need elavad meie
-            igapäevatöös. Usume, et väärtuspõhise
-            kultuuri loomine eeldab kõigi töötajate
-            kaasamist igal tasandil, mistõttu olid meie
-            töötajad kaasatud väärtuste väljatöötamise protsessi algusest peale. Ainult koos
-            loome ettevõtte, kus väärtused tõepoolest elavad ja arenevad. </p>
+          <p>We value our people in every job position. Our value lies in our long-term employees, who share valuable experience and contribute to the continuity of the company, as well as in our newcomers, who bring new ideas and knowledge. Recruitment and management are based on the values developed in 2019, which support value-based management. </p>
+          <strong>Value-based management and culture</strong>
+          <p>Each and every one of our employees
+            shares and carries forward our core values:
+            'I am a strength - and my work is valuable',
+            'We have power - and we support
+            each other', 'We change the world - by
+            making life in Estonia better'. These values
+            are not just words - they are integral to
+            our daily work. We believe that creating a
+            value-based culture requires the engagement
+            of all employees at every level, which
+            is why our employees were involved in the
+            process of developing the values from the
+            start. It is only by working together that
+            we can create a company where values
+            truly live and thrive.</p>
 
 
-          <h3>AS Alexela ja tütarettevõtete töötajad 2024</h3>
+          <h3>Employees of AS Alexela and its subsidiaries</h3>
           <p></p>
           <div class="table bg-transparent">
             <table>
               <thead>
                 <tr class="table__header bg-blue">
-                  <th class="table__header-text text-left">Aasta</th>
+                  <th class="table__header-text text-left">Year</th>
                   <th class="table__header-text">31.12.2023</th>
                   <th class="table__header-text">31.12.2024</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Töötajate arv</td>
+                  <td class="table__cell table__cell--content">Number of employees</td>
                   <td class="table__cell table__cell--number">524</td>
                   <td class="table__cell table__cell--number">538</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Juhatuse liikmed</td>
+                  <td class="table__cell table__cell--content">Board members</td>
                   <td class="table__cell table__cell--number">10</td>
                   <td class="table__cell table__cell--number">10</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Juhid ja spetsialistid</td>
+                  <td class="table__cell table__cell--content">Executives and specialists</td>
                   <td class="table__cell table__cell--number">189</td>
                   <td class="table__cell table__cell--number">210</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Teenindajad ja töölised</td>
+                  <td class="table__cell table__cell--content">Customer service and staff</td>
                   <td class="table__cell table__cell--number">325</td>
                   <td class="table__cell table__cell--number">318</td>
                 </tr>
                 <tr>
-                  <th class="text-left table__header-text bg-flamingo">Nõukogu ja juhatus</th>
+                  <th class="text-left table__header-text bg-flamingo">Council and Governing Board</th>
                   <th class="table__header-text bg-flamingo">28</th>
                   <th class="table__header-text bg-flamingo">28</th>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Naised</td>
+                  <td class="table__cell table__cell--content">Women</td>
                   <td class="table__cell table__cell--number">0</td>
                   <td class="table__cell table__cell--number">0</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Mehed</td>
+                  <td class="table__cell table__cell--content">Men</td>
                   <td class="table__cell table__cell--number">14</td>
                   <td class="table__cell table__cell--number">14</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">30–49 a</td>
+                  <td class="table__cell table__cell--content">30-49 y/o</td>
                   <td class="table__cell table__cell--number">11</td>
                   <td class="table__cell table__cell--number">10</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Üle 50 a</td>
+                  <td class="table__cell table__cell--content">Over 50 y/o</td>
                   <td class="table__cell table__cell--number">3</td>
                   <td class="table__cell table__cell--number">4</td>
                 </tr>
                 <tr>
-                  <th colspan="5" class="text-left table__header-text bg-flamingo">Uued töötajad<sup>*</sup></th>
+                  <th colspan="5" class="text-left table__header-text bg-flamingo">New staff<sup>*</sup></th>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Naised</td>
+                  <td class="table__cell table__cell--content">Women</td>
                   <td class="table__cell table__cell--number">118</td>
                   <td class="table__cell table__cell--number">136</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Mehed</td>
+                  <td class="table__cell table__cell--content">Men</td>
                   <td class="table__cell table__cell--number">47</td>
                   <td class="table__cell table__cell--number">45</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Alla 30 a</td>
+                  <td class="table__cell table__cell--content">Under 30 y/o</td>
                   <td class="table__cell table__cell--number">62</td>
                   <td class="table__cell table__cell--number">84</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">30–49 a</td>
+                  <td class="table__cell table__cell--content">30-49 y/o</td>
                   <td class="table__cell table__cell--number">72</td>
                   <td class="table__cell table__cell--number">67</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Üle 50 a</td>
+                  <td class="table__cell table__cell--content">Over 50 y/o</td>
                   <td class="table__cell table__cell--number">31</td>
                   <td class="table__cell table__cell--number">30</td>
                 </tr>
                 <tr>
-                  <th colspan="5" class="text-left table__header-text bg-flamingo">Lahkunud töötajad<sup>*</sup></th>
+                  <th colspan="5" class="text-left table__header-text bg-flamingo">Employee turnover<sup>*</sup></th>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Naised</td>
+                  <td class="table__cell table__cell--content">Women</td>
                   <td class="table__cell table__cell--number">237</td>
                   <td class="table__cell table__cell--number">212</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Mehed</td>
+                  <td class="table__cell table__cell--content">Men</td>
                   <td class="table__cell table__cell--number">96</td>
                   <td class="table__cell table__cell--number">91</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Alla 30 a</td>
+                  <td class="table__cell table__cell--content">Under 30 y/o</td>
                   <td class="table__cell table__cell--number">217</td>
                   <td class="table__cell table__cell--number">175</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">30–49 a</td>
+                  <td class="table__cell table__cell--content">30-49 y/o</td>
                   <td class="table__cell table__cell--number">63</td>
                   <td class="table__cell table__cell--number">86</td>
                 </tr>
                 <tr class="table__row">
-                  <td class="table__cell table__cell--content">Üle 50 a</td>
+                  <td class="table__cell table__cell--content">Over 50 y/o</td>
                   <td class="table__cell table__cell--number">53</td>
                   <td class="table__cell table__cell--number">42</td>
                 </tr>
               </tbody>
             </table>
-            <i>* Sisaldab hooajalisi töötajaid</i>
+            <i>* Includes seasonal workers</i>
           </div>
           <p></p>
-          <strong>Töötajate heaolu ja areng</strong>
-          <p>Alexelas mõõdame töötajate rahulolu regulaarselt küsitluste abil ja kasutame tagasisidet töökeskkonna
-            parandamiseks.
-            Igal aastal valime kolm peamist arenguvõimalust, et luua veelgi toetavam ja motiveerivam keskkond. </p>
-          <p>Meie töötajate igapäevane töö põhineb
-            väärtustel ja käitumiskoodeksil. Koodeks
-            määratleb tervise, ohutuse, võrdse kohtlemise ning inimõiguste austamise põhimõtted. Usume, et töötajate
-            turvalisus ja
-            heaolu on esmatähtsad. Seetõttu järgime
-            kõiki seaduslikke nõudeid ning ootame
-            seda ka oma partneritelt, et tagada ohutu
-            ja tervislik töökeskkond. </p>
-          <p>Töötajate heaolu ja areng on meie prioriteet, kuna usume, et ettevõtte edu sõltub sellest, kui hästi meie
-            inimesed end
-            siin tunnevad. Alexela ei talu kiusamist,
-            vägivalda ega ahistamist. Värbamisel
-            järgime võrdsuse põhimõtet; hindame
-            inimesi nende professionaalsete omaduste järgi.</p>
-          <p>Meie väärtused on suunavad meie igapäevatöös. Kõik töötajad on kaasatud väärtuste määramisse, mis arenevad
-            pidevalt.
-            Pakume igal aastal arenguvõimalusi vestluste ja koolitustega, sh 360kraadised
-            hindamised juhtide jaoks, et keskenduda
-            arenguvajadustele. Me hindame ka enesetäiendamist ja pakume oma töötajatele
-            võimalusi kutse- ning erialaste koolituste
-            läbimiseks. </p>
-          <p>Töötajate tervis ja heaolu on meile tähtsad. Seega pakume sporditoetust, ravikindlustust ja hüvesid ning
-            ajaviidet nagu
-            tenniseturniir, mis toob kokku meeskonnatunde ja sportlikud väärtused. Samuti
-            pakume konkurentsivõimelist töötasu,
-            mille määramisel võrdleme regulaarselt
-            tööturgu ning maksame alati keskmisest
-            kõrgemat palka. </p>
-          <p>Töötajate väärtustamine on oluline, sest
-            just nemad loovad ettevõtte maine ja
-            kultuuri. Lisaks igapäevasele koostööle korraldame ühisüritusi nagu Alexela
-            Energiapäev ning Väepäev, et tugevdada
-            meeskonnatööd ja ühtset töökultuuri. </p>
+          <strong>Employee well-being and
+            development</strong>
+          <p>At Alexela, we measure employee satisfaction
+            regularly through surveys and use
+            feedback to improve the working environment.
+            Each year, we select three key
+            development opportunities to create an
+            even more supportive and motivating environment.
+          </p>
+          <p>
+            Our employees' daily work is based on
+            values and the Code of Conduct. The
+            Code defines the basic ideas of health,
+            safety, equal treatment and respect for
+            human rights. We believe that the safety
+            and wellbeing of our employees is paramount.
+            We therefore comply with all
+            legal requirements and expect our partners
+            to do the same to ensure a safe and
+            healthy working environment.
+          </p>
+          <p>
+            The well-being and development of our
+            employees is our priority, as we believe
+            that the success of the company is determined
+            by how well our people feel there.
+            Alexela does not tolerate bullying, violence
+            or harassment. We recruit on the
+            basis of equality; we judge people on their
+            professional merits.
+          </p>
+          <p>
+            Our values guide our everyday work. All
+            employees are involved in defining our
+            values, which are constantly evolving.
+            We provide annual development opportunities
+            through interviews and training,
+            including 360 degree assessments for executives
+            to focus on development needs.
+            We also value self-development and provide
+            opportunities for our staff to undertake
+            vocational and professional training.
+          </p>
+          <p>
+            The health and well-being of our employees
+            are important to us. So we offer
+            sports support, medical insurance and
+            benefits, and activities such as tennis
+            tournaments that bring together team
+            spirit and sporting values. We also offer
+            competitive salaries, which are regularly
+            benchmarked against the labour market
+            and are always above average.
+          </p>
+          <p>
+            Valuing our employees is important because
+            they are the ones who create the
+            company's reputation and culture. In addition
+            to everyday cooperation, we organise
+            joint events such as Alexela Energy
+            Day and Power Day to strengthen teamwork
+            and a unified work culture.
+          </p>
         </article>
       </section>
 
@@ -1715,44 +1657,44 @@
 
           <nav class="footer__nav">
             <div class="menu__section">
-              <a href="/" class="menu__button">
+              <a href="index.html" class="menu__button">
                 <span class="menu__icon menu__icon--home"></span>
-                Avaleht
+                Homepage
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="ettevottest.html" class="menu__button">
+              <a href="about.html" class="menu__button">
                 <span class="menu__icon menu__icon--a-monogram"></span>
-                Ettevõttest
+                About the Company
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="arisuunad.html" class="menu__button">
+              <a href="business-lines.html" class="menu__button">
                 <span class="menu__icon menu__icon--eur"></span>
-                Ärisuunad
+                Business Lines
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="kestlikkus.html" class="menu__button menu__button--active">
+              <a href="sustainability.html" class="menu__button menu__button--active">
                 <span class="menu__icon menu__icon--greenspark"></span>
-                Kestlikkus (ESG)
+                Sustainability and Governance
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="finantstulemused.html" class="menu__button">
+              <a href="economic-results.html" class="menu__button">
                 <span class="menu__icon menu__icon--news"></span>
-                Finantstulemused
+                Economic Results
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="alexela_aruanne_2024.pdf" target="_blank" class="menu__button">
+              <a href="alexela_aruanne_2024_ENG.pdf" target="_blank" class="menu__button">
                 <span class="menu__icon menu__icon--contract"></span>
-                Laadi alla PDF
+                Download PDF
               </a>
             </div>
 
@@ -1806,7 +1748,7 @@
           </div>
 
           <div class="footer__slogan">
-            Energia kogu eluks
+            Energy for life
           </div>
 
         </div>

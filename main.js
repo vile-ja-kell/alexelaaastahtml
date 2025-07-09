@@ -329,3 +329,36 @@ window.addEventListener('wheel', (e) => {
     }
     e.preventDefault();
 }, { passive: false });
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  const lang = window.location.pathname.startsWith('/en') ? 'en' : 'et';
+  const selector = document.getElementById('language');
+  if (selector) {
+    selector.value = lang;
+  }
+});
+
+function switchLanguage(selectedLang) {
+  const etToEn = {
+    'index.html': 'index.html',
+    'ettevottest.html': 'about.html',
+    'arisuunad.html': 'business-lines.html',
+    'kestlikkus.html': 'sustainability.html',
+    'finantstulemused.html': 'economic-results.html',
+  };
+
+  const currentPath = window.location.pathname;
+  const currentFile = currentPath.split('/').pop() || 'index.html';
+
+  if (selectedLang === 'et') {
+    // Redirect to Estonian root files
+    const etPath = Object.entries(etToEn).find(([et, en]) => en === currentFile)?.[0] || '';
+    const newPath = '/' + etPath;
+    window.location.pathname = newPath || '/';
+  } else {
+    // Redirect to English folder with corresponding file
+    const enFile = etToEn[currentFile] || 'index.html';
+    window.location.pathname = '/en/' + enFile;
+  }
+}

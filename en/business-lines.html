@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="../css/style.css" />
-  <title>Ärisuunad</title>
+  <title>Business Lines</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <video class="header__video" autoplay muted loop playsinline poster="../video/arisuunad.jpg">
       <source src="../video/arisuunad.webm" type="video/webm" />
       <source src="../video/arisuunad.mp4" type="video/mp4" />
-      Sinu brauser ei toeta video elementi.
+      Your browser does not support the video element.
     </video>
     <nav class="nav">
       <div class="nav__logo">
@@ -27,7 +27,7 @@
       </div>
       <div class="nav__subcontainer">
         <div class="language">
-          <select name="language" id="language" class="language__select">
+          <select name="language" id="language" class="language__select" onchange="switchLanguage(this.value)">
             <option value="et">ET</option>
             <option value="en">EN</option>
           </select>
@@ -43,44 +43,44 @@
       <div class="menu__container">
         <div class="menu">
           <div class="menu__section">
-            <a href="/" class="menu__button">
+            <a href="index.html" class="menu__button">
               <span class="menu__icon menu__icon--home"></span>
-              Avaleht
+              Homepage
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="ettevottest.html" class="menu__button">
+            <a href="about.html" class="menu__button">
               <span class="menu__icon menu__icon--a-monogram"></span>
-              Ettevõttest
+              About the Company
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="arisuunad.html" class="menu__button menu__button--active">
+            <a href="business-lines.html" class="menu__button menu__button--active">
               <span class="menu__icon menu__icon--eur"></span>
-              Ärisuunad
+              Business Lines
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="kestlikkus.html" class="menu__button">
+            <a href="sustainability.html" class="menu__button">
               <span class="menu__icon menu__icon--greenspark"></span>
-              Kestlikkus (ESG)
+              Sustainability and Governance
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="finantstulemused.html" class="menu__button">
+            <a href="economic-results.html" class="menu__button">
               <span class="menu__icon menu__icon--news"></span>
-              Finantstulemused
+              Economic Results
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="alexela_aruanne_2024.pdf" target="_blank" class="menu__button">
+            <a href="alexela_aruanne_2024_ENG.pdf" target="_blank" class="menu__button">
               <span class="menu__icon menu__icon--contract"></span>
-              Laadi alla PDF
+              Download PDF
             </a>
           </div>
         </div>
@@ -89,34 +89,34 @@
     <div class="hero">
 
       <div class="hero__content">
-        <h1>Ärisuunad</h1>
+        <h1>Business Lines</h1>
       </div>
 
     </div>
   </header>
   <main class="waves-animation bg-main-1">
     <section class="section--top" id="quicklinks">
-      <h2 class="text-left">Leia kiirelt</h2>
+      <h2 class="text-left">Quick find</h2>
       <nav class="quicklinks quicklinks--pages" aria-label="Quick navigation">
-        <a class="quicklinks__item" href="ettevottest.html" aria-label="Info ettevõttest">
+        <a class="quicklinks__item" href="about.html" aria-label="About the company">
           <img src="../img/icons/a-monogram.svg" alt="Alexela logo" class="quicklinks__icon" />
-          <h3>Ettevõttest</h3>
+          <h3>About the Company</h3>
         </a>
-        <a class="quicklinks__item" href="arisuunad.html" aria-label="Info ettevõttest">
-          <img src="../img/icons/eur.svg" alt="Euro ikoon" class="quicklinks__icon" />
-          <h3>Ärisuunad</h3>
+        <a class="quicklinks__item" href="business-lines.html" aria-label="About the company">
+          <img src="../img/icons/eur.svg" alt="Euro icon" class="quicklinks__icon" />
+          <h3>Business Lines</h3>
         </a>
-        <a class="quicklinks__item" href="kestlikkus.html" aria-label="Info ettevõttest">
-          <img src="../img/icons/greenspark.svg" alt="Lehe ikoon" class="quicklinks__icon" />
-          <h3>Kestlikkus (ESG)</h3>
+        <a class="quicklinks__item" href="sustainability.html" aria-label="About the company">
+          <img src="../img/icons/greenspark.svg" alt="Leaf icon" class="quicklinks__icon" />
+          <h3>Sustainability and Governance</h3>
         </a>
-        <a class="quicklinks__item" href="finantstulemused.html" aria-label="Info ettevõttest">
-          <img src="../img/icons/news.svg" alt="Uudiste ikoon" class="quicklinks__icon" />
-          <h3>Finantstulemused</h3>
+        <a class="quicklinks__item" href="economic-results.html" aria-label="About the company">
+          <img src="../img/icons/news.svg" alt="News icon" class="quicklinks__icon" />
+          <h3>Economic Results</h3>
         </a>
-        <a class="quicklinks__item" href="alexela_aruanne_2024.pdf" target="_blank" aria-label="Info ettevõttest">
-          <img src="../img/icons/contract.svg" alt="Lepingu ikoon" class="quicklinks__icon" />
-          <h3>Laadi alla PDF</h3>
+        <a class="quicklinks__item" href="alexela_aruanne_2024_ENG.pdf" target="_blank" aria-label="About the company">
+          <img src="../img/icons/contract.svg" alt="Contract icon" class="quicklinks__icon" />
+          <h3>Download PDF</h3>
         </a>
       </nav>
     </section>
@@ -124,60 +124,84 @@
     <section class="section--content">
       <article class="image-text-content-block block--image-right">
         <figure class="block__image">
-          <img src="../img/kytused.jpg" alt="Kütused" class="block__img" />
+          <img src="../img/kytused.jpg" alt="Fuels" class="block__img" />
         </figure>
         <div class="block__text">
-          <h2 class="block__title">Vedelkütused</h2>
-          <strong>Vedelkütuste turg aastal 2024: väljakutsed ja kohanemine</strong>
+          <h2 class="block__title">Liquid Fuels</h2>
+          <strong>The liquid fuels market 2024:
+            challenges and adaptation</strong>
           <p class="block__description">
-            Aasta 2024 tõi vedelkütuste turul jätkuvalt suuri väljakutseid, kinnitades vajaduse olla valmis
-            ootamatusteks ja võimeline kiiresti reageerima turgu mõjutavatele sündmustele.</p>
+            The year 2024 continued to bring major
+challenges to the liquid fuels market, confirming
+the need to be prepared for the
+unexpected and able to react quickly to
+events affecting the market.</p>
           <p>
-            Vedelkütuste turg jäi suuresti välistest teguritest sõltuvaks. Kõige suurema mõjuga olid Venemaa
-            agressioonisõda Ukraina vastu ja poliitilised otsused lähiriikide, suurriikide ning OPEC+ liikmesriikide
-            poolt. Üldiselt on Euroopa turg nüüdseks kohanenud uute tarneahelatega.
+            The liquid fuels market remained largely
+affected by external factors. Russia's war
+of aggression against Ukraine and the
+political decisions taken by neighbouring
+countries, major powers and OPEC+
+member states had the greatest impact.
+Overall, the European market has now
+adapted to the new supply chains.
           </p>
         </div>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            OPEC+ riikide tootmiskärped ja OPECivälised riigid, kes suurendasid oma tootmismahtusid, mõjutasid
-            maailmaturgu
-            kõige enam. USA presidendivalimiste
-            mõju survestas kütuste hinnad langusele.
-            Kokkuvõttes langesid kütuste maailmaturuhinnad 2024. aastal.
+            Production cuts in OPEC+ countries and
+nonOPEC countries increasing their production
+volumes had the biggest impact
+on the world market. The impact of the
+US presidential election put downward
+pressure on fuel prices. Overall, world
+fuel prices fell in 2024.
           </p>
           <p>
-            Üks suurema mõjuga otsus tuli Rootsist,
-            kus alandati biokohustuse nõuet, mis tõi
-            kaasa HVO pakkumise kasvu ja hinnalanguse. Sel oli siiski pigem lühiajaline mõju.
+            One of the most influential decisions
+came from Sweden, which lowered the
+bioobligation requirement, leading to an
+increase in the supply of HVO and a decrease
+in the price of HVO. However, this
+had a rather short-term effect.
           </p>
           <p>
-            Alexela ostab vedelkütuseid jätkuvalt
-            oma Euroopa päritolu tarnijatelt. Enne
-            sanktsioonide kehtestamist tarnisime
-            peamiselt diislikütust ja bensiini Orleni
-            Mažeikiai rafineerimistehasest Leedus.
+            Alexela continues to buy liquid fuels from
+its European suppliers. Prior to the imposition
+of sanctions, we mainly supplied
+diesel and petrol from the Orlen refinery
+in Mažeikiai, Lithuania.
           </p>
           <p>
-            Siseriiklikult oli tarbijate kindlustunde
-            langust märgata väikse langusena tarbimismahtudes. Samuti, vedelkütuste jaeturg kasvas 1,6 protsenti, samas
-            kui hulgiturg langes 1,1 protsenti. Eesti kütuseturg
-            on tihedalt seotud maailmaturuhindadega, mis avaldas mõju ka tanklates, vähendades tarbimise kasvu.
+            Domestically, the decline in consumer
+confidence was seen in the form of a
+small fall in consumption. Similarly, the
+retail market for liquid fuels grew by 1.6
+percent, while the wholesale market fell
+by 1.1 percent. The Estonian fuel market
+is closely linked to world market prices,
+which also had an impact on petrol stations,
+reducing consumption growth.
           </p>
           <p>
-            Turu ebakindlus ja minimaalne kasv suurendasid konkurentsi kohalikul turul.
-            Turuosalised keskendusid lühiajalistele pakkumistele, et meelitada kliente.
-            Alexela keskendus oma klientidele terviklike energialahenduste pakkumisele,
-            mis sidusid kütuse- ja elektripakkumisi. Hübriidpakkumiste ning ristmüügiga
-            suutsime kasvatada energialahendusi
-            kasutavate klientide osakaalu 27 protsendini.
+            Market uncertainty and minimal growth
+fuelled competition in the local market.
+Market players focused on short-term
+offers to attract customers. Alexela concentrated
+on providing its customers with
+innovative energy solutions that combined
+fuel and electricity offers. Through
+hybrid offers and cross-selling, we were
+able to increase the share of customers
+using energy solutions to 27 percent.
           </p>
         </div>
       </article>
@@ -191,57 +215,77 @@
           <img src="../img/lng-terminal.jpg" alt="LNG terminal" class="block__img" />
         </figure>
         <div class="block__text">
-          <h2 class="block__title">Gaasilised kütused</h2>
-          <strong>Gaasituru arengud</strong>
+          <h2 class="block__title">Gaseous Fuels</h2>
+          <strong>Gas market developments</strong>
           <div class="block__description">
             <p>
-              Aasta 2022 rekordilised gaasihinnad mõjutasid jätkuvalt ka 2024. aastat, eriti äriklientide
-              konservatiivsete valikute näol, kui kaaluti sõidukiparkide üleviimist keskkonnasõbralikumatele kütustele.
-              Autotootjate otsus lõpetada 2024. aastal CNG-l töötavate sõidukite tootmine avaldab järgmistel aastatel
-              mõju CNG tarbimisele erakliendi segmendis.
+              Record gas prices in 2022 continued to
+affect 2024, with different business customers
+making conservative choices as
+they considered switching fleets to more
+environmentally friendly fuels. The decision
+by car manufacturers to stop production
+of CNG vehicles in 2024 will have
+an impact on CNG consumption in the
+private customer segment in the following
+years.
             </p>
             <p>
-              LNG turumahud jätkasid kasvu 2024. aastal, kuna see kütus pakub madala seadmete investeeringute maksumust
-              ja on kilomeetrikulu poolest kõige odavam. Võrreldes 2023. aastaga kasvas LNG turumahu maht seitse
-              protsenti.</p>
+              LNG market volumes continued to grow
+in 2024, as this fuel offers low equipment
+investment costs and is the cheapest in
+terms of cost per kilometre. Compared
+to 2023, LNG volumes grew by seven percent.</p>
           </div>
         </div>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Maagaasi ja LPG kasutamine tööstustes
-            ning hoonetes kütteallikana on jätkunud. Alexela pakub oma klientidele hübriidlahendusi, mis sõltuvad
-            maagaasi ja
-            LPG maailmaturuhindade liikumisest.
-            Aastal 2024 jätkusid investeeringud LPGseadmetesse, mille eesmärk oli peamiselt
-            kütteõlisüsteemide väljavahetamine.
+            The use of natural gas and LPG in industry
+and as heating source continues. Alexela
+provides its customers with hybrid solutions
+that are dependent on movements
+in world market prices for natural gas and
+LPG. In 2024, investments in LPG equipment
+continued, mainly aimed at replacing
+fuel oil systems.
           </p>
           <p>
-            Kuigi maagaasi müügimahud Eestis kasvasid 2024. aastal 8,8 protsenti 2023.
-            aastaga võrreldes, ei ole need veel sõjaeelsele tasemele jõudnud. LPG kasutuselevõtt on osaliselt asendanud
-            maagaasi. Samuti langes LPG turumaht 2024.
-            aastal, mis oli tingitud kuivadest ilmadest
-            viljakoristusperioodil, vähendades LPG
-            nõudlust põllumajandussektoris.
+            Although natural gas sales volumes in
+Estonia increased by 8.8% in 2024 compared
+to 2023, they have not yet reached
+pre-war levels. LPG has partially replaced
+natural gas. LPG market volumes also fell
+in 2024 due to dry weather during the
+harvesting season, reducing LPG demand
+in the agricultural sector.
           </p>
           <p>
-            Tulevikus mõjutavad gaasiliste kütuste turgu aktsiisid ja maksud. Näiteks on
-            CNG-na kasutatav biometaan jätkuvalt
-            keskkonnasõbralikuim transpordikütus.
-            Järgnevatel aastatel kasvav diislikütuse
-            aktsiis ja 2027. aastal transpordikütustele rakenduv CO₂-maks suurendavad biometaani konkurentsivõimet.
+            In the future, the market for gaseous fuels
+will be affected by excise duties and
+taxes. For example, biomethane, used as
+CNG, remains the most environmentally
+friendly transport fuel. Increasing excise
+duties on diesel in the coming years and
+the CO₂ tax on transport fuels in 2027
+will increase the competitiveness of biomethane.
           </p>
           <p>
-            Euroopa Liit kehtestas 20. detsembril sanktsioonid Venemaa propaanile.
-            Alexela oli juba alustanud alternatiivsete
-            tarnekanalite loomist ja esimene täielikult Euroopas toodetud LPG laadungiga
-            laev saabus novembris. Uute tarnekanalite avamine on oluline osa klientide varustuskindluse tagamisest.
+            On 20 December, the European Union
+imposed sanctions on Russian propane.
+Alexela had already begun to establish alternative
+supply chains and the first fully
+European-produced LPG vessel arrived
+in November. The opening of new supply
+chains is an integral part of ensuring security
+of supply for customers.
           </p>
         </div>
       </article>
@@ -251,15 +295,22 @@
     <section class="section--content">
       <article class="image-text-content-block block--image-right">
         <figure class="block__image">
-          <img src="../img/elekter.jpg" alt="Laps ja isa vahetavad elektripirni" class="block__img" />
+          <img src="../img/elekter.jpg" alt="Child and father changing light bulb" class="block__img" />
         </figure>
         <div class="block__text">
-          <h2 class="block__title">Elekter</h2>
-          <strong>Alexela elektrimüügi turuosa jätkuv kasv</strong>
+          <h2 class="block__title">Electricity</h2>
+          <strong>Alexela's electricity market
+            share continues to grow</strong>
           <p class="block__description">
-            Eesti elektriturg algas 2024. aastal pingeliselt, kuna jaanuarikuu külmad ilmad tõid kaasa ülikõrged
-            elektrihinnad. Lisaks katkes 26. jaanuari varahommikul ootamatult Estlink 2, suurim elektriühendus Soomega.
-            See sündmus mõjutas Eesti elektritarbijaid veel kaheksa kuu jooksul ja tõi kaasa kõrgemad elektrihinnad.
+            Estonia's electricity market in 2024 started
+off on a rocky note, as cold January
+weather led to extremely high electricity
+prices. In addition, Estlink 2, the largest
+electricity link with Finland, unexpectedly
+broke in the early morning of 26 January.
+This event affected electricity consumers
+in Estonia for another eight months and
+led to higher electricity prices.
           </p>
         </div>
       </article>
@@ -267,34 +318,42 @@
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Energiakriisiaegne usaldamatus börsipakettide vastu püsis ka 2024. aastal,
-            kuna kliendid usaldasid enim fikseeritud
-            hinnaga pakette. Näiteks Alexela pakett
-            Pingevaba, mis pakub ühekuulist fikseeritud hinda, oli jätkuvalt populaarne.
-            Vaatamata keerulistele turutingimustele
-            suutis Alexela pakkuda konkurentsivõimelisi elektripakette ja säilitada oma turuosa, olles Eestis suuruselt
-            selgelt teine
-            elektrimüüja. Aastal 2024 kasvas Alexela
-            elektrimüügi turuosa 19,7 protsendini.
+            The energy crisis-era distrust of exchange
+packages persisted in 2024, as customers
+put most trust in fixed-price packages.
+For example, Alexela's Pingevaba package,
+which offers a one-month fixed price,
+remained popular. Despite the challenging
+market conditions, Alexela was able
+to offer a competitive price and maintain
+its market share as the clear second largest
+electricity seller in Estonia. In 2024,
+Alexela's market share in electricity sales
+increased to 19.7%.
           </p>
           <p>
-            Laia tooteportfelliga energiaettevõttena
-            pakub Alexela mitmeid püsisoodustusi
-            ja tähtajalisi soodustusi, andes rohkem
-            väärtust neile klientidele, kes tarbivad
-            korraga mitut teenust. Alates sügisest
-            said Alexela elektrikliendid pakkumise,
-            millega kehtis neile tanklates kütusesoodustus -15 sent/liiter.
+            As an energy company with a diverse
+product portfolio, Alexela offers a range
+of permanent and fixed-term discounts,
+providing more value to customers who
+consume several services at the same
+time. Starting in autumn, Alexela's electricity
+customers received a discount of
+-15 cents per litre on fuel at petrol stations.
           </p>
           <p>
-            Alexela on sõlminud mitmeid pikaajalisi elektriostulepinguid taastuvenergiatootjatega, et turule tuua
-            taastuvelektrit,
-            mida saab klientidele pakkuda fikseeritud hindadega.
+            Alexela has entered into a number of
+longterm power purchase agreements
+with renewable energy producers to
+bring renewable electricity to the market,
+which can be offered to customers at
+fixed prices.
           </p>
         </div>
       </article>
@@ -304,56 +363,75 @@
     <section class="section--content">
       <article class="image-text-content-block block--image-right">
         <figure class="block__image">
-          <img src="../img/e-tankla.jpg" alt="Alexela laadimisjaam" class="block__img" />
+          <img src="../img/e-tankla.jpg" alt="Alexela charging station" class="block__img" />
         </figure>
         <div class="block__text">
-          <h2 class="block__title">E-Mobiilsus</h2>
-          <strong>E-Mobiilsuse lahenduste ja teenuste laienemine</strong>
+          <h2 class="block__title">E-mobility</h2>
+          <strong>Expansion of e-mobility
+            solutions and services</strong>
           <p class="block__description">
-            E-Mobiilsuse valdkonnas toimusid 2024. aastal märkimisväärsed arengud nii avaliku laadimistaristu kui ka
-            klientidele pakutavate toodete ja teenuste osas. Aastatepikkune kogemus ja tegutsemine võimaldas meil veelgi
-            täpsemalt kujundada arengut ja pakkuda klientidele suurimat väärtust, pakkudes laadimisteenuseid kodus,
-            teekonnal ja sihtkohas.
+            In the e-mobility sector, 2024 saw significant
+developments in terms of both public
+charging infrastructure and the products
+and services available to customers.
+Years of experience and action have enabled
+us to further shape developments
+and offer our customers the best value by
+providing charging services at home, enroute
+and at destination.
           </p>
         </div>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Privaatsete laadimisteenuste osas käivitasime koostöö kodumaise laadijatootja VOOLuga, pakkudes senisest
-            võimekamaid ja parema disainiga laadijaid.
-            Kliendid saavad kasutada tarka laadimist,
-            kus laadija ajastab oma tegevuse vastavalt elektrihinnale. Lisaks lõime korteriühistutele laadimistaristu
-            väljaehitamise
-            ja kasutamise juhendi ning laiendasime
-            koostööd kinnisvaraarendajatega.
+            In the area of private charging services,
+we partnered with domestic charger
+manufacturer VOOL to offer easier and
+better designed chargers. Customers can
+benefit from smart charging, where the
+charger schedules its activity according
+to the electricity price. In addition, we
+created a guide for apartement cooperatives
+on how to build and use charging
+infrastructure and expanded our cooperation
+with real estate developers.
           </p>
           <p>
-            Alexela avalike laadimisotsikute arv kasvas 2024. aastal 1,5 korda võrdluses 2023.
-            aastaga, jõudes üle 300 otsikuni pea 200s
-            eri asukohas üle Eesti.
+            The number of Alexela public charging
+points increased by 1.5 times in 2024
+compared to 2023, reaching over 300
+outlets in almost 200 different locations
+across Estonia.
           </p>
           <p>
-            Jätkasime Elmo võrgustiku laadijate väljavahetamist Alexela tanklates uute kiirlaadijate vastu. Lisaks
-            paigaldasime laadimispunkte teekonnal ja sihtkohtades
-            nagu hotellides, spaades, spordikeskustes, kaubanduskeskustes ning muudes
-            ajaveetmiskohtades. Samuti rajati laadimispunkte tiheasustusega elamupiirkondadesse, kus privaatsete
-            laadimiskohtade loomine on raskendatud – need
-            on kõikidele ümbruskonna elanikele
-            mõeldud avalikud laadijad, mida saab
-            kiirelt ja mugavalt vastavalt vajadusele
-            lisada.
+            We continued to replace the Elmo network
+chargers at Alexela service stations
+with new fast chargers. In addition, we
+installed charging points en-route and at
+destinations, such as hotels, spas, sports
+centres, shopping malls and other leisure
+facilities. We also set up charging points in
+densely populated residential areas where
+it is difficult to create private charging
+points - public charging points for all residents
+in the area, which can be quickly and
+conveniently added as needed.
           </p>
           <p>
-            Pöörasime suuremat tähelepanu teenuse arendamisele ja kvaliteedi tõstmisele. Aastal 2024 võtsime kasutusele
-            dünaamilise hinnastamise mudeli avalikes
-            laadijates, mis võimaldab paindlikumat
-            laadimist, arvestades laadimispunkti iseärasusi ja kasutajate tarbimisharjumusi.
+            We paid more attention to service development
+and quality improvement. In
+2024, we introduced a dynamic pricing
+model for public chargers, which allows
+for more flexible charging, taking into
+account the specificities of the charging
+point and the consumption habits of users.
           </p>
         </div>
       </article>
@@ -363,63 +441,83 @@
     <section class="section--content">
       <article class="image-text-content-block block--image-right">
         <figure class="block__image">
-          <img src="../img/kaubandus.jpg" alt="Alexela pood" class="block__img" />
+          <img src="../img/kaubandus.jpg" alt="Alexela shop" class="block__img" />
         </figure>
         <div class="block__text">
-          <h2 class="block__title">Kaubandus ja jaeäri</h2>
-          <strong>Tanklate kaubanduse areng ja Minu Alexela programm </strong>
+          <h2 class="block__title">Trade and Retail</h2>
+          <strong>Development of the service
+            stations and retail the My
+            Alexela programme</strong>
           <p class="block__description">
-            Kaubanduse osatähtsus tanklate juures on aastast aastasse kasvanud, pakkudes klientidele mugavat teenust ja
-            suurepärast teenindust, järgides jätkusuutlikkuse põhimõtteid. Aasta 2024 lõpuks oli Alexela jaevõrgus 43
-            kohvik-poodi, kus lisaks auto tankimisele ja laadimisele pakutakse maitsvat kehakinnitust ja esmatarvilikku
-            kaubavalikut.
+            The role of retail in service stations has
+grown year on year, providing customers
+with convenient service and excellent
+customer care, following sustainable
+principles. By the end of 2024, Alexela's
+retail network had 43 café-stores, offering
+a range of tasty snacks and convenience
+goods in addition to refuelling and
+charging.
           </p>
         </div>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Elektriautode arvu suurenemine toob
-            kaasa suurema nõudluse tanklate järele, kus pakutakse täiendavaid teenuseid.
-            Alustasime kohvik-poodide uue sisekujunduse arendamisega, et pakkuda paremat teenust ja hoida klientide
-            lojaalsust.
-            Kohvik-poodides toimuv äriline protsess
-            on pidevas arengus, et rahuldada klientide vajadusi ning saavutada meie majanduslikud eesmärgid.
+            The increase in the number of electric
+cars will lead to a greater demand for a
+larger number of service stations offering
+additional services. We started developing
+a new interior design for café-stores
+to offer better service and maintain customer
+loyalty. The business process in
+the café-stores is in constant evolution to
+meet customer needs and to achieve our
+business objectives.
           </p>
           <p>
-            Panustame pidevalt tootearendusse ja
-            teenindusoskuste arendamisse, et kasvatada uute klientide arvu ning muuta neid
-            lojaalseteks. Aastal 2024 kasvas kiirtoidukategooria kiiresti ja me jätkame eristuvate kontseptsioonidega ka
-            2025. aastal.
+            We are constantly investing in product
+development and service skills to grow
+our customer base and build loyalty. The
+fast food category grew rapidly in 2024
+and we will continue to differentiate our
+concepts in 2025.
           </p>
           <p>
-            Keskkonnahoid on meie jaoks oluline.
-            Jätkame korduvkasutatavate kohvitopside edendamist, mille osakaal kuumade
-            jookide kategoorias kasvas 14 protsendini, mis on nelja protsendipunkti suurune
-            kasv võrreldes 2023. aastaga. Samuti keskendume kohvi kvaliteedi parendamisele,
-            kasutades spetsiaalselt Alexelale röstitud
-            Araabia kohvipuu kohviube.
+            Caring for the environment is important
+to us. We will continue to promote reusable
+coffee cups , whose share in the hot
+beverage category increased to 14%, a
+four percentage point increase compared
+to 2023. We will also focus on improving
+the quality of coffee, using Arabica coffee
+beans roasted specifically for Alexela.
           </p>
           <p>
-            Aasta 2022 lõpus käivitasime Minu
-            Alexela kliendiprogrammi, kus lisaks kütuselt, elektrilt ja kaupadelt saadavatele
-            soodustustele saavad kliendid teenida
-            rahalise väärtusega digitempleid. Neid
-            saab kasutada teenuste eest tasumiseks,
-            näiteks elektri- ja gaasiarvete maksmiseks.
+            At the end of 2022, we launched the My
+Alexela customer programme, where in
+addition to discounts on fuels , electricity,
+and goods, customers can earn digital
+badges with a cash value. These can be
+used to pay for services such as electricity
+and gas.
           </p>
           <p>
-            Minu Alexela programm pakub püsiklientidele mugavust, soodustusi ja uusi
-            võimalusi. See ühendab igapäevased
-            energiatooted – nagu elekter, maagaas, sõidukikütused – ning tooted kohvik-poodides. Kliendid saavad nautida
-            soodustusi, haagise rentimist ja palju
-            muud. Alexela pakub ainukesena Eestis
-            nii laia tooteportfelliga energiateenuseid.
+            My Alexela offers convenience, benefiits,
+and new opportunities for loyal customers.
+It combines everyday energy products
+- such as electricity, natural gas, vehicle
+fuels - with products in café-shops.
+Customers can enjoy discounts, trailer
+rental, and much more. Alexela is the only
+company in Estonia to offer such a wide
+range of energy services.
           </p>
         </div>
       </article>
@@ -433,63 +531,82 @@
         </figure>
         <div class="block__text">
           <h2 class="block__title">Alexela Täkupoiss</h2>
-          <strong>Jätkus Alexela Täkupoisi energiajaama kontseptsiooni areng </strong>
+          <strong>Development of the Alexela
+            Täkupoiss energy station
+            concept continued</strong>
           <p class="block__description">
-            Aastal 2024 jätkasime Alexela Täkupoisi uudse energiajaama kontseptsiooni arendamist, mis sisaldab
-            kohvik-poodi, 100kohalist tippkoka kvaliteediga maanteerestorani, erinevaid tankimisvõimalusi ning
-            lisateenuseid nagu gaasikapid, haagiserent, purgimispunkt ja veevõtukoht matkaautodele. Lisaks pakume
-            pesemisvõimalusi kaugsõiduautojuhtidele, kohalike väikeettevõtjate toodetega suveniiririiuleid turistidele
-            ning eripakkumisi giididele, bussijuhtidele ja ürituskorraldajatele.
+            In 2024, we continued to develop Alexela
+Täkupoiss new energy station concept,
+which includes a café-shop, a 100 seat top
+chef quality roadside restaurant, a variety
+of refuelling options, and additional services
+such as gas lockers, trailer rental, a
+canning point and a water point for caravans.
+In addition, we offer washing facilities
+for long-distance drivers, souvenir
+shops for tourists with products from local
+small businesses, and special offers for
+guides, bus drivers, and event organisers.
           </p>
         </div>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Fookuses oli teadlikkuse tõstmine
-            Täkupoisi maanteerestoranist, mis pakub
-            tippkoka kvaliteediga toite, kiiret ja sõbralikku teenindust, kodumaist toorainet
-            ning poolfabrikaatide vältimist. Kõik on
-            loodud selleks, et lahendada teeliste vajadused ja pakkuda neile energiat.
+            The focus was on raising awareness of the
+Täkupoiss roadside restaurant, which offers
+top chef quality food, fast and friendly
+service, local ingredients and avoidance
+of semifinished products. All designed to
+address the needs and energise the motorist.
           </p>
           <p>
-            Aastal 2024 keskendusime püsikliendibaasi kasvatamisele, korraldades üritusi
-            ja eripakkumisi restoranis. Minu Alexela
-            kliendid moodustasid 62 protsenti restoranikülastajate ostudest.
+            In 2024, we will focus on growing our loyal
+customer base by organising events
+and special offers in the restaurant. My
+Alexela customers accounted for 62% of
+restaurant purchases.
           </p>
           <p>
-            Suurem väljakutse oli Via Baltica Sauga
-            ringtee ehitus, mis sulges Täkupoisi sissepääsu juulist septembri neljanda nädalani. Selleks, et säilitada
-            külaliste vool,
-            reageerisime sooduskampaaniaga, kus
-            kõik toidud restoranis olid 50 protsenti soodsamad. See võimaldas tutvustada
-            Täkupoisi restorani kvaliteeti ja kasvatada püsikliendibaasi.
+            A bigger challenge was the construction of
+the Via Baltica Sauga roundabout , which
+closed the entrance to Täkupoiss from
+July to the fourth week of September. In
+order to maintain the flow of guests, we
+responded with a promotional campaign
+where all food in the restaurant was 50%
+off. This allowed us to showcase the quality
+of the Täkupoiss restaurant and grow
+our loyal customer base.
           </p>
           <p>
-            Koostöös tunnustatud kondiitri Olga
-            Kajuga lõime Eestimaa marjadest inspireeritud kondiitritoodete menüü, mille
-            arendamisel keskendusime kvaliteedi ja
-            uuenduslikkuse tagamisele.
+            In collaboration with renowned pastry
+chef Olga Kaju, we created a menu of pastry
+products inspired by Estonian berries,
+focusing on quality and innovation.
           </p>
           <p>
-            Panustasime teenindajate arengusse,
-            mille tulemusena hindasid külalised teenindust väga kõrgelt: 2024. aasta NPS oli
-            71 ja Google'i arvustuste keskmine hinne
-            4,7.
+            We invested in the development of our
+            service staff, which resulted in a very high
+            rating from guests for the service: an
+            NPS of 71 in 2024 and an average Google
+            Review score of 4.7.
           </p>
           <p>
-            Kogukonnakoostöös osalesime järgmistes üritustes ja partnerlustes:
+            In the community, we participated in the
+following events and partnerships:
           <ul class="alexela__list">
-            <li>Lottemaa</li>
-            <li>Rannafestival Beach Grind</li>
-            <li>Motohooaja avamine</li>
-            <li>Pärnu restoranide nädal</li>
-            <li>Pernova isadepäev</li>
+            <li>Lottemaa Theme park</li>
+            <li>Beach Grind Festival</li>
+            <li>Opening of the moto season</li>
+            <li>Pärnu Restaurant Week</li>
+            <li>Pernova Father's Day</li>
           </ul>
           </p>
         </div>
@@ -500,67 +617,72 @@
     <section class="section--content">
       <article class="image-text-content-block block--image-right">
         <figure class="block__image">
-          <img src="../img/innovatsioon.jpg" alt="Innovatsioon" class="block__img" />
+          <img src="../img/innovatsioon.jpg" alt="Innovation" class="block__img" />
         </figure>
         <div class="block__text">
-          <h2 class="block__title">Digitaliseerimine</h2>
-          <strong>Tehnoloogia ja digitaliseerimine </strong>
+          <h2 class="block__title">Digitalisation</h2>
+          <strong>Technology and digitalisation</strong>
           <p class="block__description">
-            Aastal 2024 suunas AS Alexela üle kahe miljoni euro tehnoloogia ja digitaliseerimise arendamisse, et pakkuda
-            innovaatilisi lahendusi, mis lihtsustavad klientide igapäevaelu ja muudavad ettevõtte sisemised protsessid
-            tõhusamaks. Meie eesmärk on, et tehnoloogia oleks strateegiline eelis, mis aitab pakkuda paremat teenust,
-            suurendada efektiivsust ja kiirelt reageerida turu muutuvatele nõudmistele.
+            In 2024, AS Alexela invested more than
+            two million euros in technology and digitalisation to deliver innovative solutions
+            that simplify customers' daily lives and
+            make internal processes more efficient.
+            Our goal is for technology to be a strategic advantage that helps to deliver better
+            service, increase efficiency, and respond
+            quickly to changing market demands.
           </p>
         </div>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Tehnoloogilised investeeringud kajastusid mitmes olulises projektis.
-            Panustasime e-mobiilsuse arengusse,
-            arendades uusi tehnoloogilisi lahendusi. Tõime turule värskendatud ja kasutajasõbraliku Alexela äpi, mis
-            võimaldab
-            klientidel mugavamalt hallata energiatarbimist, lepinguid, makseid ning teenuseid.
-            Selle äpi igapäevaste kasutajate arv kasvas kaks korda eelmise aastaga võrreldes.
-            Samuti viidi 220 Energia kliendid Alexela
-            platvormile, pakkudes sujuvamat ja integreeritud kliendikogemust.
+            Technological investments were also
+            made in a number of important projects.
+            We contributed to the development of
+            emobility by developing new technological solutions. We launched an updated
+            and user-friendly Alexela app, which allows customers to manage their energy
+            bills, contracts, payments, and services
+            more conveniently. The number of daily
+            users of this app has doubled compared
+            to last year. 220 Energia customers were
+            also migrated to the Alexela platform,
+            providing a smoother and more integrated customer experience.
           </p>
           <p>
-            Tehisaru (<i>artificial intelligence</i>) roll kliendikogemuse täiustamises ja sisemiste
-            protsesside optimeerimises on suurenenud. Oleme investeerinud tehisarukoolitustesse ning võtnud kasutusele
-            mitmed
-            tehisarupõhised tööriistad, mis aitavad
-            automatiseerida rutiinseid ülesandeid
-            ja täpsustada andmepõhiseid otsuseid.
-            Tehisaru kasutamist laiendame ka klienditeeninduses, et pakkuda kiiremat ning
-            personaalsemat teenust.
+            The role of artificial intelligence in improving the customer experience and optimising internal processes has increased.
+            We have invested in and introduced a
+            range of AI-based tools to help automate
+            routine tasks and refine datadriven decisions. We are also expanding the use of
+            AI in customer service to provide a faster
+            and more personalised service.
           </p>
           <p>
-            Samuti tõime turule Alexela Targa Elektri
-            lahenduse, mis annab klientidele võimaluse nutikalt hallata oma elektritootmist
-            ja -tarbimist. See süsteem aitab optimeerida energiakulusid ning panustada keskkonnasäästlikumasse
-            energiakasutusse,
-            pakkudes klientidele suuremat kontrolli
-            oma energiakasutuse üle.
+            We also launched the Alexela Smart
+            Electricity solution, which enables customers to manage their electricity generation and consumption in a smart way.
+            This system helps to optimise energy
+            costs and contribute to a more sustainable use of energy by giving customers
+            greater control over their energy use.
           </p>
           <p>
-            Alustasime ka tuumikinfosüsteemide
-            uuendamise programmi, et viia meie tehnoloogiline võimekus uuele tasemele. See
-            tagab paindlikumate teenuste pakkumise
-            ja tõhustab ettevõtte sisemisi tööprotsesse. Digitaliseerimine loob aluse edasiseks innovatsiooniks, hoides
-            Alexela
-            konkurentsivõimelisena kiiresti arenevas
-            energiamajanduses.
+            We also launched a programme to upgrade our core information systems to
+            bring our technological capabilities to a
+            new level. This will ensure more flexible
+            service delivery and streamline internal
+            business processes. Digitalisation will
+            create the basis for further innovation,
+            keeping Alexela competitive in a rapidly
+            evolving energy economy.
           </p>
           <p>
-            Jätkame tehnoloogia arendamist, et olla
-            innovatsiooni eesliinil, luues pikaajalist
-            väärtust, säästes aega ja aidates kujundada kestlikumat tulevikku koos oma klientidega.
+            We will continue to develop technology
+            to be at the forefront of innovation, creating long-term value, saving time, and
+            helping to shape a more sustainable future with our customers.
           </p>
         </div>
       </article>
@@ -570,49 +692,55 @@
     <section class="section--content">
       <article class="image-text-content-block block--image-right">
         <figure class="block__image">
-          <img src="../img/tark-elekter.jpg" alt="Tark elekter" class="block__img" />
+          <img src="../img/tark-elekter.jpg" alt="Smart electricity" class="block__img" />
         </figure>
         <div class="block__text">
-          <h2 class="block__title">Tark Elekter</h2>
+          <h2 class="block__title">Smart Electricity</h2>
           <strong>
-            Tark Elekter – innovaatiline teenus väiketootjatele ja salvestajatele
+            Smart Electricity - an innovative service for small producers and storage
           </strong>
           <p>
-            Aasta 2024 märtsis tutvustasime turul uut platvormi Tark Elekter, mis on mõeldud elektri väiketootjatele ja
-            salvestajatele. Teenus aitab juhtida elektri tootmist ja salvestamist, pakkudes maksimaalset kasu ja aidates
-            vähendada elektriarveid.
+            In March 2024, we launched a new platform, Smart Electricity, designed for small
+            electricity producers and storage. The service will help manage electricity generation and storage, maximising benefits and
+            helping to reduce electricity bills.
           </p>
         </div>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Tark Elekter on virtuaalne elektrijaam,
-            mis ennustab järgmist päeva tarbimist
-            individuaalse ajaloo põhjal ja jälgib Nord
-            Pooli börsihinda. Teenus teeb automaatselt kasulikke tehinguid, juhtides elektritootmist, arvestades kliendi
-            tarbimist,
-            tootmisprognoosi, elektrihinda ning võrgutasusid, et osta elektrit soodsama hinnaga ja müüa kallimalt.
+            Smart Electricity is a virtual power plant
+            that predicts the next day's consumption
+            based on individual history and monitors
+            Nord Pool's exchange price. The service
+            automatically performs beneficial transactions by managing electricity generation based on customer consumption,
+            generation forecast, electricity price, and
+            network charges to buy electricity at a
+            lower price and sell it at a higher price.
           </p>
           <p>
-            Teenuse arendus jätkus kogu aasta vältel. Märtsis käivitus teenus eraisikutele,
-            aprillis laiendati see äriklientidele ja maikuust said teenust kasutada ka päikesepaneelide omanikud, kellel
-            pole salvestusvahendeid. Juunis lisandus tugi Deye
-            inverteritele ning augustis Pixii salvestusseadmetele.
+            The development of the service continued throughout the year. In March the
+            service was launched for private customers, in April it was extended to business
+            customers, and from May the service was
+            also available to owners of solar panels
+            who do not have a energy storage solution. Support for Deye inverters was added in June and for Pixii storage devices in
+            August.
           </p>
           <p>
-            Aasta lõpuks oli Targa Elektriga liitunud
-            kolmekohaline arv kliente. Teenus toetab
-            praegu Huawei, Deye ja Pixii seadmeid,
-            kuid 2025. aastal plaanime laiendada
-            ühilduvust teiste inverteritootjate seadmetega. Meeskond jätkab teenuse arendamist, et pakkuda veelgi
-            rohkematele
-            klientidele mugavat ja nutikat energialahendust.
+            By the end of the year, a triple-digit
+            number of customers had joined Smart
+            Electricity. The service currently supports
+            Huawei, Deye, and Pixii devices, but in
+            2025 we plan to extend compatibility to
+            devices from other inverter manufacturers. The team will continue to evolve the
+            service to offer even more customers a
+            convenient and smart energy solution.
           </p>
         </div>
       </article>
@@ -620,56 +748,65 @@
 
     <article class="content-block w-100">
       <h2 class="text-left px-md">
-        Sidus- ja tütarettevõtted
+        Affiliates and Subsidiaries
       </h2>
     </article>
 
     <section class="section--content">
       <article class="image-text-content-block block--image-right">
         <figure class="block__image">
-          <img src="../img/kytuseveok.jpg" alt="Kütuse veok" class="block__img" />
+          <img src="../img/kytuseveok.jpg" alt="Fuel truck" class="block__img" />
         </figure>
         <div class="block__text">
           <h2 class="block__title">AS Alexela Motors</h2>
           <strong>
-            Alexela põhiäri toetamine
+            Supporting Alexela's core business
           </strong>
           <p>
-            AS Alexela Motors, AS-i Alexela tütarettevõte, pakub vedelkütuste, sealhulgas LPG, LNG ja balloonigaasi,
-            logistika- ja transporditeenuseid. Lepingupartneriteks on Rohe Solutions Oy, kellele pakutakse LNG
-            transporditeenust Soomes, ja OÜ Oisu Biogaas, millele osutatakse CNG logistika- ja vedude teenuseid Eestis.
-
+            AS Alexela Motors, a subsidiary of AS
+            Alexela, provides logistics and transport
+            services for liquid fuels, including LPG,
+            LNG, and cylinder gas. Its contract partners are Rohe Solutions Oy, to which we
+            provide LNG transport services in Finland,
+            and OÜ Oisu Biogaas, to which we provide
+            CNG logistics and transport services in
+            Estonia.
           </p>
         </div>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            AS Alexela Motors veovahendite parki kuulub 27 sõidukit, mille seas on üha
-            enam alternatiivseid kütuseid kasutavaid veokeid. Aastal 2024 soetati kaheksa uut sõidukit, sealhulgas kolm
-            Scania
-            sadulveokit, mis kasutavad biometaani/
-            CNG-d, ja uus Volvo sadulveok, mis töötab diislikütuse ning LNG/bio-LNG kombinatsioonil.
+            The fleet of AS Alexela Motors includes 27
+            vehicles, with an increasing number of alternative fuel vehicles. In 2024, eight new
+            vehicles were acquired, including three
+            Scania semi-trailers running on biomethane/CNG and a new Volvo semitrailer
+            running on diesel and LNG/bio-LNG.
           </p>
           <p>
-            Peamised veosuunad on seotud Eestisiseste tanklate teenindamise ja toodete kohaletoimetamisega, samuti
-            LPGning LNG-tarned Soomest ja Lätist.
-            Balloonigaasi teenuses keskenduti
-            Alexela nutikappide teenindamisele, milleks soetati kaks erilahendusega Renault
-            Masteri kaubikut.
+            The main transport routes are related to
+            the servicing of Estonian domestic service stations and the delivery of products,
+            as well as LPG and LNG supplies from
+            Finland and Latvia. In the cylinder gas service, the focus was on servicing Alexela's
+            smart lockers, for which two Renault
+            Master vans with special solutions were
+            acquired.
           </p>
           <p>
-            Aastal 2024 läbisid AS Alexela Motors
-            veokid 2,35 miljonit kilomeetrit, mis on
-            300 tuhat kilomeetrit rohkem kui eelmisel aastal. Vedelkütuste veo kogused
-            kasvasid 209,6 miljonilt liitrilt 214,7 miljoni liitrini. Alexela Motorsis töötab kokku 46 inimest, enamus
-            neist on veokite
-            juhid.
+            In the year 2024, AS Alexela Motors'
+            trucks covered 2.35 million kilometres,
+            which is 300 thousand kilometres more
+            than in the previous year. The volume of
+            liquid fuels transported increased from
+            209,6 million litres to 214,7 million litres.
+            Alexela Motors employs a total of 46
+            people, the majority of whom are drivers.
           </p>
         </div>
       </article>
@@ -680,73 +817,85 @@
     <section class="section--content section--color section--cream waves-animation">
       <article class="image-text-content-block block--image-right">
         <figure class="block__image">
-          <img src="../img/solar.jpg" alt="Päikesepatarei" class="block__img" />
+          <img src="../img/solar.jpg" alt="Solar panel" class="block__img" />
         </figure>
         <div class="block__text">
           <h2 class="block__title">Alexela rePower OÜ</h2>
-          <strong>Alexela rePower OÜ – jätkusuutlikud energia- ja innovatsioonilahendused </strong>
+          <strong>OÜ Alexela rePower - sustainable energy and innovation solutions</strong>
           <div class="block__description">
             <p>
-              Alexela rePower OÜ, endine OÜ Alexela Solar, on AS-i Alexela tütarettevõte, mis koondab kõik
-              tulevikutehnoloogiate arendusprojektid ühe katuse alla. 2024. aastal restruktureeritud ettevõtte
-              eesmärgiks on lihtsustada arenduste juhtimist ning toetada nende täiendavat kasvu. </p>
+              OÜ Alexela rePower, formerly OÜ Alexela
+              Solar, is a subsidiary of AS Alexela, which
+              brings together all future technologies
+              development projects under one roof.
+              Restructured in 2024, the company's
+              mission is to simplify the management of
+              developments and support their further
+              growth.
+            </p>
           </div>
         </div>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Põhitegevused ja projektid:
+            Key activities and projects:
           <ul class="alexela__list">
-            <li>Biometaani ja vesinikutanklate arendamine</li>
-            <li>E-mobiilsuse arendamine</li>
-            <li>Biometaani tootmine ringmajanduse põhimõttel</li>
-            <li>Päikese- ja tuuleparkide arendamine</li>
-            <li>E-kütuste projektide vedamine</li>
+            <li>Biomethane and hydrogen refuelling development</li>
+            <li>Developing e-mobility</li>
+            <li>Biomethane production in a circular economy</li>
+            <li>Development of solar and wind parks</li>
+            <li>Leading e-fuels projects</li>
           </ul>
           </p>
           <p>
-            Aasta 2024 alguses käivitasime Kiviõli
-            Keemiatööstuse territooriumil 1,93 MW
-            päikeseelektrijaama, mille integreerimist alustasime akuprojektiga, et osaleda
-            võimsusreservide turul. Sügisel sõlmisime
-            lepingud 4,6 MWh akude soetamiseks,
-            mille käivitamine on planeeritud 2025.
-            aastasse.
+            At the beginning of 2024, we launched a
+            1.93 MW solar power plant at the Kiviõli
+            Chemical Industry site, which we started integrating with a battery project to
+            participate in the power reserve market.
+            In the autumn, we signed contracts for
+            the purchase of 4.6 MWh of batteries,
+            which are scheduled to be commissioned
+            in 2025.
           </p>
           <p>
-            Samuti alustasime Tartu Jalaka tänava
-            tankla ja kohvik-poe päikesepargi rajamist ning käivitasime koostöö AS-i
-            Alexela kaheksale kinnistule päikeseparkide projekteerimiseks. Paldiski päikeseparki laiendati 60,5 kW
-            võrra.</p>
+            We also started the construction of a
+            solar park for a service station and a
+            café-shop on Jalaka Street in Tartu, and
+            launched cooperation with AS Alexela
+            to design solar parks on eight properties.
+            The Paldiski solar park was expanded by
+            60.5 kW.
+          </p>
           <p>
-            <strong>Päikeseparkide tootmismahud</strong>
+            <strong>Production volumes of solar parks</strong>
           </p>
           <div class="table bg-light">
             <table>
               <thead>
                 <tr class="table__header bg-flamingo">
                   <th class="table__header-text text-left"></th>
-                  <th class="table__header-text text-right">2023. aasta</th>
-                  <th class="table__header-text text-right">2024. aasta</th>
-                  <th class="table__header-text text-right">Muutus</th>
+                  <th class="table__header-text text-right">2023</th>
+                  <th class="table__header-text text-right">2024</th>
+                  <th class="table__header-text text-right">Change</th>
                 </tr>
                 <tr class="visually-hidden">
-                  <th scope="col">Päikesepark</th>
-                  <th scope="col">2023. aasta</th>
-                  <th scope="col">2024. aasta</th>
-                  <th scope="col">Muutus</th>
+                  <th scope="col">Solar park</th>
+                  <th scope="col">2023</th>
+                  <th scope="col">2024</th>
+                  <th scope="col">Change</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="table__row">
                   <td class="table__cell table__cell--content">
-                    Saku õlletehase päikesepark
+                    Saku Brewery solar Park
                   </td>
                   <td class="table__cell table__cell--number text-right">
                     1077 MWh
@@ -760,7 +909,7 @@
                 </tr>
                 <tr class="table__row">
                   <td class="table__cell table__cell--content">
-                    Kiviõli Keemiatööstuse päikesepark
+                    Kiviõli Chemical Industry Solar Park
                   </td>
                   <td class="table__cell table__cell--number text-right">
                     0
@@ -774,7 +923,7 @@
                 </tr>
                 <tr class="table__row">
                   <td class="table__cell table__cell--content">
-                    Paldiski päikesepark
+                    Paldiski solar park
                   </td>
                   <td class="table__cell table__cell--number text-right">
                     302 MWh
@@ -788,7 +937,7 @@
                 </tr>
                 <tr class="table__row">
                   <td class="table__cell table__cell--content">
-                    Otseliini pargid
+                    Direct line parks
                   </td>
                   <td class="table__cell table__cell--number text-right">
                     40 MWh
@@ -802,7 +951,7 @@
                 </tr>
                 <tr class="table__row font-bold">
                   <td class="table__cell table__cell--content">
-                    Kokku
+                    Total
                   </td>
                   <td class="table__cell table__cell--number text-right">
                     1419 MWh
@@ -816,31 +965,34 @@
                 </tr>
               </tbody>
             </table>
-            <i>Päikeseparkide tootmismahud aastal 2023 võrdluses aastaga 2024</i>
+            <i>Solar park production volumes in 2023 compared to 2024.</i>
           </div>
           <p></p>
             <p>
-              <strong>Energiamajanduse lahendused </strong>
+              <strong>Energy management solutions</strong>
             </p>
             <p>
-              Alexela arendatavad lahendused nagu
-              VPP (virtuaalne elektrijaam) ning Tark
-              Elekter, mis optimeerivad taastuvenergia
-              taristute tööprotsesse, toetavad Alexela
-              rePoweri riistvaralisi tegevusi. Näiteks aitavad need klientidel suurendada tulu ja
-              parandada päikeseparkide efektiivsust,
-              tagades soodsama müüdava elektrienergia hinna.
+              Solutions developed by Alexela, such as
+              VPP (Virtual Power Plant) and Smart
+              Electricity, which optimise the operational processes of renewable energy infrastructures, support Alexela rePower
+              hardware activities. For example, they
+              help customers to increase revenue and
+              improve the efficiency of solar parks,
+              ensuring a more favourable price for the
+              electricity sold.
             </p>
             <p>
-              Finantseerimine ja koostöö: Alexela rePower on kasutanud väliseid finantseeringuid ja teinud koostööd AS-i
-              Alexela
-              ning teiste partneritega, et taotleda toetusi Euroopa Liidu fondidest. Eesmärk
-              on rajada vesinikutanklad ning arendada
-              metanooli punkerdamise ja veokilt laevale punkerdamise lahendusi.
+              Financing and cooperation: Alexela rePower has used external financing and
+              cooperated with AS Alexela and other partners to apply for support from
+              European Union instruments. The aim
+              is to set up hydrogen service stations,
+              and to develop methanol bunkering and
+              truck-to-ship bunkering solutions.
             </p>
             <p>
-              Samuti liitusime 2024. aastal OÜ Alexela
-              rePower ja AS-i Metrosert loodud vesinikuvaldkonna nõukojaga.
+              In 2024, we also joined the advisory
+              board for the hydrogen sector set up by
+              OÜ Alexela rePower and AS Metrosert.
             </p>
 
         </div>
@@ -850,33 +1002,43 @@
     <section class="section--content section--color section--mint waves-animation">
       <article class="image-text-content-block block--image-right">
         <figure class="block__image">
-          <img src="../img/maantee.jpg" alt="Sügisene maantee" class="block__img" />
+          <img src="../img/maantee.jpg" alt="Autumn highway" class="block__img" />
         </figure>
         <div class="block__text">
           <h2 class="block__title">Rohe Solutions OY</h2>
-          <strong>Rohe Solutions Oy – LNG ja bio-LNG lahendused Soome turul </strong>
+          <strong>Rohe Solutions Oy – LNG and bio-LNG solutions in the Finnish market</strong>
           <div class="block__description">
             <p>
-              Rohe Solutions Oy on AS-i Alexela tütarettevõte, mis tegutseb Soome turul maagaasi ja LNG müüjana. Aastast
-              2024 on ettevõtte peamine fookus LNG lahenduste pakkumisel tööstusklientidele ja LNG-laevade
-              punkerdamisel. Aasta 2024 jooksul müüdi Soomes 165 GWh maagaasi ja 120 GWh LNG-d. </p>
+              Rohe Solutions Oy is a subsidiary of AS
+              Alexela, a natural gas and LNG trader in
+              the Finnish market. From 2024, the company's main focus will be on providing
+              LNG solutions to industrial customers
+              and bunkering LNG vessels. During 2024,
+              165 GWh of natural gas and 120 GWh of
+              LNG was sold in Finland.
+            </p>
           </div>
         </div>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Eelmisel aastal tõi Rohe Solutions piirkonnas esimesena turule bio-LNG pakkumise, kus gaasivõrku ühendatud
-            biometaani tootjate toodangu saab võtta
-            välja bio-LNG-na. Biometaani väärindamine bio-LNG-ks annab tööstusettevõtetele ja transpordisektorile
-            võimaluse
-            teha edusamme oma jätkusuutlikkuse
-            eesmärkide täitmisel, toetades üleminekut keskkonnasõbralikumate energiatootmise võimaluste suunas.
+            Last year, Rohe Solutions was the first in
+            the region to launch a bio-LNG package,
+            where the output of biomethane producers connected to the gas grid can be
+            withdrawn as bio-LNG. The processing
+            of biomethane to bio-LNG provides an
+            opportunity for industrial companies and
+            the transport sector to make progress
+            their sustainability goals, supporting the
+            transition towards more environmentally
+            friendly energy production options.
           </p>
         </div>
       </article>
@@ -885,32 +1047,38 @@
     <section class="section--content">
       <article class="image-text-content-block block--image-right">
         <figure class="block__image">
-          <img src="../img/elektriliin.jpg" alt="Elektriliin" class="block__img" />
+          <img src="../img/elektriliin.jpg" alt="Power line" class="block__img" />
         </figure>
         <div class="block__text">
           <h2 class="block__title">SIA Alexela</h2>
-          <strong>SIA Alexela – elektri ja maagaasi müük Lätis </strong>
+          <strong>SIA Alexela – sale of electricity and natural gas in Latvia</strong>
           <p class="block__description">
-            SIA Alexela on AS-i Alexela tütarettevõte,
-            mis tegutseb Läti turul elektri ja maagaasi müügiga äri- ning eraklientidele. Aastal
-            2024 ulatus maagaasiportfelli maht
-            139 GWh-ni ja elektriportfelli maht 162
-            GWh-ni.
+            SIA Alexela is a subsidiary of AS Alexela,
+            which is active on the Latvian market in
+            the sale of electricity and natural gas to
+            private and business customers. In 2024,
+            the natural gas portfolio reached 139 GWh
+            and the electricity portfolio 162 GWh.
           </p>
         </div>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Aastal 2024 kasvatasime märkimisväärselt erakliendibaasi, lõpetades aasta 30
-            protsenti suurema klientide arvuga eelneva aastaga võrreldes. Samuti investeerisime IT- ja
-            arveldussüsteemide uuendamisse, luues tugeva aluse uute teenuste
-            turule toomiseks ja kliendibaasi jätkuvaks kasvuks.
+            In 2024, we significantly increased our
+            private customer base, ending the year
+            with a 30% increase in the number of
+            customers compared to the previous
+            year. We also invested in upgrading our
+            IT and billing systems, creating a strong
+            platform for launching new services and
+            growing our customer base.
           </p>
         </div>
       </article>
@@ -925,10 +1093,10 @@
         </figure>
         <div class="block__text">
           <h2 class="block__title">Hamina LNG Terminal</h2>
-          <strong>Hamina LNG Terminal – Soome ja Eesti klientide teenindamine </strong>
+          <strong>Hamina LNG Terminal – serving customers in Finland and Estonia</strong>
           <p class="block__description">
-            Hamina LNG Terminali opereerib Hamina
-            LNG OY, mis on AS Alexela sidusettevõte.
+            Hamina LNG Terminal is operated by
+            Hamina LNG Oy, an affiliate of AS Alexela.
             Hamina LNG-terminali käivitamine
             2022. aasta sügistalvel võimaldas Alexela
             abiga pakkuda Soome ja Eesti klientidele
@@ -949,30 +1117,36 @@
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Aastal 2024 tähistati Hamina LNG
-            Terminali teist tegevusaastat. Terminal
-            tarnis 2024. aasta jooksul 23 laeva
-            LNG-d, kõik tarned pärinesid väljastpoolt
-            Venemaad. Taasgaasistatuna suunati terminalist Soome ülekandevõrku ja Hamina
-            piirkonna jaotusvõrku kokku 300 GWh
-            gaasi, samal ajal laaditi LNG-d 1866 veoauto tsisternhaagisesse, mis on 53 protsenti rohkem kui eelmisel
-            aastal. Hamina
-            LNG Terminali suurim klient ja kasutaja
-            on AS Alexela.
+            In 2024, the Hamina LNG Terminal celebrated
+its second anniversary. During
+2024, the terminal delivered 23 LNG vessels,
+all from outside Russia. A total of
+300 GWh of regasified gas was injected
+into the Finnish transmission network
+and the Hamina region distribution network,
+while 1 866 tanker trailers were
+loaded with LNG, 53% more than in the
+previous year. The largest customer and
+user of the Hamina LNG Terminal is AS
+Alexela.
           </p>
           <p>
-            Aastal 2024 käivitati terminalis kaks olulist tegevust tuleviku vaates, mille algatamises mängis rolli Rohe
-            Solutions Oy.
-            Alustati laevade punkerdamise teenuse
-            pakkumist, mille raames punkerdati terminalis viis laeva, mis kasutavad mootorikütusena LNG-d. Samuti
-            käivitus bioLNG projekt, mis võimaldab ühendatud
-            biogaasijaamade toodangu terminalist
-            välja võtta bio-LNG-na.
+            In 2024, the terminal launched two important
+activities for the future, which
+Rohe Solutions Oy played a role in initiating.
+A ship bunkering service was
+launched, with five ships using LNG as
+fuel being bunkered in the terminal. A
+bio-LNG project was also launched,
+which will enable the output of the connected
+biogas plants to be taken off the
+terminal as bio-LNG.
           </p>
         </div>
       </article>
@@ -983,38 +1157,48 @@
         <h2 class="block__title">
           Eesti Biogaas OÜ
         </h2>
-        <strong>Eesti Biogaas OÜ –
-          biometaani tootmise kasv</strong>
-        <p>Alexela 50protsendilise osalusega sidusettevõtte Eesti Biogaas OÜ tootmismaht kasvas 2024. aastal 17,7
-          protsenti,
-          ulatudes 126,125 GWh-ni, mis moodustas
-          umbes poole kogu Eestis toodetud biometaanist.</p>
+        <strong>OÜ Eesti Biogaas – growth in biomethane production</strong>
+        <p>In 2024, the production volume of Eesti
+          Biogaas OÜ, a 50% owned subsidiary of
+          Alexela, increased by 17.7% to 126.125
+          GWh, accounting for about half of the total biomethane produced in Estonia.</p>
 
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Aastal 2024 valmisid Oisu ja Tartu jaamades täiendavad järelkääritid, mis suurendasid biometaani toodangut
-            umbes
-            20 protsenti. Kõik kolm Eesti Biogaas OÜ
-            biometaanijaama on nüüd üles ehitatud
-            sama mudeli järgi, koosnedes kahest põhikääritist ja kahest järelkääritist.
+            In 2024, additional post-digesters were
+completed at the Oisu and Tartu plants ,
+which increased biomethane production
+by about 20%. All three of biomethane
+OÜ Eesti biogaas biomethane plants are
+now built according to the same model,
+consisting of two digesters and two secondary
+post-digesters.
           </p>
           <p>
-            Töötlemise efektiivsuse tõstmine on
-            suuresti Eesti Biogaas OÜ meeskonna kogemuste ja teadmiste tulemus.
-            Tootmise optimeerimise kaudu suudetakse aastaringselt toota rohkem biometaani, kasutades loomset sõnnikut,
-            biomassi ja toiduainetööstuse jääke. See
-            on oluline keskkonnahoidlik samm, kuna
-            see aitab rakendada metaani, mis muidu
-            eralduks atmosfääri. Enamikku toodetud biometaanist kasutatakse transpordikütusena.
+            Increasing the efficiency of processing is
+largely the result of the experience and
+knowledge of the team OÜ Eesti biogaas.
+By optimising production, more biomethane
+can be produced throughout the
+year using animal manure, biomass, and
+food industry residues. This is an important
+environmental step, as it helps to
+harness methane that would otherwise
+be released into the atmosphere. Most
+of the biomethane produced is used as a
+transport fuel.
           </p>
-          <p>Plaanis on 2025. aastal jätkata biometaani tootmisega kolmes olemasolevas tootmisjaamas. </p>
+          <p>The plan is to continue biomethane production
+            in 2025 in three existing production
+            plants. </p>
 
           <div class="table bg-light">
             <table>
@@ -1023,12 +1207,12 @@
                   <th class="table__header-text text-left"></th>
                   <th class="table__header-text text-right">2023</th>
                   <th class="table__header-text text-right">2024</th>
-                  <th class="table__header-text text-right">Muutus</th>
+                  <th class="table__header-text text-right">Change</th>
                 </tr>
                 <tr class="visually-hidden">
-                  <th scope="col">Ettevõtte nimi</th>
-                  <th scope="col">aasta</th>
-                  <th scope="col">aasta</th>
+                  <th scope="col">Company name</th>
+                  <th scope="col">year</th>
+                  <th scope="col">year</th>
                 </tr>
               </thead>
               <tbody>
@@ -1076,7 +1260,7 @@
                 </tr>
                 <tr class="table__row font-bold">
                   <td class="table__cell table__cell--content">
-                    EBG grupp kokku
+                    EBG group total
                   </td>
                   <td class="table__cell table__cell--number text-right">
                     107 125 GWh
@@ -1090,7 +1274,7 @@
                 </tr>
               </tbody>
             </table>
-            <i>Biometaani tootmismahud aastal 2023 võrdluses aastaga 2024.</i>
+            <i>Biomethane production volumesin 2023 compared to 2024.</i>
           </div>
         </div>
       </article>
@@ -1101,49 +1285,58 @@
         <h2 class="block__title">
           Zero Terrain OÜ
         </h2>
-        <strong>Zero Terrain OÜ – Paldiskisse
-          arendatav vesisalvesti projekt</strong>
+        <strong>OÜ Zero Terrain – pumped-storage hydropower project in Paldiski</strong>
         <p>
-          Zero Terrain OÜ on AS Alexela sidusettevõte,
-          endise nimega Energiasalv, arendab
-          Paldiskisse 500 MW võimsusega vesisalvestit,
-          mis on ainus Põhja-Balti piirkonnas
-          Euroopa Liidu ühishuviprojektide
-          hulka kuuluv energiasalvestiprojekt.
+          OÜ Zero Terrain, an affiliate of AS
+Alexela, formerly known as Energiasalv,
+is developing a 500 MW pumped-storage
+hydropower facility in Paldiski, the only
+energy storage project of common interest
+in the Northern Baltic region of the
+European Union.
         </p>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Eelmisel aastal jätkati Paldiski vesisalvesti
-            projekti edasiarendamist. Projektiga jõuti
-            selleni, et teise poolaasta jooksul tuli sõlmida tarnelepingud tehnoloogiapakkujatega, et edasi liikuda.
-            Kuigi eesmärk oli
-            saavutada lõplik investeerimisotsus ehk
-            FID (final investment decision) 2024. aasta suve lõpuks, ei jõutud selleni. Suured
-            energiaprojektid vajavad riigiga koostöömudelit, mille kokkuleppimine on viibinud.
+            Last year, the Paldiski storage project was
+further developed. The project reached
+the stage where supply contracts had
+to be signed with technology suppliers
+in the second half of the year in order to
+move forward. Although the aim was to
+reach a final investment decision (FID)
+by the end of summer 2024, this was not
+achieved. Large energy projects require
+a model of cooperation with the state,
+which has been delayed.
           </p>
           <p>
-            Uuendatud tegevuskava kohaselt plaanitakse projekt viia lõpule järgmiste sammudega: kogu projekteerimine ja
-            disain
-            viiakse lõpuni ning tehnoloogiapartneritega sõlmitakse varajase kaasamise lepingud, samuti tagatakse
-            rahastus.
-            FIDini jõudmine on plaanis 2027. aastaks.
-            Koostöömudeli kokkuleppimine riigiga
-            on eeldatavasti saavutatav 2025. aasta
-            jooksul.
+            Under the renewed action plan, the project
+is planned to be finalised by: completing
+all the engineering and design; signing
+early involvement agreements with
+technology partners; and securing funding.
+FID is planned by 2027. Agreement
+on a cooperation model with the government
+is expected to be reached in 2025.
           </p>
           <p>
-            Aastal 2024 teostas KPMG Paldiski vesisalvesti sotsiaalmajanduslike kasude
-            analüüsi, mille tulemusena selgus, et projekti majanduslik mõju Eesti majandusele oleks ehitusperioodil 54
-            miljonit eurot
-            aastas ning tegevusperioodil keskmiselt
-            253 miljonit eurot aastas.
+            In 2024, KPMG carried out an analysis
+of the socio-economic benefits of the
+Paldiski pumped-storage hydropower
+facility, which showed that the economic
+impact of the project on the Estonian
+economy would be €54 million per year
+during the construction period and €253
+million per year on average during the
+operational period.
           </p>
         </div>
       </article>
@@ -1158,44 +1351,44 @@
 
           <nav class="footer__nav">
             <div class="menu__section">
-              <a href="/" class="menu__button">
+              <a href="index.html" class="menu__button">
                 <span class="menu__icon menu__icon--home"></span>
-                Avaleht
+                Homepage
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="ettevottest.html" class="menu__button">
+              <a href="about.html" class="menu__button">
                 <span class="menu__icon menu__icon--a-monogram"></span>
-                Ettevõttest
+                About the Company
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="arisuunad.html" class="menu__button menu__button--active">
+              <a href="business-lines.html" class="menu__button menu__button--active">
                 <span class="menu__icon menu__icon--eur"></span>
-                Ärisuunad
+                Business Lines
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="kestlikkus.html" class="menu__button">
+              <a href="sustainability.html" class="menu__button">
                 <span class="menu__icon menu__icon--greenspark"></span>
-                Kestlikkus (ESG)
+                Sustainability and Governance
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="finantstulemused.html" class="menu__button">
+              <a href="economic-results.html" class="menu__button">
                 <span class="menu__icon menu__icon--news"></span>
-                Finantstulemused
+                Economic Results
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="alexela_aruanne_2024.pdf" target="_blank" class="menu__button">
+              <a href="alexela_aruanne_2024_ENG.pdf" target="_blank" class="menu__button">
                 <span class="menu__icon menu__icon--contract"></span>
-                Laadi alla PDF
+                Download PDF
               </a>
             </div>
 
@@ -1249,7 +1442,7 @@
           </div>
 
           <div class="footer__slogan">
-            Energia kogu eluks
+            Energy for life
           </div>
 
         </div>

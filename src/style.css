@@ -227,7 +227,6 @@ header {
 .language {
   position: relative;
   display: flex;
-  display: none;
   align-items: center;
 }
 .language__select {

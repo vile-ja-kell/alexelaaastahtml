@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
   <link rel="manifest" href="../site.webmanifest">
   <link rel="stylesheet" href="../css/style.css" />
-  <title>Alexela aastaraamat</title>
+  <title>Consolidated Annual Report of AS Alexela 2024</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <video class="header__video" autoplay muted loop playsinline poster="../video/uduhommik.jpg">
       <source src="../video/uduhommik.webm" type="video/webm" />
       <source src="../video/uduhommik.mp4" type="video/mp4" />
-      Sinu brauser ei toeta video elementi.
+      Your browser does not support the video element.
     </video>
     <nav class="nav">
       <div class="nav__logo">
@@ -27,7 +27,7 @@
       </div>
       <div class="nav__subcontainer">
         <div class="language">
-          <select name="language" id="language" class="language__select">
+          <select name="language" id="language" class="language__select" onchange="switchLanguage(this.value)">
             <option value="et">ET</option>
             <option value="en">EN</option>
           </select>
@@ -43,44 +43,44 @@
       <div class="menu__container">
         <div class="menu">
           <div class="menu__section">
-            <a href="/" class="menu__button menu__button--active">
+            <a href="index.html" class="menu__button menu__button--active">
               <span class="menu__icon menu__icon--home"></span>
-              Avaleht
+              Homepage
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="../ettevottest.html" class="menu__button">
+            <a href="about.html" class="menu__button">
               <span class="menu__icon menu__icon--a-monogram"></span>
-              Ettevõttest
+              About the Company
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="../arisuunad.html" class="menu__button">
+            <a href="business-lines.html" class="menu__button">
               <span class="menu__icon menu__icon--eur"></span>
-              Ärisuunad
+              Business Lines
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="../kestlikkus.html" class="menu__button">
+            <a href="sustainability.html" class="menu__button">
               <span class="menu__icon menu__icon--greenspark"></span>
-              Kestlikkus (ESG)
+              Sustainability and Governance
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="../finantstulemused.html" class="menu__button">
+            <a href="economic-results.html" class="menu__button">
               <span class="menu__icon menu__icon--news"></span>
-              Finantstulemused
+              Economic Results
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="../alexela_aruanne_2024.pdf" target="_blank" class="menu__button">
+            <a href="alexela_aruanne_2024_ENG.pdf" target="_blank" class="menu__button">
               <span class="menu__icon menu__icon--contract"></span>
-              Laadi alla PDF
+              Download PDF
             </a>
           </div>
         </div>
@@ -89,34 +89,34 @@
     <div class="hero">
       <div class="hero__content">
         <h1>
-          <span class="text--no-wrap">Alexela aastal</span><span class="text--no-wrap-white"> 2024</span>
+          <span class="text--no-wrap">Alexela in</span><span class="text--no-wrap-white"> 2024</span>
         </h1>
       </div>
     </div>
   </header>
   <main class="waves-animation bg-main-2">
     <section class="section--top " id="quicklinks">
-      <h2 class="text-left">Leia kiirelt</h2>
+      <h2 class="text-left">Quick find</h2>
       <nav class="quicklinks quicklinks--home" aria-label="Quick navigation">
-        <a class="quicklinks__item" href="../ettevottest.html" aria-label="Info ettevõttest">
+        <a class="quicklinks__item" href="about.html" aria-label="About the company">
           <img src="../img/icons/a-monogram.svg" alt="Alexela logo" class="quicklinks__icon" />
-          <h3>Ettevõttest</h3>
+          <h3>About the Company</h3>
         </a>
-        <a class="quicklinks__item" href="../arisuunad.html" aria-label="Info ettevõttest">
-          <img src="../img/icons/eur.svg" alt="Euro ikoon" class="quicklinks__icon" />
-          <h3>Ärisuunad</h3>
+        <a class="quicklinks__item" href="business-lines.html" aria-label="About the company">
+          <img src="../img/icons/eur.svg" alt="Euro icon" class="quicklinks__icon" />
+          <h3>Business Lines</h3>
         </a>
-        <a class="quicklinks__item" href="../kestlikkus.html" aria-label="Info ettevõttest">
-          <img src="../img/icons/greenspark.svg" alt="Lehe ikoon" class="quicklinks__icon" />
-          <h3>Kestlikkus (ESG)</h3>
+        <a class="quicklinks__item" href="sustainability.html" aria-label="About the company">
+          <img src="../img/icons/greenspark.svg" alt="Leaf icon" class="quicklinks__icon" />
+          <h3>Sustainability and Governance</h3>
         </a>
-        <a class="quicklinks__item" href="../finantstulemused.html" aria-label="Info ettevõttest">
-          <img src="../img/icons/news.svg" alt="Uudiste ikoon" class="quicklinks__icon" />
-          <h3>Finantstulemused</h3>
+        <a class="quicklinks__item" href="economic-results.html" aria-label="About the company">
+          <img src="../img/icons/news.svg" alt="News icon" class="quicklinks__icon" />
+          <h3>Economic Results</h3>
         </a>
-        <a class="quicklinks__item" href="../alexela_aruanne_2024.pdf" target="_blank" aria-label="Info ettevõttest">
-          <img src="../img/icons/contract.svg" alt="Lepingu ikoon" class="quicklinks__icon" />
-          <h3>Laadi alla PDF</h3>
+        <a class="quicklinks__item" href="alexela_aruanne_2024_ENG.pdf" target="_blank" aria-label="About the company">
+          <img src="../img/icons/contract.svg" alt="Contract icon" class="quicklinks__icon" />
+          <h3>Download PDF</h3>
         </a>
       </nav>
     </section>
@@ -124,15 +124,24 @@
     <section class="section--content section--color section--flamingo waves-animation">
       <article class="content-block">
         <div class="block__text">
-          <h2 class="block__title">Kogu energiateekond ühest kohast</h2>
+          <h2 class="block__title">Complete energy journey from one place</h2>
           <div class="block__description mb-xxl">
             <p>
-              Alexela on Eesti juhtiv energiaettevõte, millel on laiaulatuslik teenuste portfell, mis pakub nutikaid
-              ning keskkonnasõbralikke energialahendusi igapäevaelus – kodus, teel ja sihtkohas. Keskendume
-              investeeringutele, mis muudavad Eesti energiamaastiku sõltumatumaks teistest ning samal ajal ka
-              keskkonnasõbralikumaks. Oleme otsustanud panustada kohaliku toormega põhinevatesse kestlikesse
-              energialahendustesse nagu bio-LNG, Energiasalv ja Alexela rePower, et tugevdada meie energiajulgeolekut
-              ning vähendada sõltuvust välistest allikatest.
+              Alexela is Estonia's leading energy company,
+              with a comprehensive portfolio of
+              services offering smart and environmentally
+              friendly energy solutions for everyday
+              life - at home, en-route the road and
+              at the destination. We focus on investments
+              that make Estonia's energy market
+              more independent from others and at the
+              same time more environmentally friendly.
+              We are committed to investing in sustainable
+              energy solutions based on local input
+              materials, such as bio-LNG, Energiasalv
+              and Alexela rePower, in order to strengthen
+              our energy security and reduce our dependence
+              on external sources.
             </p>
 
           </div>
@@ -143,66 +152,84 @@
         <div class="block__graph mb-xxl">
           <div class="graph__map">
             <figure>
-              <img src="../img/alexela-scheme-desk.svg" alt="Alexela scheme" class="map__image map__image--desktop" />
-              <img src="../img/alexela-scheme-mob.svg" alt="Alexela scheme" class="map__image map__image--mobile" />
+              <img src="../img/alexela-scheme-desk-eng.svg" alt="Alexela scheme" class="map__image map__image--desktop" />
+              <img src="../img/alexela-scheme-mob-eng.svg" alt="Alexela scheme" class="map__image map__image--mobile" />
             </figure>
           </div>
         </div>
 
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
           <p>
-            Meie fookuses on ka erinevad energialahendused nagu Tark Elekter, soodsa hinnaga pakkumised ja nutikapid,
-            mis aitavad vähendada energiakulusid ning suurendada
-            energiatõhusust. Lisaks arendame keskkonnast hoolivaid lahendusi nagu elektrisõidukite laadimisvõrgustik ja
-            VOOLu
-            laadijad, et toetada rohelist üleminekut ja
-            jätkusuutlikku arengut.
+            We also focus on energy solutions such
+as Smart Electricity, affordable offers
+and smart lockers that help reduce energy
+costs and increase energy efficiency. In
+addition, we are developing enviromentally
+friendly solutions, such as the electric
+vehicle charging network and VOOL
+chargers, to support the green transition
+and sustainable development
           </p>
           <p>
-            Töötame aktiivselt siinse regiooni jaoks
-            uute tarneahelate väljaarendamise nimel. Näiteks LPG tarneahel, et välistada
-            Venemaa päritolu tooted oma tooteportfellist ja tagada energiatarnete usaldusväärsus.
-
+            We are actively working on developing
+new supply chains for the region. For example,
+an LPG supply chain to exclude
+products from Russia from our product
+portfolio and to ensure the reliability of
+energy supplies.
           </p>
           <p>
-            Eesti inimeste huvide eest seismine on
-            Alexela üks olulisim väärtus. Oleme järjekindlalt toetanud sagedusreservitasu peatamist, et hoida
-            elektrihinnad taskukohasena, ja seisnud Eesti tarbijate huvide eest
-            energiaturul.
+            Standing up for the interests of the
+Estonian people is one of Alexela's most
+important values. We have consistently
+opposed the introduction of a frequency
+reserve fee, to keep electricity prices affordable,
+and stood up for the interests of
+Estonian consumers in the energy market.
           </p>
           <p>
-            Kodumaise ettevõttena panustab Alexela
-            aktiivselt kohalikesse kogukondadesse.
-            Meie kogukonnaprogramm toob kokku
-            inimesi erinevates piirkondades, samas
-            kui toiduringluskappide rajamine aitab
-            vähendada toidu raiskamist. Samuti toetame Eestimaa loodust – näiteks puude
-            istutamise projektidega – ja osaleme mitmesugustes üritustes nagu korvpall, Tallinn
-            International Horse Show ja Pimedate
-            Ööde Filmifestival, et edendada Eesti kultuuri ning sporti.
+            As a an Estonian company, Alexela actively
+contributes to local communities.
+Our Community Programme brings people
+together in different regions, while
+the establishment of food sharing lockers
+helps reduce food waste. We also support
+Estonia's nature - for example, with
+tree planting projects - and participate
+in events such as basketball, the Tallinn
+International Horse Show and the Dark
+Nights Film Festival to promote Estonian
+culture and sport.
           </p>
           <h3>
-            Tunnustused
+            Recognitions
           </h3>
           <p>
-            Alexelat tunnustatakse oma tegevuse ning
-            panuse eest Eestis ja regioonis. Meie töö
-            ning ettevõtte väärtused on leidnud positiivset kajastust erinevates valdkondades.
-            Alexela on saanud Eesti kultuurisõbra tiitli
-            ja on tunnustatud muusika toetajana, olles
-            aktiivselt toetanud kultuuri- ning haridustegevusi.
+            Alexela is recognised for its activities and
+contribution in Estonia and the region.
+Our work and the company's values have
+been positively reflected in various fields.
+Alexela has been awarded the title of
+Estonian Friend of Culture and has been
+recognised as a Supporter of Music, actively
+supporting cultural and educational
+activities.
           </p>
           <p>
-            Samuti paistab Alexela silma oma töökeskkonna ja töötajate heaolu valdkonnas. Kantar Emori uuringu järgi on
-            Alexela
-            Eesti spontaanselt tuntuim energiaettevõte ning kuulub Eesti ihaldusväärseimate
-            tööandjate hulka. Meie eesmärk on pakkuda usaldusväärseid energiateenuseid,
-            mis muudavad igapäevaelu mugavamaks ja
-            suurendavad piirkonna energiajulgeolekut.
+            Alexela also excels in its working environment
+and employee well-being. According
+to a Kantar Emor survey, Alexela is the
+most spontaneously recognised energy
+company in Estonia and one of the most
+desirable employers in Estonia. Our goal
+is to provide reliable energy services that
+make everyday life easier and increase energy
+security in the region.
           </p>
         </div>
 
@@ -210,55 +237,55 @@
     </section>
 
     <section class="section--content">
-      <h2>Alexela täna</h2>
+      <h2>Alexela today</h2>
       <article class="cards">
         <div class="cards__item">
           <div class="cards__content">
             <img src="../img/icons/heart.svg" alt="Heart icon" class="big-icon" />
             <h3 class="cards__title">1993</h3>
-            <p class="cards__description">Kütusefirma asutamine</p>
+            <p class="cards__description">Fuel company establishment</p>
           </div>
         </div>
         <div class="cards__item">
           <div class="cards__content">
             <img src="../img/icons/handshake.svg" alt="Handshake icon" class="big-icon" />
-            <h3 class="cards__title">178 tuhat</h3>
-            <p class="cards__description">era- ja äriklienti</p>
+            <h3 class="cards__title">178k</h3>
+            <p class="cards__description">private and business clients</p>
           </div>
         </div>
         <div class="cards__item">
           <div class="cards__content">
             <img src="../img/icons/community.svg" alt="Community icon" class="big-icon" />
             <h3 class="cards__title">538</h3>
-            <p class="cards__description">töötajat</p>
+            <p class="cards__description">employees</p>
           </div>
         </div>
         <div class="cards__item">
           <div class="cards__content">
             <img src="../img/icons/receipt.svg" alt="Receipt icon" class="big-icon" />
-            <h3 class="cards__title">594 ml eur</h3>
-            <p class="cards__description">müügitulu 2024.a</p>
+            <h3 class="cards__title">594 mln €</h3>
+            <p class="cards__description">sales revenue 2024</p>
           </div>
         </div>
         <div class="cards__item">
           <div class="cards__content">
             <img src="../img/icons/bolt.svg" alt="Bolt icon" class="big-icon" />
             <h3 class="cards__title">20%</h3>
-            <p class="cards__description">elektrituru turuosa</p>
+            <p class="cards__description">electricity market share</p>
           </div>
         </div>
         <div class="cards__item">
           <div class="cards__content">
             <img src="../img/icons/natural-gas.svg" alt="Natural gas icon" class="big-icon" />
             <h3 class="cards__title">17%</h3>
-            <p class="cards__description">maagaasi turuosa</p>
+            <p class="cards__description">natural gas market share</p>
           </div>
         </div>
         <div class="cards__item">
           <div class="cards__content">
             <img src="../img/icons/fuel.svg" alt="Fuel icon" class="big-icon" />
             <h3 class="cards__title">22%</h3>
-            <p class="cards__description">kütuse turuosa</p>
+            <p class="cards__description">fuel market share</p>
           </div>
         </div>
         <div class="cards__item">
@@ -266,7 +293,7 @@
             <img src="../img/icons/greenspark.svg" alt="Green icon" class="big-icon" />
             <h3 class="cards__title">5,9 TWh</h3>
             <p class="cards__description">
-              tarbijatele müüdud energiat 2024.a
+              energy sold to consumers 2024
             </p>
           </div>
         </div>
@@ -274,21 +301,21 @@
           <div class="cards__content">
             <img src="../img/icons/eur.svg" alt="Euro icon" class="big-icon" />
             <h3 class="cards__title">72%</h3>
-            <p class="cards__description">väiksem süsinikujälg*</p>
+            <p class="cards__description">smaller carbon footprint*</p>
           </div>
         </div>
         <div class="cards__item">
           <div class="cards__content">
             <img src="../img/icons/consumption.svg" alt="Consumption icon" class="big-icon" />
             <h3 class="cards__title">126,1 GWh</h3>
-            <p class="cards__description">biometaani toodetud</p>
+            <p class="cards__description">biomethane produced</p>
           </div>
         </div>
         <div class="cards__item">
           <div class="cards__content">
             <img src="../img/icons/future.svg" alt="Future icon" class="big-icon" />
             <h3 class="cards__title">2,9 GWh</h3>
-            <p class="cards__description">laetud elektrit Alexela elektrilaadijates</p>
+            <p class="cards__description">electricity charged in Alexela charging stations</p>
           </div>
         </div>
         <div class="cards__item">
@@ -296,12 +323,12 @@
             <img src="../img/icons/digitempel.svg" alt="Digitempel icon" class="big-icon" />
             <h3 class="cards__title">14%</h3>
             <p class="cards__description">
-              oma topsi osakaal kuumade jookide müügil
+              own cup share in hot beverage sales
             </p>
           </div>
         </div>
       </article>
-      <p class="content-block mt-md">*VS baasaasta 2020, mõjuala 1-2</p>
+      <p class="content-block mt-md">*VS base year 2020, impact area 1-2</p>
     </section>
     <section class="section--content section--color section--flamingo waves-animation">
       <article class="image-text-content-block block--image-right mb-xxl">
@@ -311,21 +338,21 @@
 
         </figure>
         <div class="block__text">
-          <h2 class="block__title">Üle-eestiline kohalolu</h2>
+          <h2 class="block__title">Nationwide presence</h2>
           <div class="block__description">
             <p>
-              Alexelas oleme pühendunud uuenduslike lahenduste arendamisele ja
-              tulevikukütuste kasutuselevõtule.
+              At Alexela, we are committed to developing innovative solutions and
+              adopting future fuels.
             </p>
             <p>
-              Alexela kliendina saad ka Sina oma panuse anda - Alexela
-              kogukonnaliikmena tangid ja istutad Eesti metsadesse puid ning
-              kasutades kohvi ostmisel oma topsi saad soodustust.
+              As an Alexela customer, you can also contribute - as an Alexela
+              community member, you fuel and plant trees in Estonian forests, and
+              using your own cup when buying coffee gives you a discount.
             </p>
-            <p>Vaata millised põnevad tulevikuprojektid on meil käsil!</p>
+            <p>See what exciting future projects we have in the works!</p>
           </div>
-          <a href="https://www.alexela.ee/et" target="_blank" class="link">
-            Loe edasi
+          <a href="https://www.alexela.ee/en" target="_blank" class="link">
+            Read more
             <img src="../img/icons/external-link.svg" alt="link outside icon" />
           </a>
         </div>
@@ -334,31 +361,31 @@
         <figure class="block__image">
           <a target="_blank"
             href="https://www.alexela.ee/et/eraklient/teenused-teel/leia-lahim-teenindusjaam/tanklad-kohvik-poed-ja-muugipunktid#kuva=kaart;tankla-teenused=koik;kutused=koik;teeninduspunkti-liik=koik;regioon=eesti">
-            <img src="../img/map.jpg" alt="Alexela jaamad kaardil" class="block__img" />
+            <img src="../img/map.jpg" alt="Alexela stations on map" class="block__img" />
           </a>
         </figure>
         <div class="block__text">
-          <p class="mt-lg"><strong>Klikka kaardil või sobival nupul ja vaata täpsemalt:</strong></p>
+          <p class="mt-lg"><strong>Click on the map or suitable button and see more details:</strong></p>
           <div class="block__description gap-sm grid">
             <a class="btn btn--primary" target="_blank"
-              href="https://www.alexela.ee/et/eraklient/teenused-teel/leia-lahim-teenindusjaam/tanklad-kohvik-poed-ja-muugipunktid#kuva=kaart;tankla-teenused=autonoomse-elektritoitega-tankla;kutused=koik;teeninduspunkti-liik=koik;regioon=koik">
+              href="https://www.alexela.ee/en/private-client/services-road/service-station/stations-cafe-shops-and-sales-points#view=map;services=self-powered-service-station;fuels=all;sale-point-types=all;province=eesti">
               <img src="../img/map-pin-life.svg" alt="Map pin life icon" />
-              Elutähtsa teenuse osutaja tanklad
-              <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+              Essential service provider stations
+              <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" />
 
             </a>
             <a class="btn btn--primary" target="_blank"
-              href="https://www.alexela.ee/et/eraklient/teenused-teel/leia-lahim-teenindusjaam/tanklad-kohvik-poed-ja-muugipunktid#kuva=kaart;tankla-teenused=koik;kutused=koik;teeninduspunkti-liik=tanklad;regioon=koik">
+              href="https://www.alexela.ee/en/private-client/services-road/service-station/stations-cafe-shops-and-sales-points#view=map;services=all;fuels=all;sale-point-types=filling-stations;province=eesti">
               <img src="../img/map-pin-auto.svg" alt="Map pin auto icon" />
-              Automaattanklad
-              <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+              Automatic stations
+              <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" />
 
             </a>
             <a class="btn btn--primary" target="_blank"
-              href="https://www.alexela.ee/et/eraklient/teenused-teel/leia-lahim-teenindusjaam/tanklad-kohvik-poed-ja-muugipunktid#kuva=kaart;tankla-teenused=kohvik-poed;kutused=koik;teeninduspunkti-liik=kohvik-poed;regioon=koik">
+              href="https://www.alexela.ee/en/private-client/services-road/service-station/stations-cafe-shops-and-sales-points#view=map;services=convenience-store;fuels=all;sale-point-types=all;province=eesti">
               <img src="../img/map-pin-shop.svg" alt="Map pin shop icon" />
-              Kohvik-poed
-              <img src="img/icons/chevron-right.svg" alt="Arrow right icon" />
+              Cafes and shops
+              <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" />
 
             </a>
           </div>
@@ -372,158 +399,167 @@
           <img src="../img/marti-haal.jpg" alt="Marti Hääl" class="block__img" />
         </figure>
         <div class="block__text">
-          <h2 class="block__title">Juhatuse esimees Marti Hääl</h2>
+          <h2 class="block__title">Chairman of the Board Marti Hääl</h2>
           <p class="block__description">
-            Aasta 2024 oli Alexela jaoks muutuste ja
-            kasvamise aasta. Oleme jõudnud arengufaasi,
-            kus liigume varasemalt ärimudelitelt
-            uute lahenduste suunas. See üleminek
-            nõuab suuri investeeringuid ja pidevat
-            õppimist, kuid on hädavajalik, et olla tulevikus
-            regiooni juhtiv energialahenduste
-            pakkuja. Selle suuna õigsust näitavad nii
-            meie turuosa kasv kui ka klientide positiivne
-            hinnang Alexela kuvandile.
+            2024 was a year of change and growth
+for Alexela. We have reached an evolutionary
+phase, where we are moving
+away from our previous business models
+towards new solutions. This transition
+will require significant investment and
+continuous learning, but it is essential if
+we are to be one of the region's leading
+energy solutions provider in the future.
+The validity of this direction is demonstrated
+by the growth in our market
+share and the positive customer perception
+of Alexela's image.
           </p>
         </div>
       </article>
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Read more</span>
+          <span class="accordion__close-text">Close</span>
           <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
-          <p>Aasta 2024 oli Alexela jaoks muutuste ja
-            kasvamise aasta. Oleme jõudnud arengufaasi,
-            kus liigume varasemalt ärimudelitelt
-            uute lahenduste suunas. See üleminek
-            nõuab suuri investeeringuid ja pidevat
-            õppimist, kuid on hädavajalik, et olla tulevikus
-            regiooni juhtiv energialahenduste
-            pakkuja. Selle suuna õigsust näitavad nii
-            meie turuosa kasv kui ka klientide positiivne
-            hinnang Alexela kuvandile.
+          <p>2024 was a year of change and growth for
+            Alexela. We have reached an evolutionary
+            phase, where we are moving away from
+            our previous business models towards
+            new solutions. This transition will require
+            significant investment and continuous
+            learning, but it is essential if we are to
+            be the region's leading energy solutions
+            provider in the future. The validity of this
+            direction is demonstrated by the growth
+            in our market share and the positive customer
+            perception of Alexela's image.
+          </p>
+          <h3>We have a balanced energy
+            portfolio and are developing
+            solutions for the futuure</h3>
+          <p>
+            Estonia needs a balanced energy portfolio,
+where renewable energy is complemented
+by dispatcheble capacity, energy
+storage and functioning connections with
+neighbouring countries. Alexela is contributing
+to this by developing Estonia's
+first bio-LNG supply chain, investing in
+managing the flexibility of electricity
+supply with our customers, contributing
+to the Paldiski pumped-storage hydropower
+project and building infrastructure
+that reduces dependence on Russia.
           </p>
           <p>
-            Siinse piirkonna energeetikasektorit laiemalt
-            mõjutasid 2024. aastal majanduslangus,
-            geopoliitilised muutused ja regulatiivne
-            ebakindlus. Siiski suutsime kohaneda,
-            leida võimalusi ja jätkata investeerimist
-            energiajulgeolekusse. Meie fookuses olid
-            kohalike ressursside maksimaalne kasutamine,
-            uute tarneahelate loomine ja varustuskindluse
-            tugevdamine.
+            In 2024, we continued to move from a
+product-led to a service-led business
+model, offering customers complete and
+smart energy solutions at home, en-route
+and at their destination. We grew our refuelling
+network, expanded our energy
+services and electric vehicle charging
+network, making the Smart Electricity
+solution available free of charge to our
+electricity customers. In addition, we invested
+in renewable energy by developing
+solar and battery parks and hydrogen
+refuelling solutions.
           </p>
-          <h3>Meil on tasakaalustatud energiaportfell ja arendame tulevikulahendusi</h3>
+          <h3>We are a growing energy
+            partner for the regioon</h3>
           <p>
-            Eesti vajab tasakaalustatud energiaportfelli,
-            kus taastuvenergia kõrval
-            on juhitavad tootmisvõimsused, salvestus
-            ja toimivad ühendused naaberriikidega.
-            Alexela panustab sellesse,
-            arendades Eesti esimest bio-LNG tarneahelat,
-            investeerides elektrisüsteemi
-            paindlikkuse juhtimisse koos meie
-            klientidega, panustades Paldiski vesisalvesti
-            projekti ning rajades taristu, mis
-            vähendab sõltuvust Venemaast.
-          </p>
-          <p>
-            Aastal 2024 jätkasime liikumist tootepõhiselt
-            teenusepõhisele ärimudelile, pakkudes
-            klientidele terviklikke ning nutikaid
-            energialahendusi kodus, teel ja sihtkohas.
-            Kasvatasime tanklavõrku, laiendasime
-            energiateenuseid ning elektrisõidukite
-            laadimisvõrgustikku, tehes Targa Elektri
-            lahenduse tasuta kättesaadavaks meie
-            elektriklientidele. Lisaks panustasime
-            taastuvenergiasse, arendades päikese- ja
-            akuparke ning vesinikutanklate lahendusi.
-          </p>
-          <h3>Oleme kasvav regiooni energiapartner</h3>
-          <p>
-            Aastal 2024 laiendasime tegevust Lätis
-            ja Soomes. Meie tütarettevõtted Rohe
-            Solutions Oy Soomes ja SIA Alexela Lätis
-            ehitasid üles uusi läänepõhiseid tarneahelaid
-            ning pakkusid jätkusuutlikke
-            energialahendusi. Hamina LNG terminal
-            Soomes on saanud oluliseks regionaalseks
-            sõlmpunktiks, aidates tagada sõltumatut
-            gaasivarustust nii Soomes kui ka
-            kogu Baltikumis.
+            In 2024, we expanded our operations in
+Latvia and Finland. Our subsidiaries Rohe
+Solutions Oy in Finland and SIA Alexela in
+Latvia built new Western-based supply
+chains and provided sustainable energy
+solutions. The Hamina LNG terminal in
+Finland has become an important regional
+hub, helping to secure independent gas
+supplies in both, Finland and across the
+Baltics.
           </p>
           <p>
-            Samuti viisime lõpule regiooni esimese
-            lääne päritolu LPG tarneahela loomise –
-            Alexela emaettevõte AVH Grupp omandas
-            Riia terminali SIA Latvija Propāna
-            Gāze, kindlustades nii uue tarnekanali
-            kogu regioonile.
+            We also finalised the establishment of
+the region's first westbound LPG supply
+chain – Alexela's parent company AVH
+Group owns the Riga terminal SIA Latvija
+Propāna Gāze, securing a new supply
+chain for the whole region.
           </p>
-          <h3>Säilitasime tugeva finantspositsiooni</h3>
+          <h3>We maintained a strong
+            financial position</h3>
           <p>
-            Vaatamata keerulisele majanduskeskkonnale
-            säilitasime tugeva finantspositsiooni
-            ja investeerisime üle kümne miljoni euro
-            innovaatilistesse energialahendustesse.
-            Alexela elektrimüügi turuosa kasvas 19,7
-            protsendini, tugevdades meie positsiooni
-            suuruselt teise elektrimüüjana Eestis.
-          </p>
-          <p>
-            Energiasektori hindade volatiilsus ja kõrge
-            Euribor mõjutasid turgu, kuid suutsime
-            säilitada efektiivse kulustruktuuri.
-          </p>
-          <h3>Panustame majandusse, haridusse ja kultuuri</h3>
-          <p>
-            Meie väärtused – Eesti inimeste heaolu
-            kasv, varustuskindluse tagamine, mõistlik
-            energiahind, hariduse, kultuuri ning spordi
-            toetamine ja vastutustundlikkus – ei ole
-            pelgalt sõnad, vaid põhimõtted, mida järgime
-            iga päev.
+            Despite the difficult economic environment,
+we maintained a strong financial
+position and invested over ten million
+euros in innovative energy solutions.
+Alexela's market share in electricity sales
+increased to 19.7%, strengthening our
+position as the second largest electricity
+seller in Estonia.
           </p>
           <p>
-            Panustasime Eesti majandusse 182 miljoni
-            euro makstud maksudega ja toetasime
-            haridust, kultuuri ning sporti üle 500
-            tuhande euroga koos lisategevustega
-            nende aktiveerimiseks. Meid tunnustati
-            Eesti kultuurisõbra ja muusika toetaja
-            tiitliga ning Kantar Emori uuring kinnitas,
-            et Alexela on Eesti spontaanselt tuntuim
-            energiaettevõte ja kuulub ihaldusväärseimate
-            tööandjate hulka.
+            The volatility of energy prices and the
+high Euribor affected the market, but we
+managed to maintain an efficient cost
+structure.
+          </p>
+          <h3>Investing in the economy,
+            education, and culture</h3>
+          <p>
+            Our values - increasing the well-being of
+the Estonian people, ensuring security
+of supply, reasonable energy prices, supporting
+education, culture and sport, and
+responsibility - are not just words, but
+principles that we live by every day.
           </p>
           <p>
-            Lisaks seisime Eesti tarbijate huvide
-            eest, aidates ära hoida sagedusreservitasu
-            kehtestamise, mis oleks tähendanud
-            elektrihinna tõusu nii tarbijatele kui ka
-            tootjatele.
+            We contributed €182 million in taxes paid
+to the Estonian economy and supported
+education, culture and sport with more
+than €500 thousand, including additional
+activities to activate them.
           </p>
-          <h3>Vaadates tulevikku</h3>
           <p>
-            Energiasektoris toimub fundamentaalne
-            muutus. Senised lahendused enam ei toimi,
-            kuid uued pole veel täielikult valmis.
-            Selleks, et üleminek oleks sujuv ja jätkusuutlik,
-            vajame kindlaid partnerlusi ning
-            pikaajalist visiooni. Iga ettevõtte ja inimese
-            otsus mõjutab tulevikku – energia ei ole
-            ainult hind, vaid ka väärtused, mis loovad
-            tugevama ning sõltumatuma ühiskonna.
+            We were awarded the title of Estonian
+Friend of Culture and Supporter of Music,
+and a Kantar Emor survey confirmed that
+Alexela is the most spontaneously recognised
+energy company in Estonia and one
+of the most desirable employers.
           </p>
-          <p>Koos loome parema energiatuleviku!</p>
+          <p>In addition, we stood up for the interests
+            of Estonian consumers by helping to prevent
+            the introduction of frequency reserve
+            fee, which would have meant higher
+            electricity prices for both, consumers and
+            producers.</p>
+          <h3>Looking to the future</h3>
+          <p>
+            There is an ongoing fundamental change
+in the energy sector. Current solutions no
+longer work, but new ones are not yet fully
+ready. To make the transition smooth and
+sustainable, we need strong partnerships
+and a long-term vision. Every decision by
+businesses and individuals will have an
+impact on the future- energy is not just
+the price, but also the values that create
+a stronger and more independent society.
+          </p>
+          <p>Together we will create a better energy
+            future!</p>
           <p></p>
           <p></p>
           <p></p>
-          <p>Marti Hääl</br>Juhatuse esimees</p>
+          <p>Marti Hääl</br>Chairman of the Board</p>
         </div>
       </article>
 
@@ -531,55 +567,77 @@
 
     <section class="section--dark waves-animation">
       <article class="content-block block__text">
-        <h2>Koos loome tugeva kogukonna</h2>
+        <h2>Social responsibility and
+          support for communities</h2>
         <p class="sponsorship__intro">
-          Alexela on teadlik oma mõjust kohalikele kogukondadele ning peab sotsiaalset vastutust oma tegevuse
-          lahutamatuks osaks. Seetõttu oleme pühendunud spordi, kultuuri, heategevuse ja hariduse toetamisele, et aidata
-          kaasa ühiskonna arengule ja jätkusuutlikule tulevikule.
+          Alexela is aware of its impact on local
+communities and considers social responsibility
+an integral part of its operations.
+This is why we are committed to
+supporting sport, culture, charity, and
+education to contribute to the development
+of society and a sustainable future.
         </p>
         <p>
-          Aasta 2024 sügisel uuendasime oma sponsorluspõhimõtteid, tuues sisse kriteeriumi, mille järgi kõik
-          sponsorprojektid alates 2025. aastast peavad vähendama barjääre kliendi ja ettevõtja vahel. Edukas sponsorlus
-          on kahesuunaline, kus meie toetame abivajajat ja vastupidi, et tugevdada kogukondade arengut.
+          In the autumn of 2024, we updated our
+sponsorship policy, introducing a criterion
+that all sponsorship projects from
+2025 onwards must reduce the barrier
+between the client and the company.
+Successful sponsorship is a two-way
+street, where we support those in need
+and vice versa to strengthen community
+development.
         </p>
         <p>
-          Alexela pälvis 2024. aastal kultuuriministeeriumi aasta kultuurisõbra tiitli ning sai aasta
-          muusikasõbralikuima ettevõtte tunnustuse, olles toetanud kultuurisündmusi, mis viivad edasi Eesti kultuuri.
+          In 2024, Alexela was awarded the Ministry
+of Culture's Friend of Culture of the Year
+title and received the Friend of Music of
+the Year award. We received these recognitions
+for supporting cultural events
+that promote Estonian culture.
         </p>
 
         <div class="tabs">
           <nav class="tabs__nav">
-            <button type="button" class="tabs__btn tabs__btn--on-dark">Kultuur</button>
+            <button type="button" class="tabs__btn tabs__btn--on-dark">Culture</button>
             <button type="button" class="tabs__btn tabs__btn--on-dark tabs__btn--active">Sport</button>
-            <button type="button" class="tabs__btn tabs__btn--on-dark">Haridus</button>
-            <button type="button" class="tabs__btn tabs__btn--on-dark">Heategevus</button>
+            <button type="button" class="tabs__btn tabs__btn--on-dark">Education</button>
+            <button type="button" class="tabs__btn tabs__btn--on-dark">Charity</button>
           </nav>
 
           <div class="tabs__content tabs__content--active">
 
             <article class="image-text-content-block block--image-right">
               <figure class="block__image">
-                <img src="../img/kultuur_lottemaa_laadija.jpg" alt="Lottemaa laadija" class="block__img" />
+                <img src="../img/kultuur_lottemaa_laadija.jpg" alt="Lottemaa charger" class="block__img" />
               </figure>
               <div class="block__text">
-                <h3 class="tabs__title">Kultuur</h3>
+                <h3 class="tabs__title">Culture</h3>
                 <div class="block__description">
                   <p>
-                    Kultuur on ühiskonna vundament ja selle kestlik areng vajab tugevaid partnereid. Alexela toetab
-                    kultuuri mitte ainult sponsorina, vaid pikaajalise koostööpartnerina, et aidata korraldada sisukaid
-                    ja väärtusloovaid sündmusi. Kultuur ühtlustab eri põlvkondi ja tugevdab kogukondlikku sidusust,
-                    mängides samas olulist rolli loovmajanduses ja rahvusvahelises tuntuses.
+                    Culture is the foundation of society
+and its sustainable development needs
+strong partners. Alexela supports culture
+not only as a sponsor, but as a longterm
+partner to help organise meaningful
+and value-creating events. Culture brings
+different generations together and
+strengthens community cohesion, while
+playing an important role in the creative
+economy and national awareness.
                   </p>
                 </div>
                 <div class="tabs__projects">
-                  <h4>Projektid mida toetame:</h4>
+                  <h4>The projects we support:</h4>
                   <ul class="alexela__list">
-                    <li>Alexela kontserdimaja </li>
-                    <li>Pimedate Ööde filmifestival </li>
-                    <li>Lottemaa teemapark </li>
-                    <li>Rahvusooper Estonia </li>
-                    <li>Rannafestival Beach Grind </li>
-                    <li>Kuressaare merepäevad </li>
+                    <li>Alexela Concert Hall</li>
+                      <li>Dark Nights Film Festival</li>
+                      <li>Lottemaa Theme Park</li>
+                      <li>Estonian National Opera</li>
+                      <li>Beach Grind Festival</li>
+                      <li>Kuressaare Maritime Days</li>
+                    
                   </ul>
                 </div>
               </div>
@@ -596,29 +654,34 @@
                 <h3 class="tabs__title">Sport</h3>
                 <div class="block__description">
                   <p>
-                    Kogukondlik sportimine soodustab tervislikke eluviise, tugevdab sotsiaalset sidusust ja aitab luua
-                    tervemat ühiskonda.
+                    Community sport promotes healthy lifestyles,
+strengthens social cohesion, and
+helps to create a healthier society.
                   </p>
                   <p>
-                    Esimese pilootprojektina alustasime koostööd korvpallikogukonnaga, millel on juba 675 liiget. See
-                    näitab, kuidas koostöö on kahepoolne – korvpallikogukonna liikmed on teadlikult valinud kasutada
-                    Alexela tooteid ja teenuseid, hindades meie panust nende valdkonda.
+                    As a pilot project, initiated a basketball
+community that already has 675 members.
+This demonstrates how working together
+is a two-way street - members of the basketball
+community have consciously chosen
+Alexela's products and services, valuing
+our contribution to their field.
 
                   </p>
                 </div>
                 <div class="tabs__projects">
-                  <h4>Projektid mida toetame:</h4>
+                  <h4>The projects we support:</h4>
                   <ul class="alexela__list">
-                    <li>Eesti korvpalliliit</li>
-                    <li>Spordiklubi Le Glaive, Katrina Lehis</li>
-                    <li>Muhu väina regatt</li>
-                    <li>Korvpallimeeskond TalTech/Alexela</li>
+                    <li>Estonian Basketball Association</li>
+                    <li>Le Glaive Sports Club, Katrina Lehis</li>
+                    <li>Muhu Väina Regatta</li>
+                    <li>Basketball team TalTech/Alexela</li>
                     <li>Tallinn International Horse Show</li>
-                    <li>Eesti suusaliit</li>
-                    <li>Eesti laskesuusatamise föderatsioon</li>
-                    <li>Treeningpartner Pühajärve maleklubi</li>
-                    <li>Eesti Trialton</li>
-                    <li>Lasnamäe spordikeskus</li>
+                    <li>Estonian Biathlon Union</li>
+                    <li>Estonian Ski Federation</li>
+                    <li>Training Partner Pühajärve Chess Club</li>
+                    <li>Estonian Trialton</li>
+                    <li>Lasnamäe Sports Centre</li>
 
                   </ul>
                 </div>
@@ -633,21 +696,25 @@
                 <img src="../img/haridus_enerhack_laager.jpg" alt="Energialaager" class="block__img" />
               </figure>
               <div class="block__text">
-                <h3 class="tabs__title">Haridus</h3>
+                <h3 class="tabs__title">Education</h3>
                 <div class="block__description">
                   <p>
-                    Haridusse panustamine loob eeldused uute ideede, tehnoloogiate ja innovatsiooni sünniks. Haridus
-                    annab noortele vajalikud oskused ja teadmised, mis aitavad kaasa nii isiklikule kui ka
-                    ühiskondlikule arengule. Toetades haridust, loome tugevama ja teadlikuma ühiskonna, mis suudab
-                    edukalt kohaneda muutuva maailma väljakutsetega.
+                    Investing in education creates the conditions
+for new ideas, technologies, and innovation.
+Education equips young people
+with the skills and knowledge they need
+to contribute to their personal and social
+development. By supporting education,
+we create a more supportive and informed
+society that can successfully adapt to the
+challenges of a changing world.
                   </p>
                 </div>
                 <div class="tabs__projects">
-                  <h4>Projektid mida toetame:</h4>
+                  <h4>The projects we support:</h4>
                   <ul class="alexela__list">
-                    <li>MTÜ Enerhack Foundationi tüdrukute talve- ja laste suvelaagrid</li>
-                    <li>Tallinna tehnikaülikooli elektroenergeetika ja mehhatroonika instituudi projekt "Tudengid tundi"
-                    </li>
+                    <li>Enerhack Foundation's winter camps for girls and summer camps for children</li>
+                    <li>Tallinn University of Technology, Department of Electroenergetics and Mechatronics, project "Tudengid tundi" (Students as lecturers)</li>
                     <li>Cyber Battle of Estonia</li>
 
                   </ul>
@@ -660,26 +727,30 @@
 
             <article class="image-text-content-block block--image-right">
               <figure class="block__image">
-                <img src="../img/heategevus_tammistu_peremaja.jpg" alt="Tammistu Peremaja" class="block__img" />
+                <img src="../img/heategevus_tammistu_peremaja.jpg" alt="Tammistu Farmhouse" class="block__img" />
               </figure>
               <div class="block__text">
-                <h3 class="tabs__title">Heategevus</h3>
+                <h3 class="tabs__title">Charity</h3>
                 <div class="block__description">
                   <p>
-                    Heategevus on oluline, et pakkuda tuge ühiskonna nõrgematele liikmetele ja neile, kes vajavad abi
-                    keerulistes olukordades. Heategevuslike algatuste kaudu aitame parandada elukvaliteeti, vähendada
-                    ebavõrdsust ning pakkuda lootust ja võimalusi neile, kellel seda kõige rohkem vaja on.
+                    Charity is essential to provide support to
+the vulnerable members of society and to
+those who need help in difficult situations.
+Through charitable initiatives, we help to
+improve the quality of life, reduce inequalities,
+and provide hope and opportunity to
+those who need it most.
                   </p>
                 </div>
                 <div class="tabs__projects">
-                  <h4>Projektid mida toetame:</h4>
+                  <h4>The projects we support:</h4>
                   <ul class="alexela__list">
-                    <li>SA Maarja Küla</li>
-                    <li>SA Eesti–Hollandi Heategevusfondi Toidupank</li>
-                    <li>SA Tartu Ülikooli Kliinikumi Lastefond</li>
-                    <li>Eesti Punane Rist</li>
+                    <li>SA Maarja Village</li>
+                    <li>SA Estonian-Dutch Charity Foundation Food Bank</li>
+                    <li>Tartu University Hospital Children's Fund</li>
+                    <li>Estonian Red Cross</li>
                     <li>SA Kadunud</li>
-                    <li>Agrenska Fond, Tammistu peremaja</li>
+                    <li>Agrenska Fond, Tammistu Family House</li>
 
                   </ul>
                 </div>
@@ -691,7 +762,7 @@
     </section>
     <section class="section--horizontal">
       <article class="content-block">
-        <h2 class="block__title">Istutame puid</h2>
+        <h2 class="block__title">We plant trees</h2>
         <div class="block__graph">
           <div class="graph__stats">
             <div class="stat">
@@ -700,7 +771,7 @@
               </figure>
               <div class="stat__info">
                 <h3 class="stat__value">60 489</h3>
-                <p class="stat__label">liiget</p>
+                <p class="stat__label">people</p>
               </div>
             </div>
             <div class="stat">
@@ -709,7 +780,7 @@
               </figure>
               <div class="stat__info">
                 <h3 class="stat__value">1 648 771</h3>
-                <p class="stat__label">puud</p>
+                <p class="stat__label">trees</p>
               </div>
             </div>
             <div class="stat">
@@ -718,7 +789,7 @@
               </figure>
               <div class="stat__info">
                 <h3 class="stat__value">992 395.3</h3>
-                <p class="stat__label">tonni vähem CO<sup>2</sup></p>
+                <p class="stat__label">less CO<sup>2</sup> tonnes</p>
               </div>
             </div>
           </div>
@@ -729,11 +800,11 @@
             </figure>
 
             <div class="map__legend">
-              <p>Istutatud puude arv</p>
+              <p>Number of planted trees</p>
               <div class="legend__items">
                 <div class="legend__item">
                   <span class="legend__color legend__color--dark"></span>
-                  <span class="legend__label">>100 001</span>
+                  <span class="legend__label">100 001</span>
                 </div>
                 <div class="legend__item">
                   <span class="legend__color legend__color--medium"></span>
@@ -752,17 +823,17 @@
     </section>
     <section class="section--horizontal">
       <article class="content-block">
-        <h2 class="block__title">Energiateekond, mis ulatub Soome ja Lätti</h2>
+        <h2 class="block__title">Energy corridor, extending to Finland and Latvia</h2>
         <div class="block__graph">
 
-          <div class="graph__map" role="group" aria-label="Alexela globaalne kaardi visualiseering">
+          <div class="graph__map" role="group" aria-label="Alexela global map visualisation">
             <figure class="map__figure">
 
               <!-- Responsive kaart -->
               <picture>
-                <source srcset="../img/alexela_global.svg" media="(min-width: 768px)" />
-                <source srcset="../img/alexela_global_tablet.svg" media="(min-width: 480px)" />
-                <img src="../img/alexela_global_mob.svg" alt="Alexela globaalne kaart koos tähistega mobiilivaates"
+                <source srcset="../img/alexela_global_desk_eng.svg" media="(min-width: 768px)" />
+                <source srcset="../img/alexela_global_tablet_eng.svg" media="(min-width: 480px)" />
+                <img src="../img/alexela_global_mob_eng.svg" alt="Alexela global map with markers on mobile view"
                   class="map__image" />
               </picture>
 
@@ -773,24 +844,24 @@
                   <span></span>
                   <span></span>
                 </div>
-                Ikoonide selgitused
+                Icon explanations
               </button>
 
               <!-- Interaktiivne legend -->
               <div id="map-legend" class="map__legend-panel">
-                <button class="map__legend-close" aria-label="Sulge legend">
+                <button class="map__legend-close" aria-label="Close legend">
                   <div class="menu-toggle__icon">
                     <span></span>
                     <span></span>
                   </div>
                 </button>
-                <img src="../img/alexela_global_legend.svg"
-                  alt="Tähiste legend: roheline ring – terminal, sinine kolmnurk – laohoone jne"
+                <img src="../img/alexela_global_legend_eng.svg"
+                  alt="Legend: green circle – terminal, blue triangle – warehouse, etc."
                   class="map__legend-image" />
               </div>
 
               <figcaption class="visually-hidden">
-                Kaardil on näha Alexela rahvusvahelised tegevuskohad ja tähised vastavalt legendile.
+                The map shows Alexela's international operations and symbols according to the legend.
               </figcaption>
 
             </figure>
@@ -803,14 +874,14 @@
 
     <section class="section--horizontal">
       <article class="content-block">
-        <h2 class="block__title">Nutikas energiateekond</h2>
+        <h2 class="block__title">Smart energy journey</h2>
         <div class="block__graph">
           <div class="graph__map">
             <figure>
               <video width="640" height="360" controls poster="../video/alexela_future.jpg">
                 <source src="../video/alexela_future.mp4" type="video/mp4">
                 <source src="../video/alexela_future.webm" type="video/webm" />
-                Teie veebilehitseja ei toeta video elementi.
+                Your browser does not support the video element.
               </video>
             </figure>
           </div>
@@ -820,13 +891,13 @@
 
     <section class="section--horizontal">
       <article class="content-block">
-        <h2 class="block__title">Meie lugu</h2>
+        <h2 class="block__title">Our story</h2>
         <div class="block__graph">
           <div class="graph__map">
             <figure>
               <video width="640" height="360" controls poster="../video/alexela_lugu.jpg">
                 <source src="../video/alexela_lugu.mp4" type="video/mp4">
-                Teie veebilehitseja ei toeta video elementi.
+                Your browser does not support the video element.
               </video>
             </figure>
           </div>
@@ -844,44 +915,44 @@
 
           <nav class="footer__nav">
             <div class="menu__section">
-              <a href="/" class="menu__button menu__button--active">
+              <a href="index.html" class="menu__button menu__button--active">
                 <span class="menu__icon menu__icon--home"></span>
-                Avaleht
+                Homepage
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="../ettevottest.html" class="menu__button">
+              <a href="about.html" class="menu__button">
                 <span class="menu__icon menu__icon--a-monogram"></span>
-                Ettevõttest
+                About the Company
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="../arisuunad.html" class="menu__button">
+              <a href="business-lines.html" class="menu__button">
                 <span class="menu__icon menu__icon--eur"></span>
-                Ärisuunad
+                Business Lines
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="../kestlikkus.html" class="menu__button">
+              <a href="sustainability.html" class="menu__button">
                 <span class="menu__icon menu__icon--greenspark"></span>
-                Kestlikkus (ESG)
+                Sustainability and Governance
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="../finantstulemused.html" class="menu__button">
+              <a href="economic-results.html" class="menu__button">
                 <span class="menu__icon menu__icon--news"></span>
-                Finantstulemused
+                Economic Results
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="../alexela_aruanne_2024.pdf" target="_blank" class="menu__button">
+              <a href="alexela_aruanne_2024_ENG.pdf" target="_blank" class="menu__button">
                 <span class="menu__icon menu__icon--contract"></span>
-                Laadi alla PDF
+                Download PDF
               </a>
             </div>
           </nav>
@@ -933,7 +1004,7 @@
           </div>
 
           <div class="footer__slogan">
-            Energia kogu eluks
+            Energy for life
           </div>
 
         </div>

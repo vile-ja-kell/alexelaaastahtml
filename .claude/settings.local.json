@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(pdftotext:*)",
+      "Bash(find:*)",
+      "Bash(sed:*)"
+    ],
+    "deny": []
+  }
+}

@@ -27,7 +27,7 @@
       </div>
       <div class="nav__subcontainer">
         <div class="language">
-          <select name="language" id="language" class="language__select">
+          <select name="language" id="language" class="language__select" onchange="switchLanguage(this.value)">
             <option value="et">ET</option>
             <option value="en">EN</option>
           </select>
@@ -180,7 +180,8 @@
 
         <article class="accordion">
           <button class="accordion__button" aria-expanded="false">
-            <span>Loe edasi</span>
+            <span class="accordion__read-text">Loe edasi</span>
+            <span class="accordion__close-text">Sulge</span>
             <img src="img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
           </button>
           <div class="accordion__content">
@@ -390,7 +391,8 @@
 
       <article class="accordion">
         <button class="accordion__button" aria-expanded="false">
-          <span>Loe edasi</span>
+          <span class="accordion__read-text">Loe edasi</span>
+          <span class="accordion__close-text">Sulge</span>
           <img src="img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
         </button>
         <div class="accordion__content">
@@ -1453,7 +1455,8 @@
 
         <article class="accordion">
           <button class="accordion__button" aria-expanded="false">
-            <span>Loe edasi</span>
+            <span class="accordion__read-text">Loe edasi</span>
+            <span class="accordion__close-text">Sulge</span>
             <img src="img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
           </button>
           <div class="accordion__content">

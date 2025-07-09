@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="et">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="../css/style.css" />
-  <title>Finantstulemused</title>
+  <title>Economic Results</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <video class="header__video" autoplay muted loop playsinline poster="../video/metsaalune.jpg">
       <source src="../video/metsaalune.webm" type="video/webm" />
       <source src="../video/metsaalune.mp4" type="video/mp4" />
-      Sinu brauser ei toeta video elementi.
+      Your browser does not support the video element.
     </video>
     <nav class="nav">
       <div class="nav__logo">
@@ -27,7 +27,7 @@
       </div>
       <div class="nav__subcontainer">
         <div class="language">
-          <select name="language" id="language" class="language__select">
+          <select name="language" id="language" class="language__select" onchange="switchLanguage(this.value)">
             <option value="et">ET</option>
             <option value="en">EN</option>
           </select>
@@ -43,44 +43,44 @@
       <div class="menu__container">
         <div class="menu">
           <div class="menu__section">
-            <a href="/" class="menu__button">
+            <a href="index.html" class="menu__button">
               <span class="menu__icon menu__icon--home"></span>
-              Avaleht
+              Homepage
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="ettevottest.html" class="menu__button">
+            <a href="about.html" class="menu__button">
               <span class="menu__icon menu__icon--a-monogram"></span>
-              Ettevõttest
+              About the Company
             </a>
           </div>
           
           <div class="menu__section">
-            <a href="arisuunad.html" class="menu__button">
+            <a href="business-lines.html" class="menu__button">
               <span class="menu__icon menu__icon--eur"></span>
-              Ärisuunad
+              Business Lines
             </a>
           </div>
           
                     <div class="menu__section">
-                      <a href="kestlikkus.html" class="menu__button">
+                      <a href="sustainability.html" class="menu__button">
                         <span class="menu__icon menu__icon--greenspark"></span>
-                        Kestlikkus (ESG)
+                        Sustainability and Governance
                       </a>
                     </div>
           
           <div class="menu__section">
-            <a href="finantstulemused.html" class="menu__button menu__button--active">
+            <a href="economic-results.html" class="menu__button menu__button--active">
               <span class="menu__icon menu__icon--news"></span>
-              Finantstulemused
+              Economic Results
             </a>
           </div>
 
           <div class="menu__section">
-            <a href="alexela_aruanne_2024.pdf" target="_blank" class="menu__button">
+            <a href="alexela_aruanne_2024_ENG.pdf" target="_blank" class="menu__button">
               <span class="menu__icon menu__icon--contract"></span>
-              Laadi alla PDF
+              Download PDF
             </a>
           </div>
         </div>
@@ -89,34 +89,34 @@
     <div class="hero">
 
       <div class="hero__content">
-        <h1>Finants&shy;tulemused</h1>
+        <h1>Economic Results</h1>
       </div>
 
     </div>
   </header>
   <main class="waves-animation bg-main-2">
     <section class="section--top" id="quicklinks">
-      <h2 class="text-left">Leia kiirelt</h2>
+      <h2 class="text-left">Quick find</h2>
       <nav class="quicklinks quicklinks--pages" aria-label="Quick navigation">
-        <a class="quicklinks__item" href="ettevottest.html" aria-label="Info ettevõttest">
+        <a class="quicklinks__item" href="about.html" aria-label="About the company">
           <img src="../img/icons/a-monogram.svg" alt="Alexela logo" class="quicklinks__icon" />
-          <h3>Ettevõttest</h3>
+          <h3>About the Company</h3>
         </a>
-        <a class="quicklinks__item" href="arisuunad.html" aria-label="Info ettevõttest">
-          <img src="../img/icons/eur.svg" alt="Euro ikoon" class="quicklinks__icon" />
-          <h3>Ärisuunad</h3>
+        <a class="quicklinks__item" href="business-lines.html" aria-label="About the company">
+          <img src="../img/icons/eur.svg" alt="Euro icon" class="quicklinks__icon" />
+          <h3>Business Lines</h3>
         </a>
-        <a class="quicklinks__item" href="kestlikkus.html" aria-label="Info ettevõttest">
-          <img src="../img/icons/greenspark.svg" alt="Lehe ikoon" class="quicklinks__icon" />
-          <h3>Kestlikkus (ESG)</h3>
+        <a class="quicklinks__item" href="sustainability.html" aria-label="About the company">
+          <img src="../img/icons/greenspark.svg" alt="Leaf icon" class="quicklinks__icon" />
+          <h3>Sustainability and Governance</h3>
         </a>
-        <a class="quicklinks__item" href="finantstulemused.html" aria-label="Info ettevõttest">
-          <img src="../img/icons/news.svg" alt="Uudiste ikoon" class="quicklinks__icon" />
-          <h3>Finantstulemused</h3>
+        <a class="quicklinks__item" href="economic-results.html" aria-label="About the company">
+          <img src="../img/icons/news.svg" alt="News icon" class="quicklinks__icon" />
+          <h3>Economic Results</h3>
         </a>
-        <a class="quicklinks__item" href="alexela_aruanne_2024.pdf" target="_blank" aria-label="Info ettevõttest">
-          <img src="../img/icons/contract.svg" alt="Lepingu ikoon" class="quicklinks__icon" />
-          <h3>Laadi alla PDF</h3>
+        <a class="quicklinks__item" href="alexela_aruanne_2024_ENG.pdf" target="_blank" aria-label="About the company">
+          <img src="../img/icons/contract.svg" alt="Contract icon" class="quicklinks__icon" />
+          <h3>Download PDF</h3>
         </a>
       </nav>
     </section>
@@ -126,9 +126,9 @@
       <article class="content-block mb-xxl">
         <div>
           <h2 class="block__title mb-xxs">
-            Konsolideeritud bilanss
+            Consolidated Balance Sheet
           </h2>
-          <p class="mb-xxs">(tuhandetes eurodes)</p>
+          <p class="mb-xxs">(in thousands of euros)</p>
         </div>
         <div class="table">
           <table>
@@ -136,13 +136,13 @@
               <tr class="table__header bg-flamingo">
                 <th colspan="2" class="table__header-text text-right">31.12.2024</th>
                 <th class="table__header-text text-right">31.12.2023</th>
-                <th class="table__header-text text-right">Lisa nr</th>
+                <th class="table__header-text text-right">Note no.</th>
               </tr>
             </thead>
             <tbody>
               <tr class="table__row table__row--header">
                 <td class="table__cell table__cell--content font-bold">
-                  Varad
+                  Assets
                 </td>
                 <td class="table__cell table__cell--content font-bold">
                 </td>
@@ -156,7 +156,7 @@
 
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content font-bold ">
-                  Käibevarad
+                  Current Assets
                 </td>
                 <td class="table__cell table__cell--number text-right"></td>
                 <td class="table__cell table__cell--number text-right"></td>
@@ -164,7 +164,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Raha
+                  Cash and Cash Equivalents
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   1 105
@@ -178,7 +178,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Nõuded ja ettemaksed
+                  Receivables and Prepayments
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   74 376
@@ -192,7 +192,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Varud
+                  Inventories
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   38 513
@@ -206,7 +206,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content font-bold">
-                  Kokku käibevarad
+                  Total Current Assets
                 </td>
                 <td class="table__cell table__cell--number text-right font-bold">
                   113 994
@@ -218,7 +218,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content font-bold">
-                  Põhivarad
+                  Non-current Assets
                 </td>
                 <td class="table__cell table__cell--number text-right"></td>
                 <td class="table__cell table__cell--number text-right"></td>
@@ -226,7 +226,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Pikaajalised investeeringud
+                  Long-term Investments
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   42 473
@@ -240,7 +240,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Nõuded ja ettemaksed
+                  Receivables and Prepayments
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   14 377
@@ -254,7 +254,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content">
-                  Materiaalsed põhivarad
+                  Property, Plant and Equipment
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   161 362
@@ -268,7 +268,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content">
-                  Immateriaalsed põhivarad
+                  Intangible Assets
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   6 757
@@ -282,7 +282,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content font-bold">
-                  Kokku põhivarad
+                  Total Non-current Assets
                 </td>
                 <td class="table__cell table__cell--number text-right font-bold">
                   224 969
@@ -294,7 +294,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content font-bold">
-                  Kokku varad
+                  Total Assets
                 </td>
                 <td class="table__cell table__cell--number text-right font-bold">
                   338 963
@@ -306,7 +306,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Kohustised ja omakapital
+                  Liabilities and Equity
                 </td>
                 <td class="table__cell table__cell--number text-right"></td>
                 <td class="table__cell table__cell--number text-right"></td>
@@ -314,7 +314,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content">
-                  Kohustised
+                  Liabilities
                 </td>
                 <td class="table__cell table__cell--number text-right"></td>
                 <td class="table__cell table__cell--number text-right"></td>
@@ -322,7 +322,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content">
-                  Lühiajalised kohustised
+                  Current Liabilities
                 </td>
                 <td class="table__cell table__cell--number text-right"></td>
                 <td class="table__cell table__cell--number text-right"></td>
@@ -330,7 +330,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Laenukohustised
+                  Borrowings
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   50 625
@@ -344,7 +344,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Võlad ja ettemaksed
+                  Payables and Prepayments
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   65 593
@@ -358,7 +358,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Eraldised
+                  Provisions
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   1
@@ -372,7 +372,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Sihtfinantseerimine
+                  Targeted Financing
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   292
@@ -386,7 +386,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content font-bold">
-                  Kokku lühiajalised kohustised
+                  Total Current Liabilities
                 </td>
                 <td class="table__cell table__cell--number text-right font-bold">
                   116 511
@@ -398,7 +398,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content">
-                  Pikaajalised kohustised
+                  Non-current Liabilities
                 </td>
                 <td class="table__cell table__cell--number text-right"></td>
                 <td class="table__cell table__cell--number text-right"></td>
@@ -406,7 +406,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Laenukohustised
+                  Borrowings
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   77 495
@@ -420,7 +420,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Võlad ja ettemaksed
+                  Payables and Prepayments
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   4
@@ -434,7 +434,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Edasilükkunud tulumaksukohustus
+                  Deferred Tax Liability
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   914
@@ -448,7 +448,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Eraldised
+                  Provisions
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   5
@@ -462,7 +462,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-4">
-                  Sihtfinantseerimine
+                  Targeted Financing
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   1 511
@@ -476,7 +476,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content font-bold">
-                  Kokku pikaajalised kohustised
+                  Total Non-current Liabilities
                 </td>
                 <td class="table__cell table__cell--number text-right font-bold">
                   79 929
@@ -488,7 +488,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content font-bold">
-                  Kokku kohustised
+                  Total Liabilities
                 </td>
                 <td class="table__cell table__cell--number text-right font-bold">
                   196 440
@@ -500,7 +500,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Omakapital
+                  Equity
                 </td>
                 <td class="table__cell table__cell--number text-right"></td>
                 <td class="table__cell table__cell--number text-right"></td>
@@ -508,7 +508,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content pl-4">
-                  Emaettevõtja aktsionäridele või osanikele kuuluv omakapital
+                  Equity Attributable to Owners of the Parent
                 </td>
                 <td class="table__cell table__cell--number text-right"></td>
                 <td class="table__cell table__cell--number text-right"></td>
@@ -516,7 +516,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-8">
-                  Aktsiakapital nimiväärtuses
+                  Share Capital at Nominal Value
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   1 644
@@ -530,7 +530,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-8">
-                  Ülekurss
+                  Share Premium
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   1 435
@@ -542,7 +542,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-8">
-                  Kohustuslik reservkapital
+                  Legal Reserve
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   165
@@ -554,7 +554,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-8">
-                  Muud reservid
+                  Other Reserves
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   86 385
@@ -568,7 +568,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-8">
-                  Eelmiste perioodide jaotamata kasum
+                  Retained Earnings from Previous Periods
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   58 155
@@ -580,7 +580,7 @@
               </tr>
               <tr class="table__row table__row--level-3">
                 <td class="table__cell table__cell--content pl-8">
-                  Aruandeaasta kasum (kahjum)
+                  Profit (Loss) for the Year
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   -5 258
@@ -592,7 +592,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content font-bold">
-                  Kokku emaettevõtja aktsionäridele või osanike kuuluv omakapital
+                  Total Equity Attributable to Owners of the Parent
                 </td>
                 <td class="table__cell table__cell--number text-right font-bold">
                   142 523
@@ -604,7 +604,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content font-bold">
-                  Mittekontrolliv osalus
+                  Non-controlling Interest
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   0
@@ -616,7 +616,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content font-bold">
-                  Kokku omakapital
+                  Total Equity
                 </td>
                 <td class="table__cell table__cell--number text-right font-bold">
                   142 523
@@ -628,7 +628,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content font-bold">
-                  Kokku kohustised ja omakapital
+                  Total Liabilities and Equity
                 </td>
                 <td class="table__cell table__cell--number text-right font-bold">
                   338 963
@@ -646,9 +646,9 @@
       <article class="content-block mb-xxl">
         <div>
           <h2 class="block__title mb-xxs">
-            Konsolideeritud kasumiaruanne
+            Consolidated Income Statement
           </h2>
-          <p class="mb-xxs">(tuhandetes eurodes)</p>
+          <p class="mb-xxs">(in thousands of euros)</p>
         </div>
         <div class="table">
           <table>
@@ -656,13 +656,13 @@
               <tr class="table__header bg-flamingo">
                 <th colspan="2" class="table__header-text text-right">2024</th>
                 <th class="table__header-text text-right">2023</th>
-                <th class="table__header-text text-right">Lisa nr</th>
+                <th class="table__header-text text-right">Note no.</th>
               </tr>
             </thead>
             <tbody>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Müügitulu
+                  Revenue
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   594 166
@@ -676,7 +676,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Muud äritulud
+                  Other Operating Income
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   1 271
@@ -690,7 +690,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Valmis- ja lõpetamata toodangu varude jääkide muutus
+                  Change in Inventories of Finished Goods and Work in Progress
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   30
@@ -704,7 +704,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Kapitaliseeritud väljaminekud oma tarbeks põhivara valmistamisel
+                  Capitalized Expenditures for Own Use in Fixed Asset Production
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   455
@@ -718,7 +718,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Kaubad, toore, materjal ja teenused
+                  Cost of Goods, Raw Materials and Services
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   -550 967
@@ -732,7 +732,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Mitmesugused tegevuskulud
+                  Other Operating Expenses
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   -8 061
@@ -746,7 +746,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Tööjõukulud
+                  Personnel Expenses
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   -19 377
@@ -760,7 +760,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Põhivarade kulum ja väärtuse langus
+                  Depreciation and Impairment of Fixed Assets
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   -11 604
@@ -774,7 +774,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Muud ärikulud
+                  Other Operating Costs
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   -873
@@ -788,7 +788,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Ärikasum (-kahjum)
+                  Operating Profit (Loss)
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   5 040
@@ -801,7 +801,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Kasum (kahjum) tütar– ja sidusettevõtjalt
+                  Profit (Loss) from Subsidiaries and Associates
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   -989
@@ -815,7 +815,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Intressitulud
+                  Interest Income
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   502
@@ -829,7 +829,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Intressikulud
+                  Interest Expenses
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   -8 417
@@ -843,7 +843,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Muud finantstulud ja -kulud
+                  Other Financial Income and Expenses
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   -1 043
@@ -857,7 +857,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content font-bold">
-                  Kasum (kahjum) enne tulumaksustamist
+                  Profit (Loss) Before Tax
                 </td>
                 <td class="table__cell table__cell--number text-right font-bold">
                   -4 907
@@ -870,7 +870,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Tulumaks
+                  Income Tax
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   -351
@@ -884,7 +884,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content font-bold">
-                  Aruandeaasta kasum (kahjum)
+                  Profit (Loss) for the Year
                 </td>
                 <td class="table__cell table__cell--number text-right font-bold">
                   -5 258
@@ -897,7 +897,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Mittekontrolliva osaluse kasumosa
+                  Non-controlling Interest Share of Profit
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   0
@@ -910,7 +910,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content">
-                  Emaettevõtja aktsionäri osa kasumist
+                  Parent Company Shareholder's Share of Profit
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   -5 258
@@ -929,9 +929,9 @@
       <article class="content-block mb-xxl">
         <div>
           <h2 class="block__title mb-xxs">
-            Konsolideeritud koondkasumi&shy;aruanne
+            Consolidated Statement of Comprehensive Income
           </h2>
-          <p class="mb-xxs">(tuhandetes eurodes)</p>
+          <p class="mb-xxs">(in thousands of euros)</p>
         </div>
         <div class="table">
           <table>
@@ -939,13 +939,13 @@
               <tr class="table__header bg-flamingo">
                 <th colspan="2" class="table__header-text text-right">31.12.2024</th>
                 <th class="table__header-text text-right">31.12.2023</th>
-                <th class="table__header-text text-right">Lisa nr</th>
+                <th class="table__header-text text-right">Note no.</th>
               </tr>
             </thead>
             <tbody>
               <tr class="table__row">
                 <td class="table__cell table__cell--content pl-4">
-                  Aruandeaasta kasum (-kahjum)
+                  Profit (Loss) for the Year
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   -5 258
@@ -959,7 +959,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content pl-4">
-                  Muu koondkasum (-kahjum)
+                  Other Comprehensive Income (Loss)
                 </td>
                 <td class="table__cell table__cell--number text-right">
 
@@ -973,7 +973,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content pl-4">
-                  Muud koondkasumid (-kahjumid)
+                  Other Comprehensive Income (Loss)
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   6 452
@@ -987,7 +987,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content font-bold">
-                  Kokku muu koondkasum (-kahjum)
+                  Total Other Comprehensive Income (Loss)
                 </td>
                 <td class="table__cell table__cell--number text-right font-bold">
                   6 452
@@ -999,7 +999,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content font-bold">
-                  Aruandeaasta koondkasum (-kahjum)
+                  Total Comprehensive Income (Loss) for the Year
                 </td>
                 <td class="table__cell table__cell--number text-right">1 194</td>
                 <td class="table__cell table__cell--number text-right">11 053</td>
@@ -1007,7 +1007,7 @@
               </tr>
               <tr class="table__row table__row--level-2">
                 <td class="table__cell table__cell--content pl-4">
-                  Mittekontrolliva osaluse kasumiosa
+                  Non-controlling Interest Share of Profit
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   0
@@ -1021,7 +1021,7 @@
               </tr>
               <tr class="table__row">
                 <td class="table__cell table__cell--content pl-4">
-                  Emaettevõtja aktsionäri osa koondkasumist (-kahjumist)
+                  Parent Company Shareholder's Share of Comprehensive Income (Loss)
                 </td>
                 <td class="table__cell table__cell--number text-right">
                   1 194
@@ -1041,9 +1041,9 @@
       <article class="content-block mb-xxl">
         <div>
           <h2 class="block__title mb-xxs">
-            Konsolideeritud rahavoogude aruanne
+            Consolidated Cash Flow Statement
           </h2>
-          <p class="mb-xxs">(tuhandetes eurodes)</p>
+          <p class="mb-xxs">(in thousands of euros)</p>
         </div>
         <div class="table">
           <table>
@@ -1052,209 +1052,209 @@
                 <th class="table__header-text text-left"></th>
                 <th class="table__header-text text-right">2024</th>
                 <th class="table__header-text text-right">2023</th>
-                <th class="table__header-text text-right">Lisa nr</th>
+                <th class="table__header-text text-right">Note no.</th>
               </tr>
             </thead>
             <tbody>
               <tr class="table__row table__row--level-1">
-                <td class="table__cell table__cell--content">Rahavood äritegevusest</td>
+                <td class="table__cell table__cell--content">Cash Flows from Operating Activities</td>
                 <td class="table__cell text-right"></td>
                 <td class="table__cell text-right"></td>
                 <td class="table__cell text-right"></td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell table__cell--content pl-4">Ärikasum (-kahjum)</td>
+                <td class="table__cell table__cell--content pl-4">Operating Profit (Loss)</td>
                 <td class="table__cell text-right">5 040</td>
                 <td class="table__cell text-right">13 226</td>
                 <td class="table__cell text-right"></td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell table__cell--content pl-4">Korrigeerimised</td>
+                <td class="table__cell table__cell--content pl-4">Adjustments</td>
                 <td class="table__cell text-right"></td>
                 <td class="table__cell text-right"></td>
                 <td class="table__cell text-right"></td>
               </tr>
               <tr class="table__row table__row--level-3">
-                <td class="table__cell table__cell--content pl-8">Põhivarade kulum ja väärtuse langus</td>
+                <td class="table__cell table__cell--content pl-8">Depreciation and Impairment of Fixed Assets</td>
                 <td class="table__cell text-right">11 604</td>
                 <td class="table__cell text-right">13 024</td>
                 <td class="table__cell text-right">8, 9</td>
               </tr>
               <tr class="table__row table__row--level-3">
-                <td class="table__cell table__cell--content pl-8">Kasum(kahjum) põhivarade müügist</td>
+                <td class="table__cell table__cell--content pl-8">Profit (Loss) from Sale of Fixed Assets</td>
                 <td class="table__cell text-right">-230</td>
                 <td class="table__cell text-right">-4</td>
                 <td class="table__cell text-right">8, 9, 19</td>
               </tr>
               <tr class="table__row table__row--level-3">
-                <td class="table__cell table__cell--content pl-8">Muud korrigeerimised</td>
+                <td class="table__cell table__cell--content pl-8">Other Adjustments</td>
                 <td class="table__cell text-right">-253</td>
                 <td class="table__cell text-right">-165</td>
                 <td class="table__cell text-right">15, 16</td>
               </tr>
               <tr class="table__row table__row--level-2 font-bold">
-                <td class="table__cell table__cell--content pl-4">Kokku korrigeerimised</td>
+                <td class="table__cell table__cell--content pl-4">Total Adjustments</td>
                 <td class="table__cell text-right">11 121</td>
                 <td class="table__cell text-right">12 855</td>
                 <td class="table__cell text-right"></td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell table__cell--content pl-4">Äritegevusega seotud nõuete ja ettemaksete muutus</td>
+                <td class="table__cell table__cell--content pl-4">Change in Operating Receivables and Prepayments</td>
                 <td class="table__cell text-right">-3 515</td>
                 <td class="table__cell text-right">3 052</td>
                 <td class="table__cell text-right"></td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell table__cell--content pl-4">Varude muutus</td>
+                <td class="table__cell table__cell--content pl-4">Change in Inventories</td>
                 <td class="table__cell text-right">-15 720</td>
                 <td class="table__cell text-right">23 538</td>
                 <td class="table__cell text-right">4</td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell table__cell--content pl-4">Äritegevusega seotud kohustiste ja ettemaksete muutus
+                <td class="table__cell table__cell--content pl-4">Change in Operating Payables and Prepayments
                 </td>
                 <td class="table__cell text-right">6 783</td>
                 <td class="table__cell text-right">-10 381</td>
                 <td class="table__cell text-right"></td>
               </tr>
               <tr class="table__row font-bold">
-                <td class="table__cell table__cell--content">Kokku rahavood äritegevusest</td>
+                <td class="table__cell table__cell--content">Total Cash Flows from Operating Activities</td>
                 <td class="table__cell text-right">3 709</td>
                 <td class="table__cell text-right">42 291</td>
                 <td></td>
               </tr>
 
               <tr class="table__row">
-                <td class="table__cell table__cell--content">Rahavood investeerimistegevusest</td>
+                <td class="table__cell table__cell--content">Cash Flows from Investing Activities</td>
                 <td class="table__cell text-right"></td>
                 <td class="table__cell text-right"></td>
                 <td class="table__cell text-right"></td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell pl-4">Tasutud materiaalsete ja immateriaalsete põhivarade soetamisel</td>
+                <td class="table__cell pl-4">Payments for Acquisition of Property, Plant and Equipment and Intangible Assets</td>
                 <td class="table__cell text-right">-8 742</td>
                 <td class="table__cell text-right">-20 527</td>
                 <td class="table__cell text-right">8, 9</td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell pl-4">Laekunud materiaalsete ja immateriaalsete põhivarade müügist</td>
+                <td class="table__cell pl-4">Proceeds from Sale of Property, Plant and Equipment and Intangible Assets</td>
                 <td class="table__cell text-right">320</td>
                 <td class="table__cell text-right">350</td>
                 <td class="table__cell text-right">8</td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell pl-4">Netorahavoog tütarettevõtjate soetamisel</td>
+                <td class="table__cell pl-4">Net Cash Flow from Acquisition of Subsidiaries</td>
                 <td class="table__cell text-right">-600</td>
                 <td class="table__cell text-right">866</td>
                 <td class="table__cell text-right"></td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell table__cell--content pl-4">Tasutud sidusettevõtjate soetamisel</td>
+                <td class="table__cell table__cell--content pl-4">Payments for Acquisition of Associates</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">-1 651</td>
                 <td class="table__cell text-right">7</td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell table__cell--content">Netorahavoog tütarettevõtjate müügil</td>
+                <td class="table__cell table__cell--content">Net Cash Flow from Sale of Subsidiaries</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">5 270</td>
                 <td class="table__cell text-right">6</td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell table__cell--content">Antud laenud</td>
+                <td class="table__cell table__cell--content">Loans Granted</td>
                 <td class="table__cell text-right">-300</td>
                 <td class="table__cell text-right">-2 370</td>
                 <td class="table__cell text-right">3</td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell table__cell--content">Antud laenude tagasimaksed</td>
+                <td class="table__cell table__cell--content">Loan Repayments Received</td>
                 <td class="table__cell text-right">16</td>
                 <td class="table__cell text-right">1 950</td>
                 <td class="table__cell text-right">3</td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell table__cell--content">Laekunud intressid</td>
+                <td class="table__cell table__cell--content">Interest Received</td>
                 <td class="table__cell text-right">46</td>
                 <td class="table__cell text-right">16</td>
                 <td class="table__cell text-right"></td>
               </tr>
 
               <tr class="table__row font-bold">
-                <td class="table__cell table__cell--content">Kokku rahavood investeerimistegevusest</td>
+                <td class="table__cell table__cell--content">Total Cash Flows from Investing Activities</td>
                 <td class="table__cell text-right">-9 260</td>
                 <td class="table__cell text-right">-16 096</td>
                 <td class="table__cell text-right"></td>
               </tr>
               <tr class="table__row">
-                <td class="table__cell pl-4">Rahavood finantseerimistegevusest</td>
+                <td class="table__cell pl-4">Cash Flows from Financing Activities</td>
                 <td class="table__cell text-right"></td>
                 <td class="table__cell text-right"></td>
                 <td class="table__cell text-right"></td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell pl-4">Saadud laenud</td>
+                <td class="table__cell pl-4">Loans Received</td>
                 <td class="table__cell text-right">197 375</td>
                 <td class="table__cell text-right">186 357</td>
                 <td class="table__cell text-right">12</td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell pl-4">Saadud laenude tagasimaksed</td>
+                <td class="table__cell pl-4">Loan Repayments</td>
                 <td class="table__cell text-right">-184 646</td>
                 <td class="table__cell text-right">-201 431</td>
                 <td class="table__cell text-right">12</td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell pl-4">Arvelduskrediidi saldo muutus</td>
+                <td class="table__cell pl-4">Change in Overdraft Balance</td>
                 <td class="table__cell text-right">-1 768</td>
                 <td class="table__cell text-right">-807</td>
                 <td class="table__cell text-right">12</td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell pl-4">Kapitalirendi põhiosa tagasimaksed</td>
+                <td class="table__cell pl-4">Lease Principal Repayments</td>
                 <td class="table__cell text-right">-1 986</td>
                 <td class="table__cell text-right">-1 687</td>
                 <td class="table__cell text-right">10</td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell pl-4">Makstud intressid</td>
+                <td class="table__cell pl-4">Interest Paid</td>
                 <td class="table__cell text-right">-7 230</td>
                 <td class="table__cell text-right">-6 128</td>
                 <td class="table__cell text-right"></td>
               </tr>
               <tr class="table__row table__row--level-2">
-                <td class="table__cell pl-4">Laekumised sihtfinantseerimisest</td>
+                <td class="table__cell pl-4">Proceeds from Targeted Financing</td>
                 <td class="table__cell text-right">614</td>
                 <td class="table__cell text-right">796</td>
                 <td class="table__cell text-right">16</td>
               </tr>
 
               <tr class="table__row font-bold">
-                <td class="table__cell table__cell--content">Kokku rahavood finantseerimistegevusest</td>
+                <td class="table__cell table__cell--content">Total Cash Flows from Financing Activities</td>
                 <td class="table__cell text-right">2 359</td>
                 <td class="table__cell text-right">-22 900</td>
                 <td></td>
               </tr>
 
               <tr class="table__row font-bold">
-                <td class="table__cell table__cell--content">Kokku rahavood</td>
+                <td class="table__cell table__cell--content">Total Cash Flows</td>
                 <td class="table__cell text-right">-3 192</td>
                 <td class="table__cell text-right">3 295</td>
                 <td></td>
               </tr>
               <tr class="table__row">
-                <td class="table__cell table__cell--content pl-4">Raha ja raha ekvivalendid perioodi alguses</td>
+                <td class="table__cell table__cell--content pl-4">Cash and Cash Equivalents at Beginning of Period</td>
                 <td class="table__cell text-right">4 297</td>
                 <td class="table__cell text-right">1 002</td>
                 <td class="table__cell text-right">2</td>
               </tr>
               <tr class="table__row font-bold">
-                <td class="table__cell table__cell--content">Raha ja raha ekvivalentide muutus</td>
+                <td class="table__cell table__cell--content">Change in Cash and Cash Equivalents</td>
                 <td class="table__cell text-right">-3 192</td>
                 <td class="table__cell text-right">3 295</td>
                 <td></td>
               </tr>
               <tr class="table__row">
-                <td class="table__cell table__cell--content">Raha ja ekvivalendid perioodi lõpus</td>
+                <td class="table__cell table__cell--content">Cash and Cash Equivalents at End of Period</td>
                 <td class="table__cell text-right">1 105</td>
                 <td class="table__cell text-right">4 297</td>
                 <td class="table__cell text-right">2</td>
@@ -1267,9 +1267,9 @@
       <article class="content-block mb-xxl">
         <div>
           <h2 class="block__title mb-xxs">
-            Konsolideeritud omakapitali muutuste aruanne
+            Consolidated Statement of Changes in Equity
           </h2>
-          <p class="mb-xxs">(tuhandetes eurodes)</p>
+          <p class="mb-xxs">(in thousands of euros)</p>
         </div>
         <div class="table">
           <table>
@@ -1286,18 +1286,17 @@
             <thead>
               <tr class="table__header bg-flamingo">
                 <th class="table__cell table__header-text text-left"></th>
-                <th class="table__header-text text-center bottom-border" colspan="5">Emaettevõtja aktsionäridele või
-                  osanikele kuuluv omakapital</th>
-                <th rowspan="2" class="table__cell table__header-text text-right">Vähemusosanike osalus</th>
-                <th rowspan="2" class="table__header-text text-right">Kokku</th>
+                <th class="table__header-text text-center bottom-border" colspan="5">Equity Attributable to Owners of the Parent</th>
+                <th rowspan="2" class="table__cell table__header-text text-right">Non-controlling Interest</th>
+                <th rowspan="2" class="table__header-text text-right">Total</th>
               </tr>
               <tr class="table__header bg-flamingo">
                 <th class="table__header-text text-left"></th>
-                <th class="table__cell table__header-text text-right">Aktsiakapital nimiväärtuses</th>
-                <th class="table__cell table__header-text text-right">Ülekurss</th>
-                <th class="table__cell table__header-text text-right">Kohustuslik reservkapital</th>
-                <th class="table__cell table__header-text text-right">Muud reservid</th>
-                <th class="table__cell table__header-text text-right">Jaotamata kasum (-kahjum)</th>
+                <th class="table__cell table__header-text text-right">Share Capital at Nominal Value</th>
+                <th class="table__cell table__header-text text-right">Share Premium</th>
+                <th class="table__cell table__header-text text-right">Legal Reserve</th>
+                <th class="table__cell table__header-text text-right">Other Reserves</th>
+                <th class="table__cell table__header-text text-right">Retained Earnings (Loss)</th>
               </tr>
             </thead>
             <tbody>
@@ -1312,7 +1311,7 @@
                 <td class="table__cell text-right">131 410</td>
               </tr>
               <tr class="table__row">
-                <td class="table__cell table__cell--content">Aruandeaasta kasum (kahjum)</td>
+                <td class="table__cell table__cell--content">Profit (Loss) for the Year</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">0</td>
@@ -1322,7 +1321,7 @@
                 <td class="table__cell text-right">8 697</td>
               </tr>
               <tr class="table__row">
-                <td class="table__cell table__cell--content">Muutused reservides</td>
+                <td class="table__cell table__cell--content">Changes in Reserves</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">0</td>
@@ -1332,7 +1331,7 @@
                 <td class="table__cell text-right">2 356</td>
               </tr>
               <tr class="table__row">
-                <td class="table__cell table__cell--content">Muud muutused omakapitalis</td>
+                <td class="table__cell table__cell--content">Other Changes in Equity</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">0</td>
@@ -1352,7 +1351,7 @@
                 <td class="table__cell text-right">142 169</td>
               </tr>
               <tr class="table__row">
-                <td class="table__cell table__cell--content">Aruande-aasta kasum (-kahjum)</td>
+                <td class="table__cell table__cell--content">Profit (Loss) for the Year</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">0</td>
@@ -1362,7 +1361,7 @@
                 <td class="table__cell text-right">-5 258</td>
               </tr>
               <tr class="table__row">
-                <td class="table__cell table__cell--content">Muutused reservides</td>
+                <td class="table__cell table__cell--content">Changes in Reserves</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">0</td>
@@ -1372,7 +1371,7 @@
                 <td class="table__cell text-right">6 452</td>
               </tr>
               <tr class="table__row">
-                <td class="table__cell table__cell--content">Muud muutused omakapitalis</td>
+                <td class="table__cell table__cell--content">Other Changes in Equity</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">0</td>
                 <td class="table__cell text-right">0</td>
@@ -1397,17 +1396,17 @@
         <br>
           <br>
           <p>
-            Omakapitali kirjel „Muud reservid” kajastatakse põhivarade ümberhindluse reservi ning maagaasi ja
-            elektrienergia
-            riskimaandamise reserve. Lisainfo põhivarade ümberhindluse reservi muutuste kohta on lisas 8 ning
-            riskimaandamise
-            reservide kohta lisas 35.
+            The equity item „Muud reservid” includes fixed assets ümberhindluse reservi and natural gas and
+            electricity
+            risk management reserves. Additional information fixed assets ümberhindluse reservi changes is provided in Note 8 and
+            risk management
+            reserves in Note 35.
           </p>
           <p>
-            Kirjel „Muud muutused omakapitalis“ on kajastatud muutused äriühendustest.
+            The item „Other Changes in Equity“ reflects changes from äriühendustest.
           </p>
           <p>
-            Täpsem informatsioon aktsiakapitali ning muude omakapitali kirjete kohta on lisas 17.
+            More detailed information about share capital and other equity items is provided in Note 17.
           </p>
       </article>
 
@@ -1429,44 +1428,44 @@
 
           <nav class="footer__nav">
             <div class="menu__section">
-              <a href="/" class="menu__button">
+              <a href="index.html" class="menu__button">
                 <span class="menu__icon menu__icon--home"></span>
-                Avaleht
+                Homepage
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="ettevottest.html" class="menu__button">
+              <a href="about.html" class="menu__button">
                 <span class="menu__icon menu__icon--a-monogram"></span>
-                Ettevõttest
+                About the Company
               </a>
             </div>
             
             <div class="menu__section">
-              <a href="arisuunad.html" class="menu__button">
+              <a href="business-lines.html" class="menu__button">
                 <span class="menu__icon menu__icon--eur"></span>
-                Ärisuunad
+                Business Lines
               </a>
             </div>
             
                         <div class="menu__section">
-                          <a href="kestlikkus.html" class="menu__button">
+                          <a href="sustainability.html" class="menu__button">
                             <span class="menu__icon menu__icon--greenspark"></span>
-                            Kestlikkus (ESG)
+                            Sustainability and Governance
                           </a>
                         </div>
 
             <div class="menu__section">
-              <a href="finantstulemused.html" class="menu__button menu__button--active">
+              <a href="economic-results.html" class="menu__button menu__button--active">
                 <span class="menu__icon menu__icon--news"></span>
-                Finantstulemused
+                Economic Results
               </a>
             </div>
 
             <div class="menu__section">
-              <a href="alexela_aruanne_2024.pdf" target="_blank" class="menu__button">
+              <a href="alexela_aruanne_2024_ENG.pdf" target="_blank" class="menu__button">
                 <span class="menu__icon menu__icon--contract"></span>
-                Laadi alla PDF
+                Download PDF
               </a>
             </div>
 
@@ -1519,7 +1518,7 @@
           </div>
   
           <div class="footer__slogan">
-            Energia kogu eluks
+            Energy for life
           </div>
   
         </div>
