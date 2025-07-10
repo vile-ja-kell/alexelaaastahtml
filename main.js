@@ -333,11 +333,49 @@ window.addEventListener('wheel', (e) => {
 
 window.addEventListener('DOMContentLoaded', () => {
   const lang = window.location.pathname.startsWith('/en') ? 'en' : 'et';
-  const selector = document.getElementById('language');
-  if (selector) {
-    selector.value = lang;
+  
+  // Update radio button selection
+  const radioButton = document.getElementById(lang);
+  if (radioButton) {
+    radioButton.checked = true;
   }
+  
+  // Update summary text
+  const summaryText = document.querySelector('.language__selected span');
+  if (summaryText) {
+    summaryText.textContent = lang.toUpperCase();
+  }
+  
+  // Initialize language toggle functionality
+  initLanguageToggle();
 });
+
+function initLanguageToggle() {
+  const languageInputs = document.querySelectorAll('.language__input');
+  const details = document.querySelector('.language__select');
+  const summaryText = document.querySelector('.language__selected span');
+  
+  languageInputs.forEach(input => {
+    input.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        const selectedLang = e.target.value;
+        
+        // Update summary text
+        if (summaryText) {
+          summaryText.textContent = selectedLang.toUpperCase();
+        }
+        
+        // Close the dropdown
+        if (details) {
+          details.removeAttribute('open');
+        }
+        
+        // Switch language
+        switchLanguage(selectedLang);
+      }
+    });
+  });
+}
 
 function switchLanguage(selectedLang) {
   const etToEn = {

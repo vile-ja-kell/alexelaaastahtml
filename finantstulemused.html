@@ -27,11 +27,30 @@
       </div>
       <div class="nav__subcontainer">
         <div class="language">
-          <select name="language" id="language" class="language__select" onchange="switchLanguage(this.value)">
-            <option value="et">ET</option>
-            <option value="en">EN</option>
-          </select>
-        </div>
+          <!-- CSS-only language selector using details/summary -->
+          <details class="language__select">
+              <summary class="language__selected">
+                  <span>ET</span>
+                  <div class="language__arrow">
+                      <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                          <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                  </div>
+              </summary>
+              
+              <div class="language__dropdown">
+                  <input type="radio" id="et" name="language" value="et" class="language__input" checked>
+                  <label for="et" class="language__option">
+                      <span class="language__text">ET</span>
+                  </label>
+                  
+                  <input type="radio" id="en" name="language" value="en" class="language__input">
+                  <label for="en" class="language__option">
+                      <span class="language__text">EN</span>
+                  </label>
+              </div>
+          </details>
+      </div>
         <button class="menu-toggle" aria-label="Toggle menu">
           <div class="menu-toggle__icon">
             <span></span>
