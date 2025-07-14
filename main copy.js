@@ -332,9 +332,7 @@ window.addEventListener('wheel', (e) => {
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  // Detect current language based on path structure
-  const currentPath = window.location.pathname;
-  const lang = currentPath.includes('/en/') ? 'en' : 'et';
+  const lang = window.location.pathname.startsWith('/en') ? 'en' : 'et';
   
   // Update radio button selection
   const radioButton = document.getElementById(lang);
@@ -380,58 +378,25 @@ function initLanguageToggle() {
 }
 
 function switchLanguage(selectedLang) {
-  // File mapping between Estonian and English
-  const fileMapping = {
-    et: {
-      'index.html': 'index.html',
-      'about.html': 'ettevottest.html',
-      'business-lines.html': 'arisuunad.html',
-      'sustainability.html': 'kestlikkus.html',
-      'economic-results.html': 'finantstulemused.html'
-    },
-    en: {
-      'index.html': 'index.html',
-      'ettevottest.html': 'about.html',
-      'arisuunad.html': 'business-lines.html',
-      'kestlikkus.html': 'sustainability.html',
-      'finantstulemused.html': 'economic-results.html'
-    }
+  const etToEn = {
+    'index.html': 'index.html',
+    'ettevottest.html': 'about.html',
+    'arisuunad.html': 'business-lines.html',
+    'kestlikkus.html': 'sustainability.html',
+    'finantstulemused.html': 'economic-results.html',
   };
 
   const currentPath = window.location.pathname;
-  
-  // Check if we're currently in an 'en' folder
-  const isInEnglish = currentPath.includes('/en/');
-  
-  if (selectedLang === 'en' && !isInEnglish) {
-    // Switch from Estonian to English
-    // Extract current filename
-    const pathParts = currentPath.split('/');
-    const currentFile = pathParts[pathParts.length - 1] || 'index.html';
-    
-    // Map to English filename
-    const englishFile = fileMapping.en[currentFile] || currentFile;
-    
-    // Build new path by inserting '/en/' before the filename
-    const basePath = pathParts.slice(0, -1).join('/'); // Everything except the filename
-    const newPath = basePath + '/en/' + englishFile;
-    
-    window.location.pathname = newPath;
-    
-  } else if (selectedLang === 'et' && isInEnglish) {
-    // Switch from English to Estonian
-    // Remove '/en/' from path and map filename
-    const pathParts = currentPath.split('/');
-    const currentFile = pathParts[pathParts.length - 1] || 'index.html';
-    
-    // Map to Estonian filename
-    const estonianFile = fileMapping.et[currentFile] || currentFile;
-    
-    // Remove 'en' from path parts and rebuild
-    const newPathParts = pathParts.filter(part => part !== 'en');
-    newPathParts[newPathParts.length - 1] = estonianFile; // Replace filename
-    
-    const newPath = newPathParts.join('/');
-    window.location.pathname = newPath;
+  const currentFile = currentPath.split('/').pop() || 'index.html';
+
+  if (selectedLang === 'et') {
+    // Redirect to Estonian root files
+    const etPath = Object.entries(etToEn).find(([et, en]) => en === currentFile)?.[0] || '';
+    const newPath = '/' + etPath;
+    window.location.pathname = newPath || '/';
+  } else {
+    // Redirect to English folder with corresponding file
+    const enFile = etToEn[currentFile] || 'index.html';
+    window.location.pathname = '/en/' + enFile;
   }
 }
