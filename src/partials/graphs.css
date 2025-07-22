@@ -1,7 +1,7 @@
 /* Chart Layout */
 .chart {
     font-size: var(--font-sm);
-    padding: var(--size-md);
+    padding-block: var(--size-md);
     @media (--viewport-md) {
         font-size: var(--font-md);
     }
