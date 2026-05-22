@@ -6,6 +6,17 @@ Last updated: see git log for `docs/refresh-2025-followups.md`.
 
 ---
 
+## 0a. Community section intro (`index.html` "Koos loome tugeva kogukonna")
+
+After the verbatim-only rule was set, I reverted my synthesized text and restored the original 2024 prose. The restored text still references 2024-specific events that the user may want to update later — but only with verbatim 2025 PDF excerpts, not synthesized prose:
+
+- "Aasta 2024 sügisel uuendasime oma sponsorluspõhimõtteid…" — historical fact, still accurate from 2025 vantage point
+- "Alexela pälvis 2024. aastal kultuuriministeeriumi aasta kultuurisõbra tiitli ning sai aasta muusikasõbralikuima ettevõtte tunnustuse" — these are 2024 awards. The 2025 PDF mentions the company has *been* awarded these titles plus the Kaitseministeerium riigikaitsjate toetaja tunnustus from 2025. If the user wants the section to reflect 2025, the verbatim PDF passage to use is in the CEO foreword (p4-5) and "Alexelast lühidalt" chapter (p6).
+
+**Action**: User to provide direction. Either keep the restored 2024 text (factually correct as history), or copy-paste a specific 2025 PDF excerpt to swap in.
+
+---
+
 ## 0. Tree-planting program stats on `index.html` (Istutame puid section)
 
 The community / tree-planting widget shows three counters (currently 2024 end-of-year values):
