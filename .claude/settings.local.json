@@ -6,7 +6,9 @@
       "Bash(pdftotext:*)",
       "Bash(find:*)",
       "Bash(sed:*)",
-      "Bash(jq --version)"
+      "Bash(jq --version)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ],
     "deny": []
   }
