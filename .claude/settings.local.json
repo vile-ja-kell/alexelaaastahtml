@@ -5,7 +5,8 @@
       "Bash(rg:*)",
       "Bash(pdftotext:*)",
       "Bash(find:*)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "Bash(jq --version)"
     ],
     "deny": []
   }

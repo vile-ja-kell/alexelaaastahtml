@@ -6,6 +6,9 @@
   "scripts": {
     "css:dev": "MINIFY_CSS=false postcss src/style.css -o css/style.css --map --watch",
     "css:build": "MINIFY_CSS=true postcss src/style.css -o css/style.css --map",
+    "serve": "browser-sync start --config bs-config.cjs",
+    "dev": "concurrently -n css,serve -c blue,green \"npm:css:dev\" \"npm:serve\"",
+    "build": "bash scripts/build.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +16,8 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "browser-sync": "^3.0.3",
+    "concurrently": "^9.1.0",
     "cssnano": "^7.0.6",
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.1",
