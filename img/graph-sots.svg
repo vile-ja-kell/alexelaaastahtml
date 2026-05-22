@@ -9,12 +9,12 @@
 <path d="M0 288H450.912" stroke="#D1D3D4" stroke-width="1.55781"/>
 <path d="M0 329H450.912" stroke="#D1D3D4" stroke-width="1.55781"/>
 <path d="M0 370H450.912" stroke="#F2F4F7" stroke-width="2.22544"/>
-<g clip-path="url(#clip0_10058_148418)">
-<path d="M16 160.754L120.068 86.2805L222.932 49H328L436 58V370H223.952H120.068H16V160.754Z" fill="#00BDF2"/>
-<path d="M16 83L120.653 124L223.485 144L327 27L437.5 31.5" stroke="#3D866B" stroke-width="8" stroke-linecap="round"/>
+<g clip-path="url(#clip0_sots)">
+<path d="M16 222.40 L100 148.60 L184 130.15 L268 130.15 L352 130.15 L436 37.90 V370 H352 H268 H184 H100 H16 V222.40 Z" fill="#00BDF2"/>
+<path d="M16 111.70 L100 167.05 L184 203.95 L268 60.04 L352 74.80 L436 37.90" stroke="#3D866B" stroke-width="8" stroke-linecap="round"/>
 </g>
 <defs>
-<clipPath id="clip0_10058_148418">
+<clipPath id="clip0_sots">
 <rect width="419" height="369" fill="white" transform="translate(16 1)"/>
 </clipPath>
 </defs>

@@ -52,16 +52,25 @@ These six KPI cards still show 2024 values. They were curated marketing-summary 
 
 ---
 
-## 2. Inline SVG charts show 2024-period data
+## 2. Inline SVG charts — status
 
-The site has several inline SVG charts with hard-coded time-series labels (2020-2024 range) and bar values. They were intentionally NOT touched in this content refresh (per scope decision).
+**ettevottest.html `Muudame maailma paremaks` — UPDATED to 2020-2025**
 
-Examples:
-- Fuel volumes 2020-2024 chart
-- CO₂ trend chart
-- Market share evolution charts
+Three SVGs regenerated from PDF p11-12 chart readings:
+- `img/graph-sots.svg` — SOTSIAALNE – TOETUSPROJEKTID (Toetusprojekte count + € value)
+- `img/graph-kogukond.svg` — KOGUKONNAPROGRAMM (puid + CO₂ + liikmed)
+- `img/graph-keskkond.svg` — KESKKONDA SÄÄSTVATE TANKIMISLAHENDUSTE ARENDAMINE (biometaan MWh + laetud elekter MWh)
 
-**Action**: Separate effort to update SVG data + axis labels to a 2021-2025 window. Files likely in `src/partials/graphs.css` and inline in `index.html` / `kestlikkus.html` / `arisuunad.html`.
+X-axis extended to include 2025 (20-25). Y-axis ranges updated:
+- Kogukonnaprogramm: left 0-1 400 000 → 0-2 500 000; right 0-60 000 → 0-70 000
+- Keskkonda säästvate: left 0-900 000 → 0-90 000 (MWh); right 0-3 500 → 0-6 000 (MWh)
+
+**Values are visual estimates from screenshots of the PDF** — please spot-check against the PDF when reviewing. Off by a few percent on any individual data point is likely.
+
+**Other pages still have charts that show 2024-period data**:
+- `index.html` `Istutame puid` widget (separate effort, see item #0)
+- Likely `kestlikkus.html` (CO₂ trend, market share charts — not yet inspected)
+- Likely `arisuunad.html` (per-business-line trend charts — not yet inspected)
 
 ---
 

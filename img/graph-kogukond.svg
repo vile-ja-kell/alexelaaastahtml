@@ -7,13 +7,13 @@
 <path d="M0 207H450.912" stroke="#D1D3D4" stroke-width="1.55781"/>
 <path d="M0 248H450.912" stroke="#D1D3D4" stroke-width="1.55781"/>
 <path d="M0 289H450.912" stroke="#F2F4F7" stroke-width="2.22544"/>
-<g clip-path="url(#clip0_10058_148397)">
-<path d="M16 267.067L118.889 229.403L222 144.103L325 53L437.5 13.5V289H222H118.889H16V267.067Z" fill="#3D876C"/>
-<path d="M13 275L119 251.5L326.5 144.5L439.5 120.5" stroke="#00BCF1" stroke-width="6" stroke-linecap="round"/>
-<path d="M7 261.5L117 201L221.5 87.5L327 27L434.5 2" stroke="#969696" stroke-width="6" stroke-linecap="round"/>
+<g clip-path="url(#clip0_kog)">
+<path d="M16 283.26 L100 260.30 L184 202.90 L268 162.72 L352 116.80 L436 59.40 V289 H352 H268 H184 H100 H16 V283.26 Z" fill="#3D876C"/>
+<path d="M16 286.13 L100 271.78 L184 243.08 L268 220.12 L352 197.16 L436 151.24" stroke="#00BCF1" stroke-width="6" stroke-linecap="round"/>
+<path d="M16 268.50 L100 166.00 L184 84.00 L268 43.00 L352 34.80 L436 34.80" stroke="#969696" stroke-width="6" stroke-linecap="round"/>
 </g>
 <defs>
-<clipPath id="clip0_10058_148397">
+<clipPath id="clip0_kog">
 <rect width="419" height="289" fill="white" transform="translate(16)"/>
 </clipPath>
 </defs>
