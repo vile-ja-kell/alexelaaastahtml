@@ -1,0 +1,21 @@
+<svg width="451" height="372" viewBox="0 0 451 372" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 1H450.912" stroke="#D1D3D4" stroke-width="1.55781"/>
+<path d="M0 42H450.912" stroke="#D1D3D4" stroke-width="1.55781"/>
+<path d="M0 83H450.912" stroke="#D1D3D4" stroke-width="1.55781"/>
+<path d="M0 124H450.912" stroke="#D1D3D4" stroke-width="1.55781"/>
+<path d="M0 165H450.912" stroke="#D1D3D4" stroke-width="1.55781"/>
+<path d="M0 206H450.912" stroke="#D1D3D4" stroke-width="1.55781"/>
+<path d="M0 247H450.912" stroke="#D1D3D4" stroke-width="1.55781"/>
+<path d="M0 288H450.912" stroke="#D1D3D4" stroke-width="1.55781"/>
+<path d="M0 329H450.912" stroke="#D1D3D4" stroke-width="1.55781"/>
+<path d="M0 370H450.912" stroke="#F2F4F7" stroke-width="2.22544"/>
+<g clip-path="url(#clip0_tank)">
+<path d="M16 358.93 L100 354.50 L184 330.89 L268 206.16 L352 129.41 L436 37.90 V370 H352 H268 H184 H100 H16 V358.93 Z" fill="#00BDF2"/>
+<path d="M16 185.50 L100 154.75 L184 31.75 L268 31.75 L352 31.75 L436 31.75" stroke="#3D866B" stroke-width="8" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0_tank">
+<rect width="419" height="369" fill="white" transform="translate(16 1)"/>
+</clipPath>
+</defs>
+</svg>
