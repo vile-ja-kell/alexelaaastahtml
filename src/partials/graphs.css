@@ -59,8 +59,12 @@
     display: flex;
     justify-content: space-between;
     padding-top: 0.625rem;
-    margin-left: 6.25rem;
+    margin-left: 6.8rem;
     margin-right: 6.25rem;
+    @media (--viewport-md) {
+        margin-left: 7.4rem;
+        margin-right: 6.75rem;
+    }
     &--two-col {
         margin-left: 5.4rem;
         margin-right: 0.8rem;

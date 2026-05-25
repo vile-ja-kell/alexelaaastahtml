@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<package version="3.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" xml:lang="et-EE" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/">
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+		<meta name="generator" content="Adobe InDesign 21.3" />
+		<meta name="cover" content="x1.png" />
+		<meta property="ibooks:specified-fonts">true</meta>
+		<dc:title>Alexela_aruanne_2025_v3</dc:title>
+		<dc:date>2026-05-25T11:47:38Z</dc:date>
+		<dc:language>ar-SA</dc:language>
+		<dc:language>en-US</dc:language>
+		<dc:language>et-EE</dc:language>
+		<meta property="dcterms:modified">2026-05-25T11:47:38Z</meta>
+		<dc:identifier id="bookid">urn:uuid:29d919dd-24f5-4384-be78-b447c9dc299b</dc:identifier>
+		<!--accessibility options-->
+	</metadata>
+	<manifest>
+		<item id="cover" href="cover.xhtml" media-type="application/xhtml+xml" />
+		<item id="Alexela_aruanne_2025_v3" href="Alexela_aruanne_2025_v3.xhtml" media-type="application/xhtml+xml" />
+		<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+		<item id="toc" href="toc.xhtml" media-type="application/xhtml+xml" properties="nav" />
+		<item id="idGeneratedStyles.css" href="css/idGeneratedStyles.css" media-type="text/css" />
+		<item id="Adieu-Bold.otf" href="font/Adieu-Bold.otf" media-type="application/vnd.ms-opentype" />
+		<item id="Calibri-Light.ttf" href="font/Calibri-Light.ttf" media-type="application/x-font-ttf" />
+		<item id="Commissioner-Bold.ttf" href="font/Commissioner-Bold.ttf" media-type="application/x-font-ttf" />
+		<item id="Commissioner-Italic.ttf" href="font/Commissioner-Italic.ttf" media-type="application/x-font-ttf" />
+		<item id="Commissioner-Medium.ttf" href="font/Commissioner-Medium.ttf" media-type="application/x-font-ttf" />
+		<item id="Commissioner-Regular.ttf" href="font/Commissioner-Regular.ttf" media-type="application/x-font-ttf" />
+		<item id="_DSF1883.png" href="image/_DSF1883.png" media-type="image/png" />
+		<item id="_DSF5232.png" href="image/_DSF5232.png" media-type="image/png" />
+		<item id="_DSF7698.png" href="image/_DSF7698.png" media-type="image/png" />
+		<item id="_MG_0374.png" href="image/_MG_0374.png" media-type="image/png" />
+		<item id="_MG_9327.png" href="image/_MG_9327.png" media-type="image/png" />
+		<item id="_MG_9337.png" href="image/_MG_9337.png" media-type="image/png" />
+		<item id="_MG_9629.png" href="image/_MG_9629.png" media-type="image/png" />
+		<item id="_MG_9693.png" href="image/_MG_9693.png" media-type="image/png" />
+		<item id="_MG_9868.png" href="image/_MG_9868.png" media-type="image/png" />
+		<item id="x1.png" href="image/1.png" media-type="image/png" properties="cover-image" />
+		<item id="x13_rdo8990.png" href="image/13_rdo8990.png" media-type="image/png" />
+		<item id="x19_rdo9026.png" href="image/19_rdo9026.png" media-type="image/png" />
+		<item id="x20_rdo9034.png" href="image/20_rdo9034.png" media-type="image/png" />
+		<item id="x30_rdo2472_1.png" href="image/30_rdo2472_1.png" media-type="image/png" />
+		<item id="x20230926_0043.png" href="image/20230926_0043.png" media-type="image/png" />
+		<item id="AdobeStock_533764445.png" href="image/AdobeStock_533764445.png" media-type="image/png" />
+		<item id="AdobeStock_534059822.jpg" href="image/AdobeStock_534059822.jpg" media-type="image/jpeg" />
+		<item id="AdobeStock_534059822.png" href="image/AdobeStock_534059822.png" media-type="image/png" />
+		<item id="AdobeStock_561724510.png" href="image/AdobeStock_561724510.png" media-type="image/png" />
+		<item id="AdobeStock_649874310.png" href="image/AdobeStock_649874310.png" media-type="image/png" />
+		<item id="AdobeStock_868381835.png" href="image/AdobeStock_868381835.png" media-type="image/png" />
+		<item id="Alexela_Maine_Still_1.png" href="image/Alexela_Maine_Still_1.png" media-type="image/png" />
+		<item id="Alexela_Maine_Still_11.png" href="image/Alexela_Maine_Still_11.png" media-type="image/png" />
+		<item id="Andreas.png" href="image/Andreas.png" media-type="image/png" />
+		<item id="Droon_-1-.png" href="image/Droon_%281%29.png" media-type="image/png" />
+		<item id="Droon_-2-.jpg" href="image/Droon_%282%29.jpg" media-type="image/jpeg" />
+		<item id="DSCF2501.png" href="image/DSCF2501.png" media-type="image/png" />
+		<item id="DSCF3932.png" href="image/DSCF3932.png" media-type="image/png" />
+		<item id="employer-banner-innovation.png" href="image/employer-banner-innovation.png" media-type="image/png" />
+		<item id="Enerhack.png" href="image/Enerhack.png" media-type="image/png" />
+		<item id="Esimene_la-a-ne_LPG_laev_-1-.png" href="image/Esimene_la%CC%88a%CC%88ne_LPG_laev_%281%29.png" media-type="image/png" />
+		<item id="Esimene_la-a-ne_LPG_laev_-1-1.png" href="image/Esimene_la%CC%88a%CC%88ne_LPG_laev_%281%291.png" media-type="image/png" />
+		<item id="Hero-1.png" href="image/Hero-1.png" media-type="image/png" />
+		<item id="image10.jpg" href="image/image10.jpg" media-type="image/jpeg" />
+		<item id="image21.png" href="image/image21.png" media-type="image/png" />
+		<item id="Jalaka_MB_2.png" href="image/Jalaka_MB_2.png" media-type="image/png" />
+		<item id="Kogukonnapa-ev_2023_-4-.png" href="image/Kogukonnapa%CC%88ev_2023_%284%29.png" media-type="image/png" />
+		<item id="Kogukonnapa-ev_2023_-39-.png" href="image/Kogukonnapa%CC%88ev_2023_%2839%29.png" media-type="image/png" />
+		<item id="Lottemaa.png" href="image/Lottemaa.png" media-type="image/png" />
+		<item id="ma-nnid.png" href="image/ma%CC%88nnid.png" media-type="image/png" />
+		<item id="ma-nnid1.png" href="image/ma%CC%88nnid1.png" media-type="image/png" />
+		<item id="Marti_Ha-a-l.png" href="image/Marti_Ha%CC%88a%CC%88l.png" media-type="image/png" />
+		<item id="Marti_Ha-a-l1.png" href="image/Marti_Ha%CC%88a%CC%88l1.png" media-type="image/png" />
+		<item id="Meri.png" href="image/Meri.png" media-type="image/png" />
+		<item id="Meri1.png" href="image/Meri1.png" media-type="image/png" />
+		<item id="Mikhail_Kazarin_2024_-suur-_-2-.png" href="image/Mikhail_Kazarin_2024_%28suur%29_%282%29.png" media-type="image/png" />
+		<item id="muru.png" href="image/muru.png" media-type="image/png" />
+		<item id="nikola-johnny-mirkovic-Z_dnvde5wxc-unsplash.png" href="image/nikola-johnny-mirkovic-Z_dnvde5wxc-unsplash.png" media-type="image/png" />
+		<item id="Putukate_drive-in_-2-.png" href="image/Putukate_drive-in_%282%29.png" media-type="image/png" />
+		<item id="Taevas.png" href="image/Taevas.png" media-type="image/png" />
+		<item id="Taevas1.png" href="image/Taevas1.png" media-type="image/png" />
+		<item id="Tark-elekter-alexela-iphone-mockup-3.png" href="image/Tark-elekter-alexela-iphone-mockup-3.png" media-type="image/png" />
+		<item id="Telia_Digital_Hub_2024_-Erlend_S-taub-_2.png" href="image/Telia_Digital_Hub_2024_%28Erlend_S%CC%8Ctaub%29_2.png" media-type="image/png" />
+	</manifest>
+	<spine toc="ncx">
+		<itemref idref="cover" linear="no" />
+		<itemref idref="Alexela_aruanne_2025_v3" />
+	</spine>
+	<guide>
+		<reference type="cover" href="cover.xhtml" title="Cover" />
+		<reference type="toc" href="Alexela_aruanne_2025_v3.xhtml#_idContainer011" title="Table of Contents" />
+	</guide>
+</package>
