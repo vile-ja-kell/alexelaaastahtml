@@ -7,6 +7,15 @@ Project: static multi-page HTML site for Alexela's 2024 annual report. Bilingual
 - **`project-conventions`** — CSS class taxonomy (section types, block types), file layout, PostCSS pipeline, JS conventions. Loads automatically when editing HTML/CSS/JS in this repo.
 - **`et-en-parity`** — bilingual page mapping and what must be mirrored vs differ. Triggers whenever a root `*.html` or `en/*.html` is edited.
 
+## Key reference docs (read these before any content refresh)
+
+- `docs/content-source-index.md` — precise map of which HTML section comes from which EPUB v3 line range. Use this to locate source text fast.
+- `docs/refresh-2025-state.md` — snapshot of where the 2025 Estonian refresh stands. Read first when picking up the work in a new session.
+- `docs/english-translation-workflow.md` — workflow for refreshing `en/*.html` pages from the client's English Word document.
+- `docs/refresh-2025-followups.md` — outstanding TODOs that need user/marketing input.
+
+**Authoritative source**: EPUB v3 at `raw-material-no-for-develop/Alexela_aruanne_2025_v3/OEBPS/Alexela_aruanne_2025_v3.xhtml`. Never invent or paraphrase — see `feedback_verbatim_content_only.md` in user memory.
+
 ## Page pairs (memorize)
 
 | Estonian (root)         | English (`en/`)             |
