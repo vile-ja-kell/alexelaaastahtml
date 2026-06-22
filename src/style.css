@@ -48,6 +48,24 @@ h3 {
   font-weight: 600;
 }
 
+/* Sektsiooni pealkiri – sama suur sõltumata elemendist (h2 või h3),
+   et tütarettevõtete h3-pealkirjad oleksid sama suured kui kütuste h2-d */
+.block__title {
+  font-size: clamp(var(--title-display-sm), 4vw, var(--title-display-md));
+  font-weight: 700;
+}
+
+/* Grupi vahepealkiri (nt "Sidus- ja tütarettevõtted") – visuaalselt väiksem,
+   pole article, vaid lihtne pealkiri sisuga joondatud */
+.section-group-title {
+  max-width: var(--width-xl);
+  margin-inline: auto;
+  margin-block: var(--gap-xl) var(--gap-md);
+  font-size: clamp(var(--title-display-xs), 3vw, var(--title-display-sm));
+  font-weight: 700;
+  text-align: left;
+}
+
 p {
   margin-bottom: var(--size-lg);
 }
