@@ -39,6 +39,13 @@
     background-color: var(--graphics-mint);
   }
 }
+.section--mint-light {
+  background-color: var(--graphics-mint-light);
+  &:before,
+  &:after {
+    background-color: var(--graphics-mint-light);
+  }
+}
 .section--cream {
   background-color: var(--graphics-cream);
   &:before,

@@ -748,19 +748,27 @@ figcaption {
   height: 1.5rem;
   border-radius: 50%;
   display: inline-block;
-  &--dark {
-    background: var(--success-500);
+  /* 5-astmeline roheline skaala, vastab img/estonia.svg maakonnavärvidele */
+  &--1 {
+    background: rgb(173, 219, 158);
   }
-  &--medium {
-    background: var(--success-300);
+  &--2 {
+    background: rgb(144, 199, 125);
   }
-  &--light {
-    background: var(--success-200);
+  &--3 {
+    background: rgb(115, 178, 92);
+  }
+  &--4 {
+    background: rgb(86, 158, 60);
+  }
+  &--5 {
+    background: rgb(66, 122, 44);
   }
 }
 .legend {
   &__items {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--gap-sm);
   }
   &__item {
