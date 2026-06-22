@@ -658,6 +658,41 @@ figcaption {
   margin-top: 0;
 }
 
+/* Avalehe tõestusväited – kolm lühikest punkti Alexela mummudega */
+.proof {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-lg);
+  max-width: var(--width-xl);
+  margin-inline: auto;
+  list-style: none;
+  padding-left: 0;
+  @media (--viewport-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.proof__item {
+  position: relative;
+  padding-left: 3rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.proof__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-image: url(../img/icons/monogram.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 /* Alexela list style */
 
 .alexela__list {
