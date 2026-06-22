@@ -46,6 +46,13 @@
     background-color: var(--graphics-mint-light);
   }
 }
+.section--blue-light {
+  background-color: var(--graphics-blue-light);
+  &:before,
+  &:after {
+    background-color: var(--graphics-blue-light);
+  }
+}
 .section--cream {
   background-color: var(--graphics-cream);
   &:before,
