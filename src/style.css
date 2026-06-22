@@ -607,24 +607,12 @@ figcaption {
 /* Cards */
 
 .cards {
-  display: grid;
+  /* Flex-paigutus: kaardid kasvavad ja täidavad kogu konteineri laiuse,
+     mobiilis (alla --viewport-sm) üksteise all */
+  display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   max-width: var(--width-xl);
-  /* This creates a responsive grid layout where:
-     * - repeat(auto-fill, ...) automatically fills the container with as many columns as possible
-     * - minmax(200px, 1fr) ensures each column is at least 200px wide, but can grow to fill available space
-     * - This allows cards to responsively adjust from 1 column on mobile to multiple columns on larger screens
-     */
-  grid-template-columns: repeat(1, 1fr);
-  @media (--viewport-sm) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (--viewport-md) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (--viewport-xl) {
-    grid-template-columns: repeat(4, 1fr);
-  }
   gap: var(--gap-lg);
   &__content {
     display: grid;
@@ -636,10 +624,14 @@ figcaption {
     }
   }
   &__item {
+    flex: 1 1 100%;
     background-color: var(--surface-light-03);
     padding-inline: var(--padding-md);
     padding-block: var(--padding-lg);
     border-radius: var(--radius-md);
+    @media (--viewport-sm) {
+      flex: 1 1 200px;
+    }
   }
   &__description {
     font-size: 1.125rem;
@@ -652,6 +644,7 @@ figcaption {
   max-width: var(--width-xl);
   margin-inline: auto;
   margin-block: var(--gap-xxl) var(--gap-lg);
+  text-align: center;
 }
 
 .cards__group-title:first-of-type {
