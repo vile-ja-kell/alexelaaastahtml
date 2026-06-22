@@ -58,6 +58,7 @@ h3 {
 /* Grupi vahepealkiri (nt "Sidus- ja tütarettevõtted") – visuaalselt väiksem,
    pole article, vaid lihtne pealkiri sisuga joondatud */
 .section-group-title {
+  width: 100%;
   max-width: var(--width-xl);
   margin-inline: auto;
   margin-top: var(--gap-xl);
