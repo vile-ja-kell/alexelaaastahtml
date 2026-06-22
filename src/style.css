@@ -60,10 +60,14 @@ h3 {
 .section-group-title {
   max-width: var(--width-xl);
   margin-inline: auto;
-  margin-block: var(--gap-xl) var(--gap-md);
+  margin-top: var(--gap-xl);
+  margin-bottom: -2rem; /* mobiil: väiksem vahe järgmise alampealkirjani */
   font-size: clamp(var(--title-display-xs), 3vw, var(--title-display-sm));
   font-weight: 700;
   text-align: left;
+  @media (--viewport-lg) {
+    margin-bottom: -10rem;
+  }
 }
 
 p {
