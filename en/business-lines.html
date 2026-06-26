@@ -1,1370 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Business Lines</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="../css/style.css" />
-  <title>Business Lines</title>
-</head>
-
-<body>
-  <header>
-    <video class="header__video" autoplay muted loop playsinline poster="../video/ettevottest.jpg">
+  <body>
+    <header>
+      <video class="header__video" autoplay muted loop playsinline poster="../video/ettevottest.jpg">
       <source src="../video/ettevottest.webm" type="video/webm" />
       <source src="../video/ettevottest.mp4" type="video/mp4" />
       Your browser does not support the video element.
     </video>
-    <nav class="nav">
-      <div class="nav__logo">
-        <a href="index.html">
-          <img src="../img/alexela_logo.svg" alt="Alexela logo" />
-        </a>
-      </div>
-      <div class="nav__subcontainer">
-        <div class="language">
-          <!-- CSS-only language selector using details/summary -->
-          <details class="language__select">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="../img/alexela_logo.svg" alt="Alexela logo" />
+          </a>
+        </div>
+        <div class="nav__subcontainer">
+          <div class="language">
+            <!-- CSS-only language selector using details/summary -->
+            <details class="language__select">
               <summary class="language__selected">
-                  <span>EN</span>
-                  <div class="language__arrow">
-                      <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
-                          <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                  </div>
+                <span>EN</span>
+                <div class="language__arrow">
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                    <path
+                      d="M1 1.5L6 6.5L11 1.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
               </summary>
-              
+
               <div class="language__dropdown">
-                  <input type="radio" id="et" name="language" value="et" class="language__input">
-                  <label for="et" class="language__option">
-                      <span class="language__text">ET</span>
-                  </label>
-                  
-                  <input type="radio" id="en" name="language" value="en" class="language__input" checked>
-                  <label for="en" class="language__option">
-                      <span class="language__text">EN</span>
-                  </label>
+                <input
+                  type="radio"
+                  id="et"
+                  name="language"
+                  value="et"
+                  class="language__input"
+                />
+                <label for="et" class="language__option">
+                  <span class="language__text">ET</span>
+                </label>
+
+                <input
+                  type="radio"
+                  id="en"
+                  name="language"
+                  value="en"
+                  class="language__input"
+                  checked
+                />
+                <label for="en" class="language__option">
+                  <span class="language__text">EN</span>
+                </label>
               </div>
-          </details>
-      </div>
-        <button class="menu-toggle" aria-label="Toggle menu">
-          <div class="menu-toggle__icon">
-            <span></span>
-            <span></span>
-            <span></span>
+            </details>
           </div>
-        </button>
-      </div>
-      <div class="menu__container">
-        <div class="menu">
-          <div class="menu__section">
-            <a href="index.html" class="menu__button">
-              <span class="menu__icon menu__icon--home"></span>
-              Homepage
-            </a>
-          </div>
-
-          <div class="menu__section">
-            <a href="about.html" class="menu__button">
-              <span class="menu__icon menu__icon--a-monogram"></span>
-              About the Company
-            </a>
-          </div>
-
-          <div class="menu__section">
-            <a href="business-lines.html" class="menu__button menu__button--active">
-              <span class="menu__icon menu__icon--eur"></span>
-              Business Lines
-            </a>
-          </div>
-
-          <div class="menu__section">
-            <a href="sustainability.html" class="menu__button">
-              <span class="menu__icon menu__icon--greenspark"></span>
-              Sustainability and Governance
-            </a>
-          </div>
-
-          <div class="menu__section">
-            <a href="economic-results.html" class="menu__button">
-              <span class="menu__icon menu__icon--news"></span>
-              Economic Results
-            </a>
-          </div>
-
-          <div class="menu__section">
-            <a href="Alexela_aruanne_2025_ENG.pdf" target="_blank" class="menu__button">
-              <span class="menu__icon menu__icon--contract"></span>
-              Download PDF
-            </a>
-          </div>
+          <button class="menu-toggle" aria-label="Toggle menu">
+            <div class="menu-toggle__icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
         </div>
-      </div>
-    </nav>
-    <div class="hero">
-
-      <div class="hero__content">
-        <h1>Business Lines</h1>
-      </div>
-
-    </div>
-  </header>
-  <main class="waves-animation bg-main-1">
-    <section class="section--top" id="quicklinks">
-      <h2 class="text-left">Quick find</h2>
-      <nav class="quicklinks quicklinks--pages" aria-label="Quick navigation">
-        <a class="quicklinks__item" href="about.html" aria-label="About the company">
-          <img src="../img/icons/a-monogram.svg" alt="Alexela logo" class="quicklinks__icon" />
-          <h3>About the Company</h3>
-        </a>
-        <a class="quicklinks__item" href="business-lines.html" aria-label="About the company">
-          <img src="../img/icons/eur.svg" alt="Euro icon" class="quicklinks__icon" />
-          <h3>Business Lines</h3>
-        </a>
-        <a class="quicklinks__item" href="sustainability.html" aria-label="About the company">
-          <img src="../img/icons/greenspark.svg" alt="Leaf icon" class="quicklinks__icon" />
-          <h3>Sustainability and Governance</h3>
-        </a>
-        <a class="quicklinks__item" href="economic-results.html" aria-label="About the company">
-          <img src="../img/icons/news.svg" alt="News icon" class="quicklinks__icon" />
-          <h3>Economic Results</h3>
-        </a>
-        <a class="quicklinks__item" href="Alexela_aruanne_2025_ENG.pdf" target="_blank" aria-label="About the company">
-          <img src="../img/icons/contract.svg" alt="Contract icon" class="quicklinks__icon" />
-          <h3>Download PDF</h3>
-        </a>
-      </nav>
-    </section>
-
-    <section class="section--content">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="../img/kytused.jpg" alt="Fuels" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h2 class="block__title">Liquid Fuels</h2>
-          <strong>The liquid fuels market 2024:
-            challenges and adaptation</strong>
-          <p class="block__description">
-            The year 2024 continued to bring major
-challenges to the liquid fuels market, confirming
-the need to be prepared for the
-unexpected and able to react quickly to
-events affecting the market.</p>
-          <p>
-            The liquid fuels market remained largely
-affected by external factors. Russia's war
-of aggression against Ukraine and the
-political decisions taken by neighbouring
-countries, major powers and OPEC+
-member states had the greatest impact.
-Overall, the European market has now
-adapted to the new supply chains.
-          </p>
-        </div>
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            Production cuts in OPEC+ countries and
-nonOPEC countries increasing their production
-volumes had the biggest impact
-on the world market. The impact of the
-US presidential election put downward
-pressure on fuel prices. Overall, world
-fuel prices fell in 2024.
-          </p>
-          <p>
-            One of the most influential decisions
-came from Sweden, which lowered the
-bioobligation requirement, leading to an
-increase in the supply of HVO and a decrease
-in the price of HVO. However, this
-had a rather short-term effect.
-          </p>
-          <p>
-            Alexela continues to buy liquid fuels from
-its European suppliers. Prior to the imposition
-of sanctions, we mainly supplied
-diesel and petrol from the Orlen refinery
-in Mažeikiai, Lithuania.
-          </p>
-          <p>
-            Domestically, the decline in consumer
-confidence was seen in the form of a
-small fall in consumption. Similarly, the
-retail market for liquid fuels grew by 1.6
-percent, while the wholesale market fell
-by 1.1 percent. The Estonian fuel market
-is closely linked to world market prices,
-which also had an impact on petrol stations,
-reducing consumption growth.
-          </p>
-          <p>
-            Market uncertainty and minimal growth
-fuelled competition in the local market.
-Market players focused on short-term
-offers to attract customers. Alexela concentrated
-on providing its customers with
-innovative energy solutions that combined
-fuel and electricity offers. Through
-hybrid offers and cross-selling, we were
-able to increase the share of customers
-using energy solutions to 27 percent.
-          </p>
-        </div>
-      </article>
-
-    </section>
-
-
-    <section class="section--content section--color section--flamingo waves-animation">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="../img/lng-terminal.jpg" alt="LNG terminal" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h2 class="block__title">Gaseous Fuels</h2>
-          <strong>Gas market developments</strong>
-          <div class="block__description">
-            <p>
-              Record gas prices in 2022 continued to
-affect 2024, with different business customers
-making conservative choices as
-they considered switching fleets to more
-environmentally friendly fuels. The decision
-by car manufacturers to stop production
-of CNG vehicles in 2024 will have
-an impact on CNG consumption in the
-private customer segment in the following
-years.
-            </p>
-            <p>
-              LNG market volumes continued to grow
-in 2024, as this fuel offers low equipment
-investment costs and is the cheapest in
-terms of cost per kilometre. Compared
-to 2023, LNG volumes grew by seven percent.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            The use of natural gas and LPG in industry
-and as heating source continues. Alexela
-provides its customers with hybrid solutions
-that are dependent on movements
-in world market prices for natural gas and
-LPG. In 2024, investments in LPG equipment
-continued, mainly aimed at replacing
-fuel oil systems.
-          </p>
-          <p>
-            Although natural gas sales volumes in
-Estonia increased by 8.8% in 2024 compared
-to 2023, they have not yet reached
-pre-war levels. LPG has partially replaced
-natural gas. LPG market volumes also fell
-in 2024 due to dry weather during the
-harvesting season, reducing LPG demand
-in the agricultural sector.
-          </p>
-          <p>
-            In the future, the market for gaseous fuels
-will be affected by excise duties and
-taxes. For example, biomethane, used as
-CNG, remains the most environmentally
-friendly transport fuel. Increasing excise
-duties on diesel in the coming years and
-the CO₂ tax on transport fuels in 2027
-will increase the competitiveness of biomethane.
-          </p>
-          <p>
-            On 20 December, the European Union
-imposed sanctions on Russian propane.
-Alexela had already begun to establish alternative
-supply chains and the first fully
-European-produced LPG vessel arrived
-in November. The opening of new supply
-chains is an integral part of ensuring security
-of supply for customers.
-          </p>
-        </div>
-      </article>
-
-    </section>
-
-    <section class="section--content">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="../img/elekter.jpg" alt="Child and father changing light bulb" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h2 class="block__title">Electricity</h2>
-          <strong>Alexela's electricity market
-            share continues to grow</strong>
-          <p class="block__description">
-            Estonia's electricity market in 2024 started
-off on a rocky note, as cold January
-weather led to extremely high electricity
-prices. In addition, Estlink 2, the largest
-electricity link with Finland, unexpectedly
-broke in the early morning of 26 January.
-This event affected electricity consumers
-in Estonia for another eight months and
-led to higher electricity prices.
-          </p>
-        </div>
-      </article>
-
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            The energy crisis-era distrust of exchange
-packages persisted in 2024, as customers
-put most trust in fixed-price packages.
-For example, Alexela's Pingevaba package,
-which offers a one-month fixed price,
-remained popular. Despite the challenging
-market conditions, Alexela was able
-to offer a competitive price and maintain
-its market share as the clear second largest
-electricity seller in Estonia. In 2024,
-Alexela's market share in electricity sales
-increased to 19.7%.
-          </p>
-          <p>
-            As an energy company with a diverse
-product portfolio, Alexela offers a range
-of permanent and fixed-term discounts,
-providing more value to customers who
-consume several services at the same
-time. Starting in autumn, Alexela's electricity
-customers received a discount of
--15 cents per litre on fuel at petrol stations.
-          </p>
-          <p>
-            Alexela has entered into a number of
-longterm power purchase agreements
-with renewable energy producers to
-bring renewable electricity to the market,
-which can be offered to customers at
-fixed prices.
-          </p>
-        </div>
-      </article>
-
-    </section>
-
-    <section class="section--content section--color section--blue-light waves-animation">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="../img/e-tankla.jpg" alt="Alexela charging station" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h2 class="block__title">E-mobility</h2>
-          <strong>Expansion of e-mobility
-            solutions and services</strong>
-          <p class="block__description">
-            In the e-mobility sector, 2024 saw significant
-developments in terms of both public
-charging infrastructure and the products
-and services available to customers.
-Years of experience and action have enabled
-us to further shape developments
-and offer our customers the best value by
-providing charging services at home, enroute
-and at destination.
-          </p>
-        </div>
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            In the area of private charging services,
-we partnered with domestic charger
-manufacturer VOOL to offer easier and
-better designed chargers. Customers can
-benefit from smart charging, where the
-charger schedules its activity according
-to the electricity price. In addition, we
-created a guide for apartement cooperatives
-on how to build and use charging
-infrastructure and expanded our cooperation
-with real estate developers.
-          </p>
-          <p>
-            The number of Alexela public charging
-points increased by 1.5 times in 2024
-compared to 2023, reaching over 300
-outlets in almost 200 different locations
-across Estonia.
-          </p>
-          <p>
-            We continued to replace the Elmo network
-chargers at Alexela service stations
-with new fast chargers. In addition, we
-installed charging points en-route and at
-destinations, such as hotels, spas, sports
-centres, shopping malls and other leisure
-facilities. We also set up charging points in
-densely populated residential areas where
-it is difficult to create private charging
-points - public charging points for all residents
-in the area, which can be quickly and
-conveniently added as needed.
-          </p>
-          <p>
-            We paid more attention to service development
-and quality improvement. In
-2024, we introduced a dynamic pricing
-model for public chargers, which allows
-for more flexible charging, taking into
-account the specificities of the charging
-point and the consumption habits of users.
-          </p>
-        </div>
-      </article>
-
-    </section>
-
-    <section class="section--content">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="../img/kaubandus.jpg" alt="Alexela shop" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h2 class="block__title">Trade and Retail</h2>
-          <strong>Development of the service
-            stations and retail the My
-            Alexela programme</strong>
-          <p class="block__description">
-            The role of retail in service stations has
-grown year on year, providing customers
-with convenient service and excellent
-customer care, following sustainable
-principles. By the end of 2024, Alexela's
-retail network had 43 café-stores, offering
-a range of tasty snacks and convenience
-goods in addition to refuelling and
-charging.
-          </p>
-        </div>
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            The increase in the number of electric
-cars will lead to a greater demand for a
-larger number of service stations offering
-additional services. We started developing
-a new interior design for café-stores
-to offer better service and maintain customer
-loyalty. The business process in
-the café-stores is in constant evolution to
-meet customer needs and to achieve our
-business objectives.
-          </p>
-          <p>
-            We are constantly investing in product
-development and service skills to grow
-our customer base and build loyalty. The
-fast food category grew rapidly in 2024
-and we will continue to differentiate our
-concepts in 2025.
-          </p>
-          <p>
-            Caring for the environment is important
-to us. We will continue to promote reusable
-coffee cups , whose share in the hot
-beverage category increased to 14%, a
-four percentage point increase compared
-to 2023. We will also focus on improving
-the quality of coffee, using Arabica coffee
-beans roasted specifically for Alexela.
-          </p>
-          <p>
-            At the end of 2022, we launched the My
-Alexela customer programme, where in
-addition to discounts on fuels , electricity,
-and goods, customers can earn digital
-badges with a cash value. These can be
-used to pay for services such as electricity
-and gas.
-          </p>
-          <p>
-            My Alexela offers convenience, benefiits,
-and new opportunities for loyal customers.
-It combines everyday energy products
-- such as electricity, natural gas, vehicle
-fuels - with products in café-shops.
-Customers can enjoy discounts, trailer
-rental, and much more. Alexela is the only
-company in Estonia to offer such a wide
-range of energy services.
-          </p>
-        </div>
-      </article>
-
-    </section>
-
-    <section class="section--content section--color section--mint waves-animation">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="../img/tankla.jpg" alt="Alexela Täkupoiss" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h2 class="block__title">Alexela Täkupoiss</h2>
-          <strong>Development of the Alexela
-            Täkupoiss energy station
-            concept continued</strong>
-          <p class="block__description">
-            In 2024, we continued to develop Alexela
-Täkupoiss new energy station concept,
-which includes a café-shop, a 100 seat top
-chef quality roadside restaurant, a variety
-of refuelling options, and additional services
-such as gas lockers, trailer rental, a
-canning point and a water point for caravans.
-In addition, we offer washing facilities
-for long-distance drivers, souvenir
-shops for tourists with products from local
-small businesses, and special offers for
-guides, bus drivers, and event organisers.
-          </p>
-        </div>
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            The focus was on raising awareness of the
-Täkupoiss roadside restaurant, which offers
-top chef quality food, fast and friendly
-service, local ingredients and avoidance
-of semifinished products. All designed to
-address the needs and energise the motorist.
-          </p>
-          <p>
-            In 2024, we will focus on growing our loyal
-customer base by organising events
-and special offers in the restaurant. My
-Alexela customers accounted for 62% of
-restaurant purchases.
-          </p>
-          <p>
-            A bigger challenge was the construction of
-the Via Baltica Sauga roundabout , which
-closed the entrance to Täkupoiss from
-July to the fourth week of September. In
-order to maintain the flow of guests, we
-responded with a promotional campaign
-where all food in the restaurant was 50%
-off. This allowed us to showcase the quality
-of the Täkupoiss restaurant and grow
-our loyal customer base.
-          </p>
-          <p>
-            In collaboration with renowned pastry
-chef Olga Kaju, we created a menu of pastry
-products inspired by Estonian berries,
-focusing on quality and innovation.
-          </p>
-          <p>
-            We invested in the development of our
-            service staff, which resulted in a very high
-            rating from guests for the service: an
-            NPS of 71 in 2024 and an average Google
-            Review score of 4.7.
-          </p>
-          <p>
-            In the community, we participated in the
-following events and partnerships:
-          </p>
-          <ul class="alexela__list">
-            <li>Lottemaa Theme park</li>
-            <li>Beach Grind Festival</li>
-            <li>Opening of the moto season</li>
-            <li>Pärnu Restaurant Week</li>
-            <li>Pernova Father's Day</li>
-          </ul>
-        </div>
-      </article>
-
-    </section>
-
-    <section class="section--content">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="../img/innovatsioon.jpg" alt="Innovation" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h2 class="block__title">Digitalisation</h2>
-          <strong>Technology and digitalisation</strong>
-          <p class="block__description">
-            In 2024, AS Alexela invested more than
-            two million euros in technology and digitalisation to deliver innovative solutions
-            that simplify customers' daily lives and
-            make internal processes more efficient.
-            Our goal is for technology to be a strategic advantage that helps to deliver better
-            service, increase efficiency, and respond
-            quickly to changing market demands.
-          </p>
-        </div>
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            Technological investments were also
-            made in a number of important projects.
-            We contributed to the development of
-            emobility by developing new technological solutions. We launched an updated
-            and user-friendly Alexela app, which allows customers to manage their energy
-            bills, contracts, payments, and services
-            more conveniently. The number of daily
-            users of this app has doubled compared
-            to last year. 220 Energia customers were
-            also migrated to the Alexela platform,
-            providing a smoother and more integrated customer experience.
-          </p>
-          <p>
-            The role of artificial intelligence in improving the customer experience and optimising internal processes has increased.
-            We have invested in and introduced a
-            range of AI-based tools to help automate
-            routine tasks and refine datadriven decisions. We are also expanding the use of
-            AI in customer service to provide a faster
-            and more personalised service.
-          </p>
-          <p>
-            We also launched the Alexela Smart
-            Electricity solution, which enables customers to manage their electricity generation and consumption in a smart way.
-            This system helps to optimise energy
-            costs and contribute to a more sustainable use of energy by giving customers
-            greater control over their energy use.
-          </p>
-          <p>
-            We also launched a programme to upgrade our core information systems to
-            bring our technological capabilities to a
-            new level. This will ensure more flexible
-            service delivery and streamline internal
-            business processes. Digitalisation will
-            create the basis for further innovation,
-            keeping Alexela competitive in a rapidly
-            evolving energy economy.
-          </p>
-          <p>
-            We will continue to develop technology
-            to be at the forefront of innovation, creating long-term value, saving time, and
-            helping to shape a more sustainable future with our customers.
-          </p>
-        </div>
-      </article>
-
-    </section>
-
-    <section class="section--content section--color section--cream waves-animation">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="../img/tark-elekter.jpg" alt="Smart electricity" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h2 class="block__title">Smart Electricity</h2>
-          <strong>
-            Smart Electricity - an innovative service for small producers and storage
-          </strong>
-          <p>
-            In March 2024, we launched a new platform, Smart Electricity, designed for small
-            electricity producers and storage. The service will help manage electricity generation and storage, maximising benefits and
-            helping to reduce electricity bills.
-          </p>
-        </div>
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            Smart Electricity is a virtual power plant
-            that predicts the next day's consumption
-            based on individual history and monitors
-            Nord Pool's exchange price. The service
-            automatically performs beneficial transactions by managing electricity generation based on customer consumption,
-            generation forecast, electricity price, and
-            network charges to buy electricity at a
-            lower price and sell it at a higher price.
-          </p>
-          <p>
-            The development of the service continued throughout the year. In March the
-            service was launched for private customers, in April it was extended to business
-            customers, and from May the service was
-            also available to owners of solar panels
-            who do not have a energy storage solution. Support for Deye inverters was added in June and for Pixii storage devices in
-            August.
-          </p>
-          <p>
-            By the end of the year, a triple-digit
-            number of customers had joined Smart
-            Electricity. The service currently supports
-            Huawei, Deye, and Pixii devices, but in
-            2025 we plan to extend compatibility to
-            devices from other inverter manufacturers. The team will continue to evolve the
-            service to offer even more customers a
-            convenient and smart energy solution.
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <h2 class="section-group-title px-md">Affiliates and Subsidiaries</h2>
-
-    <section class="section--content">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="../img/kytuseveok.jpg" alt="Fuel truck" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h3 class="block__title">AS Alexela Motors</h3>
-          <strong>
-            Supporting Alexela's core business
-          </strong>
-          <p>
-            AS Alexela Motors, a subsidiary of AS
-            Alexela, provides logistics and transport
-            services for liquid fuels, including LPG,
-            LNG, and cylinder gas. Its contract partners are Rohe Solutions Oy, to which we
-            provide LNG transport services in Finland,
-            and OÜ Oisu Biogaas, to which we provide
-            CNG logistics and transport services in
-            Estonia.
-          </p>
-        </div>
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            The fleet of AS Alexela Motors includes 27
-            vehicles, with an increasing number of alternative fuel vehicles. In 2024, eight new
-            vehicles were acquired, including three
-            Scania semi-trailers running on biomethane/CNG and a new Volvo semitrailer
-            running on diesel and LNG/bio-LNG.
-          </p>
-          <p>
-            The main transport routes are related to
-            the servicing of Estonian domestic service stations and the delivery of products,
-            as well as LPG and LNG supplies from
-            Finland and Latvia. In the cylinder gas service, the focus was on servicing Alexela's
-            smart lockers, for which two Renault
-            Master vans with special solutions were
-            acquired.
-          </p>
-          <p>
-            In the year 2024, AS Alexela Motors'
-            trucks covered 2.35 million kilometres,
-            which is 300 thousand kilometres more
-            than in the previous year. The volume of
-            liquid fuels transported increased from
-            209,6 million litres to 214,7 million litres.
-            Alexela Motors employs a total of 46
-            people, the majority of whom are drivers.
-          </p>
-        </div>
-      </article>
-    </section>
-
-
-
-    <section class="section--content section--color section--navy waves-animation">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="../img/solar.jpg" alt="Solar panel" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h3 class="block__title">Alexela rePower OÜ</h3>
-          <strong>OÜ Alexela rePower - sustainable energy and innovation solutions</strong>
-          <div class="block__description">
-            <p>
-              OÜ Alexela rePower, formerly OÜ Alexela
-              Solar, is a subsidiary of AS Alexela, which
-              brings together all future technologies
-              development projects under one roof.
-              Restructured in 2024, the company's
-              mission is to simplify the management of
-              developments and support their further
-              growth.
-            </p>
-          </div>
-        </div>
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            Key activities and projects:
-          </p>
-          <ul class="alexela__list">
-            <li>Biomethane and hydrogen refuelling development</li>
-            <li>Developing e-mobility</li>
-            <li>Biomethane production in a circular economy</li>
-            <li>Development of solar and wind parks</li>
-            <li>Leading e-fuels projects</li>
-          </ul>
-          <p>
-            At the beginning of 2024, we launched a
-            1.93 MW solar power plant at the Kiviõli
-            Chemical Industry site, which we started integrating with a battery project to
-            participate in the power reserve market.
-            In the autumn, we signed contracts for
-            the purchase of 4.6 MWh of batteries,
-            which are scheduled to be commissioned
-            in 2025.
-          </p>
-          <p>
-            We also started the construction of a
-            solar park for a service station and a
-            café-shop on Jalaka Street in Tartu, and
-            launched cooperation with AS Alexela
-            to design solar parks on eight properties.
-            The Paldiski solar park was expanded by
-            60.5 kW.
-          </p>
-          <!-- <p>
-            <strong>Production volumes of solar parks</strong>
-          </p>
-          <div class="table bg-light">
-            <table>
-              <thead>
-                <tr class="table__header bg-flamingo">
-                  <th class="table__header-text text-left"></th>
-                  <th class="table__header-text text-right">2023</th>
-                  <th class="table__header-text text-right">2024</th>
-                  <th class="table__header-text text-right">Change</th>
-                </tr>
-                <tr class="visually-hidden">
-                  <th scope="col">Solar park</th>
-                  <th scope="col">2023</th>
-                  <th scope="col">2024</th>
-                  <th scope="col">Change</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Saku Brewery solar Park
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1077 MWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1062 MWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    -1,4%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Kiviõli Chemical Industry Solar Park
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    0
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1611 MWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    -
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Paldiski solar park
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    302 MWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    791 MWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    161,9%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Direct line parks
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    40 MWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    108 MWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    170,0%
-                  </td>
-                </tr>
-                <tr class="table__row font-bold">
-                  <td class="table__cell table__cell--content">
-                    Total
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    1419 MWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    3572 MWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    151,7%
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <i>Solar park production volumes in 2023 compared to 2024.</i>
-          </div> -->
-          <p></p>
-            <p>
-              <strong>Energy management solutions</strong>
-            </p>
-            <p>
-              Solutions developed by Alexela, such as
-              VPP (Virtual Power Plant) and Smart
-              Electricity, which optimise the operational processes of renewable energy infrastructures, support Alexela rePower
-              hardware activities. For example, they
-              help customers to increase revenue and
-              improve the efficiency of solar parks,
-              ensuring a more favourable price for the
-              electricity sold.
-            </p>
-            <p>
-              Financing and cooperation: Alexela rePower has used external financing and
-              cooperated with AS Alexela and other partners to apply for support from
-              European Union instruments. The aim
-              is to set up hydrogen service stations,
-              and to develop methanol bunkering and
-              truck-to-ship bunkering solutions.
-            </p>
-            <p>
-              In 2024, we also joined the advisory
-              board for the hydrogen sector set up by
-              OÜ Alexela rePower and AS Metrosert.
-            </p>
-
-        </div>
-      </article>
-    </section>
-
-    <section class="section--content">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="../img/maantee.jpg" alt="Autumn highway" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h3 class="block__title">Rohe Solutions OY</h3>
-          <strong>Rohe Solutions Oy – LNG and bio-LNG solutions in the Finnish market</strong>
-          <div class="block__description">
-            <p>
-              Rohe Solutions Oy is a subsidiary of AS
-              Alexela, a natural gas and LNG trader in
-              the Finnish market. From 2024, the company's main focus will be on providing
-              LNG solutions to industrial customers
-              and bunkering LNG vessels. During 2024,
-              165 GWh of natural gas and 120 GWh of
-              LNG was sold in Finland.
-            </p>
-          </div>
-        </div>
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            Last year, Rohe Solutions was the first in
-            the region to launch a bio-LNG package,
-            where the output of biomethane producers connected to the gas grid can be
-            withdrawn as bio-LNG. The processing
-            of biomethane to bio-LNG provides an
-            opportunity for industrial companies and
-            the transport sector to make progress
-            their sustainability goals, supporting the
-            transition towards more environmentally
-            friendly energy production options.
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <section class="section--content section--color section--mint-light waves-animation">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="../img/elektriliin.jpg" alt="Power line" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h3 class="block__title">SIA Alexela</h3>
-          <strong>SIA Alexela – sale of electricity and natural gas in Latvia</strong>
-          <p class="block__description">
-            SIA Alexela is a subsidiary of AS Alexela,
-            which is active on the Latvian market in
-            the sale of electricity and natural gas to
-            private and business customers. In 2024,
-            the natural gas portfolio reached 139 GWh
-            and the electricity portfolio 162 GWh.
-          </p>
-        </div>
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            In 2024, we significantly increased our
-            private customer base, ending the year
-            with a 30% increase in the number of
-            customers compared to the previous
-            year. We also invested in upgrading our
-            IT and billing systems, creating a strong
-            platform for launching new services and
-            growing our customer base.
-          </p>
-        </div>
-      </article>
-    </section>
-
-
-
-    <section class="section--content">
-      <article class="image-text-content-block block--image-right">
-        <figure class="block__image">
-          <img src="../img/lpg.jpg" alt="LPG" class="block__img" />
-        </figure>
-        <div class="block__text">
-          <h3 class="block__title">Hamina LNG Terminal</h3>
-          <strong>Hamina LNG Terminal – serving customers in Finland and Estonia</strong>
-          <p class="block__description">
-            Hamina LNG Terminal is operated by
-            Hamina LNG Oy, an affiliate of AS Alexela.
-            Hamina LNG-terminali käivitamine
-            2022. aasta sügistalvel võimaldas Alexela
-            abiga pakkuda Soome ja Eesti klientidele
-            soodsaima logistilise kuluga väljastpoolt
-            Venemaad tarnitud LNG-d. Tegemist on
-            esimese LNG-terminaliga Soomes, millel
-            on ühendus Soome gaasiülekandevõrguga,
-            ning terminali mahutis saab hoiustada
-            kuni 30 000 m³ LNG-d. Hamina
-            LNG-terminal tegutseb kolmanda osapoole
-            vaba juurdepääsu (third party
-            open-access) põhimõttel, mille tegevuse
-            ja tariifide üle teostab järelevalvet Soome
-            Energiavirasto.
-          </p>
-        </div>
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            In 2024, the Hamina LNG Terminal celebrated
-its second anniversary. During
-2024, the terminal delivered 23 LNG vessels,
-all from outside Russia. A total of
-300 GWh of regasified gas was injected
-into the Finnish transmission network
-and the Hamina region distribution network,
-while 1 866 tanker trailers were
-loaded with LNG, 53% more than in the
-previous year. The largest customer and
-user of the Hamina LNG Terminal is AS
-Alexela.
-          </p>
-          <p>
-            In 2024, the terminal launched two important
-activities for the future, which
-Rohe Solutions Oy played a role in initiating.
-A ship bunkering service was
-launched, with five ships using LNG as
-fuel being bunkered in the terminal. A
-bio-LNG project was also launched,
-which will enable the output of the connected
-biogas plants to be taken off the
-terminal as bio-LNG.
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <section class="section--content section--color section--navy waves-animation">
-      <article class="content-block block__text">
-        <h3 class="block__title">
-          Eesti Biogaas OÜ
-        </h3>
-        <strong>OÜ Eesti Biogaas – growth in biomethane production</strong>
-        <p>In 2024, the production volume of Eesti
-          Biogaas OÜ, a 50% owned subsidiary of
-          Alexela, increased by 17.7% to 126.125
-          GWh, accounting for about half of the total biomethane produced in Estonia.</p>
-
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            In 2024, additional post-digesters were
-completed at the Oisu and Tartu plants ,
-which increased biomethane production
-by about 20%. All three of biomethane
-OÜ Eesti biogaas biomethane plants are
-now built according to the same model,
-consisting of two digesters and two secondary
-post-digesters.
-          </p>
-          <p>
-            Increasing the efficiency of processing is
-largely the result of the experience and
-knowledge of the team OÜ Eesti biogaas.
-By optimising production, more biomethane
-can be produced throughout the
-year using animal manure, biomass, and
-food industry residues. This is an important
-environmental step, as it helps to
-harness methane that would otherwise
-be released into the atmosphere. Most
-of the biomethane produced is used as a
-transport fuel.
-          </p>
-          <p>The plan is to continue biomethane production
-            in 2025 in three existing production
-            plants. </p>
-
-          <div class="table bg-light">
-            <table>
-              <thead>
-                <tr class="table__header bg-flamingo">
-                  <th class="table__header-text text-left"></th>
-                  <th class="table__header-text text-right">2023</th>
-                  <th class="table__header-text text-right">2024</th>
-                  <th class="table__header-text text-right">Change</th>
-                </tr>
-                <tr class="visually-hidden">
-                  <th scope="col">Company name</th>
-                  <th scope="col">year</th>
-                  <th scope="col">year</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Tartu Biogaas
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    36 119 GWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    41 660 GWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    15,3%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Vinni Biogaas
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    37 701 GWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    43 359 GWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    15,0%
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__cell table__cell--content">
-                    Oisu Biogaas
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    33 305 GWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    41 112 GWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    8 320
-                  </td>
-                </tr>
-                <tr class="table__row font-bold">
-                  <td class="table__cell table__cell--content">
-                    EBG group total
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    107 125 GWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    126 131 GWh
-                  </td>
-                  <td class="table__cell table__cell--number text-right">
-                    17,7%
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <i>Biomethane production volumesin 2023 compared to 2024.</i>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <section class="section--content">
-      <article class="content-block block__text">
-        <h3 class="block__title">
-          Zero Terrain OÜ
-        </h3>
-        <strong>OÜ Zero Terrain – pumped-storage hydropower project in Paldiski</strong>
-        <p>
-          OÜ Zero Terrain, an affiliate of AS
-Alexela, formerly known as Energiasalv,
-is developing a 500 MW pumped-storage
-hydropower facility in Paldiski, the only
-energy storage project of common interest
-in the Northern Baltic region of the
-European Union.
-        </p>
-      </article>
-
-      <article class="accordion">
-        <button class="accordion__button" aria-expanded="false">
-          <span class="accordion__read-text">Read more</span>
-          <span class="accordion__close-text">Close</span>
-          <img src="../img/icons/chevron-right.svg" alt="Arrow right icon" class="accordion__icon" />
-        </button>
-        <div class="accordion__content">
-          <p>
-            Last year, the Paldiski storage project was
-further developed. The project reached
-the stage where supply contracts had
-to be signed with technology suppliers
-in the second half of the year in order to
-move forward. Although the aim was to
-reach a final investment decision (FID)
-by the end of summer 2024, this was not
-achieved. Large energy projects require
-a model of cooperation with the state,
-which has been delayed.
-          </p>
-          <p>
-            Under the renewed action plan, the project
-is planned to be finalised by: completing
-all the engineering and design; signing
-early involvement agreements with
-technology partners; and securing funding.
-FID is planned by 2027. Agreement
-on a cooperation model with the government
-is expected to be reached in 2025.
-          </p>
-          <p>
-            In 2024, KPMG carried out an analysis
-of the socio-economic benefits of the
-Paldiski pumped-storage hydropower
-facility, which showed that the economic
-impact of the project on the Estonian
-economy would be €54 million per year
-during the construction period and €253
-million per year on average during the
-operational period.
-          </p>
-        </div>
-      </article>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="footer__container">
-      <div class="footer__content">
-        <div class="footer__menu">
-
-          <nav class="footer__nav">
+        <div class="menu__container">
+          <div class="menu">
             <div class="menu__section">
               <a href="index.html" class="menu__button">
                 <span class="menu__icon menu__icon--home"></span>
@@ -1380,7 +94,10 @@ operational period.
             </div>
 
             <div class="menu__section">
-              <a href="business-lines.html" class="menu__button menu__button--active">
+              <a
+                href="business-lines.html"
+                class="menu__button menu__button--active"
+              >
                 <span class="menu__icon menu__icon--eur"></span>
                 Business Lines
               </a>
@@ -1401,71 +118,1417 @@ operational period.
             </div>
 
             <div class="menu__section">
-              <a href="Alexela_aruanne_2025_ENG.pdf" target="_blank" class="menu__button">
+              <a
+                href="Alexela_aruanne_2025_ENG.pdf"
+                target="_blank"
+                class="menu__button"
+              >
                 <span class="menu__icon menu__icon--contract"></span>
                 Download PDF
               </a>
             </div>
-
-
-          </nav>
+          </div>
         </div>
-
-        <div class="footer__datablock">
-
-          <div class="footer__left">
-            <div class="footer__logo">
-              <img src="../img/alexela_logo.svg" alt="Alexela" />
-            </div>
-            <div class="footer__contact">
-              <div>
-                <strong>Alexela AS</strong>
-                <span>Roseni 11, 10111 Tallinn</span>
-              </div>
-              <a href="mailto:alexela@alexela.ee" class="footer__contact__item">
-                <img src="../img/icons/email.svg" alt="Email" />
-                <span>alexela@alexela.ee</span>
-              </a>
-              <a href="tel:+372629000" class="footer__contact__item">
-                <img src="../img/icons/Phone.svg" alt="Phone" />
-                <span>+ 372 629 000</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="footer__right">
-            <div class="footer__social">
-              <a href="https://www.alexela.ee" class="social__link"><span
-                  class="social__icon-mask icon-monogram"></span>
-                www.alexela.ee</a>
-              <a href="#" class="social__icon">
-                <span class="social__icon-mask icon-facebook"></span>
-                <span>Facebook</span>
-              </a>
-              <a href="#" class="social__icon">
-                <span class="social__icon-mask icon-instagram"></span>
-                <span>Instagram</span>
-              </a>
-              <a href="#" class="social__icon">
-                <span class="social__icon-mask icon-youtube"></span>
-                <span>Youtube</span>
-              </a>
-            </div>
-            <div class="footer__certification">
-              <img src="../img/iso-9001.svg" alt="ISO 9001 Certified" />
-            </div>
-          </div>
-
-          <div class="footer__slogan">
-            Energy for life
-          </div>
-
+      </nav>
+      <div class="hero">
+        <div class="hero__content">
+          <h1>Business Lines</h1>
         </div>
-
       </div>
-    </div>
-  </footer>
-  <script src="../main.js"></script>
-</body>
+    </header>
+    <main class="waves-animation bg-main-1">
+      <section class="section--top" id="quicklinks">
+        <h2 class="text-left">Quick find</h2>
+        <nav class="quicklinks quicklinks--pages" aria-label="Quick navigation">
+          <a
+            class="quicklinks__item"
+            href="about.html"
+            aria-label="About the company"
+          >
+            <img
+              src="../img/icons/a-monogram.svg"
+              alt="Alexela logo"
+              class="quicklinks__icon"
+            />
+            <h3>About the Company</h3>
+          </a>
+          <a
+            class="quicklinks__item"
+            href="business-lines.html"
+            aria-label="About the company"
+          >
+            <img
+              src="../img/icons/eur.svg"
+              alt="Euro icon"
+              class="quicklinks__icon"
+            />
+            <h3>Business Lines</h3>
+          </a>
+          <a
+            class="quicklinks__item"
+            href="sustainability.html"
+            aria-label="About the company"
+          >
+            <img
+              src="../img/icons/greenspark.svg"
+              alt="Leaf icon"
+              class="quicklinks__icon"
+            />
+            <h3>Sustainability and Governance</h3>
+          </a>
+          <a
+            class="quicklinks__item"
+            href="economic-results.html"
+            aria-label="About the company"
+          >
+            <img
+              src="../img/icons/news.svg"
+              alt="News icon"
+              class="quicklinks__icon"
+            />
+            <h3>Economic Results</h3>
+          </a>
+          <a
+            class="quicklinks__item"
+            href="Alexela_aruanne_2025_ENG.pdf"
+            target="_blank"
+            aria-label="About the company"
+          >
+            <img
+              src="../img/icons/contract.svg"
+              alt="Contract icon"
+              class="quicklinks__icon"
+            />
+            <h3>Download PDF</h3>
+          </a>
+        </nav>
+      </section>
 
+      <section class="section--content">
+        <article class="image-text-content-block block--image-right">
+          <figure class="block__image">
+            <img src="../img/kytused.jpg" alt="Fuels" class="block__img" />
+          </figure>
+          <div class="block__text">
+            <h2 class="block__title">Liquid fuels</h2>
+            <strong
+              >Liquid fuels market in 2025: challenges and adaptation</strong
+            >
+            <p class="block__description">
+              In 2025, the main factors influencing the liquid fuels market were
+              once again the events related to the ongoing war in Ukraine and
+              other conflicts, as well as the decisions made by OPEC+ member
+              states, underlining the need to be prepared for the unexpected and
+              to respond swiftly to events affecting the market. The European
+              market has now adapted to the new supply chains, and over the
+              course of the year we saw less volatility than in previous years.
+            </p>
+          </div>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              Alexela continues to purchase liquid fuels from European suppliers.
+            </p>
+            <p>
+              Domestic consumption remained at the previous year's level. The 2.7
+              per cent growth in the retail market was driven by an increase in
+              refuelling by transit customers, which was caused by a sharp rise in
+              excise duty in Lithuania. The wholesale market, however, remained at
+              the same level.
+            </p>
+            <p>
+              The rise in excise duties on diesel and petrol had an impact on fuel
+              prices.
+            </p>
+            <p>
+              The minimal market growth intensified competition in the local
+              market, which was reflected in the fierce price competition that
+              started in the autumn, altering market dynamics and resulting in
+              regional price differences and constant weekly price fluctuations.
+              Market participants reviewed their existing customer offers and
+              updated their loyalty programmes. Alexela focused on providing its
+              customers with complete energy solutions, combining fuel and
+              electricity offers.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section
+        class="section--content section--color section--flamingo waves-animation"
+      >
+        <article class="image-text-content-block block--image-right">
+          <figure class="block__image">
+            <img
+              src="../img/lng-terminal.jpg"
+              alt="LNG terminal"
+              class="block__img"
+            />
+          </figure>
+          <div class="block__text">
+            <h2 class="block__title">Gaseous fuels</h2>
+            <strong>Gas market developments</strong>
+            <div class="block__description">
+              <p>
+                The year 2025 brought a noticeable stabilisation to the natural
+                gas market: record-high gas prices are now a thing of the past,
+                LNG production on the global market has increased, and gas prices
+                in Western Europe and the Baltic States were on a downward trend
+                throughout the year.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              The use of natural gas and LPG as a heating source in industry and
+              buildings has continued. Alexela offers its customers hybrid
+              solutions that are dependent on fluctuations in global market prices
+              for natural gas and LPG. In 2025, investment in LPG equipment
+              continued, mainly to replace heating oil systems.
+            </p>
+            <p>
+              In the future, the market for gaseous fuels will be influenced by
+              excise duties and taxes. For example, biomethane used as CNG is
+              still a more environmentally friendly transport fuel. In the coming
+              years, rising excise duty on diesel fuel, the CO2 tax on transport
+              fuels that will become applicable in 2028, and new renewable fuel
+              obligations will significantly boost the competitiveness of
+              biomethane as a transport fuel.
+            </p>
+            <p>
+              On 20 December 2024, the European Union imposed sanctions on Russian
+              propane. Opening new supply channels was the main focus in 2025, to
+              ensure customer service and security of supply. At the start of the
+              year, the market was influenced by stockpiled gas of Russian origin
+              and attempts by some market participants to circumvent sanctions.
+              The first delivery of propane from the US took place in Q2,
+              introducing a new quality to the market. Stable supplies ensured
+              security of supply for customers.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section--content">
+        <article class="image-text-content-block block--image-right">
+          <figure class="block__image">
+            <img
+              src="../img/elekter.jpg"
+              alt="Child and father changing a light bulb"
+              class="block__img"
+            />
+          </figure>
+          <div class="block__text">
+            <h2 class="block__title">Electricity</h2>
+            <strong>Continued growth in Alexela's market share in electricity sales</strong>
+            <p class="block__description">
+              The Estonian electricity market had a turbulent start in 2025, as
+              Estlink 2 – Estonia's largest electricity interconnector with
+              Finland – was broken in the early hours of 25 December 2024 by a
+              ship's dragging anchor. In addition, synchronisation with the
+              continental European electricity grid took place on 8 February.
+              These two events affected Estonian electricity consumers throughout
+              the year, resulting in higher costs for electricity suppliers and
+              higher electricity prices for consumers.
+            </p>
+          </div>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              For private customers, 2025 was a landmark year, as Alexela launched
+              four new electricity packages to meet the needs of consumers:
+              Flexible Fix, Choose Yourself, Virtual Battery and the Fixed Plan.
+              Similar to 2024, customers continued to prefer fixed-price solutions
+              over electricity at market rates. The alexela.ee website has also
+              been updated, and customers can now easily find the right
+              electricity package for them by answering just three questions.
+            </p>
+            <p>
+              As an energy company with a broad product portfolio, Alexela offers
+              a range of permanent discounts and limited-time offers, providing
+              added value to customers who use several services at once. The
+              loyalty programme, under which Alexela offers a discount of -3c/l on
+              all fuels exclusively to electricity and natural gas customers, was
+              updated in autumn.
+            </p>
+            <p>
+              Alexela has entered into a number of long-term electricity purchase
+              agreements with renewable energy producers in order to bring
+              renewable electricity to the market, which it can then offer to
+              customers at fixed prices.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section--content section--color section--blue-light waves-animation">
+        <article class="image-text-content-block block--image-right">
+          <figure class="block__image">
+            <img
+              src="../img/e-tankla.jpg"
+              alt="Alexela charging station"
+              class="block__img"
+            />
+          </figure>
+          <div class="block__text">
+            <h2 class="block__title">E-Mobility</h2>
+            <strong>Expansion of e-mobility solutions and services</strong>
+            <p class="block__description">
+              2025 was a busy year for Alexela's e-mobility division and, in many
+              respects, a record-breaking one. Our previous experience has enabled
+              us to set more significant focus points than before, both in terms
+              of expanding the charging infrastructure and service development. We
+              continued on our path to creating solutions for people – whether at
+              home, on the road or at the destinations. In addition to chargers
+              intended for the personal use of private and business customers, our
+              public charging infrastructure also grew significantly, becoming one
+              of the largest in Estonia with nearly 450 public charging plugs. We
+              opened nearly 100 new charging points at destinations and installed
+              10 new ultra-fast chargers at Alexela filling stations with
+              convenience shops along the motorways. We gave particular attention
+              to the accessibility of the chargers at filling stations, taking
+              into account the charging needs of larger vehicles.
+            </p>
+          </div>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              We continued to develop popular services such as "Charging the
+              Electric Company Car at Home" and "Home Electricity on the Road",
+              making them even more flexible than before. In order to showcase
+              Alexela's charging solutions to people, we started installing VOOL
+              home chargers in large car showrooms and filling stations with
+              convenience stores, so that people could actually try out the
+              chargers and leave their vehicles to charge for longer periods.
+            </p>
+            <p>
+              A number of turnkey projects for both large business customers and
+              in housing development were completed in late 2025.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section--content">
+        <article class="image-text-content-block block--image-right">
+          <figure class="block__image">
+            <img
+              src="../img/kaubandus.jpg"
+              alt="Alexela shop"
+              class="block__img"
+            />
+          </figure>
+          <div class="block__text">
+            <h2 class="block__title">Trade and retail</h2>
+            <strong>Development of trade at filling stations</strong>
+            <p class="block__description">
+              The importance of trade at filling stations has increased year on
+              year, allowing us to offer our customers a convenient service and
+              excellent customer care while respecting the principles of
+              sustainability. By late 2025, Alexela's retail network included 42
+              café-shops and one franchise shop in Paia, offering delicious food
+              and groceries in addition to car refuelling and charging options.
+            </p>
+          </div>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              The increase in the number of electric vehicles will lead to an
+              increased demand for filling stations offering additional services.
+              The business processes in our café-shops are constantly developing
+              to meet our customers' needs and achieve our financial objectives.
+            </p>
+            <p>
+              We continuously invest in product development and service skills to
+              increase the number of new customers and make them loyal. The fast
+              food category continued to grow in 2025 and in 2026, we will
+              introduce new products to the menu to ensure that the growth trend
+              continues.
+            </p>
+            <p>
+              Environmental protection is an important priority for us. We'll
+              continue to promote reusable coffee cups, whose share in the hot
+              drinks category grew to 18%, a 4% increase compared to 2024. The hot
+              drinks category is very important and we're constantly working to
+              improve the quality of coffee.
+            </p>
+            <p>
+              <strong>My Alexela loyalty programme</strong>
+            </p>
+            <p>
+              The My Alexela loyalty programme offers loyal customers convenience,
+              discounts and new opportunities, combining everyday energy products
+              (electricity, natural gas and vehicle fuels) with the product range
+              of our café-shops to create a comprehensive customer experience.
+              Customers can enjoy a range of benefits and personalised offers
+              across all products and services.
+            </p>
+            <p>
+              In 2025, we took a significant step towards personalising the
+              customer experience by adding digital special offers – or vouchers –
+              to the Minu Alexela app. The new solution allows us to offer
+              customers more tailored and personalised offers than before, taking
+              into account their consumption habits and preferences. This creates
+              an opportunity to move away from universal campaigns towards
+              data-driven, targeted offers, and to increase the value exchange
+              between the customer and Alexela.
+            </p>
+            <p>
+              The updated terms and conditions of the loyalty programme entered
+              into force in October 2025. The objective of the changes was to
+              ensure that pricing remained clear and transparent for customers and
+              to respond to rapid price fluctuations in the fuel market. We have
+              brought retail fuel prices down to a more competitive level directly
+              at the filling station, as a result of which the general fixed
+              discount no longer applies to all customers – the lower price is now
+              factored into the retail price.
+            </p>
+            <p>
+              At the same time, we continue valuing the customers who use several
+              services. Private customers with an Alexela electricity and/or
+              natural gas contract get a permanent fuel discount of -3 c/l. In
+              addition, we offer private customers who have joined our loyalty
+              programme a birthday discount of 5 c/l on their birthday and on the
+              five days immediately before and after it. As part of the loyalty
+              programme, it is also possible to share benefits with one's family,
+              thereby strengthening family- and relationship-based customer
+              relationships.
+            </p>
+            <p>
+              The My Alexela programme continues to evolve, focusing on
+              personalisation, competitive pricing and strengthening long-term
+              customer relationships to increase both customer satisfaction and
+              loyalty.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section--content section--color section--mint waves-animation">
+        <article class="image-text-content-block block--image-right">
+          <figure class="block__image">
+            <img
+              src="../img/tankla.jpg"
+              alt="Alexela Täkupoiss"
+              class="block__img"
+            />
+          </figure>
+          <div class="block__text">
+            <h2 class="block__title">Alexela Täkupoiss</h2>
+            <strong
+              >Development of the Alexela Täkupoiss energy station concept
+              continued
+            </strong>
+            <p class="block__description">
+              In 2025, we continued to develop the innovative energy station
+              concept of Alexela Täkupoiss, which includes a café-shop, a 100-seat
+              roadside restaurant serving top-quality cuisine, various refuelling
+              options and additional services such as gas cabinets, a trailer hire
+              service, a waste disposal point and a water supply point for
+              campervans. In addition, we offer shower facilities for
+              long-distance lorry drivers, summer market stalls stocked with
+              products from local small businesses for tourists, and special
+              offers for tour guides, coach drivers and event organisers.
+            </p>
+          </div>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              We continued to raise awareness of the Täkupoiss roadside
+              restaurant, which offers top-quality cuisine, fast and friendly
+              service, locally sourced ingredients and avoids the use of
+              semi-processed products. Everything has been designed to meet the
+              needs of people on the road and provide them with energy. In 2025,
+              we launched Täkupoiss Catering, where the mobile kitchen of
+              Täkupoiss has a key role, enabling us to provide restaurant-standard
+              catering at the customer's request.
+            </p>
+            <p>
+              My Alexela customers accounted for 49 per cent of purchases made by
+              restaurant guests.
+            </p>
+            <p>
+              We invested in the development of our service staff, as a result of
+              which our guests rated the service very highly: the NPS for 2025 was
+              72 and the average rating on Google Reviews was 4.7.
+            </p>
+
+            <p>
+              In community cooperation, we took part in the following events and
+              partnerships:
+            </p>
+            <ul class="alexela__list">
+              <li>Lottemaa</li>
+              <li>Beach Grind Festival</li>
+              <li>Opening of the motorsports season</li>
+              <li>Pärnu Restaurant Week</li>
+              <li>Pernova Father's Day</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section class="section--content">
+        <article class="image-text-content-block block--image-right">
+          <figure class="block__image">
+            <img
+              src="../img/innovatsioon.jpg"
+              alt="Innovation"
+              class="block__img"
+            />
+          </figure>
+          <div class="block__text">
+            <h2 class="block__title">Digitalisation</h2>
+            <strong>Technology and digitalisation</strong>
+            <p class="block__description">
+              Technology and digitalisation were important cornerstones of AS
+              Alexela's development strategy in 2025. The investments made in them
+              exceeded the five-million-euro mark. Our goal is to implement
+              innovative solutions that make the lives of our customers easier and
+              more convenient, optimise the company's internal resources, and make
+              processes more clearly data-driven and transparent. This approach
+              makes it possible to provide a faster and higher-quality service,
+              whilst reducing red tape and saving time. The technological advantage
+              resulting from these investments is critical to remaining at the
+              forefront of the market and adapting swiftly to both new regulations
+              and changing customer preferences.
+            </p>
+          </div>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              Investments in technology were realised through a number of major
+              projects. We developed innovative electricity products (virtual
+              power plant, fixed plan, flexible fix), implemented a new energy
+              portfolio risk management solution (ETRM) and rolled out a new
+              automatic ordering system in our shops. We continued to develop
+              e-mobility and to further develop digital solutions for cylinder gas.
+            </p>
+            <p>
+              As an important step towards enhancing the customer experience and
+              our marketing capabilities, we selected a new CRM and marketing
+              automation platform for Alexela and began implementing it. This lays
+              the foundation for more targeted and timely customer communication,
+              more consistent customer journey management, and more data-driven
+              sales and service processes.
+            </p>
+            <p>
+              Training courses on artificial intelligence (AI) also played a
+              significant role. Over the course of the year, the use of AI became
+              commonplace across all business sectors, primarily for automating
+              routine tasks and speeding up work. We also prepared the 'Alexela
+              Guide to Generative AI', which helps people use AI safely and
+              responsibly. AI tools are increasingly being used in almost all of
+              Alexela's IT solutions.
+            </p>
+            <p>
+              In the context of Smart Electricity, we continued to develop the
+              functionalities of the virtual power plant designed for business
+              customers and established the capability to participate in the newly
+              opened frequency markets.
+            </p>
+            <p>
+              In addition, we launched preparations to apply for ISO 27001
+              certification and continued with the programme to upgrade Alexela's
+              IT systems to take our technological capabilities to a new level.
+              This paves the way for the provision of more flexible services and
+              the development of more efficient internal work processes.
+              Digitalisation provides a solid foundation for further innovation and
+              helps to keep Alexela competitive in the rapidly evolving energy
+              sector.
+            </p>
+            <p>
+              We will continue to develop our technology in order to remain at the
+              forefront of innovation, create long-term value, save time and work
+              with our customers to shape a more sustainable future.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section--content section--color section--cream waves-animation">
+        <article class="image-text-content-block block--image-right">
+          <figure class="block__image">
+            <img
+              src="../img/tark-elekter.jpg"
+              alt="Smart electricity"
+              class="block__img"
+            />
+          </figure>
+          <div class="block__text">
+            <h2 class="block__title">VPP/Smart Electricity</h2>
+            <strong>
+              Smart Electricity – an innovative service for small-scale producers
+              and storage providers
+            </strong>
+            <p>
+              In March 2024, we launched a new platform called Smart Electricity,
+              which is designed for small-scale electricity producers and storage
+              providers. The service helps manage electricity generation and
+              storage, maximising benefits and helping to reduce electricity
+              bills.
+            </p>
+          </div>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              Smart Electricity is a service that forecasts the following day's
+              consumption based on individual usage history and monitors the Nord
+              Pool market price. The service automatically carries out useful
+              transactions, managing electricity generation and storage, taking
+              into account the customer's consumption, generation forecasts,
+              electricity prices and grid charges. The system optimises energy use
+              as a whole – energy is purchased and stored during periods when
+              prices are lower, and during peak-price hours, the energy is either
+              sold or used for self-consumption, thereby reducing the amount of
+              electricity purchased from the grid at peak times. The solution is
+              suitable for both batteries connected to the point of consumption and
+              stand-alone solar parks, where the focus is on maximising sales
+              revenue based on generation forecasts and market prices.
+            </p>
+            <p>
+              Active development of the service continued in 2025. Over the course
+              of the year, we expanded our device support and refined our
+              optimisation algorithms to offer our customers even greater value,
+              which in turn helped to grow our customer base.
+            </p>
+            <strong> VPP (Virtual Power Plant) </strong>
+            <p>
+              In 2025, we developed our VPP (Virtual Power Plant) service, which
+              enables participation in frequency markets and the consolidation of
+              various generation and storage resources into a single, centrally
+              managed portfolio.
+            </p>
+            <p>
+              The VPP service enables the management of both batteries and solar
+              farms, optimising their operation in line with market conditions and
+              the system operator's requirements. In 2025, the first business
+              customers were also connected to the platform; their portfolios
+              included both solar parks and battery parks, allowing them to
+              participate in frequency markets and generate additional revenue by
+              offering flexibility.
+            </p>
+            <p>
+              The goal for 2026 is to increase the size of the VPP portfolio,
+              on-board additional customers and enhance interoperability with
+              equipment from various inverter manufacturers. There are also plans
+              to develop the technical and commercial capacity to participate in
+              all frequency markets, offering customers new revenue opportunities
+              and increasing the role of flexibility within the electricity
+              system.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <h2 class="section-group-title px-md">Associates and subsidiaries</h2>
+
+      <section class="section--content">
+        <article class="image-text-content-block block--image-right">
+          <figure class="block__image">
+            <img
+              src="../img/kytuseveok.jpg"
+              alt="Fuel truck"
+              class="block__img"
+            />
+          </figure>
+          <div class="block__text">
+            <h3 class="block__title">AS Alexela Motors</h3>
+            <strong> Supporting Alexela's core business </strong>
+            <p>
+              AS Alexela Motors is a subsidiary of AS Alexela which provides
+              logistics and transport services for liquid fuels, including LPG,
+              LNG and cylinder gas. Rohe Solutions Oy, to whom it provides LNG
+              transport services in Finland, and OÜ Oisu Biogaas, to whom it
+              provides CNG logistics and transport services in Estonia, remain the
+              company's main external contractual partners.
+            </p>
+          </div>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              In light of the changes to Alexela's liquefied natural gas supply
+              chain, the biggest challenge in 2025 was ensuring the smooth
+              organisation of liquefied natural gas supplies from the terminal in
+              Latvia. During the financial year, a total of 14,642 tons of
+              liquefied gas were supplied from the terminal, ensuring a consistent
+              and high-quality service for Alexela's customers.
+            </p>
+            <p>
+              Hydrogen transport was added as a new service in 2025. Alexela
+              Motors carries out container transport to the Alexela hydrogen
+              refuelling station on Peterburi Road, thereby supporting the
+              company's development of alternative fuels and their availability on
+              the market.
+            </p>
+            <p>
+              In 2025, the company's lorries covered a total of 2.69 million
+              kilometres, which is 340,000 kilometres more than in 2024 and 640,000
+              kilometres more than in 2023.
+            </p>
+            <p>
+              As at the end of the reporting year, there were 16 road tractors, 8
+              lorries and 2 vans in the company's fleet for carrying out transport
+              operations.
+            </p>
+            <p>
+              As at the end of 2025, Alexela Motors employed 48 people, the
+              majority of whom were lorry drivers. The professionalism, experience
+              and dedication of our employees form the basis for the company's
+              provision of high-quality and reliable services. In late 2025, AS
+              Alexela decided to merge Alexela Motors with its parent company.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section
+        class="section--content section--color section--navy waves-animation"
+      >
+        <article class="image-text-content-block block--image-right">
+          <figure class="block__image">
+            <img src="../img/solar.jpg" alt="Solar panel" class="block__img" />
+          </figure>
+          <div class="block__text">
+            <h3 class="block__title">Alexela rePower OÜ</h3>
+            <strong>
+              OÜ Alexela rePower – sustainable energy and innovation solutions
+            </strong>
+            <div class="block__description">
+              <p>
+                OÜ Alexela rePower is a subsidiary of AS Alexela, which brings
+                together all future technology development projects under one
+                roof. The company, which was restructured in 2024, has been
+                operating under a new name since 2025, with the aim of managing new
+                developments and development ideas.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>Main activities and projects:</p>
+            <ul class="alexela__list">
+              <li>the development of biomethane and hydrogen refuelling stations</li>
+              <li>biomethane production based on the principles of the circular economy</li>
+              <li>development of solar and wind farms.</li>
+              <li>managing e-fuel projects</li>
+            </ul>
+            <p>
+              In early 2025, we launched and integrated a 2 MW battery, alongside
+              the solar power station on the Kiviõli Keemiatööstus site – a project
+              that had started in 2024 – in order to participate in the aFRR and
+              mFRR markets.
+            </p>
+            <p>
+              In 2025, we continued to build solar parks on AS Alexela's land,
+              marking a significant step towards achieving the company's goal of
+              more sustainable and environmentally friendly energy use.
+            </p>
+            <!-- <p>
+              <strong>Production volumes of solar parks</strong>
+            </p>
+            <div class="table bg-light">
+              <table>
+                <thead>
+                  <tr class="table__header bg-flamingo">
+                    <th class="table__header-text text-left"></th>
+                    <th class="table__header-text text-right">2023</th>
+                    <th class="table__header-text text-right">2024</th>
+                    <th class="table__header-text text-right">Change</th>
+                  </tr>
+                  <tr class="visually-hidden">
+                    <th scope="col">Solar park</th>
+                    <th scope="col">2023</th>
+                    <th scope="col">2024</th>
+                    <th scope="col">Change</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table__row">
+                    <td class="table__cell table__cell--content">
+                      Saku Brewery solar park
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      1077 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      1062 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      -1.4%
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell table__cell--content">
+                      Kiviõli Chemical Industry solar park
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      0
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      1611 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      -
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell table__cell--content">
+                      Paldiski solar park
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      302 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      791 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      161.9%
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell table__cell--content">
+                      Direct line parks
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      40 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      108 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      170.0%
+                    </td>
+                  </tr>
+                  <tr class="table__row font-bold">
+                    <td class="table__cell table__cell--content">Total</td>
+                    <td class="table__cell table__cell--number text-right">
+                      1419 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      3572 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      151.7%
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <i
+                >Solar park production volumes in 2023 compared to 2024.</i
+              >
+            </div> -->
+            <p></p>
+            <p>
+              <strong>Energy sector solutions </strong>
+            </p>
+            <p>
+              Solutions developed by Alexela, such as Alexela and Alexela rePower,
+              continue to develop a range of energy sector solutions, such as VPP
+              (Virtual Power Plant) and Smart Electricity, which optimise the
+              operational processes of renewable energy infrastructure. These
+              solutions help customers increase their revenue and improve the
+              efficiency of their solar parks, ensuring a more favourable price for
+              the electricity they sell. Similarly, there are new battery projects
+              at various stages of development.
+            </p>
+            <p>
+              The methanol bunkering project is continuing, as is the mapping of
+              potential e-fuel production sites.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section--content">
+        <article class="image-text-content-block block--image-right">
+          <figure class="block__image">
+            <img
+              src="../img/maantee.jpg"
+              alt="Autumn highway"
+              class="block__img"
+            />
+          </figure>
+          <div class="block__text">
+            <h3 class="block__title">Rohe Solutions OY</h3>
+            <strong>
+              Rohe Solutions Oy – LNG and bio-LNG solutions on the Finnish market
+            </strong>
+            <div class="block__description">
+              <p>
+                Rohe Solutions Oy is a subsidiary of AS Alexela, operating on the
+                Finnish market as a supplier of natural gas and LNG. From 2024, the
+                company's main focus has been on providing LNG solutions to
+                industrial customers and bunkering LNG vessels. In 2025, 300 GWh of
+                natural gas and 265 GWh of LNG were sold in Finland.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              The main focus in 2025 was on increasing LNG volumes, which was
+              supported by new bunkering contracts.
+            </p>
+            <p>
+              In 2024, a bio-LNG offer was launched, which makes it possible to
+              withdraw the output of biomethane producers connected to the gas
+              network as bio-LNG, helps valorise biomethane as bio-LNG and gives
+              industrial companies and the transport sector the option to make
+              progress towards meeting their sustainability targets, supporting the
+              transition towards more environmentally friendly energy production
+              options.
+            </p>
+            <p>
+              In 2025, the first contracts were signed with clients in the
+              transport and maritime sectors for the supply of bio-LNG.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section--content section--color section--mint-light waves-animation">
+        <article class="image-text-content-block block--image-right">
+          <figure class="block__image">
+            <img
+              src="../img/elektriliin.jpg"
+              alt="Power line"
+              class="block__img"
+            />
+          </figure>
+          <div class="block__text">
+            <h3 class="block__title">SIA Alexela</h3>
+            <strong>SIA Alexela – sale of electricity and natural gas in Latvia </strong>
+            <p class="block__description">
+              SIA Alexela is a subsidiary of AS Alexela which operates on the
+              Latvian market, selling electricity and natural gas to business and
+              private customers. In 2025, the portfolio's volume more than doubled
+              compared with the previous year, reaching 292 GWh for natural gas and
+              342 GWh for electricity.
+            </p>
+          </div>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              In 2025, the private customer base continued to grow, ending the year
+              with a 27 per cent increase in the number of customers.
+            </p>
+            <p>
+              We launched Elastic, an electricity package with a fresh approach,
+              which was well received by our customers. We continued to invest in
+              upgrading our IT and settlement systems, thereby laying the
+              foundations for the development of our services.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section--content">
+        <article class="image-text-content-block block--image-right">
+          <figure class="block__image">
+            <img src="../img/lpg.jpg" alt="LPG" class="block__img" />
+          </figure>
+          <div class="block__text">
+            <h3 class="block__title">Hamina LNG Terminal</h3>
+            <strong
+              >Hamina LNG Terminal – serving customers in Finland and Estonia
+            </strong>
+            <p class="block__description">
+              The launch of the Hamina LNG terminal in the autumn and winter of
+              2022 allowed Alexela to supply customers in Finland and Estonia with
+              LNG sourced from outside Russia at the most competitive logistics
+              costs. At the time, it was the first LNG terminal in Finland to be
+              connected to the Finnish gas transmission network. To date, it is the
+              only LNG terminal in Finland that is connected to the Finnish gas
+              transmission network and which, at the same time, can store up to
+              30,000 m³ of LNG in its terminal tank for long periods.
+            </p>
+          </div>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              The Hamina LNG terminal operates on the principle of third party
+              open-access, with its operations and tariffs being supervised by the
+              Finnish Energy Authority.
+            </p>
+            <p>
+              2025 was the third year of operation for Hamina LNG. During 2025, the
+              terminal received LNG from 11 vessels, with all supplies originating
+              from outside Russia. A total of 600 GWh of LNG passed through the
+              terminal. A total of 238 GWh of regasified gas was fed from the
+              terminal into the Finnish transmission network and the distribution
+              network in the Hamina region, whilst LNG was loaded in the tank
+              trailers of 1,463 lorries and then delivered to customers in Estonia
+              and Finland as a cleaner fuel alternative.
+            </p>
+            <p>
+              In 2025, the projects launched the previous year in cooperation with
+              Rohe Solutions OY gained momentum. A total of 109 GWh of bio-LNG
+              storage and handling capacity, which makes it possible to take the
+              output of biogas stations connected to the gas network from the
+              terminal as bio-LNG, was used during the year. A total of 19 vessels
+              were bunkered, with the majority of these bunkering operations
+              carried out with bio-LNG.
+            </p>
+            <p>AS Alexela is the largest customer and user of Hamina LNG.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section--content section--color section--navy waves-animation">
+        <article class="content-block block__text">
+          <h3 class="block__title">Eesti Biogaas OÜ</h3>
+          <strong>Eesti Biogaas OÜ – growth in biomethane production</strong>
+          <p>
+            Production at Eesti Biogaas, an associate in which Alexela holds a 50
+            per cent stake, grew by 4.4 per cent in 2025, reaching 131.71 GWh,
+            which accounted for approximately 43 per cent of all biomethane
+            produced in Estonia.
+          </p>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              In 2025, the extensions to the Tartu and Oisu biogas plants – which
+              had been completed in the previous year – were in operation for their
+              first full year, helping to increase the output of both plants. All
+              the biogas plants operated by Eesti Biogaas are now built to the same
+              design, consisting of two primary digesters and two secondary
+              digesters.
+            </p>
+            <p>
+              The improvement in processing efficiency is largely down to the
+              experience and expertise of the Eesti Biogaas team. By optimising
+              production, it is possible to produce more biomethane all year round
+              using animal manure, biomass and food industry waste. This is an
+              important step towards environmental protection, as it helps to
+              reduce the amount of methane that would otherwise be released into the
+              atmosphere. Most of the biomethane produced is used as transport fuel.
+            </p>
+            <p>
+              At the end of the year, Eesti Biogaas sold its 60% holding in Oisu
+              Biogaas to Infortar Agro, a co-shareholder of Eesti Biogaas. As
+              Infortar had also become a 40% shareholder in Oisu Biogaas through its
+              acquisition of Estonia Farmid, it was only natural that Infortar
+              wished to fully consolidate Oisu Biogaas into its group. As a result
+              of the transaction, nothing has changed in terms of the sale of Oisu's
+              biomethane output, and Alexela continues to transport all of Oisu's
+              biomethane output to the gas injection point in Tartu, where this
+              biogas is used primarily to refuel buses in Tartu.
+            </p>
+            <p>
+              In 2026, the plan is to continue producing biomethane at the existing
+              production plants; no capital investment is planned at any of the
+              plants.
+            </p>
+
+            <div class="table bg-light">
+              <table>
+                <thead>
+                  <tr class="table__header bg-flamingo">
+                    <th class="table__header-text text-left"></th>
+                    <th class="table__header-text text-right">2024</th>
+                    <th class="table__header-text text-right">2025</th>
+                    <th class="table__header-text text-right">Change</th>
+                  </tr>
+                  <tr class="visually-hidden">
+                    <th scope="col">Company name</th>
+                    <th scope="col">2024</th>
+                    <th scope="col">2025</th>
+                    <th scope="col">Change</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table__row">
+                    <td class="table__cell table__cell--content">
+                      Tartu Biogaas
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      41 660 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      47 131 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      13.1%
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell table__cell--content">
+                      Vinni Biogaas
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      43 359 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      44 175 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      1.9%
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell table__cell--content">
+                      Oisu Biogaas*
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      41 112 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      40 404 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      –1.7%
+                    </td>
+                  </tr>
+                  <tr class="table__row font-bold">
+                    <td class="table__cell table__cell--content">
+                      Total EBG Group
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      126 131 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      131 710 MWh
+                    </td>
+                    <td class="table__cell table__cell--number text-right">
+                      4.4%
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <i>Biomethane production volumes in 2025 compared with 2024.</i>
+              <br />
+              <i
+                >*The output of Oisu Biogaas is calculated up to 20 November 2025,
+                when Eesti Biogaas sold its 60% stake in Oisu Biogaas and no longer
+                holds any equity interest in Oisu Biogaas. Eesti Biogaas will
+                continue to provide plant management services to Oisu Biogaas on
+                market terms.</i
+              >
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section--content">
+        <article class="content-block block__text">
+          <h3 class="block__title">Zero Terrain OÜ</h3>
+          <strong>Underground 500 MW pumped hydro storage facility to be built in Paldiski</strong>
+          <p>
+            The 500 MW Paldiski pumped hydro storage facility to be built on Pakri
+            Peninsula is Estonia's largest private-sector investment ready for
+            construction. It is estimated that, over the course of the project,
+            around €13 billion will flow into the Estonian economy. As a strategic
+            energy infrastructure project, it will provide Estonia with additional
+            controllable capacity, strengthens security of supply even in the event
+            of temporary restrictions or disruptions to external connections, and
+            helps to reduce dependence on third countries and critical raw
+            materials.
+          </p>
+        </article>
+
+        <article class="accordion">
+          <button class="accordion__button" aria-expanded="false">
+            <span class="accordion__read-text">Read more</span>
+            <span class="accordion__close-text">Close</span>
+            <img
+              src="../img/icons/chevron-right.svg"
+              alt="Arrow right icon"
+              class="accordion__icon"
+            />
+          </button>
+          <div class="accordion__content">
+            <p>
+              In 2025, the company presented to the public a socio-economic
+              analysis prepared by the international audit firm KPMG. According to
+              the analysis, the project is expected to enable consumers to save an
+              estimated €131 million a year on electricity costs, increase tax
+              revenue by approximately €80 million, and add an average of €253
+              million in value added to the economy each year.
+            </p>
+            <p>
+              In 2025, the focus was on developing a model for cooperation with the
+              state. The activities included technical preparations, the
+              development of partnerships and the design of a funding structure. The
+              goal is to establish a clear framework for balancing the risks
+              associated with long-term investments and to increase investment
+              confidence.
+            </p>
+            <p>
+              The pumped hydro storage facility project Zero Terrain in Paldiski is
+              a Project of Common Interest (PCI) of the European Union. As a
+              strategic infrastructure project, the preparatory work has been
+              supported by the European Union's Connecting Europe Facility.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer__container">
+        <div class="footer__content">
+          <div class="footer__menu">
+            <nav class="footer__nav">
+              <div class="menu__section">
+                <a href="index.html" class="menu__button">
+                  <span class="menu__icon menu__icon--home"></span>
+                  Homepage
+                </a>
+              </div>
+
+              <div class="menu__section">
+                <a href="about.html" class="menu__button">
+                  <span class="menu__icon menu__icon--a-monogram"></span>
+                  About the Company
+                </a>
+              </div>
+
+              <div class="menu__section">
+                <a
+                  href="business-lines.html"
+                  class="menu__button menu__button--active"
+                >
+                  <span class="menu__icon menu__icon--eur"></span>
+                  Business Lines
+                </a>
+              </div>
+
+              <div class="menu__section">
+                <a href="sustainability.html" class="menu__button">
+                  <span class="menu__icon menu__icon--greenspark"></span>
+                  Sustainability and Governance
+                </a>
+              </div>
+
+              <div class="menu__section">
+                <a href="economic-results.html" class="menu__button">
+                  <span class="menu__icon menu__icon--news"></span>
+                  Economic Results
+                </a>
+              </div>
+
+              <div class="menu__section">
+                <a
+                  href="Alexela_aruanne_2025_ENG.pdf"
+                  target="_blank"
+                  class="menu__button"
+                >
+                  <span class="menu__icon menu__icon--contract"></span>
+                  Download PDF
+                </a>
+              </div>
+            </nav>
+          </div>
+
+          <div class="footer__datablock">
+            <div class="footer__left">
+              <div class="footer__logo">
+                <img src="../img/alexela_logo.svg" alt="Alexela" />
+              </div>
+              <div class="footer__contact">
+                <div>
+                  <strong>Alexela AS</strong>
+                  <span>Roseni 11, 10111 Tallinn</span>
+                </div>
+                <a
+                  href="mailto:alexela@alexela.ee"
+                  class="footer__contact__item"
+                >
+                  <img src="../img/icons/email.svg" alt="Email" />
+                  <span>alexela@alexela.ee</span>
+                </a>
+                <a href="tel:+372629000" class="footer__contact__item">
+                  <img src="../img/icons/Phone.svg" alt="Phone" />
+                  <span>+ 372 629 000</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="footer__right">
+              <div class="footer__social">
+                <a href="https://www.alexela.ee" class="social__link"
+                  ><span class="social__icon-mask icon-monogram"></span>
+                  www.alexela.ee</a
+                >
+                <a href="#" class="social__icon">
+                  <span class="social__icon-mask icon-facebook"></span>
+                  <span>Facebook</span>
+                </a>
+                <a href="#" class="social__icon">
+                  <span class="social__icon-mask icon-instagram"></span>
+                  <span>Instagram</span>
+                </a>
+                <a href="#" class="social__icon">
+                  <span class="social__icon-mask icon-youtube"></span>
+                  <span>Youtube</span>
+                </a>
+              </div>
+              <div class="footer__certification">
+                <img src="../img/iso-9001.svg" alt="ISO 9001 Certified" />
+              </div>
+            </div>
+
+            <div class="footer__slogan">Energy for life</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../main.js"></script>
+  </body>
 </html>
