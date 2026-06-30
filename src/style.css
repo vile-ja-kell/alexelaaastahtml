@@ -66,8 +66,8 @@ h3 {
   font-size: clamp(var(--title-display-xs), 3vw, var(--title-display-sm));
   font-weight: 700;
   text-align: left;
-  @media (--viewport-lg) {
-    margin-bottom: -10rem;
+  @media (--viewport-xl) {
+    /* margin-bottom: -12rem; */
   }
 }
 
@@ -91,7 +91,8 @@ header {
   object-fit: cover;
   border-radius: 0;
   -o-object-position: top;
-  object-position: top right;
+  object-position: right;
+    bottom: 0;
 }
 
 .nav {
@@ -497,7 +498,7 @@ main {
   flex-direction: column;
   gap: var(--gap-xl);
   @media (--viewport-xl) {
-    gap: var(--gap-xxxl);
+    gap: var(--gap-xxl);
   }
 }
 section {
@@ -691,7 +692,8 @@ figcaption {
 .proof__item {
   position: relative;
   padding-left: 3rem;
-  font-size: 1.125rem;
+  font-family: "Adieu", sans-serif;
+  font-size: clamp(1.25rem, 3vw, var(--title-display-xs));
   font-weight: 600;
   line-height: 1.3;
 }

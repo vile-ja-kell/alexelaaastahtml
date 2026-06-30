@@ -10,7 +10,9 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(git commit -q -m ' *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(awk '/^h3 \\\\{/,/^\\\\}/' src/style.css)",
+      "Bash(git commit -q -m 'ET pages: relative home links \\(parity with EN\\) + hero/CSS polish *)"
     ],
     "deny": []
   }

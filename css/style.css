@@ -1266,9 +1266,9 @@ h3 {
   font-weight: 700;
   text-align: left;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
 .section-group-title {
-    margin-bottom: -10rem
+    /* margin-bottom: -12rem; */
 }
   }
 p {
@@ -1289,7 +1289,8 @@ header {
   object-fit: cover;
   border-radius: 0;
   -o-object-position: top;
-  object-position: top right;
+  object-position: right;
+    bottom: 0;
 }
 .nav {
   display: flex;
@@ -1662,7 +1663,7 @@ main {
 }
 @media (min-width: 1200px) {
 main {
-    gap: var(--gap-xxxl)
+    gap: var(--gap-xxl)
 }
   }
 section {
@@ -1850,7 +1851,8 @@ figcaption {
 .proof__item {
   position: relative;
   padding-left: 3rem;
-  font-size: 1.125rem;
+  font-family: "Adieu", sans-serif;
+  font-size: clamp(1.25rem, 3vw, var(--title-display-xs));
   font-weight: 600;
   line-height: 1.3;
 }
